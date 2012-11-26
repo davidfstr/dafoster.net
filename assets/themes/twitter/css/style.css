@@ -36,6 +36,29 @@ html, body {
   border: 0;
 }
 
+/* Override Bootswatch-Readable: Use standard heights for h1-h3 */
+h1, h2, h3 {
+  line-height: 1.4em;
+}
+
+/* Override Bootswatch-Readable: No margins for h1-h6 */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0;
+}
+/* ...except in post content */
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  margin: 0.7em 0;
+}
+
+
+/* Fix Bootstrap regression: Center content of static navbars */
+.navbar-inner > .container { width:940px; }
+
 /* tag_box ======================================================== */
 
 .tag_box {

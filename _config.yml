@@ -9,8 +9,8 @@ pygments: true
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title: David Foster
-tagline: Site Tagline
+title: DaFoster Blog
+tagline: 
 author:
   name: David Foster
   email: davidfstr@gmail.com
@@ -70,9 +70,9 @@ JB:
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change theme here if needed.
   #
-  archive_path: /archive.html
-  categories_path: /categories.html
-  tags_path: /tags.html
+  archive_path: /
+  categories_path: /404.html
+  tags_path: /topics.html
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
