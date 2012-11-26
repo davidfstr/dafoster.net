@@ -36,6 +36,22 @@ html, body {
   border: 0;
 }
 
+/* Green navbar */
+.navbar-inner {
+  background: #09991c; /* Old browsers */
+  background: -moz-linear-gradient(top, #09991c 0%, #76dd01 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#09991c), color-stop(100%,#76dd01)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #09991c 0%,#76dd01 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #09991c 0%,#76dd01 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #09991c 0%,#76dd01 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #09991c 0%,#76dd01 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#09991c', endColorstr='#76dd01',GradientType=0 ); /* IE6-9 */
+}
+
+/* White navbar links */
+.navbar .nav > li > a {
+  color: #FFFFFF;
+}
 
 /* tag_box ======================================================== */
 
