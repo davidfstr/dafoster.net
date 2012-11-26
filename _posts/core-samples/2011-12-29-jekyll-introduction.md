@@ -1,7 +1,7 @@
 ---
 layout: post
-category : lessons
-tags : [intro, beginner, jekyll, tutorial]
+category: lessons
+tags: [intro, beginner, jekyll, tutorial]
 ---
 {% include JB/setup %}
 
@@ -172,8 +172,8 @@ If you define more than one category you are defining a category hierarchy "set"
 Example:
 
     ---
-    title :  Hello World
-    categories : [lessons, beginner]
+    title:  Hello World
+    categories: [lessons, beginner]
     ---
 
 This defines the category hierarchy "lessons/beginner". Note this is _one category_ node in Jekyll.
@@ -230,7 +230,7 @@ Templates should be coded in HTML and contain YAML Front Matter.
 All templates can contain Liquid code to work with your site's data.
 
 **Rending Page/Post Content in a Template**  
-There is a special variable in all templates named : `content`.
+There is a special variable in all templates named: `content`.
 The `content` variable holds the page/post content including any sub-template content previously defined.
 Render the content variable wherever you want your main content to be injected into your template:
 
@@ -338,8 +338,8 @@ YAML Front Matter must be prepended to the top of template/post/page files:
 
     ---
     layout: post
-    category : pages
-    tags : [how-to, jekyll]
+    category: pages
+    tags: [how-to, jekyll]
     ---
 
     ... contents ...
