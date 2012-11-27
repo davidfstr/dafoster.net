@@ -66,13 +66,18 @@ h2 small { font-size:16px; }
 h3 small { font-size:13.6px; }
 
 /* No margin before first heading in a block */
-* > h1:first-child,
-* > h2:first-child,
-* > h3:first-child,
-* > h4:first-child,
-* > h5:first-child,
-* > h6:first-child {
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
   margin-top: 0;
+}
+
+/* No margin after pagination at end of block */
+.pagination:last-child {
+  margin-bottom: 0;
 }
 
 /* Fix Bootstrap regression: Center content of static navbars */
