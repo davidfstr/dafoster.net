@@ -14,7 +14,9 @@ group: navigation
 {% for tag in site.tags %} 
   <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
   <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
+    {% assign post_list = tag[1] %}
+    {% for post in post_list %}
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
   </ul>
 {% endfor %}
