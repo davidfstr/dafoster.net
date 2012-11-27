@@ -1,8 +1,11 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
-    {% if site.safe == false %}var disqus_developer = 1;{% endif %}
-    var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
-    {% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% endif %}
+    /* * * CONFIGURATION VARIABLES * * */
+    {% if site.safe == false %}var disqus_developer = 1; // not running in production{% endif %}
+    var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';
+    var disqus_url = '{{ site.production_url }}{{ page.url }}';
+    var disqus_title = '{{ page.title }}';
+    
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
