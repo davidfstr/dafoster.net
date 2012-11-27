@@ -46,18 +46,23 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0;
 }
 /* ...except in post content */
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5,
-.content h6 {
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6 {
   margin: 0.7em 0;
 }
 
-
 /* Fix Bootstrap regression: Center content of static navbars */
 .navbar-inner > .container { width:940px; }
+
+/* Center the navbar */
+.navbar {
+  width: 980px;
+  margin-left: auto; margin-right: auto;
+}
 
 /* tag_box ======================================================== */
 

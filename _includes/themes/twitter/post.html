@@ -18,20 +18,20 @@
 
 <div class="row">
   <div class="span12">
-    {{ pagination }}
-    
-    <h2>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h2>
-    
-    {% comment %}
-      {% unless page.tags == empty %}
-        <ul class="tag_box inline">
-          {% assign tags_list = page.tags %}
-          {% include JB/tags_list %}
-        </ul>
-      {% endunless %}
-    {% endcomment %}
-    
-    {{ content }}
+    <div class="main-content">
+      <h2>{{ page.title }} <small>{{ page.date | date_to_string }}</small></h2>
+      
+      {% comment %}
+        {% unless page.tags == empty %}
+          <ul class="tag_box inline">
+            {% assign tags_list = page.tags %}
+            {% include JB/tags_list %}
+          </ul>
+        {% endunless %}
+      {% endcomment %}
+      
+      {{ content }}
+    </div>
     
     {{ pagination }}
     
