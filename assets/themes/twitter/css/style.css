@@ -56,14 +56,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Override Bootswatch-Readable: Make headings smaller: Size h{N} as h{N+1} */
-h1 { font-size:36px; }
-h2 { font-size:28px; }
-h3 { font-size:20px; }
-h4 { font-size:16px; }
-h5 { font-size:13.6px; }
-h1 small { font-size:20px; }
-h2 small { font-size:16px; }
-h3 small { font-size:13.6px; }
+h1 { font-size: 36px; }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; }
+h4 { font-size: 16px; }
+h5 { font-size: 13.6px; }
+h1 small { font-size: 20px; }
+h2 small { font-size: 16px; }
+h3 small { font-size: 13.6px; }
 
 /* No margin before first heading in a block */
 h1:first-child,
@@ -81,7 +81,7 @@ h6:first-child {
 }
 
 /* Fix Bootstrap regression: Center content of static navbars */
-.navbar-inner > .container { width:940px; }
+.navbar-inner > .container { width: 940px; }
 
 /* Center the navbar */
 .navbar {
