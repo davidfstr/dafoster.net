@@ -1,6 +1,6 @@
 /* Outermost background */
 html, body {
-  background-color: #eee;
+  background-color: #f9f8f4;  /* airy gray */
 }
 
 /* ========================================================================== */
@@ -24,9 +24,23 @@ html, body {
 
 .breadcrumb-bar {
   background-color: #f5f5f5;
-  padding: 20px 20px 10px;
+  padding: 10px 20px 5px;
   margin: -20px -20px 20px;
   border-bottom: 2px solid #cdcdcd;
+}
+
+.breadcrumb-bar {
+  font-family: Verdana, sans-serif;
+  font-size: 12px;
+}
+
+.breadcrumb {
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.breadcrumb li:last-child .divider {
+  display: none;
 }
 
 /* ========================================================================== */
@@ -100,6 +114,43 @@ h6:first-child {
 /* No margin after pagination at end of block */
 .pagination:last-child {
   margin-bottom: 0;
+}
+
+/* Don't force links in nav bar to have white background */
+.navbar .nav > .active > a,
+.navbar .nav > .active > a:hover,
+.navbar .nav > .active > a:focus {
+  background-color: transparent;
+}
+
+/* ========================================================================== */
+/* Accent Color: Green */
+
+.navbar-inner {
+  background-color: #64a914;  /* bright green */
+  background-image: none;
+}
+
+.breadcrumb-bar {
+  background-color: #d0eab8;  /* pastel green */
+}
+.breadcrumb a {
+  color: #52a24f;
+}
+
+a {
+  color: #52a24f;   /* grass green */
+}
+a:active, a.active {
+  color: #61815e;
+}
+a:link, a:visited {
+  color: #0c7a00;
+  text-decoration: none;
+}
+a:hover { /* must be after a:link, a:visited */
+  color: #0d5904;
+  text-decoration: underline;
 }
 
 /* ========================================================================== */
