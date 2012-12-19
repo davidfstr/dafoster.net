@@ -1,16 +1,36 @@
-/* Override some defaults */
+/* Outermost background */
 html, body {
   background-color: #eee;
 }
+
+/* ========================================================================== */
+/* Navigation */
+
 .navbar {
   margin-bottom: 0;
 }
-.container > footer {
-  margin-top: 20px;
+
+/* Fix Bootstrap regression: Center content of static navbars */
+.navbar-inner > .container { width: 940px; }
+
+/* Center the navbar */
+.navbar {
+  width: 980px;
+  margin-left: auto; margin-right: auto;
 }
-.container > footer p {
-  text-align: center; /* center align it with the container */
+
+/* ========================================================================== */
+/* Breadcrumbs */
+
+.breadcrumb-bar {
+  background-color: #f5f5f5;
+  padding: 20px 20px 10px;
+  margin: -20px -20px 20px;
+  border-bottom: 2px solid #cdcdcd;
 }
+
+/* ========================================================================== */
+/* Content Area */
 
 /* The white background content wrapper */
 .content {
@@ -25,23 +45,25 @@ html, body {
           box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
-/* Page header tweaks */
-.page-header {
-  background-color: #f5f5f5;
-  padding: 20px 20px 10px;
-  margin: -20px -20px 20px;
+/* ========================================================================== */
+/* Footer */
+
+.container > footer {
+  margin-top: 20px;
+}
+.container > footer p {
+  text-align: center; /* center align it with the container */
 }
 
-.topbar .btn {
-  border: 0;
-}
+/* ========================================================================== */
+/* Override Bootswatch-Readable */
 
-/* Override Bootswatch-Readable: Use standard heights for h1-h3 */
+/* Use standard heights for h1-h3 */
 h1, h2, h3 {
   line-height: 1.4em;
 }
 
-/* Override Bootswatch-Readable: No margins for h1-h6 */
+/* No margins for h1-h6 */
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0;
 }
@@ -55,7 +77,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0.7em 0;
 }
 
-/* Override Bootswatch-Readable: Make headings smaller: Size h{N} as h{N+1} */
+/* Make headings smaller: Size h{N} as h{N+1} */
 h1 { font-size: 36px; }
 h2 { font-size: 28px; }
 h3 { font-size: 20px; }
@@ -80,16 +102,8 @@ h6:first-child {
   margin-bottom: 0;
 }
 
-/* Fix Bootstrap regression: Center content of static navbars */
-.navbar-inner > .container { width: 940px; }
-
-/* Center the navbar */
-.navbar {
-  width: 980px;
-  margin-left: auto; margin-right: auto;
-}
-
-/* tag_box ======================================================== */
+/* ========================================================================== */
+/* tag_box */
 
 .tag_box {
 	list-style:none;
