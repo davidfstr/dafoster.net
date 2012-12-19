@@ -1,10 +1,24 @@
 <div class="breadcrumb-bar">
-  {% comment %}[TODO: Generate from page metadata or layout]{% endcomment %}
   <ul class="breadcrumb">
-    <li><a href="/">Home</a>
-      <span class="divider">&gt;</span></li>
-    <li><a href="/articles/">Articles</a>
-      <span class="divider">&gt;</span></li>
+    {% capture divider %} <span class="divider">&gt;</span>{% endcapture %}
+    
+    {% assign has_breadcrumbs = false %}
+    {% for bc_url in page.breadcrumbs %}
+      {% assign bc_title = '&#x26a0;' %}
+      {% for node in site.pages %}
+        {% capture node_url %}{{ node.url | replace: '/index.html', '/' }}{% endcapture %}
+        {% if bc_url == node_url %}
+          {% capture bc_title %}{{ node.title }}{% endcapture %}
+        {% endif %}
+      {% endfor %}
+      
+      <li><a href="{{ bc_url }}">{{ bc_title }}</a>{{ divider }}</li>
+      {% assign has_breadcrumbs = true %}
+    {% endfor %}
+    
+    {% if has_breadcrumbs == false %}
+      <li>&nbsp;</li>
+    {% endif %}
   </ul>
 </div>
 
