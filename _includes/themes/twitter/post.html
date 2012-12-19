@@ -16,6 +16,9 @@
   </div>
 {% endcapture %}
 
+{% assign page_breadcrumbs = "/,/articles/" | split: "," %}
+{% include breadcrumbs %}
+
 <div class="row">
   <div class="span12">
     <div class="main-content">
