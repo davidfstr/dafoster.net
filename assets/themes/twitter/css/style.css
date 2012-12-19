@@ -88,7 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 .main-content h4,
 .main-content h5,
 .main-content h6 {
-  margin: 0.7em 0;
+  margin-top: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 /* Make headings smaller: Size h{N} as h{N+1} */
@@ -134,7 +135,8 @@ h6:first-child {
 .breadcrumb-bar {
   background-color: #d0eab8;  /* pastel green */
 }
-.breadcrumb a {
+.breadcrumb a,
+.breadcrumb .divider {
   color: #52a24f;
 }
 
