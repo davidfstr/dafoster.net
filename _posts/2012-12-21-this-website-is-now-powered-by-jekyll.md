@@ -1,7 +1,7 @@
 ---
 layout: post
 title: This website is now powered by Jekyll
-tags: [Projects]
+tags: [Projects, Personal]
 
 ---
 {% include JB/setup %}
