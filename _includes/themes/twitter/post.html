@@ -19,23 +19,21 @@
 {% assign page_breadcrumbs = "/,/articles/" | split: "," %}
 {% include breadcrumbs %}
 
-<div class="row post">
-  <div class="span12">
-    <h1>{{ page.title }}</h1>
-    <div class="post-metadata">
-      {{ page.date | date_to_string }} &ndash; Filed under: 
-      <span class="tag_box inline">
-        {% assign tags_list = page.tags %}
-        {% for tag in tags_list %} 
-          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
-        {% endfor %}
-      </span>
-    </div>
-    
-    {{ content }}
-    
-    {{ pagination }}
-    
-    {% include JB/comments %}
+<div class="post">
+  <h1>{{ page.title }}</h1>
+  <div class="post-metadata">
+    {{ page.date | date_to_string }} &ndash; Filed under: 
+    <span class="tag_box inline">
+      {% assign tags_list = page.tags %}
+      {% for tag in tags_list %} 
+        <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
+      {% endfor %}
+    </span>
   </div>
+  
+  {{ content }}
+  
+  {{ pagination }}
+  
+  {% include JB/comments %}
 </div>
