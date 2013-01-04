@@ -10,7 +10,7 @@ breadcrumbs: [/, /articles/]
     <h1>{{ page.title }}</h1>
     
     {% for tag in site.tags %} 
-      <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+      <h2 class="topic-h" id="{{ tag[0] }}-ref">{{ tag[0] }} <small>{{ tag[1].size }}</small></h2>
       <ul>
         {% assign post_list = tag[1] %}
         {% for post in post_list %}
