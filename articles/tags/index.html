@@ -5,21 +5,22 @@ breadcrumbs: [/, /articles/]
 ---
 {% include JB/setup %}
 
-<ul class="tag_box inline">
-  {% assign tag_info_list = site.tags %}
-  {% for tag_info in tag_info_list %}
-    {% assign tag = tag_info[0] %}
-    <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
-  {% endfor %}
-</ul>
-
-
-{% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
-  <ul>
-    {% assign post_list = tag[1] %}
-    {% for post in post_list %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+<div class="row">
+  <div class="span9">
+    <h1>{{ page.title }}</h1>
+    
+    {% for tag in site.tags %} 
+      <h2 id="{{ tag[0] }}-ref">{{ tag[0] }}</h2>
+      <ul>
+        {% assign post_list = tag[1] %}
+        {% for post in post_list %}
+          <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
     {% endfor %}
-  </ul>
-{% endfor %}
+  </div>
+  
+  <div class="span3 block-bar">
+    {% include blocks/article_topics %}
+  </div>
+</div>

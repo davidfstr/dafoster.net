@@ -6,8 +6,18 @@ breadcrumbs: [/]
 ---
 {% include JB/setup %}
 
-<ul class="x-posts">
-  {% for post in site.posts %}
-    <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<div class="row">
+  <div class="span9">
+    <h1>{{ page.title }}</h1>
+    
+    <ul class="x-posts">
+      {% for post in site.posts %}
+        <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  
+  <div class="span3 block-bar">
+    {% include blocks/article_topics %}
+  </div>
+</div>

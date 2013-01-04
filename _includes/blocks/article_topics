@@ -1,0 +1,11 @@
+<div class="block">
+  <h3>Topics</h3>
+  
+  <ul class="tag_box">
+    {% assign tag_info_list = site.tags %}
+    {% for tag_info in tag_info_list %}
+      {% assign tag = tag_info[0] %}
+      <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+    {% endfor %}
+  </ul>
+</div>

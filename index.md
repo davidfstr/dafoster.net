@@ -5,6 +5,8 @@ breadcrumbs: []
 ---
 {% include JB/setup %}
 
+<h1>{{ page.title }}</h1>
+
 My name is [David Foster]. On this site you will find [projects] I'm working
 on, [articles] I've written, and other useful information.
 

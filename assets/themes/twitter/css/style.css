@@ -44,7 +44,18 @@ html, body {
 }
 
 /* ========================================================================== */
-/* Posts (Articles) */
+/* Blocks */
+
+.block-bar { }
+
+.block {
+  padding: 12px;
+  background-color: #f9f8f4;
+  border: 1px solid #cdcdcd;
+}
+
+/* ========================================================================== */
+/* Articles */
 
 /* Move the margin under the first h1 to below the .post_metadata */
 .post h1:first-child {
@@ -167,6 +178,10 @@ a:link, a:visited {
 a:hover { /* must be after a:link, a:visited */
   color: #0d5904;
   text-decoration: underline;
+}
+
+.block {
+  background-color: #f0fad8;
 }
 
 /* ========================================================================== */
