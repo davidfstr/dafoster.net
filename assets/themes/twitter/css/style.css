@@ -44,6 +44,18 @@ html, body {
 }
 
 /* ========================================================================== */
+/* Posts (Articles) */
+
+/* Move the margin under the first h1 to below the .post_metadata */
+.post .main-content h1:first-child {
+  margin-bottom: -0.2em;
+}
+.post-metadata {
+  margin-bottom: 1em;
+  color: #808080;
+}
+
+/* ========================================================================== */
 /* Content Area */
 
 /* The white background content wrapper */

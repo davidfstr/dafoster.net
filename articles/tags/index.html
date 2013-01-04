@@ -6,8 +6,11 @@ breadcrumbs: [/, /articles/]
 {% include JB/setup %}
 
 <ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
+  {% assign tag_info_list = site.tags %}
+  {% for tag_info in tag_info_list %}
+    {% assign tag = tag_info[0] %}
+    <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
+  {% endfor %}
 </ul>
 
 
