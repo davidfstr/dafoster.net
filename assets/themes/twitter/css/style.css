@@ -47,7 +47,7 @@ html, body {
 /* Posts (Articles) */
 
 /* Move the margin under the first h1 to below the .post_metadata */
-.post .main-content h1:first-child {
+.post h1:first-child {
   margin-bottom: -0.2em;
 }
 .post-metadata {
@@ -100,18 +100,8 @@ h1, h2, h3 {
   line-height: 1.4em;
 }
 
-/* No margins for h1-h6 */
+/* Sane margins around headings */
 h1, h2, h3, h4, h5, h6 {
-  /* TODO: Verify that this rule is unused. Then remove .main-content class. */
-  margin: 0 0;
-}
-/* ...except in post content */
-.main-content h1,
-.main-content h2,
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6 {
   margin-top: 0.5em;
   margin-bottom: 0.2em;
 }
