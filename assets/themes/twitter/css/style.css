@@ -63,7 +63,12 @@ html, body {
 }
 .post-metadata {
   margin-bottom: 1em;
-  color: #808080;
+  color: #808080; /* subtle gray */
+}
+
+/* Decrease line spacing for titles that wrap */
+.post h1:first-child {
+  line-height: 1.2em;
 }
 
 /* ========================================================================== */
