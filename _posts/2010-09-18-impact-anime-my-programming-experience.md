@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Impact of Anime on my Programming Experience
-tags: [Personal, Anime]
+tags: [Personal]
+x_minor_tags: [Anime]
 x_date_published: 2012-12-21
 
 ---
