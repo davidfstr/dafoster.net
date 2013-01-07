@@ -2,7 +2,7 @@
 layout: post
 title: Impact of Anime on my Programming Experience
 tags: [Personal, Anime]
-date_published: 2012-12-21
+x_date_published: 2012-12-21
 
 ---
 It occurs to me that anime has been an important driver for improving my programming abilities.

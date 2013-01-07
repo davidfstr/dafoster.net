@@ -2,8 +2,8 @@
 layout: post
 title: Comparing iPod Touch (2nd Gen) to iPhone 3GS
 tags: [Productivity, Personal]
-date_published: 2012-12-21
-date_updated: 2012-12-21
+x_date_published: 2012-12-21
+x_date_updated: 2012-12-21
 
 ---
 

@@ -2,8 +2,8 @@
 layout: post
 title: Retrospect vs. Time Machine
 tags: [Digital_Preservation, Software]
-date_published: 2012-12-21
-date_updated: 2012-12-21
+x_date_published: 2012-12-21
+x_date_updated: 2012-12-21
 
 ---
 

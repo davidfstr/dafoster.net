@@ -2,7 +2,7 @@
 layout: post
 title: Why I no longer use Drupal
 tags: [Software, Productivity]
-date_published: 2012-12-21
+x_date_published: 2012-12-21
 
 ---
 

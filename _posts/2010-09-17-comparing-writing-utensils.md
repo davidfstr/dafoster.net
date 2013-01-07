@@ -2,7 +2,7 @@
 layout: post
 title: Why Pens > Pencils &ndash; Comparing Writing Utensils
 tags: [Productivity]
-date_published: 2012-12-21
+x_date_published: 2012-12-21
 
 ---
 
