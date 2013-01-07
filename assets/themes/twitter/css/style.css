@@ -73,6 +73,11 @@ html, body {
   vertical-align: super;
 }
 
+.topic-h.active,
+.tag_box .active a {
+  background-color: #85e01b; /* bright green */
+}
+
 /* ========================================================================== */
 /* Content Area */
 
