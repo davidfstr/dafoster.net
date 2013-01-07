@@ -21,10 +21,9 @@ my [old site].
 
 ## Recent Articles
 
-{% comment %}[TODO: Only list the most recent 30.]{% endcomment %}
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for post in site.posts limit:30 %}
     <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
   {% endfor %}
 </ul>
-{% comment %}[TODO: Link to "See all articles..."]{% endcomment %}
+<a href="/articles/">See all articles...</a>
