@@ -59,7 +59,8 @@ html, body {
 
 /* Move the margin under the first h1 to below the .post_metadata */
 .post h1:first-child {
-  margin-bottom: -0.2em;
+  /* -0.2em looks good if there are no descenders */
+  margin-bottom: 0em;
 }
 .post-metadata {
   margin-bottom: 1em;
