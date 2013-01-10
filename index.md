@@ -3,8 +3,6 @@ layout: page
 title: Home
 breadcrumbs: []
 ---
-{% include JB/setup %}
-
 <h1>{{ page.title }}</h1>
 
 My name is [David Foster]. On this site you will find [articles] I've written

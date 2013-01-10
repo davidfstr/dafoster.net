@@ -4,8 +4,6 @@ title: This website is now powered by Jekyll
 tags: [Projects, Personal]
 
 ---
-{% include JB/setup %}
-
 And this is my first post using the new system. Articles are a lot easier to
 write, so I will be posting more frequently.
 
