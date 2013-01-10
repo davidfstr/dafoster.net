@@ -2,6 +2,8 @@
 layout: page
 title: Articles (By Topic)
 breadcrumbs: [/, /articles/]
+include_jquery: true
+include_jquery_hashchange: true
 ---
 {% include JB/setup %}
 
@@ -30,16 +32,17 @@ breadcrumbs: [/, /articles/]
     return str.substring(str.length - end.length) == end;
   }
   
-  function locationChanged() {
+  $(window).hashchange(function() {
     // Highlight topic corresponding to current anchor (if specified)
     if (location.hash && endsWith(location.hash, "-ref")) {
       var topic = location.hash.substring(1, location.hash.length - "-ref".length);
-      document.getElementById(topic + "-ref").className += " active";
-      document.getElementById(topic + "-topic").className += " active";
+      
+      $('.topic-h').removeClass('active');
+      $('.tag_box li').removeClass('active');
+      
+      $('#' + topic + "-ref").addClass('active');
+      $('#' + topic + "-topic").addClass('active');
     }
-  }
-  
-  // TODO: Listen to the document for subsequent changes to the location
-  //       (such as by clicking a topic on the sidebar).
-  locationChanged();
+  });
+  $(window).hashchange();
 </script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>{% include JB/setup %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -22,6 +22,10 @@
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
   -->
+    
+    <!-- Le scripts -->
+    {% if page.include_jquery %}<script src="{{ ASSET_PATH }}/js/jquery-1.8.3.min.js"></script>{% endif %}
+    {% if page.include_jquery_hashchange %}<script src="{{ ASSET_PATH }}/js/jquery.ba-hashchange.min.js"></script>{% endif %}
   </head>
 
   <body>

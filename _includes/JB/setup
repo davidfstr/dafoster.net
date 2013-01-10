@@ -1,4 +1,4 @@
-{% capture jbcache %}
+{% capture ignored %}
   <!--
     || Dynamically set liquid variables for working with URLs/paths
     -->
@@ -19,4 +19,4 @@
       {% capture ASSET_PATH %}{{ BASE_PATH }}/assets/themes/{{ page.theme.name }}{% endcapture %}
     {% endif %}  
   {% endif %}
-{% endcapture %}{% assign jbcache = nil %}
+{% endcapture %}{% assign ignored = nil %}
