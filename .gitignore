@@ -1,10 +1,8 @@
+# Generated site
 _site/*
-_theme_packages/*
 
+# Windows
 Thumbs.db
+
+# OS X
 .DS_Store
-
-!.gitkeep
-
-.rbenv-version
-.rvmrc
