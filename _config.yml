@@ -42,10 +42,12 @@ exclude: ["README.md", "Rakefile"]
 markdown: rdiscount
 rdiscount:
   # Choices:
-  #   * smart - Enable SmartyPants typographic enhancements
+  #   * smart - Enable SmartyPants processing.
   #             (smart quotes, en- and em- dashes, and ellipses).
-  #   * autolink
-  #   * (more?)
+  #   * autolink - Greedily urlify links.
+  #   * (for more options, see rdiscount.rb in the RDiscount source)
+  #   * (for unimplemented options, see http://www.pell.portland.or.us/~orc/Code/discount/)
+  #     - MKD_EXTRA_FOOTNOTE - Enable PHP Markdown Extra-style footnotes.  
   extensions: [smart]
 
 # Enable code highlighting with Pygments.
