@@ -49,6 +49,6 @@ My experience using various kinds of writing utensils in school...
 * Typing speed is much higher
     * Gets even better if you use typing expansion software
     * Gets even better if you use dictation software [for prose]
-    * Gets even better if you use <insert special typing method used by court recorders>
+    * Gets even better if you use a stenotype machine
 * Hyperlinks are easy to create and maintain
     * This is especially powerful when writing reference documents
