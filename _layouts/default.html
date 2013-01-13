@@ -5,8 +5,13 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | {{ site.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% endif %}
     <meta name="author" content="{{ site.author.name }}">
+  {% if page.redirect_to_url %}
+    <meta http-equiv="refresh" content="0;URL='{{ page.redirect_to_url }}'">
+  {% endif %}
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -71,7 +76,15 @@
           </ul>
         </div>
         
-        {{ content }}
+        {% if page.redirect_to_url %}
+          {% if page.redirect_has_content %}
+            {{ content }}
+          {% else %}
+            {% include redirecting %}
+          {% endif %}
+        {% else %}
+          {{ content }}
+        {% endif %}
       </div>
 
       <footer>

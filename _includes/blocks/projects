@@ -1,0 +1,23 @@
+<div class="block">
+  <h3>Projects</h3>
+  {% comment %}[TODO: Use distinct styling from a real tag box]{% endcomment %}
+  <ul class="tag_box">
+    {% for cur_page in site.pages %}
+      {% if cur_page.layout == "project" %}
+        {% assign project_title = cur_page.title %}
+        {% assign project_url = cur_page.url | replace: '/index.html', '' %}
+        {% assign project_slug = cur_page.url | replace: '/projects/', '' | replace: '/index.html', '' %}
+        {% assign project_is_redirect = cur_page.redirect_to_url %}
+        
+        <li id="{{ project_slug }}-project"{% if cur_page.url == page.url %} class="active"{% endif %}>
+          <a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  <p style="margin-top: .5em;">And more at:</p>
+  <ul>
+    <li><a href="https://github.com/davidfstr?tab=repositories" class="external">GitHub</a></li>
+    <li><a href="/prism/projects" class="external">Historical Projects (2010 and older)</a></li>
+  </ul>
+</div>

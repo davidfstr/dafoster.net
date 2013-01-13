@@ -100,15 +100,29 @@ html, body {
           box-shadow: 0 1px 2px rgba(0,0,0,.15);
 }
 
-/* Table styling
- * 
- * Example usage: /articles/2010/09/17/comparing-ipod-touch-2nd-gen-iphone-3gs/
+/* 
+ * Table styling
+ *   Example: /articles/2010/09/17/comparing-ipod-touch-2nd-gen-iphone-3gs/
  */
 td, th {
   padding: .3em .5em;
 }
 table {
   margin-bottom: 1em;
+}
+
+/*
+ * External-link styling based on CSS code found at:
+ *     http://en.wikipedia.org/skins-1.5/monobook/main.css?97
+ */
+a.external {
+	/* IE6/XP: Doesn't display the background image in the correct location
+	 *         when the decorated 'a' link wraps multiple lines.
+	 *         No non-Javascript workaround for this exists as of 11/20/2007.
+	 *         See http://www.satzansatz.de/cssd/wrappinglinkbg.html for
+	 *         a good discussion of the issue. */
+	background: url(external.png) top right no-repeat;
+	padding-right: 13px;
 }
 
 /* ========================================================================== */

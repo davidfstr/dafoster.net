@@ -1,0 +1,2 @@
+<em>Redirecting you to:</em><br />
+<a href="{{ page.redirect_to_url }}">{{ page.redirect_to_url }}</a>

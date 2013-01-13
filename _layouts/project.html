@@ -1,0 +1,31 @@
+---
+layout: default
+breadcrumbs: [/, /projects/]
+redirect_has_content: true
+---
+<style>
+.logo {
+  float: right;
+  background-color: #fafafa;
+  border: 1px solid #dfdfdf;
+  padding: 20px;
+}
+</style>
+
+<div class="row">
+  <div class="span9">
+    <img class="logo" src="logo-128.png" />
+    
+    <h1>{{ page.title }}</h1>
+    
+    {% if page.redirect_to_url %}
+      {% include redirecting %}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </div>
+  
+  <div class="span3 block-bar">
+    {% include blocks/projects %}
+  </div>
+</div>
