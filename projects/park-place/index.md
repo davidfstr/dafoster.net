@@ -12,7 +12,3 @@ An iPhone app that helps you find nearby parking on the cheap.
 
 I developed this application for Seabalt Solutions LLC between October 2010
 and February 2012, originally as a contractor and later as a cofounder.
-
-I will open source this project and provide more information later
-this year. (2013-01-12)
-
