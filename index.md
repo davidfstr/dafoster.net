@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: home_page
 title: Home
 breadcrumbs: []
 ---

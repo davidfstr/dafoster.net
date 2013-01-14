@@ -125,6 +125,42 @@ a.external {
 	padding-right: 13px;
 }
 
+/* Image box */
+.image-box {
+  float: right;
+  padding: 10px;
+  margin-left: 10px;
+  border: 1px solid #bfbfbf;
+  background-color: #fafafa;
+}
+.image-box p {
+  margin-top: .5em;
+  margin-bottom: 0px;
+  font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 12px;
+}
+
+/* Table of Contents */
+.toc {
+  display: inline-block;
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+  padding: 8px;
+  min-width: 150px;
+}
+.toc ul {
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 0px;
+  font-family: Verdana, sans-serif;
+  font-size: 11px;
+}
+.toc ul li {
+  list-style-type: none;
+  padding: 0 0 .2em .2em;
+  padding-bottom: 0.2em;
+}
+
 /* ========================================================================== */
 /* Footer */
 
@@ -214,6 +250,7 @@ a:hover { /* must be after a:link, a:visited */
 
 .block {
   background-color: #f0fad8;
+  margin-bottom: 10px;
 }
 
 /* ========================================================================== */
