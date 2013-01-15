@@ -80,6 +80,7 @@ html, body {
 }
 
 .topic-h.active,
+h2.active,
 .tag_box .active a {
   background-color: #85e01b; /* bright green */
 }

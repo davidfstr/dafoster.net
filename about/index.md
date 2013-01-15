@@ -3,6 +3,8 @@ layout: home_page
 title: About
 group: navigation
 breadcrumbs: [/]
+include_jquery: true
+include_jquery_hashchange: true
 
 ---
 <h1>{{ page.title }}</h1>
@@ -19,11 +21,11 @@ My name is **David Foster** and I enjoy developing software for fun and profit.
     <li><a href="#biography">Biography</a></li>
     <li><a href="#objectives">Areas of Interest</a></li>
     <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
 
-<a name="biography"></a>
-## Biography
+<h2 id="biography">Biography</h2>
 
 I initially discovered computers when I was 4 and starting programming them at 6.
 Since then, programming has been one of my most enduring hobbies.
@@ -37,8 +39,7 @@ Beyond that I enjoy:
 * playing badminton and pool; and
 * watching the occasional anime series.
 
-<a name="objectives"></a>
-## Areas of Interest
+<h2 id="objectives">Areas of Interest</h2>
 
 ### Sectors
 
@@ -56,8 +57,7 @@ Beyond that I enjoy:
 * Scala, Clojure, and other cutting-edge languages
 * C, C++, x86 Assembler
 
-<a name="experience"></a>
-## Experience
+<h2 id="experience">Experience</h2>
 
 *More information available on my [LinkedIn profile].*
 
@@ -97,3 +97,22 @@ Beyond that I enjoy:
 [Air2Web]: http://www.air2web.com/
 [Intercept Technology Inc.]: http://www.intercept.com/
 [National Computer Camps, Inc.]: http://nccamp.com/
+
+<h2 id="contact">Contact</h2>
+
+Need to contact me? Solve the following puzzle to get my email:
+
+**MyEmail = "david" + RemoveVowels("foster") + "@gmail.com"**
+
+*(The letters A, E, I, O, and U are vowels.)*
+
+<script>
+  $(window).hashchange(function() {
+    // Highlight heading corresponding to current anchor (if specified)
+    if (location.hash) {
+      $('h2').removeClass('active');
+      $(location.hash).addClass('active');
+    }
+  });
+  $(window).hashchange();
+</script>
