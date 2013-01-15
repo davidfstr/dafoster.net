@@ -7,6 +7,12 @@ include_jquery: true
 include_jquery_hashchange: true
 
 ---
+<style>
+h2 small {
+  vertical-align: super;
+}
+</style>
+
 <h1>{{ page.title }}</h1>
 
 <div class="image-box">

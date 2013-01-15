@@ -10,7 +10,7 @@ include_jquery_hashchange: true
     <h1>{{ page.title }}</h1>
     
     {% for tag in site.tags %} 
-      <h2 class="topic-h" id="{{ tag[0] }}-ref">{{ tag[0] }} <small>{{ tag[1].size }}</small></h2>
+      <h2 id="{{ tag[0] }}-ref">{{ tag[0] }} <small>{{ tag[1].size }}</small></h2>
       <ul>
         {% assign post_list = tag[1] %}
         {% for post in post_list %}
@@ -35,7 +35,7 @@ include_jquery_hashchange: true
     if (location.hash && endsWith(location.hash, "-ref")) {
       var topic = location.hash.substring(1, location.hash.length - "-ref".length);
       
-      $('.topic-h').removeClass('active');
+      $('h2').removeClass('active');
       $('.tag_box li').removeClass('active');
       
       $('#' + topic + "-ref").addClass('active');

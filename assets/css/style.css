@@ -73,19 +73,6 @@ html, body {
 }
 
 /* ========================================================================== */
-/* Articles (By Topic) Page */
-
-.topic-h small {
-  vertical-align: super;
-}
-
-.topic-h.active,
-h2.active,
-.tag_box .active a {
-  background-color: #85e01b; /* bright green */
-}
-
-/* ========================================================================== */
 /* Content Area */
 
 /* The white background content wrapper */
@@ -124,6 +111,15 @@ a.external {
 	 *         a good discussion of the issue. */
 	background: url(external.png) top right no-repeat;
 	padding-right: 13px;
+}
+
+/*
+ * Heading highlighting
+ * (Supported on About and Articles (By Topic) pages.)
+ */
+h2.active,
+.tag_box .active a {
+  background-color: #85e01b; /* bright green */
 }
 
 /* Image box */
