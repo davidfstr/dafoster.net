@@ -6,3 +6,6 @@ Thumbs.db
 
 # OS X
 .DS_Store
+
+# RVM
+.rvmrc

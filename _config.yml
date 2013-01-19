@@ -48,7 +48,11 @@ rdiscount:
   #   * (for more options, see rdiscount.rb in the RDiscount source)
   #   * (for unimplemented options, see http://www.pell.portland.or.us/~orc/Code/discount/)
   #     - MKD_EXTRA_FOOTNOTE - Enable PHP Markdown Extra-style footnotes.  
-  extensions: [smart]
+  extensions:
+    - smart
+    # Requires custom fork of RDiscount until the upstream maintainer
+    # merges the changes: https://github.com/davidfstr/rdiscount
+    - footnotes
 
 # Enable code highlighting with Pygments.
 # 
