@@ -6,7 +6,7 @@ breadcrumbs: []
 <h1>{{ page.title }}</h1>
 
 My name is [David Foster]. On this site you will find [articles] I've written
-and [projects] I'm working on.
+and [projects] I've done.
 
 Much information related to my activities prior to 2010 can also be found on 
 my [old site].
