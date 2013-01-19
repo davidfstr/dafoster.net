@@ -3,6 +3,17 @@ html, body {
   background-color: #f9f8f4;  /* airy gray */
 }
 
+/*
+ * Force vertical scrollbars on all pages.
+ * 
+ * If this is not done, the vertical scrollbar will appear on most (long)
+ * pages, but not short pages. The scrollbar's presence affects the horizontal
+ * centering of the layout, so having it sometimes visible and sometimes not
+ * makes the content appear to jump left on long pages and jump right on short
+ * pages.
+ */
+html { overflow-y: scroll }
+
 /* ========================================================================== */
 /* Navigation */
 
