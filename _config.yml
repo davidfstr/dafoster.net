@@ -110,7 +110,7 @@ JB:
   # Some JB helpers refer to these paths; change them here if needed.
   archive_path: /articles/
   categories_path: /404.html
-  tags_path: /articles/tags/
+  tags_path: /articles/topics/
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.

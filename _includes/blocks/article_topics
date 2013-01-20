@@ -13,7 +13,7 @@
         {% endif %}
       {% endfor %}
       
-      <li id="{{ tag }}-topic"{% if page_has_tag %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+      <li id="{{ tag }}-topic"{% if page_has_tag %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
     {% endfor %}
   </ul>
 </div>

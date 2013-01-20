@@ -10,7 +10,7 @@ breadcrumbs: [/, /articles/]
       <span class="tag_box inline">
         {% assign tags_list = page.tags %}
         {% for tag in tags_list %} 
-          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
+          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></span>
         {% endfor %}
       </span>
     </div>

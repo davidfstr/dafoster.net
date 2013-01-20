@@ -10,7 +10,7 @@ include_jquery_hashchange: true
     <h1>{{ page.title }}</h1>
     
     {% for tag in site.tags %} 
-      <h2 id="{{ tag[0] }}-ref">{{ tag[0] }} <small>{{ tag[1].size }}</small></h2>
+      <h2 id="{{ tag[0] }}">{{ tag[0] }} <small>{{ tag[1].size }}</small></h2>
       <ul>
         {% assign post_list = tag[1] %}
         {% for post in post_list %}
@@ -26,19 +26,15 @@ include_jquery_hashchange: true
 </div>
 
 <script>
-  function endsWith(str, end) {
-    return str.substring(str.length - end.length) == end;
-  }
-  
   $(window).hashchange(function() {
-    // Highlight topic corresponding to current anchor (if specified)
-    if (location.hash && endsWith(location.hash, "-ref")) {
-      var topic = location.hash.substring(1, location.hash.length - "-ref".length);
+    // Highlight topic corresponding to current anchor
+    if (location.hash) {
+      var topic = location.hash.substring(1, location.hash.length);
       
       $('h2').removeClass('active');
       $('.tag_box li').removeClass('active');
       
-      $('#' + topic + "-ref").addClass('active');
+      $('#' + topic).addClass('active');
       $('#' + topic + "-topic").addClass('active');
     }
   });
