@@ -1,0 +1,208 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Skills</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<h1>Skills</h1>
+
+<table id="toc" align="center">
+<tr>
+<td width="33%">
+<ul>
+	<li><a href="skills/#languages">Computer Languages</a>
+	<ul>
+		<li><a href="skills/#java">Java, C#</a></li>
+		<li><a href="skills/#c">C</a></li>
+		<li><a href="skills/#cpp">C++</a></li>
+		<li><a href="skills/#x86asm">x86 Assembly</a></li>
+		<li><a href="skills/#applescript">AppleScript</a></li>
+		<li><a href="skills/#hypertalk">HyperTalk</a></li>
+	</ul></li>
+</ul>
+</td>
+<td width="33%">
+<ul>
+	<li><a href="skills/#web">Web</a>
+	<ul>
+		<li><a href="skills/#htmlcss">HTML, CSS</a></li>
+		<li><a href="skills/#javascript">JavaScript</a></li>
+		<li><a href="skills/#drupal">Drupal</a></li>
+		<li><a href="skills/#mediawiki">MediaWiki</a></li>
+	</ul></li>
+</ul>
+</td>
+<td width="33%">
+<ul>
+    <li><a href="skills/#programs">Programs</a>
+	<ul>
+		<li><a href="skills/#eclipse">Eclipse</a></li>
+		<li><a href="skills/#word">Microsoft Word</a></li>
+	</ul></li>
+	<li><a href="skills/#tools">Tools</a>
+	<ul>
+		<li><a href="skills/#vcs">Subversion, CVS</a></li>
+		<li><a href="skills/#ant">Apache Ant</a></li>
+	</ul></li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+
+<a name="languages"></a>
+<h2>Computer Languages</h2>
+
+<a name="java"></a>
+<h3>Java, C#</h3>
+<p>
+Java is my native programming language and the language that nearly all of the projects
+featured on this site are written in. I know every syntactic construct (including some
+rather esoteric ones) and am quite adept at applying design patterns in this language. In
+addition I am very familiar with the structure of Java bytecode and the workings of the
+Java Virtual Machine. Most of my experience in this language was obtained by working
+on <a href="projects/decomp/">decomp4</a>, my <a href="projects/hotline/">Hotline client</a>, and my <a href="projects/kiss/">KiSS viewer</a>.
+</p>
+<p>
+In all important respects, I have found C# to have the same basic philosophy as Java,
+during my use of it at <a href="http://www.microsoft.com/" class="external">Microsoft</a>.
+</p>
+
+<a name="c"></a>
+<h3>C</h3>
+<p>
+C was the first "real" programming language that I learned, and I still make good use of 
+it when writing low level code for microcontrollers. I know every syntactic construct in 
+this language. My experience in this language comes from writing code for the 
+embedded systems in <a href="activities/#robotics">robots</a> and from my work on <a href="projects/refactorshop/">C Refactoring Workshop</a>.
+</p>
+
+<a name="cpp"></a>
+<h3>C++</h3>
+<p>
+I have been writing code in C++ almost as long as I have been using straight C. I avoid the use of 
+many of C++'s advanced features (such as the use of templates for <a href="http://en.wikipedia.org/wiki/Template_metaprogramming" class="external">template 
+metaprogramming</a>) because I think they are too easily abused. As a side effect of this 
+policy, there are a number of advanced C++ constructs that I am not familiar with (such 
+as the special <tt>*_cast</tt> operators). My experience in this language comes from the same 
+areas that I use C.
+</p>
+
+<a name="x86asm"></a>
+<h3>x86 Assembly</h3>
+<p>
+In the past I have written small programs in x86 assembly, just to see what was possible 
+with the bare metal of the machine. I am familiar with but not proficient in inline x86 
+assembly in C. My experience with this language comes from other instructors at 
+<a href="http://nccamp.com/" class="external">National Computer Camp</a>, extensive tinkering, and authoring a set of 33 instructional 
+worksheets for learning x86 assembly.
+</p>
+
+<a name="applescript"></a>
+<h3>AppleScript</h3>
+<p>
+AppleScript is a scripting language for Mac OS that allows you to control programs and 
+documents in order to automate repetitive tasks. It is heavily based on <a href="skills/#hypertalk">HyperTalk</a>, the 
+first language that I learned. Today I use AppleScript to create small programs that 
+automate tasks for me. My experience with this language comes from writing the 
+<a href="projects/gtprint/">GTPrint Printing Scripts</a>, writing small scripts to automate odd jobs, and from observing 
+parallels with the HyperTalk language.
+</p>
+
+<a name="hypertalk"></a>
+<h3>HyperTalk</h3>
+<p>
+HyperTalk is an old high-level scripting language used in Apple's <a href="http://en.wikipedia.org/wiki/HyperCard" class="external">HyperCard</a> program, 
+which is similar to Visual Basic. This is the first language that I ever used and also the 
+first language I mastered. I learned this language through extensive tinkering in my 
+copious free time when I was very young. My most significant project in this language 
+was my <a href="projects/dungeons/">Dungeons</a> game.
+</p>
+
+<a name="web"></a>
+<h2>Web</h2>
+
+<a name="htmlcss"></a>
+<h3>HTML, CSS</h3>
+<p>
+I have written and maintained several small websites by hand, including this website 
+and the <a href="http://gtacm.org/" class="external">GT ACM website</a>. This website is the first site that I have used CSS to do non-trivial 
+styling of pages.
+</p>
+
+<a name="javascript"></a>
+<h3>JavaScript</h3>
+<p>
+I am still learning this language. Recently (as of March 2008) I have started using 
+JavaScript to implement my own interactive web applications. My most significant use 
+of this language to date is in <a href="projects/netdraw/#webversion">NetDraw for the Web</a>.
+</p>
+
+<a name="drupal"></a>
+<h3>Drupal</h3>
+<p>
+<a href="http://www.drupal.org" class="external">Drupal</a> is a content management system run by several dynamic websites. I learned a 
+lot about this framework while building a new <a href="http://dafoster.net">personal website</a> that used it. Drupal is 
+excellent for community sites - especially those that require fine-grained access controls.
+</p>
+
+<a name="mediawiki"></a>
+<h3>MediaWiki</h3>
+<p>
+<a href="http://www.mediawiki.org" class="external">MediaWiki</a> is wiki software that is run by several well known sites, including Wikipedia. 
+I helped set up and subsequently upgrade a MediaWiki server for the <a href="activities/igvc/">RoboJackets</a> 
+robotics club. I am also one of the primary contributors to the <a href="http://wiki.robojackets.org/w/IGVC" class="external">RoboJackets IGVC wiki</a>.
+</p>
+
+<a name="programs"></a>
+<h2>Programs</h2>
+
+<a name="eclipse"></a>
+<h3>Eclipse</h3>
+<p>
+<a href="http://www.eclipse.org/" class="external">Eclipse</a> is my favorite Java IDE. I have used it in numerous projects to date.
+</p>
+
+<a name="word"></a>
+<h3>Microsoft Word</h3>
+<p>
+I have used several of Word's more advanced features (such as styles and templates) 
+when I authored a set of instructional worksheets for learning x86 assembly at <a href="http://nccamp.com/" class="external">National Computer Camps</a>.
+</p>
+
+<a name="tools"></a>
+<h2>Tools</h2>
+
+<a name="vcs"></a>
+<h3>Subversion, CVS</h3>
+<p>
+I have used both the <a href="http://subversion.tigris.org/" class="external">Subversion</a> and <a href="http://en.wikipedia.org/wiki/Concurrent_Versions_System" class="external">CVS</a> <a href="http://en.wikipedia.org/wiki/Version_control_system" class="external">version control systems</a> in several of my 
+projects. Additionally I have experience in setting up repositories for both systems and 
+migrating history from CVS to Subversion repositories.
+</p>
+
+<a name="ant"></a>
+<h3>Apache Ant</h3>
+<p>
+I have written <a href="http://ant.apache.org/" class="external">Ant</a> buildfiles for several group projects while studying at Georgia Tech. I 
+have also worked with custom Ant tasks before.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

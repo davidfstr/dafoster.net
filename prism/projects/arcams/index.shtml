@@ -1,0 +1,83 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>ARCAMS</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="otherIcon" src="projects/images/arcams.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>ARCAMS</li>
+</ul>
+</div>
+
+<h1>ARCAMS</h1>
+<p>
+<b>ARCAMS (Autonomous Robot Control and 
+Monitoring System)</b> is a graphical program for 
+collecting data from, monitoring, controlling, and 
+programming the US FIRST robot of the <a href="activities/geargrinders/">Gear Grinders</a> 
+robotics team. This project has about <b>6,200</b> lines of code.
+</p>
+
+<a name="features"></a>
+<h2>Features</h2>
+<p>
+One of the most impressive parts of this program is a custom <b>graph widget</b> that I wrote 
+which can display one or more scatterplots at the same time. Displayed scatterplots 
+need not have the same X and Y axes. For example you could display graphs of (1) the 
+PWM signal being sent to the wheel versus time and (2) the main battery voltage versus 
+time simultaneously. In that example there would be two Y axes (PWM and Volts) and 
+one X axis (seconds).
+</p>
+<p>
+Another useful feature of this program is its <b>unit conversion system</b>. This allows 
+commands (e.g., <tt>move body forward 3 feet</tt>) to be specified in whatever units the 
+user feels most comfortable with. Quantities are automatically converted to use the 
+robot's native units (e.g., wheel encoder ticks).
+</p>
+
+<a name="screenshots"></a>
+<h2>Screenshots</h2>
+<center>
+<div class="thumb" style="width:425px">
+	<a href="projects/arcams/images/graphWidget.png">
+		<img src="projects/arcams/images/graphWidget-thumb.png" width="425" height="291"
+			alt="The ARCAM graph widget">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/arcams/images/graphWidget.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		Custom graph widget that is capable of display multiple scatterplots at the same
+		time. The widget supports displaying multiple X and Y axes as needed, depending 
+		on which channels are selected.
+	</div>
+</div>
+</center>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

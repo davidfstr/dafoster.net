@@ -1,0 +1,78 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Sametime Client</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="networkingIcon" src="projects/images/chatBubbles.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>Sametime Client</li>
+</ul>
+</div>
+
+<h1>Sametime Client</h1>
+<p>
+<b>com.air2web.im.service.sametime</b> is a highly scalable 
+<a href="http://en.wikipedia.org/wiki/IBM_Lotus_Sametime" class="external">Sametime</a> client implementation. This library was 
+developed for <a href="http://www.air2web.com/" class="external">Air2Web's</a> <a href="http://www.air2web.com/2IMWirelessIM.html" class="external">2IM enterprise instant messaging 
+server</a> during the summer of 2007 and consists of about 
+<b>12,000</b> lines of code.
+</p>
+<p>
+The key feature of this library is its <b>scalability</b> to 
+thousands of simultaneous client connections. This 
+scalability was achieved by writing a NIO socket 
+abstraction that internally multiplexed communications of 
+multiple conceptual sockets over the same NIO channel. 
+Most of the NIO socket abstraction was written by Josh 
+Miers at Air2Web, but I had to work with and debug the 
+abstraction extensively.
+</p>
+
+<a name="features"></a>
+<h2>Features</h2>
+Notable features of this program include:
+<ul>
+	<li><b>scalability</b> to thousands of concurrent connections</li>
+	<li><b>encrypted connections</b> with the 40- and 128-bit <a href="http://en.wikipedia.org/wiki/RC2" class="external">RC2 block cipher</a></li>
+	<li><b>multiple connection types</b> including:
+	<ul>
+		<li>Sametime direct connections</li>
+		<li>HTTP direct connections</li>
+		<li>HTTP proxy connections</li>
+		<li>HTTPS proxy connections</li>
+	</ul></li>
+</ul>
+
+Other features include:
+<ul>
+	<li>conferences (i.e. user chat)</li>
+	<li>instant messages</li>
+	<li>user lookup by credentials</li>
+	<li>buddy list storage + buddy presence awareness</li>
+</ul>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

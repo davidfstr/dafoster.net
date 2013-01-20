@@ -1,0 +1,79 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>KiSSManager2</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="otherIcon" src="projects/images/kiss.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>KiSSManager2</li>
+</ul>
+</div>
+
+<h1>KiSSManager2</h1>
+<p>
+<b>KiSSManager2</b> is a viewer for virtual "paper dolls" created 
+in the <a href="http://en.wikipedia.org/wiki/Kisekae_Set_System" class="external">Kisekae Set System (KiSS)</a>. I originally developed this 
+program to try my hand at a sprite animation system (with an 
+integrated scripting language). This program consists of 
+<b>5,500</b> lines of code (LOC).
+</p>
+
+<a name="features"></a>
+<h2>Features</h2>
+This program supports:
+<ul>
+	<li>dragging cells (sprites) of several formats:
+	<ul>
+		<li>4-bit and 8-bit standard cells</li>
+		<li><b>KiSS/GS1-4</b> cells</li>
+		<li>32-bit <b>CherryKiSS</b> cells</li>
+		<li>cells that specify a custom palette</li>
+	</ul></li>
+	<li>FrenchKiSS (<b>FKiSS</b>) 1, 2, and 2.1 scripting support
+	<ul>
+		<li>detailed error/warning reporting</li>
+	</ul></li>
+	<li>playing WAV and MIDI files</li>
+</ul>
+<p>
+FKiSS 4 support was planned and partially implemented but never completed.
+</p>
+
+<a name="versions"></a>
+<h2>Versions</h2>
+Previous major versions of this project include:
+<ul>
+	<li><b>KiSSManager</b> (~2,100 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>KiSSSprites</b> (~2,400 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>KiSSViewer</b></li>
+</ul>
+<p>
+The very first version of this program, <b>KiSSViewer</b>, was originally written in C. All 
+other versions are in Java.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

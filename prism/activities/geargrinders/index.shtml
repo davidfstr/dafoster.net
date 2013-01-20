@@ -1,0 +1,72 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Gear Grinders</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="activities/">Activities</a></li>
+	<li>Gear Grinders</li>
+</ul>
+</div>
+
+<div class="tright">
+	<img src="activities/geargrinders/images/geargrindersLogo.png" width="155" height="160" alt="Gear Grinders logo" title="The a simplified version of the official Gear Grinders logo">
+</div>
+<div class="tright" style="width:155px;"><center>
+	<img src="activities/images/firstLogo.png" width="128" height="128" alt="US FIRST logo" title="The official US FIRST logo">
+</center></div>
+
+<h1>Gear Grinders</h1>
+<p>
+During my junior year of high school, I joined the newly-formed 
+robotics team called <a href="http://www.geargrinders.net/" class="external">Gear Grinders</a> and went on to 
+participate in the 2004 and 2005 <a href="http://www.usfirst.org/" class="external">US FIRST Robotics 
+Competition</a>. The game for the 2004 year was <a href="http://en.wikipedia.org/wiki/FIRST_Frenzy:_Raising_the_Bar" class="external">FIRST 
+Frenzy</a> and the game for the 2005 year was <a href="http://en.wikipedia.org/wiki/Triple_Play_%28FIRST%29" class="external">Triple Play</a>.
+</p>
+<p>
+Being the <b>lead programmer</b> (during both years), I was 
+responsible for programming our robot to interface with its 
+hardware, drive in manual mode, and to behave intelligently 
+when in autonomous mode.
+</p>
+
+My main activities during the build season were:
+<ul>
+	<li>
+		writing a <b>hardware abstraction layer</b> so that we could
+		run our robot's code on either the <a href="http://www.ifirobotics.com/edu-rc.shtml" class="external">EDU robot controller</a> or
+		the full-size <a href="http://www.ifirobotics.com/rc.shtml" class="external">FRC robot controller</a> without modification
+	</li>
+	<li>
+		developing the <a href="projects/arcams/">Autonomous Robot Control and
+		Monitoring System (ARCAMS)</a>, a system for 
+		<b>visualizing sensor data</b> and programming the robot at a
+		high level
+	</li>
+	<li>
+		<b>rewriting the base code</b> that FIRST provided us to 
+		be more robust
+	</li>
+</ul>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

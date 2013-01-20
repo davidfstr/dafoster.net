@@ -1,0 +1,7 @@
+# Enable server side includes (shtml)
+Options +IncludesNOEXEC
+AddType text/html .shtml
+AddOutputFilter INCLUDES .shtml
+
+# Make sure to look for index.shtml if it exists
+DirectoryIndex index.html index.shtml index.php

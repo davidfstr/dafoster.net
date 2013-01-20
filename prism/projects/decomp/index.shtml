@@ -1,0 +1,122 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>decomp4</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="softwareDevelopmentIcon" src="projects/images/javaClassToSource.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>decomp4</li>
+</ul>
+</div>
+
+<h1>decomp4</h1>
+<p>
+<b>decomp4</b> is a full-featured Java <a href="projects/decomp/decompiler/">decompiler</a> <sup><a href="projects/decomp/decompiler/" style="text-decoration:none;">(what's this?)</a></sup> that I 
+developed over a period of three years between high school 
+and college. This is the largest codebase that I have written 
+from scratch, consisting of over <b>50,000</b> lines of code.
+</p>
+<p>
+This project really solidified my understanding of the Java language. Not only did I 
+end up reading the <a href="http://java.sun.com/docs/books/jls/" class="external">Java Language Specification</a> and <a href="http://java.sun.com/docs/books/jvms/" class="external">Java Virtual Machine Specification</a> 
+from cover to cover, I also had to learn several new practices to deal 
+with a such a large codebase.
+</p>
+<p>
+As of February 19, 2005, decomp4 is able to successfully decompile <b>99.68%</b> of the 
+6949 classes in the Java 2 Platform Standard Edition v1.4.1.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="projects/decomp/#features">Features</a></li>
+<li><a href="projects/decomp/#versions">Versions</a></li>
+<li><a href="projects/decomp/#papers">Papers</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="features"></a>
+<h2>Features</h2>
+Features include:
+<ul>
+	<li>support for all simple Java language constructs</li>
+	<li>support for <tt>synchronized</tt> blocks</li>
+	<li>support for <tt>try</tt>-<tt>catch</tt>-<tt>finally</tt> blocks</li>
+	<li>advanced type inference</li>
+	<li>advanced control flow analysis</li>
+</ul>
+
+Notable non-supported constructs (mostly from Java 1.5+) include:
+<ul>
+	<li>nested classes</li>
+	<li>generics</li>
+	<li>auto-boxing/unboxing</li>
+	<li>enhanced <tt>for</tt> loops</li>
+	<li>enum and annotation types</li>
+	<li>annotations</li>
+</ul>
+
+<a name="versions"></a>
+<h2>Versions</h2>
+Previous major versions of this project include:
+<ul>
+	<li><b>decomp3</b> (~44,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>decomp2</b> (~19,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>decomp</b> (a throwaway prototype)</li>
+</ul>
+
+<a name="papers"></a>
+<h2>Papers</h2>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="projects/decomp/papers/Decompiling%20Java-Part I.pdf">
+			<img src="projects/decomp/images/pdfDoc.png" width="45" height="45" alt=""></a>
+		</td>
+		<td>
+			Download 
+			<a href="projects/decomp/papers/Decompiling%20Java-Part I.pdf"><b>How can Java .class files be decompiled?</b></a><br>
+			<i>This paper was submitted to the Georgia Science and Engineering Fair (GSEF) in 2004.</i>
+		</td>
+	</tr>
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="projects/decomp/papers/Decompiling%20Java-Part II.pdf">
+			<img src="projects/decomp/images/pdfDoc.png" width="45" height="45" alt=""></a>
+		</td>
+		<td>
+			Download 
+			<a href="projects/decomp/papers/Decompiling%20Java-Part II.pdf"><b>Decompiling Java, Part II: Control Flow</b></a><br>
+			<i>This paper was submitted to the Intel International Science and Engineering Fair (ISEF) in 2005.</i>
+		</td>
+	</tr>
+</table>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

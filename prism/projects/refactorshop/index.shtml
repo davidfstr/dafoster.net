@@ -1,0 +1,69 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>C Refactoring Workshop</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="softwareDevelopmentIcon" src="projects/images/refactoring.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>C Refactoring Workshop</li>
+</ul>
+</div>
+
+<h1>C Refactoring Workshop</h1>
+<p>
+<b>C Refactoring Workshop</b> is a tool for automatically 
+performing <a href="http://en.wikipedia.org/wiki/Refactoring" class="external">refactorings</a> on C source code. I originally developed 
+this program to assist in improving the code of 
+the <a href="http://www.intercept.com/html_files/products/pantheon/pantheon_main.htm" class="external">Pantheon</a> project for <a href="http://www.intercept.com/" class="external">Intercept Technologies</a>. The tool 
+itself is written in Java and consists of about <b>12,000</b> lines 
+of code.
+</p>
+<p>
+Working on this project significantly enhanced my knowledge of the C language. Since this 
+program's primary function is to make changes to C source code (without changing the 
+observable behavior), I had to become very familar with the C grammar, which I 
+obtained by reading the <a href="http://www.open-std.org/JTC1/SC22/WG14/www/docs/n1256.pdf" class="external">C99 Language Specification (ISO-IEC 9899)</a>.
+</p>
+
+<h2>Features</h2>
+Notable features of this program include:
+<ul>
+	<li><b>linear time</b> refactorings (with respect to the number of files modified)</li>
+	<li><b>renaming multiple identifiers</b> simultaneously with Java regular expressions
+	<ul>
+		<li>
+			To rename identifiers of the form <tt>*_structure_type</tt> to <tt>*_t</tt>, type: <br>
+			<tt>refactor renameFamily identifier regex (.*)_structure_type $1_t</tt>
+		</li>
+	</ul></li>
+	<li><b>preview/confirmation</b> of refactoring changes</li>
+	<li>ability to print forward and reverse <b>call trees</b> of functions</li>
+	<li>locate all occurrences of a reference (e.g. an identifer)</li>
+	<li>list the names of all references whose name matches a specified regular expression</li>
+</ul>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

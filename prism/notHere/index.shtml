@@ -1,0 +1,28 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Under Construction</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<h1>Under Construction</h1>
+This page is currently under construction. Check back later.
+<div style="text-align:center;"><img src="notHere/images/underConstruction.gif" alt=""></div>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>David Foster - About Me</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+<h1>About Me</h1>
+<div class="thumb tright" style="width:151px">
+	<a href="images/DavidFosterHead.jpg">
+		<img src="images/DavidFoster2009-thumb.jpg" width="149" height="199" 
+			alt="A picture of David Foster">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="images/DavidFoster2009.jpg">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		A picture of me
+	</div>
+</div>
+<p>
+My name is <b>David Foster</b> and I'm a recent 
+graduate of <a href="http://www.gatech.edu/" class="external">Georgia Tech</a> looking for interesting
+projects to take on.
+</p>
+<p>
+If you are a <b>Georgia Tech student</b>, then you will benefit most from the <a href="scripts/">scripts</a> posted on 
+this site. On the other hand if you are an <b>employer</b>, read on to learn about my 
+qualifications.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="#biography">Biography</a></li>
+<li><a href="#objective">Work Objectives</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#moreinfo">More Information</a></li>
+<li><a href="#contact">Contact Me</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="biography"></a>
+<h2>Biography</h2>
+<p>
+I initially discovered computers when I was 4 and starting programming them at 6. Since 
+then, programming has been one of my most enduring hobbies. Beyond that I enjoy 
+playing tennis, badminton, and pool; watching Japanese anime; reading; and learning 
+about spoken languages (as well as programming languages).
+</p>
+
+<a name="objective"></a>
+<h2>Work Objectives</h2>
+<p>
+I enjoy working on backends and infrastructure, the plumbing that keeps everything 
+working. In the past, networking and software development tools have proven to be the 
+most interesting specific domains.
+</p>
+<p>
+I am especially passionate about digital preservation (i.e. backup, archival, emulation, 
+virtualization, porting) and anime (i.e. distribution, playback, transcoding). I will be 
+thrilled to work on any project in these areas.
+</p>
+
+<a name="experience"></a>
+<h2>Experience</h2>
+<b>Personal Experience</b>
+<ul>
+	<li>started programming at age 6</li>
+	<li>can program in <a href="skills/#languages">many languages</a></li>
+	<li>programmed <a href="projects/"><b>numerous personal projects</b></a>
+	<ul>
+		<li>
+			developed a <a href="projects/decomp/">Java decompiler</a> (in Java) that supports most standard
+			Java-language constructs (including <tt>finally</tt> blocks)
+		</li>
+	</ul></li>
+	<li>worked with robots and embedded systems in <a href="activities/#robotics">robotics clubs</a></li>
+	<li>using my knowledge of algorithms to compete in <a href="activities/gtacm/#progteam">programming competitons</a>
+	<ul>
+		<li>Finalist at the <a href="/prism/activities/gtacm/#progteam">2008 ACM International Collegiate Programming Competition</a></li>
+	</ul></li>
+</ul>
+
+<b>Industry Experience</b>
+<ul>
+	<li><a href="http://www.microsoft.com/" class="external">Microsoft</a> (Nov 2009 &ndash; Present)
+	<ul>
+		<li>
+			Created a scalable system to validate all content published to 
+            <a href="http://windows.microsoft.com/" class="external">http://windows.microsoft.com/</a>
+		</li>
+	</ul></li>
+</ul>
+
+<ul>
+	<li><a href="http://www.google.com/" class="external">Google</a> (Summer 2008)
+	<ul>
+		<li>
+			Designed and implemented the layout system of a user interface designer 
+			program
+		</li>
+		<li>Developed a JavaScript drag and drop system</li>
+	</ul></li>
+</ul>
+
+<ul>
+	<li><a href="http://www.air2web.com/" class="external">Air2Web</a> (Summer 2007)
+	<ul>
+		<li>
+			Developed a <a href="projects/sametime/">scalable implementation</a> of the <a href="http://en.wikipedia.org/wiki/Sametime" class="external">Sametime</a> instant-messaging 
+			protocol that supports thousands of concurrent users
+		</li>
+		<li>Developed an XML-based tool for testing <a href="http://en.wikipedia.org/wiki/Short_message_peer-to-peer_protocol" class="external">SMPP</a> SMSC servers</li>
+	</ul></li>
+</ul>
+
+<ul>
+	<li><a href="http://www.intercept.com/" class="external">Intercept Technology Inc.</a> (Summer 2006)
+	<ul>
+		<li>Developed a <a href="projects/refactorshop/">C/C++ refactoring tool</a></li>
+	</ul></li>
+</ul>
+
+<ul>
+	<li><a href="http://nccamp.com/" class="external">National Computer Camps, Inc.</a> (Summers 2002, 2004-05)
+	<ul>
+		<li>
+			Authored a set of 33 instructional worksheets for learning
+			x86 Assembly language
+		</li>
+		<li>
+			Responsible for teaching campers how to write programs in
+			Java, C++, x86 Assembly, and BASIC
+		</li>
+	</ul></li>
+</ul>
+
+<a name="moreinfo"></a>
+<h2>More Information</h2>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="projects/">
+			<img src="common/images/nav/blueGear.png" width="50" height="50" alt=""></a>
+		</td>
+		<td>
+			<a href="projects/" class="navtext"><b>Projects</b></a>
+		</td>
+	</tr>
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="activities/">
+			<img src="common/images/nav/metalClock.png" width="50" height="50" alt=""></a>
+		</td>
+		<td>
+			<a href="activities/" class="navtext"><b>Activities</b></a>
+		</td>
+	</tr>
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="skills/">
+			<img src="common/images/nav/star.png" width="50" height="50" alt=""></a>
+		</td>
+		<td>
+			<a href="skills/" class="navtext"><b>Skills</b></a>
+		</td>
+	</tr>
+</table>
+
+<a name="contact"></a>
+<h2>Contact Me</h2>
+<p>
+<img src="images/mail.gif" width="24" height="24" style="vertical-align:middle; margin-right:5px;" alt="">Feel free to email me at <img src="images/email-address.gif" width="152" height="22" alt="&lt;david [DOT] foster [AT] gatech [DOT] edu&gt;" style="vertical-align:middle;">.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

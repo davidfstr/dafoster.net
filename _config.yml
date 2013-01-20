@@ -32,8 +32,13 @@ production_url: http://blog.dafoster.net
 # For more see: https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink: /articles/:categories/:year/:month/:day/:title/
 
-# Don't publish these files to the web. They aren't used by the site.
-exclude: ["README.md", "Rakefile"]
+# Don't publish these files to the web.
+exclude:
+    # Not used by the site.
+    - "README.md"
+    - "Rakefile"
+    # Processed by a separate tool.
+    - "prism"
 
 # Select and configure the Markdown engine. Not all are created equal.
 # 

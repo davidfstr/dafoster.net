@@ -1,0 +1,140 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>NetDraw</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="networkingIcon" src="projects/images/NetDraw.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>NetDraw</li>
+</ul>
+</div>
+
+<h1>NetDraw</h1>
+<p>
+NetDraw is a diagramming program that allows multiple 
+people to edit the same canvas simultaneously. This 
+program was developed as a project for my Software 
+Practicum class (CS 2335) at <a href="http://www.gatech.edu/" class="external">Georgia Tech</a>. NetDraw 
+consists of about <b>6,400</b> lines of code.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="projects/netdraw/#goals">Goals</a></li>
+<li><a href="projects/netdraw/#webversion">Web Version</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="goals"></a>
+<h2>Goals</h2>
+This project was interesting because of the two main conflicting goals it was designed to satisfy:
+<ul>
+	<li>responsiveness of drawing</li>
+	<li>determinism in the face of asynchronous concurrent modifications</li>
+</ul>
+
+<div class="thumb tright" style="width:169px">
+	<img src="projects/netdraw/images/layerSystem.png" width="169" height="149" 
+		alt="NetDraw layer system">
+	<div class="thumbcaption">
+		The <b>layer system</b> that 
+		NetDraw uses when displaying 
+		elements of the canvas. 
+	</div>
+</div>
+
+To ensure that all viewers of the canvas saw the same 
+canvas even though they could all make modifications 
+to it concurrently, I designed a clever <b>layer system</b> 
+for managing the drawing:
+<ul>
+	<li><b>Scratch Layer</b>
+	<ul>
+		<li>
+			shapes that the user is in the process of 
+			drawing appear here
+		</li>
+	</ul></li>
+	<li><b>Pending Layer</b>
+	<ul>
+		<li>
+			shapes that the user has finished drawing
+			but have not been confirmed by the canvas
+			server appear here
+		</li>
+	</ul></li>
+	<li><b>Confirmed Layer</b>
+	<ul>
+		<li>
+			shapes that the user has finished drawing
+			and that have been confirmed by the canvas
+			server appear here
+		</li>
+		<li>
+			the canvas server is responsible for
+			determining the final Z-order of
+			shapes drawn at the time by different clients
+		</li>
+	</ul></li>
+</ul>
+
+<p>
+Responsiveness is achieved because shapes that the 
+user draws are immediately displayed in the Scratch 
+and Pending layers. Determinism is achieved by 
+letting the canvas server determine the final Z-order 
+of drawn shapes, and then moving those shapes from 
+the Pending layer to the Confirmed layer.
+</p>
+
+<a name="webversion"></a>
+<h2>Web Version</h2>
+<p>
+I created a limited version of this program for <a href="http://developer.yahoo.com/hacku/" class="external">Yahoo! Hack Week</a> that runs in your web 
+browser as a <a href="skills/#javascript">JavaScript</a>-based application. It has fewer painting tools than the Java-based 
+version and does not currently support multiple users editing the same canvas.
+</p>
+<ul>
+	<li><a href="webapps/netdraw/"><b>NetDraw for the Web</b></a></li>
+</ul>
+<p>
+I wrote the JavaScript entirely by hand and incorporated the following <b>external 
+components</b>:
+</p>
+<ul>
+	<li><a href="http://www.walterzorn.com/jsgraphics/jsgraphics_e.htm" class="external">Walter Zorn's JS Vector Graphics Library</a></li>
+	<li><a href="http://developer.yahoo.com/yui/colorpicker/" class="external">YUI Color Picker</a></li>
+</ul>
+<p>
+Credits to Justin Whittle of Yahoo! Atlanta for bringing me up to speed in JavaScript so 
+fast.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

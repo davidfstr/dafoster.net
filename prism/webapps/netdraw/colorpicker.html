@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Example of Color Picker Built in a Dialog via JavaScript</title>
+
+<!-- YUI: Color Picker in Dialog -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/fonts/fonts-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/container/assets/skins/sam/container.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/colorpicker/assets/skins/sam/colorpicker.css"> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/utilities/utilities.js" ></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/container/container-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/slider/slider-min.js" ></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/colorpicker/colorpicker-min.js" ></script> 
+
+<style>
+	/*style for the server response field*/
+    #resp { font-family:courier;margin:10px;padding:5px;border:1px solid #ccc;background:#fff;}
+</style>
+
+</head>
+
+<body class="yui-skin-sam">
+
+<!--BEGIN SOURCE CODE FOR EXAMPLE =============================== -->
+
+<script type="text/javascript">
+
+//create a namespace object in the example namespace:
+var NetDraw = {};
+
+//create a new object for this module:
+NetDraw.colorpicker = {
+	//In our initialization function, we'll create the dialog;
+	//in its render event, we'll create our Color Picker instance.
+	init: function() {
+
+		// Instantiate the Dialog
+		this.dialog = new YAHOO.widget.Dialog("yui-picker-panel", { 
+			width : "500px",
+			close: true,
+			fixedcenter : true,
+			visible : false, 
+			constraintoviewport : true,
+			buttons : [ { text:"Submit", handler:this.handleSubmit, isDefault:true },
+						{ text:"Cancel", handler:this.handleCancel } ]
+		});
+
+		// Once the Dialog renders, we want to create our Color Picker instance.
+		this.dialog.renderEvent.subscribe(function() {
+			//make sure that we haven't already created our Color Picker
+			if (this.picker) return;
+			
+			this.picker = new YAHOO.widget.ColorPicker("yui-picker", {
+				container: this.dialog,
+				images: {
+					PICKER_THUMB: "extern/colorpicker/picker_thumb.png",
+					HUE_THUMB: "extern/colorpicker/hue_thumb.png"
+				},
+				//Here are some other configurations we could use for our Picker:
+				//showcontrols: false,  // default is true, false hides the entire set of controls
+				showhexcontrols: true, // default is false
+				showhsvcontrols: true  // default is false
+			});
+
+			// Listen for changes to the picker's current RGB value
+			this.picker.on("rgbChange", function(o) {
+				alert("DEBUG: rgbChange");
+			});
+		});	
+		
+		// If we wanted to do form validation on our Dialog, this
+		// is where we'd do it.  Remember to return true if validation
+		// passes; otherwise, your Dialog's submit method won't submit.
+		this.dialog.validate = function() {
+			return true;
+		};
+		
+		// We're all set up with our Dialog's configurations;
+		// now, render the Dialog
+		this.dialog.render();
+		
+		// We can wrap up initialization by wiring all of the buttons in our
+		// button dashboard to selectively show and hide parts of the
+		// Color Picker interface.
+		// YAHOO.util.Event.onAvailable is the standard Dom event attachment
+		// method:
+		YAHOO.util.Event.on("showbtn", "click", this.dialog.show, this.dialog, true);
+		YAHOO.util.Event.on("hidebtn", "click", this.dialog.hide, this.dialog, true);
+
+	},
+	
+	handleSubmit: function() {
+		alert("DEBUG: handleSubmit");
+	},
+
+	handleCancel: function() {
+		this.cancel();
+	}
+};
+
+// The earliest safe moment to instantiate a Dialog (or any
+// Container element is onDOMReady; we'll initialize then:
+YAHOO.util.Event.onDOMReady(NetDraw.colorpicker.init, NetDraw.colorpicker, true);
+
+</script>
+
+<!--begin Color Picker configuration dashboard: -->
+<div>
+  <button id="showbtn">Show Color Picker</button> 
+  <button id="hidebtn">Hide Color Picker</button>
+</div>
+
+<!--begin Dialog markup in standard module format-->
+<div id="yui-picker-panel" class="yui-picker-panel" style="visibility: hidden;">
+	<div class="hd">Please choose a color:</div>
+	<div class="bd">
+		<form name="yui-picker-form" id="yui-picker-form" method="post" action="assets/post.php">
+		<div class="yui-picker" id="yui-picker"></div>
+		</form>
+	</div>
+	<div class="ft"></div>
+</div>
+
+<!--END SOURCE CODE FOR EXAMPLE =============================== -->
+
+</body>
+</html>

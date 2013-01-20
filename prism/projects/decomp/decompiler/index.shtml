@@ -1,0 +1,48 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>What is a Decompiler?</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li><a href="projects/decomp/">decomp4</a></li>
+	<li>What is a Decompiler?</li>
+</ul>
+</div>
+
+<h1>What is a Decompiler?</h1>
+<p>
+A <b>decompiler</b> is a computer program which analyzes the behavior of other programs 
+and outputs <i>source code</i> that describes it.
+</p>
+<p>
+Another way of looking at what a decompiler does is to imagine a language translater. 
+Just like a human translater can convert German texts to English, a Java decompiler can 
+convert the <i>bytecode</i> of a Java program to <i>source code</i>.
+</p>
+<center>
+<img src="projects/decomp/decompiler/images/bytecodeToSource.png" width="449" height="449" 
+	alt="Bytecode <-> Source Code"
+	title="Source code is normally compiled into bytecode by a compiler. A decompiler decompiles bytecode back to the original source code.">
+</center>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

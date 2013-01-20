@@ -1,0 +1,122 @@
+/* NAVIGATION
+ *
+ * Based on code found at:
+ *     http://css.maxdesign.com.au/listamatic2/vertical02.htm
+ */
+
+#navcontainer {
+	/* define overall width of nav-list */
+	width: 14em;
+}
+
+#navcontainer {
+	/* strong border around the rest of the list, joining the strong horiz dividers */
+	border-top: 2px solid #606060;
+	border-left: 2px solid #606060;
+	border-right: 2px solid #606060;
+}
+#navcontainer ul li {
+	/* strong horizontal divider between items */
+	border-top: 0;
+	border-bottom: 2px solid #606060;
+}
+#navcontainer ul ul li {
+	/* subtle horizontal divider between subitems within a single item */
+	border-top: 1px solid #999999;
+	border-bottom: 0;
+}
+
+#navcontainer ul
+{
+	/* eliminate margin above the top-edge */
+	/* IE/Mac: prevent left cell edge of subitems from indenting */
+	margin: 0;
+	padding: 0;
+	/* suppress display of list bullets */
+	list-style-type: none;
+}
+
+#navcontainer .navitem {
+	/* items/subitems: set the font of page captions */
+	/* IE/Mac: ignores this when in quirks mode; obeys in strict mode */
+	font: bold 14px Arial, sans-serif;
+	/* items/subitems: text color */
+	color: #000;
+	/* items/subitems: no underline */
+	text-decoration: none;
+}
+
+#navcontainer ul .navitem
+{
+	display: block;
+	/* items: normal background color */
+	background-color: #cccccc;
+}
+
+#navcontainer ul .navitem:hover
+{
+	/* items: hover background color */
+	background-color: #DDD;
+}
+
+#navcontainer ul ul .navitem
+{
+	display: block;
+	/* subitems: normal background color */
+	background-color: #a8a8a8;
+}
+
+#navcontainer ul ul .navitem:hover
+{
+	/* subitems: hover background color */
+	background-color: #bfbfbf;
+}
+
+/*
+ * Defines the background images and padding for every item in the nav-list manually
+ * 
+ * -------------------------------------------------
+ * |                     5px                       |
+ * -------------------------------------------------
+ * | 10px/45px | 50px x 50px [Icon] | 5px | [Text] |
+ * -------------------------------------------------
+ * |                     5px                       |
+ * -------------------------------------------------
+ * 
+ */
+.navlev1 {
+	padding-left: 65px !important;  /* 10 + 50 + 5 */
+}
+.navlev2 {
+	padding-left: 110px !important;  /* 45 + 50 + 5 */
+}
+.navitem {
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	height: 50px !important;        /* 50 */
+	/* XXX: disallows multi-line anchor text */
+	/* XXX: text does not stay vertically aligned if zoom is increased */
+	line-height: 50px !important;	/* centers the text vertically */
+}
+
+/* Level 1 - Background Images */
+#nav-about {
+	background: url(images/nav/stickFigure.png) 10px center no-repeat;
+}
+#nav-scripts {
+	background: url(images/nav/scriptsIcon.png) 10px center no-repeat;
+}
+#nav-wiki {
+	background: url(images/nav/knowledgeBaseWikiIcon.png) 10px center no-repeat;
+}
+
+/* Level 2 - Background Images */
+#nav-projects {
+	background: url(images/nav/blueGear.png) 45px center no-repeat;
+}
+#nav-activities {
+	background: url(images/nav/metalClock.png) 45px center no-repeat;
+}
+#nav-skills {
+	background: url(images/nav/star.png) 45px center no-repeat;
+}

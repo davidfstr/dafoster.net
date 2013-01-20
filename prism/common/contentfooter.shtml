@@ -1,0 +1,3 @@
+<center>
+	<i>This page last modified <!--#config timefmt="%B %e, %Y" --><!--#echo var="LAST_MODIFIED" --></i>
+</center>

@@ -1,0 +1,58 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>GTPrint Printing Scripts</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="otherIcon" src="projects/images/printingScripts.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>GTPrint Printing Scripts</li>
+</ul>
+</div>
+
+<h1>GTPrint Printing Scripts</h1>
+<p>
+The <b>GTPrint Printing Scripts</b> are a set of shell scripts 
+and <a href="http://www.apple.com/applescript/" class="external">AppleScripts</a> that allow you print to the printers in 
+the <a href="http://www.gatech.edu/" class="external">Georgia Tech</a> library, student center, and Central 
+Printing service from the Mac OS X print dialog. The 
+GTPrint Scripts consist of about <b>500</b> lines of code.
+</p>
+
+Working on this project taught me a lot about:
+<ul>
+	<li>how Mac OS X's PDF Services mechanism works,</li>
+	<li>how to write advanced AppleScripts, and</li>
+	<li>how to build a Mac OS X installer.</li>
+</ul>
+
+<a name="download"></a>
+<h2>Download</h2>
+<p>
+This set of scripts can be downloaded from the <a href="scripts/"><b>Scripts</b></a> page.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

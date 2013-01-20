@@ -1,0 +1,204 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>MULE</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="gameIcon" src="projects/images/mule.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>MULE</li>
+</ul>
+</div>
+
+<h1>MULE</h1>
+<p>
+<b>MULE</b> is a remake of an <a href="http://en.wikipedia.org/wiki/M.U.L.E." class="external">old Atari game</a> of the same name 
+that has been extended to support multiplayer games over 
+a network. This program was developed as the final project 
+for my Software Practicum class (CS 2335) at <a href="http://www.gatech.edu/" class="external">Georgia 
+Tech</a>. MULE consists of about <b>24,000</b> lines of code.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="projects/mule/#features">Features</a></li>
+<li><a href="projects/mule/#screenshots">Screenshots</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="features"></a>
+<h2>Features</h2>
+Notable features of this program include:
+<ul>
+	<li>a custom <b>windowing toolkit</b></li>
+	<li>a <b>scalable networking protocol</b>
+	<ul>
+		<li>
+			a MULE server does <i>not</i> route traffic between clients in a game
+		</li>
+		<li>
+			the creator of a game is designated as the <i>host</i> of that game
+		</li>
+		<li>
+			all other players that join a game connect to
+			the host of that game directly (instead of loading
+			down the server)
+		</li>
+	</ul></li>
+	<li>custom <b>map editor</b></li>
+	<li>
+		an <b>auctioning system</b> in which multiple players can bid on a commodity
+	</li>
+</ul>
+
+<a name="screenshots"></a>
+<h2>Screenshots</h2>
+<center>
+<table>
+<tr>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/mainGameScreen.png">
+		<img src="projects/mule/images/mainGameScreen-thumb.png" width="191" height="144"
+			alt="The main game screen">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/mainGameScreen.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The <b>main game screen</b>. The player 
+		can move around the board, buy 
+		MULEs from the store at the center 
+		tile, and place them on owned plots.
+	</div>
+</div>
+</td>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/playerEvent.png">
+		<img src="projects/mule/images/playerEvent-thumb.png" width="191" height="128"
+			alt="A player event">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/playerEvent.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		A notification of a <b>player event</b>, 
+		which is a special event that occurs 
+		to a player. Notice the <b>acknowledgment 
+		widget</b> displaying the 
+		players who've pressed OK.
+	</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/playerSetupScreen.png">
+		<img src="projects/mule/images/playerSetupScreen-thumb.png" width="192" height="145"
+			alt="The player setup screen">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/playerSetupScreen.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The <b>player setup screen</b>, which is 
+		where the host waits for other 
+		players to join their game.
+	</div>
+</div>
+</td>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/turnSummaryScreen.png">
+		<img src="projects/mule/images/turnSummaryScreen-thumb.png" width="178" height="134"
+			alt="The turn summary screen">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/turnSummaryScreen.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The <b>turn summary screen</b>, which 
+		displays every player's score and 
+		assets at the end of every turn.
+	</div>
+</div>
+</td>
+</tr>
+<tr>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/serverLobby.png">
+		<img src="projects/mule/images/serverLobby-thumb.png" width="192" height="145"
+			alt="The server lobby">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/serverLobby.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The <b>server lobby</b>, which is where 
+		players look for games to join and 
+		can chat with other players.
+	</div>
+</div>
+</td>
+<td>
+<div class="thumb" style="width:192px;">
+	<a href="projects/mule/images/mapEditor.png">
+		<img src="projects/mule/images/mapEditor-thumb.png" width="163" height="145"
+			alt="The map editor">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/mule/images/mapEditor.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The <b>map editor</b>. The terrain type of 
+		a tile can be changed by clicking on 
+		it repeatedly.
+	</div>
+</div>
+</td>
+</tr>
+</table>
+</center>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

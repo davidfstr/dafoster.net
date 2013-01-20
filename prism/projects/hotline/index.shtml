@@ -1,0 +1,96 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>HotlineProject</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="networkingIcon" src="projects/images/bigRedH.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>HotlineProject</li>
+</ul>
+</div>
+
+<h1>HotlineProject</h1>
+<p>
+<b>HotlineProject</b> is a client implementation of the relatively 
+complex <a href="http://en.wikipedia.org/wiki/Hotline_Communications" class="external">Hotline Connect</a> client-server protocol. The codebase 
+of this project consists of about <b>16,000</b> lines of code (LOC).
+</p>
+<p>
+This has been my most challenging networking protocol 
+implementation to date. During the course of this project, I 
+taught myself and used design patterns and the technique of 
+refactoring. Most software developers learn these techniques 
+through college or the work force; I learned them on my own at 
+the beginning of high school.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="projects/hotline/#features">Features</a></li>
+<li><a href="projects/hotline/#versions">Versions</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="features"></a>
+<h2>Features</h2>
+This protocol provides a multitude of services to its clients:
+<ul>
+	<li>file/directory transfer (with resume support)</li>
+	<li>user chat</li>
+	<li>private messages</li>
+	<li>message broadcasts</li>
+	<li>threaded newsgroups</li>
+	<li>user permissions</li>
+	<li>simultaneous asynchronous requests</li>
+</ul>
+
+My client additionally sports the following unique features:
+<ul>
+	<li>the ability to browse previously visited Hotline servers offline</li>
+	<li>a command-line interface to complement the graphical interface</li>
+	<li>extended server bookmarks that store extra information, such as:
+	<ul>
+		<li>what trackers the server is on</li>
+		<li>the time that the server was last seen (on a tracker)</li>
+		<li>the server's tracker description</li>
+	</ul></li>
+</ul>
+
+<a name="versions"></a>
+<h2>Versions</h2>
+Previous major versions of this project include:
+<ul>
+	<li><b>HLToolkit</b> (<b>hlc</b>, <b>hlp</b>, <b>hlt</b>, <b>hlcVisual</b>) (~11,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>HLClient3</b> (~11,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>HLClient2</b> (~6,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+	<li><b>HotlineClient</b> (~3,000 <acronym title="lines of code" class="spell">LOC</acronym>)</li>
+</ul>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

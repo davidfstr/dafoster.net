@@ -1,0 +1,243 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Projects</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+<style type="text/css">
+
+table.categorySection {
+	border-top: 1px solid #bfbfbf;
+	border-left: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	
+	/* IE6+7/XP: ignores this - see the line below for a workaround */
+	border-spacing: 0px;
+	/* IE6+7/XP: forces 'border-spacing: 0px' */
+	border-collapse: collapse;
+	
+	/* IE6/XP: force obeying of the 'width' attribute of the first cell (td) */
+	table-layout: fixed;
+}
+.categorySection h2 {
+	padding: 0;
+	margin: 0;
+}
+.categorySection tr td {
+	border-bottom: 1px solid #bfbfbf;
+	
+	padding: 1px;
+}
+
+.categoryItems tr {
+	/* keep top edges of icons aligned, even if captions have different heights */
+	vertical-align: top;
+}
+.categoryItems tr td {
+	border: 0px;
+	
+	/* captions should be Arial Bold and centered */
+	font: bold 14px Arial, sans-serif;
+	text-align: center;
+}
+.categoryItems a {
+	/* captions should always appear plain and black */
+	color: black;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<h1>Projects</h1>
+<p>
+Below is a list of most of the major projects that I have taken on. Between them
+alone I have written more than <b>250,000</b> lines of code. All projects are in <a href="skills/#java">Java</a> unless 
+otherwise specified.
+</p>
+<p>
+For more <b>recent projects</b> please see the <a href="http://dafoster.net/projects" class="external">projects page on my new website</a>.
+</p>
+
+<table id="toc" align="center">
+<tr>
+<td width="50%">
+<ul>
+	<li><a href="projects/#softwareDevelopment">Software Development</a></li>
+	<li><a href="projects/#networking">Networking</a></li>
+</ul>
+</td>
+<td width="50%">
+<ul>
+	<li><a href="projects/#games">Games</a></li>
+	<li><a href="projects/#other">Other</a></li>
+</ul>
+</td>
+</tr>
+</table>
+<br>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #e1e1fc;">
+	<td width="55"><img src="projects/images/hammer.png" width="55" height="55" alt="" align="left"></td>
+	<td><a name="softwareDevelopment"></a><h2>Software Development</h2></td>
+</tr>
+<tr style="background-color: #f5f5fc">
+<td colspan="2">
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="projects/decomp/">
+		<img class="softwareDevelopmentIcon" src="projects/images/javaClassToSource.png" width="128" height="128" alt="">
+		<br>
+		decomp4
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/refactorshop/">
+		<img class="softwareDevelopmentIcon" src="projects/images/refactoring.png" width="128" height="128" alt="">
+		<br>
+		C Refactoring Workshop
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/imagefilterdemo/">
+		<img class="softwareDevelopmentIcon" src="projects/images/ImageFilterDemo.png" width="128" height="128" alt="">
+		<br>
+		ImageFilterDemo
+		</a>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #fce1e1">
+	<td width="55"><img src="projects/images/globe.png" width="55" height="55" alt="" align="left"></td>
+	<td><a name="networking"></a><h2>Networking</h2></td>
+</tr>
+<tr style="background-color: #fbf8f8">
+<td colspan="2">
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="projects/hotline/">
+		<img class="networkingIcon" src="projects/images/bigRedH.png" width="128" height="128" alt="">
+		<br>
+		HotlineProject
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/sametime/">
+		<img class="networkingIcon" src="projects/images/chatBubbles.png" width="128" height="128" alt="">
+		<br>
+		Sametime Client
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/netdraw/">
+		<img class="networkingIcon" src="projects/images/NetDraw.png" width="128" height="128" alt="">
+		<br>
+		NetDraw
+		</a>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #fffec9">
+	<td width="55"><img src="projects/images/pacman.png" width="55" height="55" alt="" align="left"></td>
+	<td><a name="games"></a><h2>Games</h2></td>
+</tr>
+<tr style="background-color: #fffef5">
+<td colspan="2">
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="projects/dungeons/">
+		<img class="gameIcon" src="projects/images/dungeons.png" width="128" height="128" alt="">
+		<br>
+		Dungeons
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/mule/">
+		<img class="gameIcon" src="projects/images/mule.png" width="128" height="128" alt="">
+		<br>
+		MULE
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/jetpack/">
+		<img class="gameIcon" src="projects/images/jetpack.png" width="128" height="128" alt="">
+		<br>
+		Jetpack
+		</a>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #e8e8e8">
+	<td width="55"><img src="projects/images/other.png" width="55" height="55" alt="" align="left"></td>
+	<td><a name="other"></a><h2>Other</h2></td>
+</tr>
+<tr style="background-color: #fafafa">
+<td colspan="2">
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="projects/kiss/">
+		<img class="otherIcon" src="projects/images/kiss.png" width="128" height="128" alt="">
+		<br>
+		KiSSManager2
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/arcams/">
+		<img class="otherIcon" src="projects/images/arcams.png" width="128" height="128" alt="">
+		<br>
+		ARCAMS
+		</a>
+	</td>
+	<td width="33%">
+		<a href="projects/gtprint/">
+		<img class="otherIcon" src="projects/images/printingScripts.png" width="128" height="128" alt="">
+		<br>
+		GTPrint Printing Scripts
+		</a>
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

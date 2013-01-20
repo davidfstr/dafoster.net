@@ -1,0 +1,109 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>ImageFilterDemo</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="softwareDevelopmentIcon" src="projects/images/ImageFilterDemo.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>ImageFilterDemo</li>
+</ul>
+</div>
+
+<h1>ImageFilterDemo</h1>
+<p>
+<b>ImageFilterDemo</b> is a program that allows rapid 
+prototyping of vision algorithms and other image filters in 
+Java. This program was developed to assist me in 
+developing new vision algorithms such as barrel detection 
+for <a href="activities/igvc">RoboJackets IGVC</a>. This codebase (including the built-in 
+filters) consists of about <b>6,500</b> lines of code.
+</p>
+
+<a name="download"></a>
+<h2>Download</h2>
+<p>
+This program can be downloaded from the <a href="http://wiki.robojackets.org/w/ImageFilterDemo" class="external">ImageFilterDemo page</a> on the RoboJackets 
+IGVC wiki.
+</p>
+
+<a name="features"></a>
+<h2>Features</h2>
+This program supports:
+<ul>
+	<li>user-defined image filters through a plugin architechure</li>
+	<li>image filter parameters that can be edited at runtime</li>
+	<li>processing sequences of images (i.e. movies) in real-time</li>
+</ul>
+
+<div class="thumb tright" style="width:140px">
+	<img src="projects/imagefilterdemo/images/identifiedBarrel.png" width="140" height="164"
+		alt="An identified orange & white construction barrel">
+	<div class="thumbcaption">
+		A barrel and its bounding box, 
+		as identified by my <a href="http://wiki.robojackets.org/w/Barrel_Detection#Image_Acquisition_.26_Color_Identification_.28.232.29" class="external">barrel 
+		finding algorithm</a>.
+	</div>
+</div>
+
+<div class="thumb tright" style="width:140px">
+	<img src="projects/imagefilterdemo/images/histogramWithOtsu.png" width="140" height="82"
+		alt="Gray level histogram with Otsu threshold indicated">
+	<div class="thumbcaption">
+		Gray level histogram with its 
+		optimal <a href="http://wiki.robojackets.org/w/Adaptive_Thresholding#Otsu_Thresholding" class="external">Otsu thresholding</a> level 
+		indicated.
+	</div>
+</div>
+
+<a name="filters"></a>
+<h2>Built-In Filters</h2>
+Non-trivial built-in image filters that I wrote for this program include:
+<ul>
+	<li>
+		<b>BarrelBlobFinder</b> - an orange & white construction 
+		barrel finder
+	</li>
+	<li>
+		<b>GrayscaleLevelHistogram</b> - draws a histogram of 
+		the gray levels in an image and calculates the gray 
+		level that separates the foreground from the 
+		background using the <a href="http://wiki.robojackets.org/w/Adaptive_Thresholding#Otsu_Thresholding" class="external">Otsu thresholding</a> algorithm
+	</li>
+	<li>
+		<b>LinearHoughTransform2</b> - uses a <a href="http://wiki.robojackets.org/w/Hough_Transform" class="external">Hough 
+		transform</a> to identify the straight lines in an image
+	</li>
+	<li>
+		<b>GaussianBlurFilter</b> - Gaussian blur with 
+		configurable radius and standard deviation
+	</li>
+</ul>
+
+<!-- IE6/XP: fix divider line between navigation bar and content -->
+<br clear="both">&nbsp;
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>RoboJackets IGVC</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="activities/">Activities</a></li>
+	<li>RoboJackets IGVC</li>
+</ul>
+</div>
+
+<div class="tright">
+	<img src="activities/igvc/images/robojacketsLogo.png" width="150" height="150" alt="RoboJackets logo" title="The official RoboJackets logo">
+</div>
+<div class="tright" style="width:150px;"><center>
+	<img src="activities/images/igvcLogo.png" width="128" height="128" alt="IGVC logo" title="The official IGVC logo">
+</center></div>
+
+<h1>RoboJackets IGVC</h1>
+<p>
+I have been a part of <a href="http://www.robojackets.org/" class="external">RoboJackets</a> IGVC since coming to 
+Georgia Tech in 2005. Initially, I started as IGVC's <b>lead 
+programmer</b>, responsible for getting all devices on the 
+robot talking to the laptop and processing images from 
+the camera.
+</p>
+<p>
+In 2007 my role on the team was <b>Integration and 
+Telemetry Lead</b>, making me responsible for defining 
+teamwide coding standards and communication 
+protocols, integrating the modules developed by different 
+team members, and coordinating communication between 
+the team divisions.
+</p>
+
+<div class="thumb tright" style="width:140px">
+	<img src="projects/imagefilterdemo/images/identifiedBarrel.png" width="140" height="164"
+		alt="An identified orange & white construction barrel">
+	<div class="thumbcaption">
+		A barrel and its bounding box, 
+		as identified by my <a href="http://wiki.robojackets.org/w/Barrel_Detection#Image_Acquisition_.26_Color_Identification_.28.232.29" class="external">barrel 
+		finding algorithm</a>.
+	</div>
+</div>
+
+<a name="vision"></a>
+<h2>Vision Algorithms</h2>
+<p>
+To help <b>develop vision algorithms</b>, I created a 
+prototyping program called <a href="projects/imagefilterdemo/"><b>ImageFilterDemo</b></a>. With this 
+program I implemented not only several well-known 
+algorithms, such as Gaussian blur and the Hough 
+transform, but also a few of my own custom algorithms, 
+such as an <b>orange & white construction barrel finder</b>.
+</p>
+
+<a name="clubservices"></a>
+<h2>Club Services</h2>
+<p>
+I also helped set up a <a href="http://wiki.robojackets.org/w/IGVC" class="external"><b>wiki</b></a> for RoboJackets IGVC. It 
+has information about our team, its activities, and any 
+robotics-related research that it has done.
+</p>
+<p>
+I also pioneered the use of <b>version control</b> (specifically <a href="skills/#vcs">Subversion</a>) to make it easier to 
+track changes to our robot's code and to simplify collaborative development of the code.
+</p>
+<p>
+Initially the wiki and version control system were intended to just be for the 
+RoboJackets IGVC team, but both were later adopted by the other teams in 
+RoboJackets as general club services.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

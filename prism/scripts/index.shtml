@@ -1,0 +1,232 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Scripts</title>
+<!--#include virtual="/prism/common/head.html" -->
+<style type="text/css">
+
+.printertable {
+	font-size: 90%;
+}
+
+.printertable .head {
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<h1>Scripts</h1>
+<p>
+During my time at Georgia Tech, I've written a number of useful scripts to simplify
+actions that I perform frequently. Most of these scripts are specific to
+Mac OS X and cannot be used on either Windows or Linux.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="scripts/#printing">Printing Scripts</a></li>
+<li><a href="scripts/#lawnAutologin">LAWN Autologin Script</a></li>
+<li><a href="scripts/#otherScripts">Other Scripts</a></li>
+<li><a href="scripts/#scriptIdeas">Script Ideas</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="printing"></a>
+<h2>Printing Scripts</h2>
+<p>
+These printing scripts allow you to print to the GT Library,
+the GT Student Center, Central Printing, and the College of Computing (CoC).
+</p>
+<center><img src="scripts/images/printDialogScreenshot.png" width="461" height="250" alt="Screenshot showing how to invoke the GTPrint printing script"></center>
+<br>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" valign="top">
+			<center>
+			<a href="downloads/GTPrint Printing Scripts v2.0.1.dmg">
+			<img src="scripts/images/printingScriptIcon.png" width="43" height="63" alt=""></a>
+			</center>
+		</td>
+		<td>
+			Download 
+			<a href="downloads/GTPrint Printing Scripts v2.0.1.dmg"><b>GTPrint Printing Scripts</b> v2.0.1</a><br>
+			<b style="color:red;">Does not work with the new printing system introduced Fall 2008.</b><br>
+			<i>Allows you to print to the GT Library, the GT Student Center, and Central Printing from
+			   your print dialog. Printing in both portrait and landscape
+			   orientations is supported.</i>
+		</td>
+	</tr>
+	<!--
+	<tr>
+		<td width="63" class="itemIcon">
+			<img src="scripts/images/printingScriptIcon.png" width="43" height="63" alt="">
+		</td>
+		<td>
+			<i>Will not release - <acronym title="Technology Services Organization" class="spell">TSO</acronym> has killed <acronym title="Secure Shell" class="spell">SSH</acronym> access to all CoC print servers</i><br> 
+			Download 
+			<strike><b>CoC Printing Scripts</b> v1.0</strike><br>
+			<i>Allows you to print to the College of Computing from your print dialog.</i>
+		</td>
+	</tr>
+	-->
+</table>
+
+<h3>Printing to the College of Computing</h3>
+To setup printing to the CoC on Mac OS X 10.4 (Tiger):
+<ol>
+	<li>Open <b>Printer Setup Utility</b>.</li>
+	<li>Click the <b>Add</b> button on the toolbar. A dialog will appear.</li>
+	<li>Click the <b>IP Printer</b> button on the toolbar.</li>
+	<li>From the <b>Protocol</b> menu, select <b>HP Jet Direct - Socket</b>.</li>
+	<li>For the address/name/location/printer model, specify one of:</li>
+</ol>
+
+<table class="printertable" border="1" cellspacing="0" style="margin-left: 3em;">
+<tr class="head">
+	<td>rosalyn</td>
+	<td>wormwood</td>
+</tr>
+<tr>
+	<td>130.207.14.144</td>
+	<td>130.207.14.145</td>
+</tr>
+<tr>
+	<td>GT CoC - Rosalyn</td>
+	<td>GT CoC - Wormwood</td>
+</tr>
+<tr>
+	<td>CoC 107, Thin Client Lab</td>
+	<td>CoC 107, Thin Client Lab</td>
+</tr>
+<tr>
+	<td>HP LaserJet 4300 Series</td>
+	<td>HP LaserJet 4350</td>
+</tr>
+</table><br>
+
+<table class="printertable" border="1" cellspacing="0" style="margin-left: 3em;">
+<tr class="head">
+	<td>moe</td>
+	<td>susie</td>
+</tr>
+<tr>
+	<td>130.207.14.132</td>
+	<td>130.207.14.136</td>
+</tr>
+<tr>
+	<td>GT CoC - Moe</td>
+	<td>GT CoC - Susie</td>
+</tr>
+<tr>
+	<td>GT CoC, outside CoC 148</td>
+	<td>CoC 153, Enterprise Computing Lab</td>
+</tr>
+<tr>
+	<td>HP LaserJet 4300 Series</td>
+	<td>HP LaserJet 4350</td>
+</tr>
+</table>
+
+<br>
+
+<a name="lawnAutologin"></a>
+<h2>LAWN Autologin Script</h2>
+<p>
+This script automatically logs you into <a href="http://www.lawn.gatech.edu/" class="external"><acronym title="Local Area Walkup/Wireless Network">LAWN</acronym></a>, Georgia Tech's wireless network,
+whenever your computer connects to it.
+</p>
+<p>
+<img src="scripts/images/windowsLogo-small.gif" width="17" height="15" alt="" align="bottom">
+Windows users should try the <a href="http://www.hydrous.net/articles/lawnlogin.php" class="external">LawnLogin</a> program written by Ethan Trewhitt.
+</p>
+<center><img src="scripts/images/autologinScreenshot.png" width="328" height="168" alt="Screenshot showing the LAWN autologin script in action"></center>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" class="itemIcon">
+			<!-- TODO: add 2.0 badge to icon -->
+			<a href="downloads/Login to GT Wireless v1.5.dmg">
+			<img src="scripts/images/autologinScriptIcon.png" width="45" height="53" alt=""></a>
+		</td>
+		<td>
+			Download 
+			<a href="downloads/Login to GT Wireless v1.5.dmg"><b>Login to GTWireless</b> v1.5</a>
+			for <b>Leopard</b> (Mac OS X 10.5)<br>
+			<i>Automatically logs into LAWN when your computer connects to it.</i>
+		</td>
+	</tr>
+	<tr>
+		<td width="63" class="itemIcon">
+			<!-- TODO: add 1.0 badge to icon -->
+			<a href="downloads/Login to GT Wireless v1.4.dmg">
+			<img src="scripts/images/autologinScriptIcon.png" width="45" height="53" alt=""></a>
+		</td>
+		<td>
+			Download 
+			<a href="downloads/Login to GT Wireless v1.4.dmg"><b>Login to GTWireless</b> v1.4</a>
+			for <b>Tiger</b> (Mac OS X 10.4)<br>
+			<i>Automatically logs into LAWN when your computer connects to it.</i>
+		</td>
+	</tr>
+</table>
+
+<a name="lawnAutologin2-status"></a>
+<h3>Login to GTWireless for Leopard Acknowledgements</h3>
+<p>
+Getting the Leopard version out the door would not have been possible 
+without help from a number of respondants who helped me write the LaunchAgent plist 
+needed. Special thanks goes to <i>Achille Brighton</i> and <i>Derek Greene</i> for providing me 
+sample plist files to work from.
+</p>
+
+<a name="otherScripts"></a>
+<h2>Other Scripts</h2>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" class="itemIcon">
+			<a href="downloads/Convert .webloc to .url v1.0.dmg">
+			<img src="scripts/images/dropletScriptIcon.png" width="45" height="45" alt=""></a>
+		</td>
+		<td>
+			Download 
+			<a href="downloads/Convert .webloc to .url v1.0.dmg"><b>Convert .webloc to .url</b> v1.0</a><br>
+			<i>Converts Safari .webloc bookmarks to standard .url bookmarks that are understood by Firefox, IE, and other browsers.</i>
+		</td>
+	</tr>
+</table>
+<br>
+
+<a name="scriptIdeas"></a>
+<h2>Script Ideas</h2>
+<table class="itemTable" border="0">
+	<tr>
+		<td width="63" class="itemIcon">
+			<img src="scripts/images/ideaIcon.png" width="45" height="43" alt="">
+		</td>
+		<td>
+			Modify <b>Login to GTWireless</b> and the <b>GTPrint Printing Scripts</b> to
+			save the GT account/password in the keychain instead of as cleartext.
+		</td>
+	</tr>
+</table>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

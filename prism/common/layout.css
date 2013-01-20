@@ -1,0 +1,369 @@
+/*
+ * This stylesheet defines the standard layout and appearance of elements on my website.
+ * 
+ * By David Foster
+ */
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* LAYOUT
+ *
+ * Written with assistance from:
+ *     http://css.maxdesign.com.au/floatutorial/tutorial0816.htm
+ */
+
+/*
+ * Contains all of the other panes
+ * 
+ * Expands horizontally to fill most of the available space.
+ * This puts some whitespace padding on the sides.
+ */
+#container
+{
+	/* expand width of the content container to fill most of the available space */
+	width: 98%;
+	/* center the content container */
+	margin: 10px auto;
+	
+	/* color and border the content container */
+	background-color: #fff;
+	color: #333;
+	border: 1px solid gray;
+	
+	/* increase readability by increasing the overall line-height of text */
+	line-height: 130%;
+	
+	/*background-color: #ddd;*/
+}
+
+/*
+ * Top pane
+ */
+#top
+{
+	/* add space between the border and the content */
+	padding: .5em;
+	
+	/* color the top pane and add a horizontal line between it and the lower panes */
+	background-color: #ddd;
+	border-bottom: 1px solid gray;
+}
+
+#top h1
+{
+	/* remove extra vertical padding around the heading */
+	padding: 0;
+	margin: 0;
+}
+
+/*
+ * Navigation pane on the left side of the page
+ */
+#leftnav
+{
+	/* float this pane on the left side of the page */
+	float: left;
+	width: 13.5em;
+	
+	/* add padding between the content of the navigation pane and its border */
+	margin: 0;
+	padding: .5em;
+}
+
+/*
+ * Content pane
+ */
+#content-container
+{
+	/*
+	 * IMPORTANT
+	 * prevent the content from flowing around the navigation pane;
+	 * make sure that the width specified for the margin is greater than the overall width of the "leftnav" div
+	 */
+	margin-left: 15.5em;
+	
+	/*
+	 * add a vertical line between the content pane and the navigation pane
+	 * 
+	 * NOTE: assumes that the content pane is longer than the main content
+	 */
+	border-left: 1px solid gray;
+	
+	/* add padding between the content of the content pane and its left border */
+	padding: 1em;
+	
+	/* color the content pane */
+	background-color: #fff;
+}
+
+#content {
+	/* restrict the maximum line width */
+	/* IE6/XP: ignores this rule */
+	max-width: 36em;
+}
+
+#footer
+{
+	/* force the footer below any floated elements above */
+	clear: both;
+	
+	/* add space between the border and the content */
+	margin: 0;
+	padding: .5em;
+	
+	/* color the footer pane and add a horizontal line between it and the upper panes */
+	color: #333;
+	background-color: #ddd;
+	border-top: 1px solid gray;
+}
+
+/* remove the space above the content in the "leftnav" and "content" divs */
+#leftnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* TABLE OF CONTENTS
+ * 
+ * Styling based on CSS code found at:
+ *     http://en.wikipedia.org/skins-1.5/monobook/main.css?99
+ */
+#toc {
+	/* make the item text smaller */
+	font-size: 95%;
+	
+	/* space cells that are horizontally across from each other */
+	border-spacing: 7px 0px;
+}
+#toc td {
+	/* define a border and background */
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	
+	/* add padding */
+	padding: 8px;
+	
+	/* define standard width of TOC */
+	width: 10em;
+	
+	/* top-align text in cells that are horizontally across from each other */
+	vertical-align: top;
+}
+#toc ul {
+	/* configure indentation */
+	margin: 0;
+	padding: 0;
+}
+#toc ul ul {
+	/* configure inner indentation */
+	margin: 0 0 0 1.5em;
+}
+#toc ul li {
+	/* suppress bullets */
+	list-style-type: none;
+	
+	/* add some vertical spacing between items */
+	padding-bottom: 0.2em;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* BREADCRUMBS
+ *
+ * Heavily based on code found at:
+ *     http://css.maxdesign.com.au/listamatic/horizontal33.htm
+ */
+#breadcrumbs {
+	font: bold 14px Arial, sans-serif;
+	margin-bottom: 1em;
+}
+
+#breadcrumbs ul
+{
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#breadcrumbs ul li
+{
+display: inline;
+padding: 0;
+margin: 0;
+}
+
+#breadcrumbs ul li:before { content: "> "; }
+#breadcrumbs ul li:first-child:before { content: ""; }
+
+/*IE workaround*/
+/*All IE browsers*/
+* html #breadcrumbs ul li
+{
+background-image: url("images/gt.gif");
+background-repeat: no-repeat;
+background-position: 0 50%;
+padding: 0 0.5em 0 1em;
+margin: 0 1em 0 -1em;
+}
+
+/*Win IE browsers - hide from Mac IE\*/
+* html #breadcrumbs ul { height: 1%; }
+
+* html #breadcrumbs ul li
+{
+display: block;
+float: left;
+}
+
+/*End hide*/
+/*Mac IE 5*/
+* html #breadcrumbs ul li:first-child { background-image: none; }
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* THUMBNAILS
+ *
+ * Thumbnail styling based on CSS code found at:
+ *     http://en.wikipedia.org/skins-1.5/monobook/main.css?97
+ * 
+ * Format for a thumbnail with a caption:
+ *     <div class="thumb tright" style="width:100px">
+ *         <img src="someImage.png" width="100" height="100" alt="Some image" title="This is some random image">
+ *         <div class="thumbcaption">
+ *             This is a caption for the random picture shown above.
+ *         </div>
+ *     </div>
+ * 
+ * XXX: Format for a right-aligned picture w/o a caption:
+ *     <div class="tright">
+ *         <img src="someImage.png" width="100" height="100" alt="Some image" title="This is some random image">
+ *     </div>
+ */
+
+div.tleft {
+	/* float the thumb on the side of the page */
+	float: left;
+	
+	/* multiple thumbs should stack vertically */
+	clear: left;
+	/* multiple thumbs should be spaced apart */
+	margin-bottom: .5em;
+	
+	/* add space between the thumbs and adjacent text */
+	margin-right: 1em;
+}
+div.tright {
+	/* float the thumb on the side of the page */
+	float: right;
+	
+	/* multiple thumbs should stack vertically */
+	clear: right;
+	/* multiple thumbs should be spaced apart */
+	margin-bottom: .5em;
+	
+	/* add space between the thumbs and adjacent text */
+	margin-left: 1em;
+}
+
+div.thumb {
+	background-color: #F9F9F9;
+	border: 1px solid #CCCCCC;
+	overflow: hidden;
+	padding: 6px;
+	text-align: center;
+}
+div.thumbcaption {
+	/* setup caption font and spacing */
+	font-family: sans-serif;
+	/* Opera & IE: doesn't seem to make the text as small as expected */
+	font-size: .8em;
+	line-height: 1.4em;
+	text-align: left;
+	
+	padding-top: .3em;
+	
+	/* if forced to overflow caption, don't let the overflow leave the div */
+	overflow: hidden;
+}
+div.thumbmagnify {
+	float: right;
+	margin-left: 2px;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* STYLING
+ * 
+ * Most code in this section written from scratch.
+ */
+
+img
+{
+	/* prevent Firefox from adding a border around images - especially the navigation icons */
+	border: 0px
+}
+
+h1 {
+	/* remove extra vertical margins above top-level headings */
+	padding: 0;
+	margin-top: 0;
+	
+	font-size: 2em
+}
+
+ul {
+	/* remove extra vertical margins above bulleted lists */
+	padding-top: 0;
+	margin-top: 0;
+	
+	/*padding-left: 2em;*/
+}
+
+/* TODO: fix the horizontal spacing around the bullets of bulleted lists */
+
+tt {
+	/* make size of monospace fonts comparable to that of the surrounding text */
+	font-size: 90%;
+}
+
+/*
+ * ITEM TABLES
+ */
+.itemTable tr td {
+	/* add some vertical spacing between rows */
+	padding-bottom: .5em;
+}
+.itemTable td.itemIcon {
+	text-align: center;
+}
+
+/*
+ * ACRONYMS
+ */
+acronym {
+	speak: normal;
+	
+	/* decorate acronyms so that you can see them */
+	cursor: help;
+	border-bottom-style: dotted;
+	border-bottom-width: 1px;
+}
+acronym.spell {
+	speak: spell-out;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+/* DECORATION */
+
+/*
+ * External-link styling based on CSS code found at:
+ *     http://en.wikipedia.org/skins-1.5/monobook/main.css?97
+ */
+a.external {
+	/* IE6/XP: doesn't display the background image in the correct location
+	 *         when the decorated 'a' link wraps multiple lines;
+	 *         no non-Javascript workaround for this exists as of 11/20/2007;
+	 *         see http://www.satzansatz.de/cssd/wrappinglinkbg.html for
+	 *         a good discussion of the issue */
+	background: url(images/external.png) center right no-repeat;
+	/* CSS3: explicitly specify the background image placement
+	 *       algorithm when the 'a' element wraps lines */
+	/* TODO: uncomment this once W3C's CSS validator can deal with CSS3 */
+	/*background-break: continuous;*/
+	padding-right: 13px;
+}

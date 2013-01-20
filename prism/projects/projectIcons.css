@@ -1,0 +1,21 @@
+/* each type of project icon has a different background color */
+.softwareDevelopmentIcon {
+	background: #e1e1fc;
+	border: 1px solid #bfbfbf;
+	padding: 5px;
+}
+.networkingIcon {
+	background: #fce1e1;
+	border: 1px solid #bfbfbf;
+	padding: 5px;
+}
+.gameIcon {
+	background: #fffec9;
+	border: 1px solid #bfbfbf;
+	padding: 5px;
+}
+.otherIcon {
+	background: #e8e8e8;
+	border: 1px solid #bfbfbf;
+	padding: 5px;
+}

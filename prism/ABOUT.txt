@@ -1,0 +1,16 @@
+This document describes the unusual files in this directory.
+
+common/
+	Holds content/styling that is common to every (or most) pages on this site.
+downloads/
+	Downloadable content.
+
+====================================================================================================
+REMOVED
+
+google9dcd73aaa1be146e.html
+	File that verifies to Google that I own this website.
+sitemap.txt
+sitemap-OLD.xml
+	Google sitemap that assists the Googlebot in indexing my site.
+

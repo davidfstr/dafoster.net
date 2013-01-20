@@ -1,0 +1,75 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Jetpack</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="gameIcon" src="projects/images/jetpack.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>Jetpack</li>
+</ul>
+</div>
+
+<h1>Jetpack</h1>
+<p>
+<b>Jetpack</b> is a remake of a <a href="http://www.adeptsoftware.com/jetpack/" class="external">classic DOS game</a> of the same 
+name so that it runs in Java. The objective of the game is 
+to collect the treasures in a level and get to the exit. I first 
+discovered the original Jetpack game on a friend's 
+computer and liked it so much that I decided to rewrite it 
+so that it would run on my own computer. My version of 
+Jetpack consists of about <b>7,300</b> lines of code.
+</p>
+
+<a name="features"></a>
+<h2>Features</h2>
+This program has:
+<ul>
+	<li>levels loaded from files with a format reminiscent of ASCII art</li>
+	<li>simple enemy AI</li>
+	<li>collision detection between sprites and the background tiles</li>
+</ul>
+
+<a name="screenshots"></a>
+<h2>Screenshots</h2>
+<center>
+<div class="thumb" style="width:420px">
+	<a href="projects/jetpack/images/level.png">
+		<img src="projects/jetpack/images/level-thumb.png" width="420" height="281"
+			alt="The first level of Jetpack">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/jetpack/images/level.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		The first <b>level</b> in the Jetpack game.
+	</div>
+</div>
+</center>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Dungeons</title>
+<!--#include virtual="/prism/common/head.html" -->
+<link rel="stylesheet" href="projects/projectIcons.css" type="text/css">
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div class="tright">
+	<img class="gameIcon" src="projects/images/dungeons.png" width="128" height="128" alt="">
+</div>
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="projects/">Projects</a></li>
+	<li>Dungeons</li>
+</ul>
+</div>
+
+<h1>Dungeons</h1>
+<p>
+<b>Dungeons</b> is a game in which you explore a maze, avoid 
+enemies, pick up treasure, and try to find the exit for the level. 
+In this game you try to maximize your score and stay alive as 
+long as you can. Dungeons consists of about <b>4,600</b> lines of 
+code. This was my first large project.
+</p>
+
+<table id="toc">
+<tr><td>
+<ul>
+<li><a href="projects/dungeons/#features">Features</a></li>
+<li><a href="projects/dungeons/#history">History</a></li>
+<li><a href="projects/dungeons/#screenshots">Screenshots</a></li>
+</ul>
+</td></tr>
+</table>
+<br>
+
+<a name="features"></a>
+<h2>Features</h2>
+<p>
+There are items called <b>pickups</b> that you can find that perform special actions such as 
+revealing the entire level, transforming all enemies into treasures, or automatically 
+solving the current level.
+</p>
+<p>
+It is possible for the user to define their own custom <b>external pickups</b> by writing 
+specially formatted text files that contain the <a href="skills/#hypertalk">HyperTalk</a> script that should be executed 
+upon using the pickup.
+</p>
+
+In addition:
+<ul>
+	<li>levels are dynamically generated</li>
+	<li>games can be saved and loaded</li>
+	<li>enemies have two types of AI to seek the player</li>
+	<li>there is a wide variety of pickups that perform special actions</li>
+	<li>high scores are persisted across launches</li>
+	<li>there is a full help system</li>
+</ul>
+
+<a name="history"></a>
+<h2>History</h2>
+<p>
+The inspiration for this game came from a similar game described in a Macintosh game 
+programming book that I read while I was at <a href="http://nccamp.com/" class="external">National Computer Camp</a>. (It should be 
+noted though that the final version of my game is <i>significantly</i> improved from 
+the original.) I then proceeded to write the game while at camp. It became so popular with 
+the other campers there that I had people lining up to play it during break times. At the 
+end of that week at camp I received a <b>Special Award</b> from the camp director because 
+the game was so impressive.
+</p>
+
+<a name="screenshots"></a>
+<h2>Screenshots</h2>
+<center>
+<div class="thumb" style="width:430px">
+	<a href="projects/dungeons/images/playingArea.png">
+		<img src="projects/dungeons/images/playingArea-thumb.png" width="430" height="335"
+			alt="A typical level in Dungeons">
+	</a>
+	<div class="thumbcaption">
+		<div class="thumbmagnify">
+			<a href="projects/dungeons/images/playingArea.png">
+<!--#include virtual="/prism/common/thumbmagnify.html" -->
+			</a>
+		</div>
+		A <b>typical level</b> in the Dungeons game. In this screenshot the entire level has 
+		been displayed; normally the player can only see the parts of the level that have 
+		already been explored.
+	</div>
+</div>
+</center>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

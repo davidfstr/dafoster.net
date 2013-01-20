@@ -1,0 +1,119 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>Activities</title>
+<!--#include virtual="/prism/common/head.html" -->
+<style type="text/css">
+
+.categorySection {
+	border-top: 1px solid #bfbfbf;
+	border-left: 1px solid #bfbfbf;
+	border-right: 1px solid #bfbfbf;
+	
+	border-spacing: 0px;
+}
+.categorySection h2 {
+	padding: 3px; 
+	margin: 0;
+}
+.categorySection tr td {
+	border-bottom: 1px solid #bfbfbf;
+	
+	padding: 1px;
+}
+
+.categoryItems tr {
+	/* keep top edges of icons aligned, even if captions have different heights */
+	vertical-align: top;
+}
+.categoryItems tr td {
+	border: 0px;
+	
+	/* captions should be Arial Bold and centered */
+	font: bold 14px Arial, sans-serif;
+	text-align: center;
+}
+.categoryItems a {
+	/* captions should appear plain and black */
+	color: black;
+	text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<h1>Activities</h1>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #e1e1fc">
+	<td><a name="robotics"></a><h2>Robotics Clubs</h2></td>
+</tr>
+<tr style="background-color: #f5f5fc">
+<td>
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="activities/igvc/">
+		<img class="sIcon" src="activities/images/igvcLogo.png" width="128" height="128" alt=""><br>
+		RoboJackets IGVC
+		</a>
+	</td>
+	<td width="33%">
+		<a href="activities/geargrinders/">
+		<img class="sIcon" src="activities/images/firstLogo.png" width="128" height="128" alt=""><br>
+		Gear Grinders
+		</a>
+	</td>
+	<td width="33%">
+		<!-- intentionally empty -->
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+<br>
+
+<table class="categorySection" width="100%">
+<tr style="background-color: #e1e1fc">
+	<td><a name="other"></a><h2>Other Clubs</h2></td>
+</tr>
+<tr style="background-color: #f5f5fc">
+<td>
+	<table class="categoryItems" width="100%">
+	<tr>
+	<td width="33%">
+		<a href="activities/gtacm/">
+		<img class="otherIcon" src="activities/images/acmLogo.png" width="128" height="128" alt=""><br>
+		GT ACM
+		</a>
+	</td>
+	<td width="33%">
+		<!-- intentionally empty -->
+	</td>
+	<td width="33%">
+		<!-- intentionally empty -->
+	</td>
+	</tr>
+	</table>
+</td>
+</tr>
+</table>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>

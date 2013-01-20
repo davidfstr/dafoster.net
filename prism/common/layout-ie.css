@@ -1,0 +1,21 @@
+/*
+ * This file contains IE-specific CSS hacks that don't validate when
+ * given to the W3C CSS parser.
+ * 
+ * This file should be included after the normal stylesheet
+ */
+
+#content {
+	/* IE6/XP: XXX: emulate the 'max-width' rule in the normal stylesheet
+	 * 
+	 * Technique learned from:
+	 * > http://www.svendtofte.com/code/max_width_in_ie/
+	 * 
+	 * NOTE: 900 = magic number discovered through experimentation
+	 */
+	width:expression(
+		document.body.clientWidth > (900/12) * 
+		parseInt(document.body.currentStyle.fontSize)?
+			"36em":
+			"auto" );
+}

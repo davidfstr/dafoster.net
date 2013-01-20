@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>NetDraw</title>
+<style type="text/css">
+
+#toolbar {
+	border: 1px dotted black;
+	padding: 4px;
+	/* XXX: compensate for the strange padding-bottom of the #tools element */
+	padding-bottom: 0px;
+	background-color: #00CCFF;
+	cursor: pointer;
+	
+	/* 400-(4*2) = 392 */
+	width: 392px;
+	/* 22+(4*2) = 30 */
+	height: 30px;
+	
+	margin-bottom: 4px;
+}
+
+#tools {
+	/* suppress display of list bullets */
+	list-style-type: none;
+	
+	/* remove indentation */
+	margin: 0;
+	padding: 0;
+}
+
+#tools li {
+	/* make the list horizontal */
+	display: inline;
+}
+
+#tools li img {
+	border: 1px solid #828282;
+	background-color: #e1e1fc;
+}
+
+#canvas {
+	border: 1px dotted black;
+	padding: 0px;
+	background-color: #00CCFF;
+	
+	width: 400px;
+	height: 400px;
+}
+
+#colorwell {
+	width: 22px;
+	height: 22px;
+	background-color: #000000;
+}
+
+</style>
+
+<!-- YUI: Core - must appear before all other YUI imports -->
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/yahoo/yahoo-min.js" ></script>
+
+<!-- YUI: Events -->
+<!--
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/yahoo/yahoo-min.js" ></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/event/event-min.js" ></script>
+-->
+
+<!-- YUI: Color Picker -->
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/fonts/fonts-min.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/container/assets/skins/sam/container.css">
+<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.5.0/build/colorpicker/assets/skins/sam/colorpicker.css"> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/utilities/utilities.js" ></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/container/container-min.js"></script>
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/slider/slider-min.js" ></script> 
+<script type="text/javascript" src="http://yui.yahooapis.com/2.5.0/build/colorpicker/colorpicker-min.js" ></script> 
+
+<!-- JavaScript Vector Graphics Library: http://www.walterzorn.com/jsgraphics/jsgraphics_e.htm -->
+<script type="text/javascript" src="extern/wz_jsgraphics.js"></script>
+
+<!-- NetDraw application logic -->
+<script type="text/javascript" src="primitives.js"></script>
+<script type="text/javascript" src="tools.js"></script>
+<script type="text/javascript" src="main.js"></script>
+
+</head>
+<body onload="init();">
+
+<div id="toolbar">
+<ul id="tools" style="display: inline">
+<!-- This list is filled out via JavaScript with lines of the following format: -->
+<!-- <li><img id="TOOLNAME" src="images/tools/TOOLNAME.png" width="22" height="22" onclick="Toolbar.select(this.id);"></li> -->
+</ul>
+
+<!-- TODO: get this to display in the right place -->
+<div id="optionbar" style="display: inline;">
+<div style="float: right;"><input type="checkbox" id="filled">Filled</div>
+<div style="float: right;" id="colorwell" onclick="NetDraw.colorpicker.toggleVisibility();"></div>
+<div style="float: right;"><button onclick="Canvas.print();">Print</button></div>
+</div>
+
+</div>
+
+<!-- XXX: The magic 'event' parameter is probably Firefox-specific -->
+<div id="canvas"
+	onmousedown="Canvas.mousePressed(event);"
+	onmouseup="Canvas.mouseReleased(event);"
+	onmousemove="Canvas.mouseMoved(event);"
+	onmouseout="Canvas.mouseExited(event);">
+</div>
+
+<!-- The color picker dialog - initially invisible -->
+<div id="yui-picker-panel" class="yui-picker-panel" style="visibility: hidden;">
+	<div class="hd">Please choose a color:</div>
+	<div class="bd">
+		<form name="yui-picker-form" id="yui-picker-form" method="post" action="assets/post.php">
+		<div class="yui-picker" id="yui-picker"></div>
+		</form>
+	</div>
+	<div class="ft"></div>
+</div>
+
+<hr>
+<b>NetDraw for the Web</b><br>
+Based on the original <a href="http://www.prism.gatech.edu/~gth681y/projects/netdraw/">NetDraw</a> for Java<br>
+Copyright &copy; 2008 by <a href="http://www.prism.gatech.edu/~gth681y/">David Foster</a><br>
+<br>
+This web application is best-viewed in either <a href="http://www.apple.com/safari/" class="external">Safari</a> or <a href="http://www.mozilla.com/en-US/firefox/" class="external">Firefox</a>.<br>
+Internet Explorer is specifically unsupported.<br>
+<br>
+This program was developed during <a href="http://developer.yahoo.com/hacku/" class="external">Yahoo! Hack Week</a> at <a href="http://www.gatech.edu/" class="external">Georgia Tech</a> on March 7-8, 2008.
+</body>
+</html>

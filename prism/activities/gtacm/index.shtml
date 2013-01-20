@@ -1,0 +1,66 @@
+<!--#include virtual="/prism/common/prehtml.html" -->
+<html>
+<head>
+<title>GT ACM</title>
+<!--#include virtual="/prism/common/head.html" -->
+</head>
+<body>
+<div id="container">
+
+<!--#include virtual="/prism/common/header.shtml" -->
+
+<div id="content-container">
+<div id="content">
+
+<div id="breadcrumbs">
+<ul>
+	<li><a href="activities/">Activities</a></li>
+	<li>GT ACM</li>
+</ul>
+</div>
+
+<div class="tright">
+	<img src="activities/gtacm/images/newGTAcmLogo.png" width="158" height="56" alt="GT ACM logo" title="The (new) GT ACM logo">
+</div>
+<div class="tright" style="width:158px;"><center>
+	<img src="activities/images/acmLogo.png" width="128" height="128" alt="ACM logo" title="The national ACM logo">
+</center></div>
+
+<h1>GT ACM</h1>
+<p>
+I have been a member of the <b>Georgia Tech Association for 
+Computing Machinery (ACM)</b> chapter since coming to 
+Georgia Tech in 2005. Over time, I have become an active 
+member in the organization.
+</p>
+
+<a name="progteam"></a>
+<h2>Programming Team</h2>
+<p>
+In 2007 I was a member of Georgia Tech's premier team in 
+the <a href="http://cm.baylor.edu/" class="external">International Collegiate Programming Contest</a>, the GT 
+Yellow Jackets.
+</p>
+<p>
+We won <a href="http://web.archive.org/web/20080316170411/http://www.cc.gatech.edu/news/yellow-jackets-place-2nd-at-acm-regional-programming-contest#documentContent" class="external">2nd place</a> in the <b>2007 Southeast Regional Programming 
+Competition</b>, out of 76 teams, and received an <a href="http://web.archive.org/web/20080312170658/http://www.cc.gatech.edu/news/yellow-jackets-programming-team-advances-to-the-acm-icpc-world-finals#documentContent">invitation</a> to the World Finals in Banff,
+Alberta Canada.
+</p>
+
+<a name="webmaster"></a>
+<h2>Webmaster</h2>
+<p>
+In 2007, I took on the responsibility of maintaining the official <a href="http://gtacm.org/" class="external">GT 
+ACM website</a>. Since leaving Georgia Tech, others have been maintaining it in my stead.
+</p>
+
+<!--#include virtual="/prism/common/contentfooter.shtml" -->
+
+</div>
+</div>
+
+<!--#include virtual="/prism/common/footer.html" -->
+
+</div>
+</body>
+</html>
