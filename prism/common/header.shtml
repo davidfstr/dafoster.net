@@ -8,7 +8,7 @@
 <div id="leftnav">
 <div id="navcontainer">
 <ul id="navlist">
-	<li><a href="index.shtml" id="nav-about" class="navitem navlev1">About Me</a>
+	<li><a href="/prism/" id="nav-about" class="navitem navlev1">About Me</a>
 	<ul>
 		<li><a href="projects/" id="nav-projects" class="navitem navlev2">Projects</a></li>
 		<li><a href="activities/" id="nav-activities" class="navitem navlev2">Activities</a></li>
