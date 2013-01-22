@@ -33,8 +33,12 @@
   -->
     
     <!-- Le scripts -->
-    {% if page.include_jquery %}<script src="{{ ASSET_PATH }}/js/jquery-1.8.3.min.js"></script>{% endif %}
-    {% if page.include_jquery_hashchange %}<script src="{{ ASSET_PATH }}/js/jquery.ba-hashchange.min.js"></script>{% endif %}
+  {% if page.include_jquery or page.linkable_headings %}
+    <script src="{{ ASSET_PATH }}/js/jquery-1.8.3.min.js"></script>
+  {% endif %}
+  {% if page.include_jquery_hashchange or page.linkable_headings %}
+    <script src="{{ ASSET_PATH }}/js/jquery.ba-hashchange.min.js"></script>
+  {% endif %}
   </head>
 
   <body>
@@ -95,6 +99,19 @@
         <p>&copy; {{ site.author.name }} {{ site.time | date: '%Y'}}</p>
       </footer>
 
-    </div> <!-- /container -->
+    </div>
+    
+  {% if page.linkable_headings %}
+    <script>
+      $(window).hashchange(function() {
+        // Highlight heading corresponding to current anchor (if specified)
+        if (location.hash) {
+          $('h2').removeClass('active');
+          $(location.hash).addClass('active');
+        }
+      });
+      $(window).hashchange();
+    </script>
+  {% endif %}
   </body>
 </html>

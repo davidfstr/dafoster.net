@@ -3,8 +3,7 @@ layout: home_page
 title: About
 group: navigation
 breadcrumbs: [/]
-include_jquery: true
-include_jquery_hashchange: true
+linkable_headings: true
 
 ---
 <style>
@@ -111,14 +110,3 @@ Need to contact me? Solve the following puzzle to get my email:
 **MyEmail = "david" + RemoveVowels("foster") + "@gmail.com"**
 
 *(The letters A, E, I, O, and U are vowels.)*
-
-<script>
-  $(window).hashchange(function() {
-    // Highlight heading corresponding to current anchor (if specified)
-    if (location.hash) {
-      $('h2').removeClass('active');
-      $(location.hash).addClass('active');
-    }
-  });
-  $(window).hashchange();
-</script>
