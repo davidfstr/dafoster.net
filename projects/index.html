@@ -32,7 +32,7 @@ breadcrumbs: [/]
   <div class="span9">
     <h1>{{ page.title }}</h1>
     
-    <div class="x-projects">
+    <div class="x-projects" style="margin-bottom: 1.25em">
       {% for cur_page in site.pages %}
         {% if cur_page.layout == "project" %}
           {% assign project_title = cur_page.title %}
@@ -53,11 +53,7 @@ breadcrumbs: [/]
       {% endfor %}
     </div>
     
-    <p style="margin-top: 1.25em;">And more at:</p>
-    <ul>
-      <li><a href="https://github.com/davidfstr?tab=repositories" class="external">GitHub</a></li>
-      <li><a href="/prism/projects" class="external">Historical Projects (2010 and older)</a></li>
-    </ul>
+    {% include blocks/projects_more %}
   </div>
   
   <div class="span3 block-bar">
