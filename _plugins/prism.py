@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 """
 Generates the output for the /prism directory inside /_site.
 
