@@ -24,6 +24,11 @@
 <div id="content">
 
 <h1>Scripts</h1>
+
+<div class="alert">
+  <strong>Unsupported.</strong> These scripts are no longer supported.
+</div>
+
 <p>
 During my time at Georgia Tech, I've written a number of useful scripts to simplify
 actions that I perform frequently. Most of these scripts are specific to

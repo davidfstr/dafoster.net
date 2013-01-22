@@ -12,6 +12,13 @@
 <div id="content-container">
 <div id="content">
 <h1>About Me</h1>
+
+<div class="alert alert-error">
+  <strong>Outdated.</strong> This page is being maintained for historical curiousity only.<br/>
+  <br/>
+  Please see <a href="/about/" class="external">the new About page</a> for accurate information.
+</div>
+
 <div class="thumb tright" style="width:151px">
 	<a href="images/DavidFoster2009.jpg">
 		<img src="images/DavidFoster2009-thumb.jpg" width="149" height="199" 
@@ -26,6 +33,7 @@
 		A picture of me
 	</div>
 </div>
+
 <p>
 My name is <b>David Foster</b> and I'm a recent 
 graduate of <a href="http://www.gatech.edu/" class="external">Georgia Tech</a> looking for interesting

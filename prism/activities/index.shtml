@@ -51,6 +51,12 @@
 
 <h1>Activities</h1>
 
+<div class="alert alert-error">
+  <strong>Outdated.</strong> This page is being maintained for historical curiousity only.<br/>
+  <br/>
+  Please see <a href="/about/" class="external">the new About page</a> for accurate information.
+</div>
+
 <table class="categorySection" width="100%">
 <tr style="background-color: #e1e1fc">
 	<td><a name="robotics"></a><h2>Robotics Clubs</h2></td>
