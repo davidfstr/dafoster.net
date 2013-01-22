@@ -137,7 +137,7 @@ h2.active,
 .image-box {
   float: right;
   padding: 10px;
-  margin-left: 10px;
+  margin-left: 10px; margin-bottom: 10px;
   border: 1px solid #bfbfbf;
   background-color: #fafafa;
 }
