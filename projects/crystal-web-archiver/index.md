@@ -6,7 +6,7 @@ summary: >
 x_started_on: Sep 30, 2011
 x_ended_on: Jan 25, 2012
 x_languages: [Python]
-x_lines_of_code: 4106
+x_lines_of_code: 4,106
 
 redirect_to_url: https://github.com/davidfstr/Crystal-Web-Archiver#readme
 
