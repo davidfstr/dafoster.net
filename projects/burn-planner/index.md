@@ -8,6 +8,8 @@ x_started_on: Nov 20, 2010
 x_ended_on: Jan 19, 2011
 x_languages: [Objective_C]
 x_lines_of_code: 1,934
+x_location: Cathode at /Users/davidf/Projects
+
 linkable_headings: true
 
 ---

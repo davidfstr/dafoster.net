@@ -15,6 +15,7 @@ x_concepts_learned: |
 x_special_features: |
     * Integrated visual debugger
     * Optimized hand-written class-loader
+x_location: Cathode at /Users/davidf/Projects
 
 redirect_to_url: /prism/projects/decomp/
 

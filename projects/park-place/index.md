@@ -6,6 +6,8 @@ summary: >
 x_started_on: 2010-10-13
 x_ended_on: 2012-01-13
 x_languages: [Objective_C]
+x_lines_of_code: 10,577
+x_location: Cathode at /Users/davidf/Projects
 
 ---
 An iPhone app that helps you find nearby parking on the cheap.

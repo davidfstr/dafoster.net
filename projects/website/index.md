@@ -4,6 +4,8 @@ title: Website
 summary: >
     This website.
 x_languages: [Web]
+x_location: Online at /
+
 linkable_headings: true
 
 ---

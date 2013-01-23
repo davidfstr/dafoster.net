@@ -12,6 +12,7 @@ x_lines_of_code: 188
 x_concepts_learned: |
     * Leveraging external libraries in my software (here: JGoodies Forms)
     * Ant-based build system
+x_location: Cathode at /Users/davidf/Projects
 
 redirect_to_url: https://github.com/davidfstr/Decimal-Binary-Unit-Converter#readme
 
