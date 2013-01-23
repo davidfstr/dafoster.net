@@ -16,16 +16,18 @@ style: |
     .span9 > hr { border-top-color: #d3d3d3; /* subtle */ }
 
 ---
-[HandBrake] is a popular project for ripping DVDs and for converting
+[HandBrake] is a popular program for ripping DVDs and for converting
 converts movie files from one format to another.
 
-I extended HandBrake to support subtitle inputs from files (in addition
+I extended HandBrake to support subtitles from file inputs (in addition
 to DVDs) and to support the <acronym title="SubStation Alpha">SSA</acronym>
 and <acronym title="Advanced SubStation Alpha">ASS</acronym> subtitle formats,
 which are popular for encoding Japanese anime and foreign films.
 
-My main motivation was to watch movies on my iPhone while riding public transit
-and flying long-distance.
+My main motivation for adding subtitle support was to watch movies on my iPhone
+while riding public transit and flying long-distance.
+
+This was the first open source project I participated in.
 
 ## Download
 
@@ -52,7 +54,7 @@ If you experience any major rendering issues with SSA subtitles, please:
 
 These days (as of 2011) I am more or less inactive on HandBrake development.
 Yet I am currently your best shot at getting SSA issues fixed. Therefore if you
-really want to get me to fix a particular issue, you are encouraged to find a
+really want to get a particular issue fixed, you are encouraged to find a
 creative way to motivate me.[^motivate] :-)
 
 ## Updates
