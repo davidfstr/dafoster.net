@@ -2,7 +2,7 @@
 layout: project
 title: Park Place
 summary: >
-    An iPhone app that helps you find nearby parking on the cheap.
+    Helps you find cheap nearby parking on your iPhone.
 x_started_on: 2010-10-13
 x_ended_on: 2012-01-13
 x_languages: [Objective_C]
