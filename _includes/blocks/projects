@@ -4,7 +4,11 @@
   <ul class="tag_box" style="margin-bottom: .5em">
     {% for cur_page in site.pages %}
       {% if cur_page.layout == "project" %}
-        {% assign project_title = cur_page.title %}
+        {% if cur_page.short_title %}
+          {% assign project_title = cur_page.short_title %}
+        {% else %}
+          {% assign project_title = cur_page.title %}
+        {% endif %}
         {% assign project_url = cur_page.url | replace: '/index.html', '' %}
         {% assign project_slug = cur_page.url | replace: '/projects/', '' | replace: '/index.html', '' %}
         {% assign project_is_redirect = cur_page.redirect_to_url %}
