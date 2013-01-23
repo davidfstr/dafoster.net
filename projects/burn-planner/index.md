@@ -2,7 +2,7 @@
 layout: project
 title: Burn Planner
 summary: >
-    Burn a series of files to multiple DVDs quickly
+    Burns a series of files to multiple DVDs quickly
     by automatically allocating files among DVDs and naming the DVDs.
 x_started_on: Nov 20, 2010
 x_ended_on: Jan 19, 2011

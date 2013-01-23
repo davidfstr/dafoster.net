@@ -84,6 +84,15 @@
           </ul>
         </div>
         
+        {% comment %}
+          [Useful for styling .md files, whose style tags are stripped.]
+        {% endcomment %}
+        {% if page.style %}
+          <style>
+            {{ page.style }}
+          </style>
+        {% endif %}
+        
         {% if page.redirect_to_url %}
           {% if page.redirect_has_content %}
             {{ content }}

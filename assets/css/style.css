@@ -169,6 +169,12 @@ h2.active,
   padding-bottom: 0.2em;
 }
 
+acronym {
+  cursor: help;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+}
+
 /* ========================================================================== */
 /* Footer */
 
