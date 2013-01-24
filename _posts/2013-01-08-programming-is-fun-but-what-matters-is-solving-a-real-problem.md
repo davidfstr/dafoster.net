@@ -15,8 +15,6 @@ Therefore it is the *problem* that deserves the most attention if you want to ma
 Direct customer interaction, such as through in-person interviews of the general public, is way outside my comfort zone. However I will perservere. I think it is a very important skill for actually making a dent in the universe.[^4]
 
 
-{% comment %}[TODO: Reconfigure Markdown engine to support footnotes.]{% endcomment %}
-
 [^1]: *Refactoring* is a systematic method for code cleanup: improving the structure of existing code without changing its behavior. I highly recommend the book [Refactoring](http://www.amazon.com/Refactoring-Improving-Design-Existing-Code/dp/0201485672) if you want a deep-dive into the topic.
 
 [^2]: <!-- Speculation: --> Business majors & managers recognize early on the importance of solving business problems. After all, their training is around organizing other people to solve problems they identify. (Although I feel they often focus overly on managing and not enough on problem identification.)

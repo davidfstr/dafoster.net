@@ -29,7 +29,7 @@
 <h1>Gear Grinders</h1>
 <p>
 During my junior year of high school, I joined the newly-formed 
-robotics team called <a href="http://www.geargrinders.net/" class="external">Gear Grinders</a> and went on to 
+robotics team called <b>Gear Grinders</b> and went on to 
 participate in the 2004 and 2005 <a href="http://www.usfirst.org/" class="external">US FIRST Robotics 
 Competition</a>. The game for the 2004 year was <a href="http://en.wikipedia.org/wiki/FIRST_Frenzy:_Raising_the_Bar" class="external">FIRST 
 Frenzy</a> and the game for the 2005 year was <a href="http://en.wikipedia.org/wiki/Triple_Play_%28FIRST%29" class="external">Triple Play</a>.
@@ -45,8 +45,8 @@ My main activities during the build season were:
 <ul>
 	<li>
 		writing a <b>hardware abstraction layer</b> so that we could
-		run our robot's code on either the <a href="http://www.ifirobotics.com/edu-rc.shtml" class="external">EDU robot controller</a> or
-		the full-size <a href="http://www.ifirobotics.com/rc.shtml" class="external">FRC robot controller</a> without modification
+		run our robot's code on either the EDU robot controller or
+		the full-size FRC robot controller without modification
 	</li>
 	<li>
 		developing the <a href="projects/arcams/">Autonomous Robot Control and

@@ -73,4 +73,4 @@ entire volume. And this is exactly at the time you need it your files backed up
 the most, when your hard drive is likely to fail.
 
 
-[instructions for circumventing this]: http://safalra.com/other/time-machine-network-drive/
+[instructions for circumventing this]: http://code.stephenmorley.org/articles/time-machine-on-a-network-drive/

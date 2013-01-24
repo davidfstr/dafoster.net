@@ -31,7 +31,7 @@ This was the first open source project I participated in.
 
 ## Download
 
-* [HandBrake 0.9.5 and later](hbdownload) has subtitle support
+* [HandBrake 0.9.5 and later][hbdownload] has subtitle support
 * I have personally tested:
     * HandBrake svn3563 (2010100201)
     * HandBrake svn3567 (2010100301)
@@ -78,19 +78,19 @@ Now everyone can see my SSA subtitle improvements.
 
 At long last. The main body of work is now complete.
 
-Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=17609&start=75#p83649>
+Committed: <https://forum.handbrake.fr/viewtopic.php?f=4&t=17609&start=75#p83649>
 
 ---
 ### SSA burn-in now compiles under all supported architectures.
 <small>2010-09-19</small>
 
-Announced: <http://forum.handbrake.fr/viewtopic.php?f=4&t=17609&start=50#p83250>
+Announced: <https://forum.handbrake.fr/viewtopic.php?f=4&t=17609&start=50#p83250>
 
 ---
 ### Initial version of SSA burn-in patch completed.
 <small>2010-08-14</small>
 
-Announced: <http://forum.handbrake.fr/viewtopic.php?f=4&t=17609#p81389>
+Announced: <https://forum.handbrake.fr/viewtopic.php?f=4&t=17609#p81389>
 
 ---
 ### Wrote HandBrake Architectural Guide.
@@ -98,7 +98,7 @@ Announced: <http://forum.handbrake.fr/viewtopic.php?f=4&t=17609#p81389>
 
 This should help new developers on the HandBrake project come up to speed more quickly.
 
-Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16559#p77909>
+Committed: <https://forum.handbrake.fr/viewtopic.php?f=4&t=16559#p77909>
 
 ---
 ### Now decodes SSA to UTF-8 subtitles.
@@ -106,7 +106,7 @@ Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16559#p77909>
 
 Subtitled anime is now playable on iPhone, albeit without styling info.
 
-Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16538#p77832>
+Committed: <https://forum.handbrake.fr/viewtopic.php?f=4&t=16538#p77832>
 
 ---
 ### Can now transcode all subtitle formats that it can output.
@@ -114,20 +114,20 @@ Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16538#p77832>
 
 HandBrake can now transcode all subtitle formats that it can output (VOB, UTF-8, TX3G).
 
-Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16267#p77158>
+Committed: <https://forum.handbrake.fr/viewtopic.php?f=4&t=16267#p77158>
 
 ---
 ### General support for subtitles from file-inputs.
 <small>2010-05-04</small>
 
-Committed: <http://forum.handbrake.fr/viewtopic.php?f=4&t=16099#p76255>
+Committed: <https://forum.handbrake.fr/viewtopic.php?f=4&t=16099#p76255>
 
 ---
 ### Approach decided.
 <small>2010-04-13</small>
 
 Announced to the HandBrake community here:  
-<http://forum.handbrake.fr/viewtopic.php?f=4&t=15967>
+<https://forum.handbrake.fr/viewtopic.php?f=4&t=15967>
 
 
 [HandBrake]: http://handbrake.fr/

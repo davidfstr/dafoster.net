@@ -29,7 +29,7 @@
 <b>C Refactoring Workshop</b> is a tool for automatically 
 performing <a href="http://en.wikipedia.org/wiki/Refactoring" class="external">refactorings</a> on C source code. I originally developed 
 this program to assist in improving the code of 
-the <a href="http://www.intercept.com/html_files/products/pantheon/pantheon_main.htm" class="external">Pantheon</a> project for <a href="http://www.intercept.com/" class="external">Intercept Technologies</a>. The tool 
+the <a href="http://www.intercept.com/pcb-rf-hybrid-layout/pcb-rf-hybrid-layout.html" class="external">Pantheon</a> project for <a href="http://www.intercept.com/" class="external">Intercept Technologies</a>. The tool 
 itself is written in Java and consists of about <b>12,000</b> lines 
 of code.
 </p>

@@ -155,7 +155,7 @@ of this language to date is in <a href="projects/netdraw/#webversion">NetDraw fo
 <a name="drupal"></a>
 <h3>Drupal</h3>
 <p>
-<a href="http://www.drupal.org" class="external">Drupal</a> is a content management system run by several dynamic websites. I learned a 
+<a href="http://drupal.org" class="external">Drupal</a> is a content management system run by several dynamic websites. I learned a 
 lot about this framework while building a new <a href="/articles/2012/12/21/this-website-is-now-powered-by-jekyll/" class="external">personal website</a> that used it. Drupal is 
 excellent for community sites - especially those that require fine-grained access controls.
 </p>

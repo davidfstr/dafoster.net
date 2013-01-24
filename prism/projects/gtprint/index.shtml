@@ -27,7 +27,7 @@
 <h1>GTPrint Printing Scripts</h1>
 <p>
 The <b>GTPrint Printing Scripts</b> are a set of shell scripts 
-and <a href="http://www.apple.com/applescript/" class="external">AppleScripts</a> that allow you print to the printers in 
+and AppleScripts that allow you print to the printers in 
 the <a href="http://www.gatech.edu/" class="external">Georgia Tech</a> library, student center, and Central 
 Printing service from the Mac OS X print dialog. The 
 GTPrint Scripts consist of about <b>500</b> lines of code.

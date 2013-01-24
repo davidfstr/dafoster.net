@@ -33,7 +33,7 @@ from scratch, consisting of over <b>50,000</b> lines of code.
 </p>
 <p>
 This project really solidified my understanding of the Java language. Not only did I 
-end up reading the <a href="http://java.sun.com/docs/books/jls/" class="external">Java Language Specification</a> and <a href="http://java.sun.com/docs/books/jvms/" class="external">Java Virtual Machine Specification</a> 
+end up reading the <a href="http://docs.oracle.com/javase/specs/jls/se5.0/html/j3TOC.html" class="external">Java Language Specification</a> and <a href="http://docs.oracle.com/javase/specs/jvms/se5.0/html/VMSpecTOC.doc.html" class="external">Java Virtual Machine Specification</a> 
 from cover to cover, I also had to learn several new practices to deal 
 with a such a large codebase.
 </p>

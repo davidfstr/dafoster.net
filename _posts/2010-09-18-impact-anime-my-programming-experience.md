@@ -16,7 +16,7 @@ For example:
       via an included doll file with the French KiSS viewer by John Stiles.
     * Taught me how to write directly to graphics buffers, in both C and
       later Java.
-* I initially picked up Java when I was writing [RealMediaFixer],
+* I initially picked up Java when I was writing **RealMediaFixer**,
   a repairer of RealMedia video files. CodeWarrior's implementation of the
   C++ iostream classes had a broken buffered stream implementation,
   so I switched to Java to use its rock solid BufferedOutputStream 
@@ -30,10 +30,7 @@ For example:
   so that I can watch new anime on the bus.
 
 
-<!-- TODO: Republish entire Prism site. -->
 [implementation of the Kisekae Set System]: /prism/projects/kiss/
-<!-- TODO: Publish this project. -->
-[RealMediaFixer]: /projects/realmediafixer/
 [Ranma]: http://www.themanime.org/viewreview.php?id=396
 [my own client and server for the Hotline protocol]: /prism/projects/hotline/
 [enhancing support for transcoding soft subtitles in HandBrake]: /projects/handbrake-subtitle-support/

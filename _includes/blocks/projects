@@ -9,7 +9,7 @@
         {% else %}
           {% assign project_title = cur_page.title %}
         {% endif %}
-        {% assign project_url = cur_page.url | replace: '/index.html', '' %}
+        {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
         {% assign project_slug = cur_page.url | replace: '/projects/', '' | replace: '/index.html', '' %}
         {% assign project_is_redirect = cur_page.redirect_to_url %}
         
