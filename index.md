@@ -11,7 +11,6 @@ and [projects] I've done.
 Much information related to my activities prior to 2010 can also be found on 
 my [old site].
 
-{% comment %}[TODO: Create pages for these links.]{% endcomment %}
 [David Foster]: /about/
 [projects]: /projects/
 [articles]: /articles/

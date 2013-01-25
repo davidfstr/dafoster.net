@@ -3,8 +3,6 @@
 # 
 # All variables are available to templates via {{ site.author.name }} or similar.
 
-# Jekyll-Bootstrap themes are encouraged to use these universal variables.
-# --
 # (Used in <title> for every page. Used in nav bar. Used in Atom feed.)
 title: DaFoster
 # (Not used anywhere)
@@ -52,11 +50,9 @@ rdiscount:
   #   * autolink - Greedily urlify links.
   #   * (for more options, see rdiscount.rb in the RDiscount source)
   #   * (for unimplemented options, see http://www.pell.portland.or.us/~orc/Code/discount/)
-  #     - MKD_EXTRA_FOOTNOTE - Enable PHP Markdown Extra-style footnotes.  
   extensions:
     - smart
-    # Requires custom fork of RDiscount until the upstream maintainer
-    # merges the changes: https://github.com/davidfstr/rdiscount
+    # Requires RDiscount 2.0.7 or later
     - footnotes
 
 # Enable code highlighting with Pygments.
