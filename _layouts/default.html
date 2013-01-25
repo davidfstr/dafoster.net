@@ -5,8 +5,13 @@
   <head>
     <meta charset="utf-8">
     <title>{{ page.title }} | {{ site.title }}</title>
+  {% comment %}[Displayed as snippet for Google search results]{% endcomment %}
   {% if page.description %}
+    {% comment %}[Allow pages to specify explicit SEO description]{% endcomment %}
     <meta name="description" content="{{ page.description }}">
+  {% elsif page.summary %}
+    {% comment %}[Use project summary for SEO description]{% endcomment %}
+    <meta name="description" content="{{ page.summary }}">
   {% endif %}
     <meta name="author" content="{{ site.author.name }}">
   {% if page.redirect_to_url %}
