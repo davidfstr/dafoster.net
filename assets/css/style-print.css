@@ -1,0 +1,5 @@
+/* Remove color from breadcrumbs */
+.breadcrumb a,
+.breadcrumb .divider {
+  color: black;
+}
