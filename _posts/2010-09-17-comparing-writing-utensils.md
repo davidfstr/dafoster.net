@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why Pens > Pencils &ndash; Comparing Writing Utensils
+title: Comparing Writing Utensils (Why Pens&nbsp;>&nbsp;Pencils)
 tags: [Productivity]
 x_date_published: 2012-12-21
 
