@@ -59,6 +59,11 @@
                 <li><a href="{{ BASE_PATH }}{{ node.url | replace: '/index.html', '/' }}">{{ node.title }}</a></li>
               {% endif %}
             {% endfor %}
+            {% if site.safe == false %}
+              <li style="background-color: red; color: white; margin-top: 13px; padding-left: .2em; padding-right: .2em; font-family: Verdana, sans-serif;">
+                DEVELOPMENT MODE
+              </li>
+            {% endif %}
           </ul>
         </div>
       </div>
