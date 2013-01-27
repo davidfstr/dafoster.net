@@ -1,10 +1,12 @@
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
-    {% if site.safe == false %}var disqus_developer = 1; // not running in production{% endif %}
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';
-    var disqus_url = '{{ site.production_url }}{{ page.url }}';
     var disqus_title = '{{ page.title }}';
+    var disqus_url = '{{ site.production_url }}{{ page.url | replace: '/index.html', '/' }}';
+  {% if site.safe == false %}
+    var disqus_developer = 1; // disable URL authentication
+  {% endif %}
     
     /* * * DON'T EDIT BELOW THIS LINE * * */
     (function() {
