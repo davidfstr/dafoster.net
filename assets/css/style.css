@@ -249,6 +249,11 @@ h6:first-child {
   background-color: transparent;
 }
 
+.navbar-inner {
+  /* IE 9: Disable filter attribute in Bootstrap, since it confuses IE */
+  filter: none;
+}
+
 /* ========================================================================== */
 /* Accent Color: Green */
 
