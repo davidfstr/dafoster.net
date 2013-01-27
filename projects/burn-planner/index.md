@@ -41,7 +41,9 @@ If this program saves you time, consider giving back with a donation.
 			<input type="hidden" name="cn" value="Feature Requests">
 			<input type="hidden" name="currency_code" value="USD">
 			<input type="hidden" name="tax" value="0">
-			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donate" name="submit">
+			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"
+				width="147" height="47"
+				alt="Donate" name="submit">
 			<select name="amount" style="width: 65px; vertical-align: top;">
 				<option value="5.00">$5</option>
 				<option value="10.00" selected="selected">$10</option>
