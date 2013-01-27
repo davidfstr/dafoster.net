@@ -9,7 +9,7 @@ linkable_headings: true
 <h1>{{ page.title }}</h1>
 
 <div class="image-box">
-  <img src="portrait.jpg" width="120" height="160" />
+  <img src="portrait.jpg" width="120" height="160" alt="Portrait of David Foster" />
   <p>A picture of me</p>
 </div>
 
