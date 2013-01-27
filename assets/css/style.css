@@ -254,6 +254,11 @@ h6:first-child {
   filter: none;
 }
 
+sup {
+  /* Windows 7: Add "Palatino Linotype" as preference over "Georgia" */
+  font-family: Palatino, "Palatino Linotype", Georgia, "Times New Roman", Times, serif;
+}
+
 /* ========================================================================== */
 /* Accent Color: Green */
 
