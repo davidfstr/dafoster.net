@@ -318,10 +318,6 @@ a:hover { /* must be after a:link, a:visited */
 	border-radius: 3px;
 	text-decoration:none;
 }
-.tag_box a span{
-	vertical-align:super;
-	font-size:0.8em;
-}
 .tag_box a.active {
 	background:#57A957;
 	border:1px solid #4C964D;
