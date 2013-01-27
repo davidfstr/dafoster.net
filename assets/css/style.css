@@ -124,6 +124,24 @@ a.external {
 	padding-right: 13px;
 }
 
+/* 
+ * Private context styling based on CSS code found at:
+ * http://en.wikipedia.org/skins-1.5/monobook/main.css
+ * 
+ * Generally this style is applied to anything that is
+ * conditionally enabled when the site is in development mode
+ * (and disabled when in production mode).
+ */
+.private {
+  /* IE6/XP: Doesn't display the background image in the correct location
+	 *         when the decorated 'a' link wraps multiple lines.
+	 *         No non-Javascript workaround for this exists as of 11/20/2007.
+	 *         See http://www.satzansatz.de/cssd/wrappinglinkbg.html for
+	 *         a good discussion of the issue. */
+	background: url(lock_icon.gif) top right no-repeat;
+  padding-right: 17px;
+}
+
 /*
  * Heading highlighting
  * (Supported on About and Articles (By Topic) pages.)

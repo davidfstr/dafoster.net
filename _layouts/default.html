@@ -61,7 +61,9 @@
             {% endfor %}
             {% if site.safe == false %}
               <li style="background-color: red; color: white; margin-top: 13px; padding-left: .2em; padding-right: .2em; font-family: Verdana, sans-serif;">
-                DEVELOPMENT MODE
+                <span class="private" style="background-position: center right;">
+                  DEVELOPMENT MODE
+                </span>
               </li>
             {% endif %}
           </ul>
@@ -116,7 +118,10 @@
       </div>
 
       <footer>
-        <p>&copy; {{ site.time | date: '%Y'}} <a href="/about/">{{ site.author.name }}</a> | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a></p>
+        <p>&copy; {{ site.time | date: '%Y'}} <a href="/about/">{{ site.author.name }}</a>
+        {% if site.safe == false %}
+         | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a></p>
+        {% endif %}
       </footer>
 
     </div>
