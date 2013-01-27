@@ -1,7 +1,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <!-- Tell IE 8+ to render the page in IE 7 style -->
 <meta http-equiv="X-UA-Compatible" content="IE=7">
-<base href="/prism/">
+
+<!-- Configure relative links to be site-relative to root subdirectory. -->
+<!-- IE 6-9+: Only understands *absolute* href in "base" tag.
+  ||          Downlevel-revealed conditional comment breaks validation
+  ||          but works in practice. -->
+<![if !IE]>  <base href="/prism/"> <![endif]>
+<!--[if IE]> <base href="http://dafoster.net/prism/"> <![endif]-->
+
 <link rel="stylesheet" href="common/nav.css" type="text/css">
 <link rel="stylesheet" href="common/layout.css" type="text/css">
 <!--[if IE]><link rel="stylesheet" href="common/layout-ie.css" type="text/css"><![endif]-->
