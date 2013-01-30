@@ -1,6 +1,9 @@
 # Generated site
 _site/
 
+# Staging for deployment
+_production/
+
 # Windows
 Thumbs.db
 
