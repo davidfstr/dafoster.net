@@ -186,6 +186,9 @@ h2.active,
   padding: 0 0 .2em .2em;
   padding-bottom: 0.2em;
 }
+.toc ul ul li {
+  padding-left: 2em;
+}
 
 acronym {
   cursor: help;
