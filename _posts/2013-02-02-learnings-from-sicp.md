@@ -12,7 +12,7 @@ tags: [Software]
 
 Recently I took the liberty of reading one of the defining books in the domain of computer science: [The Structure and Interpretation of Computer Programs][sicp], often abbreviated as SICP.
 
-SICP is the computer science textbook given to computer science undergraduates at MIT. It serves as a good advanced text on software design and as a good introductory text for the Lisp programming language.
+SICP is the computer science textbook given to undergraduates at MIT. It serves as a good advanced text on software design and as a good introductory text for the Lisp programming language.
 
 Here are interesting things I learned:
 
@@ -47,7 +47,7 @@ Languages should:
 
 Units of computation can be abstracted in several forms:
 
-* **procedure** - *Assigns names to common patterns and then work in terms of the named abstractions directly.*
+* **procedure** - *Assigns names to common patterns, allowing you to work in terms of the named abstractions directly.*
     * AKA function, method
 * **abstract data type** - *Allows the choice of representation (i.e. the implementation) to vary separately from the API (i.e. the interface).*[^impl-vs-interface]
     * Built-in language support is often provided in the form of **classes**.
@@ -77,7 +77,7 @@ Units of computation can be abstracted in several forms:
 
 Two design philosophies:
 
-* **Lisp-school**: Create abstract data types by combining a *small* set of general-purpose data types (especially collections). These complex structures can then be manipulated using operations on these general-purpose types.
+* **Lisp-school**: Create abstract data types by combining a *small* set of general-purpose data types (particularly collections). These complex structures can then be manipulated using operations on these general-purpose types.
 
     * *"Lisp is for building organisms -­ imposing, breathtaking, dynamic structures built by squads fitting fluctuating myriads of simpler organisms into place."*
     
@@ -94,7 +94,7 @@ Roughly speaking, I think of the Lisp philosophy as **programming with collectio
 
 #### Usage
 
-The Pascal philosophy has won out in most statically typed languages such as C++ and Java, and in languages with poor (or nonexistant) built-in collections.
+The Pascal philosophy has won out in most statically typed languages such as C++ and Java, and in languages with poor (or nonexistent) built-in collections.
 
 The Lisp philosophy is more common in dynamically typed languages that lack built-in support for classes, such as Lisp itself and JavaScript.
 
@@ -107,7 +107,7 @@ A hybrid approach (using both philosophies) is seen in languages that are dynami
 
 Polymorphism is where multiple abstract data types implement a common *interface*, which is typically defined as a series of methods that can be called on all implementing types.
 
-This allows client code, when given an object known only to implement a particular interface, to invoke interface methods on the object and end up calling the correct implementation of that method, depending on the runtime type of the object.
+This allows client code, when given an object known only to implement a particular interface, to invoke interface methods on the object and end up calling the correct implementation of that method depending on the runtime type of the object.
 
 #### Implementation Strategies
 
@@ -132,20 +132,24 @@ These implementation strategies for polymorphism have some tradeoffs, which are 
 * Message passing, on the other hand, can be made more flexible: 
     * Implementing data types may choose to support more operations than the standard set on the interface.[^vfs]
     * Heck, individual *instances* can choose to support more operations than the standard set.
-        * In such cases, you would be able to interrogate (i.e. reflect on) an individual instance to determine what operations (i.e. messages) it understands/supports.
+        * In such cases, you would want to interrogate (i.e. reflect on) an individual instance to determine what operations (i.e. messages) it understands/supports.
 
 [^vfs]: For example, the Linux virtual filesystem, which is implemented in message-passing style, has a common set of operations that all filesystems are expected to support (ex: `unlink`). However individual filesystems may support additional operations: For example the HFS+ filesystem on Mac OS X additionally supports a `delete` operation, which has slightly different semantics than the standard `unlink` operation.
 
 <a id="cross-type-operations"></a>
 ### Cross-Type Operations
 
-Introducing **cross-type operations**, such as `add(Integer, Complex)`, is very tricky design issue.
+Introducing **cross-type operations**, such as `add(Integer, Complex)`, is a very tricky design issue.
 
-Having explicit functions that operate on all combinations of types is possible but highly verbose. With **n** types and **m** operations, you need n*m functions to implement all combinations. Impractical.
+Having explicit functions that operate on all combinations of types is possible but highly verbose. With **n** types and **m** operations, you need <strong>n*m</strong> functions to implement all combinations. Impractical.
 
-Another strategy is to use *coercion* to convert a value from one type to another. So instead of defining `add(Integer, Complex)`, just define `convertToComplex(Integer) : Complex`, and use the existing `add(Complex, Complex)`. To convert between all types requires at least n but no more than n^2 conversion functions.
+Another strategy is to use *coercion* to convert a value from one type to another. So instead of defining `add(Integer, Complex)`, just define `convertToComplex(Integer) : Complex`, and use the existing `add(Complex, Complex)`. To convert between all types requires at least **n** but no more than **n<sup>2</sup>** conversion functions.
 
-Many programming languages have built-in facilities to automatically coerce types. For some languages (like JavaScript or PHP) these coersion rules are quite complex (and error-prone). Other languages (like ML) ban implicit coercion entirely. Java only has coercion for built-in types. C++ lets the datatype designer choose (via `implicit` or explicit one-argument constructors). Scala relies on implicit coercion a lot to enable foreign methods to be introduced on types.
+Many programming languages have built-in facilities to automatically coerce types. For some languages (like JavaScript or PHP) these coersion rules are quite complex (and error-prone). Other languages (like ML) ban implicit coercion entirely.
+
+* Java only has coercion for built-in types.
+* C++ lets the datatype designer choose (via `implicit` or explicit one-argument constructors).
+* Scala relies on implicit coercion a lot to enable foreign methods to be introduced on types.
 
 One wrinkle is that these conversion functions might introduce a loss in precision. For example not every integer can be represented as double of exactly the same value.
 
@@ -163,7 +167,7 @@ Haskell takes a very aggressive stance against assignments, mutable state, and o
 <a id="lazy-evaluation"></a>
 ### Lazy Evaluation
 
-Normally expressions are evaluated immediately, in the order that they occur in code. **Lazy evaluation** changes this behavior such that expressions are only evaluated when some primitive operation (like print or add) requires the value of the expression.
+Normally expressions are evaluated immediately, in the order that they occur in code. **Lazy evaluation** changes this behavior such that expressions are only evaluated when some primitive operation (like print or add) requires the value of the expression. Until then the unevaluated expression is passed around (as a "thunk").
 
 Lazy evaluation enables that creation of **lazy data structures**, which is a useful performance optimization in some contexts.
 
@@ -172,7 +176,7 @@ Unrestricted mutation and lazy evaluation do not mix well in programming languag
 <a id="declarative-languages"></a>
 ## Declarative Languages
 
-Logic programming languages are the far declarative end of the
+Logic programming languages are at the far declarative end of the
 imperative-declarative spectrum. They can be used to deduce answers
 from a set of initial set of declarative statements.
 
