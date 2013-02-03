@@ -12,9 +12,9 @@ tags: [Software]
 
 Recently I took the liberty of reading one of the defining books in the domain of computer science: [The Structure and Interpretation of Computer Programs][sicp], often abbreviated as SICP.
 
-SICP is the computer science textbook given to undergraduates at MIT. It serves as a good advanced text on software design and as a good introductory text for the Lisp programming language.
+SICP is the computer science textbook given to undergraduates at MIT. It serves as an advanced text on software design and as an introductory text for the Lisp programming language.
 
-Here are interesting things I learned:
+Here are some interesting things I learned:
 
 <div class="toc">
   <ul>
@@ -192,4 +192,7 @@ A "query" (i.e. an expression in the language) is transformed into a
 
 So those are a few interesting things I learned from reading SICP. Taking notes while reading made it a lot easier for me to remember the content. You might try it when reading a technical book with a lot of new concepts.
 
+## *Related Articles*
 
+* [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
+    * *Discusses several programming languages and their unique features.*

@@ -11,5 +11,10 @@ Previously this site was powered by the [Drupal] engine. I found it overly
 complex to maintain, especially for a single-user blog and portfolio website.
 For more details see my post [Why I no longer use Drupal].
 
+## *Related Articles*
+
+* [Why I no longer use Drupal]
+    * *Details why Drupal is overly complex for a personal blog.*
+
 [Drupal]: http://drupal.org
 [Why I no longer use Drupal]: /articles/2012/12/16/why-i-no-longer-use-drupal/

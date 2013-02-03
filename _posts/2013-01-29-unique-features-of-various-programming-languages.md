@@ -137,6 +137,11 @@ Here's a list of a few well-known languages I've worked with and some of the mor
 * **Call-with-current-continuation**
     * Allows you to save the current execution state of the program in a variable and jump back to it later. Multiple times, even. It's like a friggin' time machine. You can implement fairly complex control flow operators with this function.
 
+[^lisp-dialects]: There are more dialects of Lisp than any other language I can think of. These 3 (Common Lisp, Scheme, and Clojure) are just the most popular dialects. I've directly used [Racket](http://racket-lang.org) in the past, which is itself a dialect of Scheme.
+
 <!-- TODO: Add Prolog -->
 
-[^lisp-dialects]: There are more dialects of Lisp than any other language I can think of. These 3 (Common Lisp, Scheme, and Clojure) are just the most popular dialects. I've directly used [Racket](http://racket-lang.org) in the past, which is itself a dialect of Scheme.
+## *Related Articles*
+
+* [Learnings from SICP (and Lisp)](/articles/2013/02/02/learnings-from-sicp/)
+    * *Discusses computer science concepts and how they manifest in various programming languages.*
