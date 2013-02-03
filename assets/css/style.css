@@ -196,6 +196,16 @@ acronym {
   border-bottom-width: 1px;
 }
 
+/* Fenced code blocks */
+pre {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  font-size: 14px;
+  margin: 15px 0;
+  padding: 6px 10px;
+  border-radius: 3px;
+  background-color: #f8f8f8;
+}
+
 /* ========================================================================== */
 /* Footer */
 
