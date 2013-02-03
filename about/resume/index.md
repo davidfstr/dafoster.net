@@ -16,6 +16,7 @@ for work.*
   </ul>
 </div>
 
+
 <h2 id="objectives">Areas of Interest</h2>
 
 I'll be more responsive if your positions intersect my current interests...
@@ -34,25 +35,35 @@ I'll be more responsive if your positions intersect my current interests...
 
 Languages I have done significant work in:
 
-* Java, C#, Objective-C
 * Python
+* Java, C#
+* Objective-C
 * C, C++, x86 Assembler
 * HTML, JavaScript, CSS
 
-Additional languages I have studied, but not created significant software in:
+Additional languages I have studied but have not created significant software in:
 
 * Scala
-* Lisp (Common Lisp, Scheme, Racket, Closure)
+* Lisp (Common Lisp, Scheme, Racket, Clojure)
 * Haskell
 * Standard ML
 * Smalltalk
 
+
 <h2 id="experience">Experience</h2>
+
+### Personal Projects
+
+I work on lots of projects in my spare time since software is awesome.  
+See my [**project gallery**](/projects/) for details.
+
+### Industry
 
 * [Splunk] (2012 to Present)
     * designed and implemented Splunk's [PHP SDK][PhpSdk]
     * maintaining Splunk's [Python SDK][PySdk], [Java SDK][JavaSdk],
       [JavaScript SDK][JsSdk], and [PHP SDK][PhpSdk]
+    * created the [Twitter] and [Flurry] data connectors for Splunk
     * possibly other secret projects :-)
 * Seabalt Solutions LLC (2011 to 2012)
     * created multiple iOS applications, some for external clients
@@ -78,6 +89,8 @@ Additional languages I have studied, but not created significant software in:
 [PySDK]: https://github.com/splunk/splunk-sdk-python
 [JavaSdk]: https://github.com/splunk/splunk-sdk-java
 [JsSdk]: https://github.com/splunk/splunk-sdk-javascript
+[Twitter]: http://blogs.splunk.com/2012/09/04/exploring-twitter-data/
+[Flurry]: http://blogs.splunk.com/2012/09/20/analyzing-flurry-data/
 [Microsoft]: http://www.microsoft.com/
 [Windows Online]: http://windows.microsoft.com/
 [Google]: http://www.google.com/
