@@ -3,6 +3,7 @@ layout: post
 title: Things I Wish I Knew Before Working in Industry
 tags: [Software, Business]
 x_date_written: 2008-04-30
+featured: true
 
 ---
 

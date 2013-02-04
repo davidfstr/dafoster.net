@@ -3,6 +3,7 @@ layout: post
 title: Programming is Fun. But What Matters is Solving a Real Problem.
 tags: [Software, Business, Personal]
 x_date_written: 2012-12-01
+featured: true
 
 ---
 
