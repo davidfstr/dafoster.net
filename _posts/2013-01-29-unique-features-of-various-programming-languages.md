@@ -49,13 +49,31 @@ Here's a list of a few well-known languages I've worked with and some of the mor
 
 [wora]: http://en.wikipedia.org/wiki/Write_once,_run_anywhere
 
-### C&#35;[^java-copycat]
+### C&#35;
+
+Very similar to Java.[^java-copycat]
 
 * **Assemblies**
     * This is a level of encapsulation above the typical namespaces or modules in most languages. Assemblies are similar to the idea of static/dynamic libraries in C or JAR files in Java.
     * Notably, you can mark members as `internal`, which makes them public within the same assembly, but private to everybody outside the assembly. This is quite useful.
+* **Cross-language compatibility is first-class** (not just for C)
+    * C# runs in the Common Language Runtime, which was designed from the beginning to support interoperability between languages.
+* **Properties are first-class**
+    * No longer need to write explicit getter and (optional) setter methods.
+* **Listeners are first-class**
+    * Classes can declare an *event* `Foo` with `addFooListener` and `removeFooListener` functionality built in.
+    * Unfortunately the implementation has some annoyances[^event-flaw].
+* **Foreign Methods[^foreign-method] are first-class**
+    * C# calls these *extension methods*.
+* **Partial Classes**
+    * Allows a class's members to be defined in multiple files.
+    * Useful to add functionality to a generated class (for example, from a parser generator) without those modifications getting lost when the class is next regenerated.
 
 [^java-copycat]: C# is by design almost a direct copy of Java. It amazes me that Microsoft (C#'s sponsor) would spend so much effort making a copy of an existing language.
+
+[^foreign-method]: I am referring to the [Foreign Method](http://www.refactoring.com/catalog/introduceForeignMethod.html) design pattern here, not a native function from a [foreign function interface](http://en.wikipedia.org/wiki/Foreign_function_interface).
+
+[^event-flaw]: If you invoke an uninitialized event-property, it will throw a `NullReferenceException` instead of ignoring your request, as you would expect. Workaround by initializing events with an empty delegate.
 
 ### Python
 
@@ -77,8 +95,10 @@ Here's a list of a few well-known languages I've worked with and some of the mor
         * An object's constructor is called `__init__`.
         * The method implementing an operator overload for plus is called `__add__`.
         * A class's metaclass is held by the `__metaclass__` field.
-* **Metaclasses**
-    * Deep magic. I will say no more.
+* **Generators** and **Coroutines**
+    * Generators enable straightforward *pulling* of values from a complex data source (like a parsed data structure).
+    * Coroutines enable straightforward *pushing* of values to a complex data sink.
+    * Python calls both constructs a *generator*.
 
 ### JavaScript
 
