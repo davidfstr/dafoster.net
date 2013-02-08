@@ -26,19 +26,9 @@ Have specific questions about how these were implemented? [Contact me].
 
 ## Installation
 
-* Install RDiscount **2.0.7** (or later).
-    * NOTE: This may be released as a gem by the time you reach this.  
-      If so, just use: `gem install --version '>= 2.0.7' rdiscount`
-
-```
-cd /tmp
-git clone https://github.com/rtomayko/rdiscount.git
-cd rdiscount
-gem build rdiscount.gemspec
-gem install rdiscount-*.gem
-```
-
 * Install Jekyll.
+    * If you already have this installed, you may need to upgrade
+      RDiscount to version 2.0.7 or later with `gem update rdiscount`.
 
 ```
 gem install jekyll
