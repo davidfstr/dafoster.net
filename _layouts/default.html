@@ -138,8 +138,10 @@
       <footer>
         <p>&copy; {{ site.time | date: '%Y'}} <a href="/about/">{{ site.author.name }}</a>
         {% if site.safe == false %}
-         | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a></p>
+         | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a>
+         | <a href="{{ site.production_url }}{{ page.url | replace: '/index.html', '/' }}"><span class="private">View in Production</span></a>
         {% endif %}
+        </p>
       </footer>
 
     </div>
