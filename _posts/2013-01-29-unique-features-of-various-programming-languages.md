@@ -21,7 +21,7 @@ Here's a list of a few well-known languages I've worked with and some of the mor
     * The idea that a language specification would explicitly specify certain constructs as having undefined behavior is interesting. Most specifications leave things undefined by omission, not commission.
     * Although this allows various compiler optimizations, many developers rely on their particular compiler's implementation of undefined behavior without even realizing it.[^overflow]
 
-[^overflow]: For example it is undefined what happens when you add to an integer variable and the variable overflows. In most compilers adding 1 to the largest integer wraps around to result in the smallest integer, and thus a number of programs depend on this behavior.
+[^overflow]: For example it is undefined what happens when you add to an integer variable and the variable overflows. In most compilers adding 1 to the largest integer wraps around to result in the smallest integer, and thus a number of programs depend on this behavior. Other compilers [assume overflow is impossible](http://thiemonagel.de/2010/01/signed-integer-overflow/).
 
 ### Java
 
