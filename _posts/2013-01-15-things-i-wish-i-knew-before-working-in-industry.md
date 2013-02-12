@@ -9,7 +9,7 @@ featured: true
 
 In April 2008, a representative from IBM gave a presentation at Georgia
 Tech about things he wished he knew before working in the the software
-industry. I have found his advise to be very useful at various points during
+industry. I have found his advice to be very useful at various points during
 my career. Sadly I have lost the presenter's name.
 
 Here is my outline of his presentation. **Emphasized** points are ones I've found
