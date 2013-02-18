@@ -146,7 +146,7 @@ Very similar to Java.[^java-copycat]
 
 ### Lisp <small>(Common Lisp, Scheme, Clojure)[^lisp-dialects]</small>
 
-* **Homeoiconic**
+* **Homoiconic**
     * When you write a Lisp program, the notation you use (the *grammar*) is equivalent to what a compiler would see (an *abstract syntax tree* or *AST*).
     * Furthermore this Lisp code is represented as a nested structure of lists, symbols, and literals, all of which can be directly generated and manipulated in Lisp itself!
     * This allows Lisp code to generate list structures which can then be run as Lisp code directly.
