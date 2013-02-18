@@ -2,6 +2,7 @@
 layout: post
 title: Unique Features of Various Programming Languages
 tags: [Software]
+x_date_updated: 2013-02-18
 
 ---
 
@@ -131,7 +132,7 @@ Very similar to Java.[^java-copycat]
     * Expressions are only evaluated when some primitive operation (like `print` or `add`) requires the value of the expression.
     * Allows you to define your own control flow operators.[^control-flow]
     * Allows you to extract complex expressions without fear of introducing a performance hit (since the expression will only actually be evaluated if it is needed).
-* **Pure &ndash; Side effects are disallowed by default**
+* **Side effects banned by default**
     * Mutation of data structures and I/O, both of which have order-sensitive side effects, are not allowed except within the confines of **monad**.
     * A **monad** is a construct that explicitly controls evaluation order, in contrast to the usual unpredictable lazy evaluation behavior.
 * **`null` banned by default.**
@@ -145,19 +146,36 @@ Very similar to Java.[^java-copycat]
 
 ### Lisp <small>(Common Lisp, Scheme, Clojure)[^lisp-dialects]</small>
 
-* **Homeoiconic // Grammar and Abstract Syntax Tree (AST) equivalent**
-    * When you write a Lisp program, the notation you use (the *grammar*) is equivalent to what a compiler would see (an *AST*).
+* **Homeoiconic**
+    * When you write a Lisp program, the notation you use (the *grammar*) is equivalent to what a compiler would see (an *abstract syntax tree* or *AST*).
     * Furthermore this Lisp code is represented as a nested structure of lists, symbols, and literals, all of which can be directly generated and manipulated in Lisp itself!
-    * This allows Lisp code at runtime to generate list structures which can then be run as Lisp code directly.
-    * And at *compile* time, Lisp **macros** can do the same thing, generating arbitrary new statements and control structures. This is extremely powerful.
-        * Domain specific languages, in particular, are very easy to implement in Lisp thanks to macros.
+    * This allows Lisp code to generate list structures which can then be run as Lisp code directly.
+        * Generation can be done at *compile* time with **macros**.
+        * Generation can be done at *runtime* as well, and then invoked with **eval**.
     * However the highly uniform structure of Lisp code, devoid of operator and syntactic diversity, makes for lousy typography and thus low readability.
+* **Macros**
+    * A function that transforms the AST of its operands at *compile* time to new code.
+    * Macros can be used to generate arbitrary new statements and control structures.
+        * Domain specific languages, in particular, are very easy to implement in Lisp thanks to macros.
+    * Macros can also be used to perform code optimizations at compile time[^macro-optimize] (similar to  "template metaprogramming" in C++).
+    * Fluent use of macros requires the host language to be homoiconic, which is rare. Thus Lisp remains the only well-known language family that has macros.
 * **Lisp Conditions and Restarts**
     * Allows bidirectional communication between different parts of the call stack. More powerful than exceptions, since conditions can not only unwind the stack but also wind it back again via a restart.
 * **Call-with-current-continuation**
     * Allows you to save the current execution state of the program in a variable and jump back to it later. Multiple times, even. It's like a friggin' time machine. You can implement fairly complex control flow operators with this function.
 
 [^lisp-dialects]: There are more dialects of Lisp than any other language I can think of. These 3 (Common Lisp, Scheme, and Clojure) are just the most popular dialects. I've directly used [Racket](http://racket-lang.org) in the past, which is itself a dialect of Scheme.
+
+[^macro-optimize]: Prismatic performs efficient [compile-time DOM templating](http://blog.getprismatic.com/blog/2013/1/22/the-magic-of-macros-lighting-fast-templating-in-clojurescript) in JavaScript using macros.
+
+### Other
+
+* **Fexprs**
+    * A function whose operands are passed to it at runtime without being evaluated.
+    * Similar to macros and lazy evaluation in terms of power.
+    * Has fallen out of favor since the 1980s due to being difficult for compilers to optimize. Also it is hard to provide good error messages .
+    * Furthermore most fexpr functions tend to rely on *eval* to continue evaluating its operands. The use of *eval* has its own problems...
+
 
 <!-- TODO: Add Prolog -->
 
