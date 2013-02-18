@@ -173,7 +173,7 @@ Very similar to Java.[^java-copycat]
 * **Fexprs**
     * A function whose operands are passed to it at runtime without being evaluated.
     * Similar to macros and lazy evaluation in terms of power.
-    * Has fallen out of favor since the 1980s due to being difficult for compilers to optimize. Also it is hard to provide good error messages .
+    * Has fallen out of favor since the 1980s due to being difficult for compilers to optimize. Also it is hard to provide good error messages.
     * Furthermore most fexpr functions tend to rely on *eval* to continue evaluating its operands. The use of *eval* has its own problems...
 
 
