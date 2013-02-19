@@ -5,16 +5,40 @@ breadcrumbs: []
 ---
 <h1>{{ page.title }}</h1>
 
-My name is [David Foster]. On this site you will find [articles] I've written
-and [projects] I've done.
+My name is [David Foster]. Check out the cool [software I've written].
 
-Much information related to my activities prior to 2010 can also be found on 
-my [old site].
+My [articles] may also be of interest.
 
 [David Foster]: /about/
-[projects]: /projects/
+[software I've written]: /projects/
 [articles]: /articles/
-[old site]: /prism/
+
+## Featured Projects
+
+<div class="x-projects" style="margin-bottom: 1.25em; margin-top: -.7em;">
+  {% for cur_page in site.pages %}
+    {% if cur_page.layout == "project" and cur_page.featured %}
+      {% assign project_title = cur_page.title %}
+      {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
+      {% assign project_summary = cur_page.summary %}
+      {% assign project_is_redirect = cur_page.redirect_to_url %}
+      
+      <div class="project">
+        <a href="{{ project_url }}"><img src="{{ project_url }}logo-128.png" alt="Logo for {{ project_title }}" /></a>
+        <div>
+          <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
+            {% if cur_page.featured %}
+              <span title="Featured Project">&#x2606;</span>
+            {% endif %}
+          </h2>
+          <p>
+            {{ project_summary }}
+          </p>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
 
 ## Featured Articles
 
@@ -44,3 +68,10 @@ my [old site].
   {% endfor %}
 </ul>
 <a href="/articles/">See all articles...</a>
+
+## Miscellaneous
+
+Much information related to my activities prior to 2010 can also be found on 
+my [old site].
+
+[old site]: /prism/

@@ -66,6 +66,31 @@ html { overflow-y: scroll }
 }
 
 /* ========================================================================== */
+/* Projects */
+
+.project {
+  margin-top: 20px;           /* spacing between adjacent projects */
+  position: relative;         /* enable absolute positioning for children */
+  min-height: 75px;           /* no shorter than the contained image */
+}
+.project img {
+  position: absolute;         /* position at (0,0) */
+  width: 75px; height: 75px;  /* shrink image from full size */
+}
+.project > div {
+  margin-left: 90px;          /* give 15px space on left (75+15=90) */
+}
+.project h2 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+}
+.project {
+  font-family: Verdana, sans-serif;
+  font-size: 13px;
+}
+
+/* ========================================================================== */
 /* Articles */
 
 /* Move the margin under the first h1 to below the .post_metadata */
