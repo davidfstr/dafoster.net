@@ -2,6 +2,9 @@
 layout: post
 title: Learning Skills from Professionals
 tags: [Business, Personal]
+x_unpublish_reason: >
+    Weak angle. Content is not really useful by itself.
+    This is more a *musing* than a useful post.
 
 ---
 
