@@ -181,5 +181,8 @@ Very similar to Java.[^java-copycat]
 
 ### *Related Articles*
 
+* [Visual Guide to Programming Language Properties](/articles/2013/02/20/visual-guide-to-programming-language-properties/)
+    * *Shows programming language features, how they are related, and which features are present in popular languages.*
+    * *Visualizes some of the features discussed in this article.*
 * [Learnings from SICP (and Lisp)](/articles/2013/02/02/learnings-from-sicp/)
     * *Discusses computer science concepts and how they manifest in various programming languages.*
