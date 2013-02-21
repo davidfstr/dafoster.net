@@ -1,0 +1,89 @@
+/*
+ * [] Languages: L_HASKELL, L_JAVA, L_CPP, L_OBJC, L_PYTHON, L_RUBY, L_LISP
+ */
+
+digraph "Language Properties" {
+    graph [rankdir = LR]                                // layout algorithm
+    graph [fontname="ArialRoundedMTBold", fontsize=16]  // header font
+    graph [dpi=72]
+    graph [margin=-.2, color=white]                     // trim edges
+    node [style=filled, fillcolor=white]                // nodes default to filled
+    
+    /* Node Properties */
+    
+    AOD_RAII [shape=box, width=.1, label="", style=filled, fillcolor=black]
+    
+    /* Edges */
+    
+    subgraph "cluster-2" {
+        //label="Resource Management"
+        
+        // Labels & Styles
+        Destructors         [label="Destructors", fillcolor=lightblue1]                             //                    L_CPP, L_OBJC
+        ObjScopeRsrcManage  [label="Object-scoped\n resource management (RAII)",
+            fillcolor=palegreen, shape=box]                                                         //                    L_CPP, L_OBJC
+        StackAllocObjs      [label="Stack-allocated\n objects",
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                    L_CPP
+        AggressiveObjDestruct   [label="Aggressive object\n destruction",
+            fillcolor=palegreen, shape=box]                                                         //                    L_CPP, L_OBJC
+        ManualMemManage     [label="Manual memory\n management",
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                    L_CPP
+        RefCounting         [label="Reference counting", fillcolor=lightblue1, shape=Mrecord]       //                           L_OBJC
+        ElimFreeRelease     [label="Eliminate: free() and release() calls",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA,        L_OBJC, L_PYTHON, L_RUBY, L_LISP
+        AutoRefCounting     [label="Automatic reference\n counting (ARC)",
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                           L_OBJC
+        TryFinally          [label="Try-finally\n statement", fillcolor=lightblue1]                 //            L_JAVA,                L_PYTHON, L_RUBY
+        WithStatement       [label="With-resource\n statement",
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                                   L_PYTHON
+        BlockScopeRsrcManage    [label="Block-scoped\n resource management",
+            fillcolor=palegreen, shape=box]                                                         //            L_JAVA,                L_PYTHON, L_RUBY
+        GarbageCollect      [label="Garbage collection",
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
+        ElimStaticMemLeak   [shape=none, margin=0, label=<
+            <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                <tr><td bgcolor="palegreen"> Eliminate: Static memory leak </td></tr>
+                <tr><td bgcolor="palegreen"> Eliminate: Dangling pointer use </td></tr>
+            </table>>]                                                                              // L_HASKELL, L_JAVA,        L_OBJC, L_PYTHON, L_RUBY, L_LISP
+        AnyObjOwnershipPattern  [label="Non-hierarchal and distributed\n object ownership easy",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
+        NondetermObjDealloc [label=
+            "Nondeterministic object\n deallocation timing\n ('garbage collection pauses')",
+            fillcolor=pink, shape=box]                                                              // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
+        
+        // Nodes & Edges
+        Destructors                              -> AOD_RAII
+        StackAllocObjs  -> AggressiveObjDestruct -> AOD_RAII -> ObjScopeRsrcManage
+        ManualMemManage -> AggressiveObjDestruct
+        RefCounting     -> AggressiveObjDestruct
+        TryFinally -> WithStatement
+                      WithStatement -> BlockScopeRsrcManage [penwidth=3]
+        TryFinally                  -> BlockScopeRsrcManage
+        GarbageCollect            -> ElimStaticMemLeak
+        GarbageCollect            -> AnyObjOwnershipPattern
+        GarbageCollect            -> NondetermObjDealloc
+        GarbageCollect            -> ElimFreeRelease
+        RefCounting     -> AutoRefCounting -> ElimFreeRelease
+                           AutoRefCounting -> ElimStaticMemLeak
+        
+        // Layout hacking
+        // (Nodes should be adjacent)
+        ObjScopeRsrcManage -> BlockScopeRsrcManage [style=invis]
+        // (Destructors to top)
+        StackAllocObjs -> Destructors [style=invis]
+        
+        subgraph { rank=source
+            Destructors StackAllocObjs RefCounting ManualMemManage
+            GarbageCollect
+        }
+        
+        subgraph { rank=same
+            AggressiveObjDestruct AutoRefCounting
+        }
+        
+        subgraph { rank=sink
+            ObjScopeRsrcManage BlockScopeRsrcManage ElimStaticMemLeak
+            AnyObjOwnershipPattern ElimFreeRelease NondetermObjDealloc
+        }
+    }
+}

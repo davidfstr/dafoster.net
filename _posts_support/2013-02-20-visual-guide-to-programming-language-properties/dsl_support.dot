@@ -1,0 +1,45 @@
+/*
+ * [] Languages: L_HASKELL, L_JAVA, L_CPP, L_OBJC, L_PYTHON, L_RUBY, L_LISP
+ */
+
+digraph "Language Properties" {
+    graph [rankdir = LR]                                // layout algorithm
+    graph [fontname="ArialRoundedMTBold", fontsize=16]  // header font
+    graph [dpi=72]
+    graph [margin=-.2, color=white]                     // trim edges
+    node [style=filled, fillcolor=white]                // nodes default to filled
+    
+    /* Edges */
+    
+    subgraph "cluster-3" {
+        //label="Domain Specific Language Support"
+        
+        // Labels & Styles
+        Homoiconic          [label="Homoiconicity", fillcolor=lightblue1]                           // L_LISP
+        Macros              [label="Macros (code-\ntransforming)", fillcolor=lightblue1]            // L_LISP
+        EmbeddedDSLs        [label="Embedded domain specific\n languages (DSLs) easy",
+            fillcolor=palegreen, shape=box]                                                         // L_LISP,           L_RUBY
+        BadTypography       [label="Lousy typography\n (Hard to read)",
+            fillcolor=pink, shape=box]                                                              // L_LISP
+        OperatorsAsMethods  [label="Operators implemented\n as normal functions",
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_LISP, L_PYTHON
+        OperatorOverloading [label="Operator overloading", fillcolor=lightblue1]                    // L_LISP, L_PYTHON,         L_CPP
+        RelaxedParens       [label="Relaxed parentheses\n requirements", fillcolor=lightblue1]      //                   L_RUBY
+        
+        // Nodes & Edges
+        Homoiconic -> BadTypography
+        Homoiconic -> Macros
+                      Macros                      -> EmbeddedDSLs [penwidth=3]
+        OperatorsAsMethods -> OperatorOverloading
+                              OperatorOverloading -> EmbeddedDSLs [style=dashed]
+        RelaxedParens                             -> EmbeddedDSLs
+        
+        subgraph { rank=source
+            Homoiconic OperatorsAsMethods RelaxedParens
+        }
+        
+        subgraph { rank=sink
+            EmbeddedDSLs BadTypography
+        }
+    }
+}

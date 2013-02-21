@@ -1,0 +1,52 @@
+/*
+ * [] Languages: L_HASKELL, L_JAVA, L_CPP, L_OBJC, L_PYTHON, L_RUBY, L_LISP
+ */
+
+digraph "Language Properties" {
+    graph [rankdir = LR]                                // layout algorithm
+    graph [fontname="ArialRoundedMTBold", fontsize=16]  // header font
+    graph [dpi=72]
+    graph [margin=-.2, color=white]                     // trim edges
+    node [style=filled, fillcolor=white]                // nodes default to filled
+    
+    /* Node Properties */
+    
+    PM_EDH   [shape=box, width=.1, label="", style=filled, fillcolor=black]
+    CC_MRE   [shape=box, width=.1, label="", style=filled, fillcolor=black]
+    
+    /* Edges */
+    
+    // [] NOTE: I may have omitted some items for L_CPP and L_LISP,
+    //          since I am less familar with these community's tools.
+    subgraph "cluster-4" {
+        //label="Miscellaneous (Extralinguistic)"
+        
+        // Labels & Styles
+        CodeCoverage        [label="Code coverage",
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL, L_JAVA, L_PYTHON, L_RUBY, L_LISP
+        UnitTests           [label="Unit test automation",
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL, L_JAVA, L_PYTHON, L_RUBY, L_LISP
+        MinimizeAllRuntimeErrors    [label="Minimize ALL runtime errors",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA, L_PYTHON, L_RUBY, L_LISP
+        PackageManager      [label="Package manager",
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL,         L_PYTHON, L_RUBY, L_LISP
+        EnvIsolator         [label="Environment isolator",
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                    L_PYTHON, L_RUBY
+        ElimDependencyHell  [label="Eliminate: Dependency hell",
+            fillcolor=palegreen, shape=box]                                                         //                    L_PYTHON, L_RUBY
+        
+        // Nodes & Edges
+        CodeCoverage -> CC_MRE
+        UnitTests    -> CC_MRE -> MinimizeAllRuntimeErrors
+        PackageManager -> PM_EDH
+        EnvIsolator    -> PM_EDH -> ElimDependencyHell
+        
+        subgraph { rank=source
+            CodeCoverage UnitTests PackageManager EnvIsolator
+        }
+        
+        subgraph { rank=sink
+            MinimizeAllRuntimeErrors ElimDependencyHell
+        }
+    }
+}

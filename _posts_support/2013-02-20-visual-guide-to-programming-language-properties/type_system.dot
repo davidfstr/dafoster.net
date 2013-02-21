@@ -1,0 +1,88 @@
+/*
+ * [] Languages: L_HASKELL, L_JAVA, L_CPP, L_OBJC, L_PYTHON, L_RUBY, L_LISP
+ */
+
+digraph "Language Properties" {
+    graph [rankdir = LR]                                // layout algorithm
+    graph [fontname="ArialRoundedMTBold", fontsize=16]  // header font
+    graph [dpi=72]
+    graph [margin=-.2, color=white]                     // trim edges
+    node [style=filled, fillcolor=white]                // nodes default to filled
+    
+    /* Node Properties */
+    
+    // Layout hacking
+    StaticTyping
+    
+    ST_TI    [shape=box, width=.1, label="", style=filled, fillcolor=black]
+    
+    // Layout hacking
+    ST_TOOL  [shape=circle, width=.15, label="", style=filled, fillcolor=black]
+    
+    /* Edges */
+    
+    subgraph "cluster-1" {
+        //label="Type System"
+        
+        // Labels & Styles
+        RestrictEffects     [label="Restricted side effects", fillcolor=lightblue1, shape=Mrecord]  // L_HASKELL
+        LazyEval            [label="Lazy evaluation", fillcolor=lightblue1]                         // L_HASKELL
+        ExtractExpr         [label="Expressions extractable\n without performance penalty",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL
+        StaticTyping        [label="Static typing", fillcolor=lightblue1]                           // L_HASKELL, L_JAVA, L_CPP, L_OBJC
+        ToolableJumpToDef   [label="Toolable 'jump to definition'\n (and dependency analysis)",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA, L_CPP, L_OBJC
+        ToolableRefactorRename  [label="Toolable 'refactor rename'",
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA, L_CPP, L_OBJC
+        ToolableApiDocs     [label="Toolable API docs", fillcolor=palegreen, shape=box]             // L_HASKELL, L_JAVA, L_CPP, L_OBJC
+        NoNull              [label="No null (or 'bottom')\n in type system", fillcolor=lightblue1]  // L_HASKELL
+        ElimRuntimeNullError [shape=none, margin=0, label=<
+            <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                <tr><td bgcolor="palegreen"> Eliminate: Runtime null pointer error </td></tr>
+                <tr><td bgcolor="pink"> Overhead to ignore 'impossible' nulls </td></tr>
+            </table>>]                                                                              // L_HASKELL
+        ElimRuntimeTypeError [shape=none, margin=0, label=<
+            <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                <tr><td bgcolor="palegreen"> Eliminate: Runtime type error </td></tr>
+                <tr><td bgcolor="pink"> Polymorphism limited by type system power </td></tr>
+            </table>>]                                                                              // L_HASKELL
+        CheckedExceptions   [label="Checked exceptions", fillcolor=lightblue1]                      //            L_JAVA
+        ElimRuntimeUnhandledException [shape=none, margin=0, label=<
+            <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
+                <tr><td bgcolor="palegreen"> Eliminate: Unhandled exceptions at runtime </td></tr>
+                <tr><td bgcolor="pink"> Overhead to ignore 'impossible' exceptions </td></tr>
+            </table>>]                                                                              //            L_JAVA
+        TypeInference       [label="Type inference", fillcolor=lightblue1]                          // L_HASKELL
+        ElimTypeDecls       [label="Eliminate: Type declarations", fillcolor=palegreen, shape=box]  // L_HASKELL,                        L_PYTHON, L_RUBY, L_LISP
+        DynamicTyping       [label="Dynamic typing", fillcolor=lightblue1]                          //                                   L_PYTHON, L_RUBY, L_LISP
+        ProgWithCollections [label="'Programming with\n collections'",
+            fillcolor=palegreen, shape=box]                                                         //                                   L_PYTHON, L_RUBY, L_LISP
+        
+        // Nodes & Edges
+        RestrictEffects -> LazyEval -> ExtractExpr
+        StaticTyping -> ElimRuntimeTypeError
+        StaticTyping  -> ST_TI
+        TypeInference -> ST_TI -> ElimTypeDecls
+        StaticTyping -> NoNull -> ElimRuntimeNullError
+        StaticTyping -> CheckedExceptions -> ElimRuntimeUnhandledException
+        StaticTyping -> ST_TOOL -> ToolableJumpToDef
+                        ST_TOOL -> ToolableRefactorRename
+                        ST_TOOL -> ToolableApiDocs
+        DynamicTyping -> ElimTypeDecls
+        DynamicTyping -> ProgWithCollections
+        
+        // Layout hacking
+        // (Nodes should be adjacent)
+        //RestrictEffects -> DynamicTyping [style=invis]
+        
+        subgraph { rank=source
+            RestrictEffects StaticTyping TypeInference DynamicTyping
+        }
+        
+        subgraph { rank=sink
+            ExtractExpr ElimRuntimeTypeError ElimTypeDecls
+            ElimRuntimeNullError ElimRuntimeUnhandledException
+            ToolableJumpToDef ToolableRefactorRename ToolableApiDocs
+        }
+    }
+}
