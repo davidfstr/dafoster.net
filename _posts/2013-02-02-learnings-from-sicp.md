@@ -192,7 +192,7 @@ A "query" (i.e. an expression in the language) is transformed into a
 
 So those are a few interesting things I learned from reading SICP. Taking notes while reading made it a lot easier for me to remember the content. You might try it when reading a technical book with a lot of new concepts.
 
-## *Related Articles*
+### *Related Articles*
 
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*

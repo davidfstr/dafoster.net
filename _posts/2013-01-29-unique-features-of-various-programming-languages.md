@@ -179,7 +179,7 @@ Very similar to Java.[^java-copycat]
 
 <!-- TODO: Add Prolog -->
 
-## *Related Articles*
+### *Related Articles*
 
 * [Learnings from SICP (and Lisp)](/articles/2013/02/02/learnings-from-sicp/)
     * *Discusses computer science concepts and how they manifest in various programming languages.*
