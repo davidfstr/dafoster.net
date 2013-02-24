@@ -59,6 +59,10 @@ Interesting observations:
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/dsl_support.html.inc %}
 
+<br/>
+‡ Beyond the Lisp family, Prolog is the only other language I know of that is homoiconic.  
+&nbsp;&nbsp;&nbsp;Its syntax is reasonably easy to read, unlike Lisp.
+
 ## Tools
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/tools.html.inc %}
