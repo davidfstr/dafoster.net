@@ -70,10 +70,10 @@ Interesting observations:
 {% capture details_table %}
 &nbsp;               | C++ | ObjC        | Java  | Haskell | Python      | Ruby       | Lisp
 ---------------------|-----|-------------|-------|---------|-------------|------------|---------------
-Code coverage        | -   | -           | EMMA  | hpc     | coverage.py | SimpleCov  | code-coverage
-Unit test automation | -   | -           | JUnit | HUnit   | unittest    | *many*     | RackUnit
-Package manager      | -   | -           | -     | Cabal   | pip         | gem        | PLaneT
-Environment isolater | -   | -           | -     | -       | virtualenv  | rvm        | -
+Code coverage        | -   | -           | EMMA  | hpc     | coverage.py | SimpleCov  | *varies* <!-- ex: code-coverage -->
+Unit test automation | -   | -           | JUnit | HUnit   | unittest    | *many*     | *varies* <!-- ex: RackUnit -->
+Package manager      | -   | -           | -     | Cabal   | pip         | gem        | *varies* <!-- ex: PLaneT -->
+Environment isolater | -   | -           | -     | -       | virtualenv  | rvm        | *varies* <!-- no known example -->
 {% endcapture %}
 
 <div class="accordion" id="accordion2">

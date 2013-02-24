@@ -31,9 +31,9 @@ digraph "Language Properties" {
         PackageManager      [label="Package manager",
             fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL,         L_PYTHON, L_RUBY, L_LISP
         EnvIsolator         [label="Environment isolator",
-            fillcolor=lightblue1, shape=Mrecord]                                                    //                    L_PYTHON, L_RUBY
+            fillcolor=lightblue1, shape=Mrecord]                                                    //                    L_PYTHON, L_RUBY, L_LISP
         ElimDependencyHell  [label="Eliminate: Dependency hell",
-            fillcolor=palegreen, shape=box]                                                         //                    L_PYTHON, L_RUBY
+            fillcolor=palegreen, shape=box]                                                         //                    L_PYTHON, L_RUBY, L_LISP
         
         // Nodes & Edges
         CodeCoverage -> CC_MRE
