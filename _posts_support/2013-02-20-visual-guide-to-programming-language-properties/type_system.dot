@@ -55,7 +55,7 @@ digraph "Language Properties" {
         TypeInference       [label="Type inference", fillcolor=lightblue1]                          // L_HASKELL
         ElimTypeDecls       [label="Eliminate: Type declarations", fillcolor=palegreen, shape=box]  // L_HASKELL,                        L_PYTHON, L_RUBY, L_LISP
         DynamicTyping       [label="Dynamic typing", fillcolor=lightblue1]                          //                                   L_PYTHON, L_RUBY, L_LISP
-        ProgWithCollections [label="'Programming with\n collections'",
+        ProgWithCollections [label="'Programming with\n collections'†",
             fillcolor=palegreen, shape=box]                                                         //                                   L_PYTHON, L_RUBY, L_LISP
         
         // Nodes & Edges

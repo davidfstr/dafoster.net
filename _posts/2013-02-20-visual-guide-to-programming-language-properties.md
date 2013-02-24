@@ -43,6 +43,11 @@ Interesting observations:
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.html.inc %}
 
+<br/>
+† "Programming with collections" is discussed in [Lisp vs. Pascal Design Philosophies].
+
+[Lisp vs. Pascal Design Philosophies]: /articles/2013/02/02/learnings-from-sicp/#lisp-vs-pascal-design-philosophies
+
 ## Resource Management
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.html.inc %}
