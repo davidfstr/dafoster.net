@@ -36,7 +36,7 @@ digraph "Language Properties" {
         TryFinally          [label="Try-finally\n statement", fillcolor=lightblue1]                 //            L_JAVA,                L_PYTHON, L_RUBY
         WithStatement       [label="With-resource\n statement",
             fillcolor=lightblue1, shape=Mrecord]                                                    //                                   L_PYTHON
-        BlockScopeRsrcManage    [label="Block-scoped\n resource management",
+        BlockScopeRsrcManage    [label="Block-scoped\n resource management§",
             fillcolor=palegreen, shape=box]                                                         //            L_JAVA,                L_PYTHON, L_RUBY
         GarbageCollect      [label="Garbage collection",
             fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
@@ -48,7 +48,7 @@ digraph "Language Properties" {
         AnyObjOwnershipPattern  [label="Non-hierarchal and distributed\n object ownership easy",
             fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
         NondetermObjDealloc [label=
-            "Nondeterministic object\n deallocation timing\n ('garbage collection pauses')",
+            "Nondeterministic object\n deallocation timing",
             fillcolor=pink, shape=box]                                                              // L_HASKELL, L_JAVA,                L_PYTHON, L_RUBY, L_LISP
         
         // Nodes & Edges

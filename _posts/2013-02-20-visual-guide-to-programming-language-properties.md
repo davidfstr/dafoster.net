@@ -52,6 +52,9 @@ Interesting observations:
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.html.inc %}
 
+<br/>
+§ See also the idea of **monadic regions** for block-scoped resource management.
+
 ## Domain Specific Language Support
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/dsl_support.html.inc %}
