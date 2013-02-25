@@ -68,6 +68,8 @@ Interesting observations:
 <br/>
 § See also the idea of **monadic regions** for block-scoped resource management.
 
+¶ Objective-C is the only known language that supports automatic reference counting.
+
 ## Domain Specific Language Support
 
 {% include 2013/2013-02-20-visual-guide-to-programming-language-properties/dsl_support.html.inc %}

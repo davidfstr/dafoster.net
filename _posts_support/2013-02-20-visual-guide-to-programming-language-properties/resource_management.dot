@@ -31,7 +31,7 @@ digraph "Language Properties" {
         RefCounting         [label="Reference counting", fillcolor=lightblue1, shape=Mrecord]       //                           L_OBJC
         ElimFreeRelease     [label="Eliminate: free() and release() calls",
             fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA,        L_OBJC, L_PYTHON, L_RUBY, L_LISP
-        AutoRefCounting     [label="Automatic reference\n counting (ARC)",
+        AutoRefCounting     [label="Automatic reference\n counting (ARC) ¶",
             fillcolor=lightblue1, shape=Mrecord]                                                    //                           L_OBJC
         TryFinally          [label="Try-finally\n statement", fillcolor=lightblue1]                 //            L_JAVA,                L_PYTHON, L_RUBY
         WithStatement       [label="With-resource\n statement",
