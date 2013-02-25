@@ -180,12 +180,14 @@ Logic programming languages are at the far declarative end of the
 imperative-declarative spectrum. They can be used to deduce answers
 from a set of initial set of declarative statements.
 
-Prolog is the best-known example of a logic programming language.
+[Prolog] is the best-known example of a logic programming language.
 
 Query systems for databases are a type of logic programming language.
 
 A "query" (i.e. an expression in the language) is transformed into a
 "query plan" (i.e. a specific set of steps to follow) by a query planner. The implemented of these planners is quite complex.
+
+[Prolog]: /articles/2013/02/25/notes-on-prolog/
 
 <a id="conclusion"></a>
 ## Conclusion
@@ -196,3 +198,5 @@ So those are a few interesting things I learned from reading SICP. Taking notes 
 
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*
+* [Notes on Prolog](/articles/2013/02/25/notes-on-prolog/)
+    * *Describes the Prolog language in more detail.*
