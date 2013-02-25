@@ -26,6 +26,19 @@ script: |
             window.ignoreTabHeaderClicks = false;
         }
     });
+    
+    // Rotate triangle symbol when accordian toggled
+    $('.accordion-toggle .expand-symbol').text('▸ ');
+    $('.accordion-toggle').click(function() {
+        var accordianBodySelector = $(this).attr('href');
+        var isCollapsed = $(accordianBodySelector).attr('class').indexOf("in") !== -1;
+        
+        if (isCollapsed) {
+            $('.expand-symbol', this).text('▸ ');
+        } else {
+            $('.expand-symbol', this).text('▾ ');
+        }
+    });
 
 ---
 
@@ -76,11 +89,11 @@ Package manager      | -   | -           | -     | Cabal   | pip         | gem  
 Environment isolater | -   | -           | -     | -       | virtualenv  | rvm        | *varies* <!-- no known example -->
 {% endcapture %}
 
-<div class="accordion" id="accordion2">
+<div class="accordion" id="tool-details">
   <div class="accordion-group">
     <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-        Tool Details
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#tool-details" href="#collapseOne">
+        <span class="expand-symbol"></span>Tool Details
       </a>
     </div>
     <div id="collapseOne" class="accordion-body collapse">
