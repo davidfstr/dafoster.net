@@ -35,7 +35,7 @@ digraph "Language Properties" {
         ToolableRefactorRename  [label="Toolable 'refactor rename'",
             fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_JAVA, L_CPP, L_OBJC
         ToolableApiDocs     [label="Toolable API docs", fillcolor=palegreen, shape=box]             // L_HASKELL, L_JAVA, L_CPP, L_OBJC
-        NoNull              [label="No null (or 'bottom')\n in type system", fillcolor=lightblue1]  // L_HASKELL
+        NoNull              [label="No null in type system", fillcolor=lightblue1]                  // L_HASKELL
         ElimRuntimeNullError [shape=none, margin=0, label=<
             <table border="0" cellborder="1" cellspacing="0" cellpadding="4">
                 <tr><td bgcolor="palegreen"> Eliminate: Runtime null pointer error </td></tr>
