@@ -164,9 +164,9 @@ Very similar to Java.[^java-copycat]
 * **Call-with-current-continuation**
     * Allows you to save the current execution state of the program in a variable and jump back to it later. Multiple times, even. It's like a friggin' time machine. You can implement fairly complex control flow operators with this function.
 
-[^lisp-dialects]: There are more dialects of Lisp than any other language I can think of. These 3 (Common Lisp, Scheme, and Clojure) are just the most popular dialects. I've directly used [Racket](http://racket-lang.org) in the past, which is itself a dialect of Scheme.
+[^lisp-dialects]: There are more dialects of Lisp than any other language I can think of. These 3 (Common Lisp, Scheme, and Clojure) are just the most popular dialects. I've directly used [Racket](/articles/2013/03/01/notes-on-racket/) in the past, which is itself a dialect of Scheme.
 
-[^macro-optimize]: Prismatic performs efficient [compile-time DOM templating](http://blog.getprismatic.com/blog/2013/1/22/the-magic-of-macros-lighting-fast-templating-in-clojurescript) in JavaScript using macros.
+[^macro-optimize]: Prismatic performs efficient [compile-time DOM templating](http://blog.getprismatic.com/blog/2013/1/22/the-magic-of-macros-lighting-fast-templating-in-clojurescript) in ClojureScript using macros.
 
 ### Other
 
@@ -184,5 +184,11 @@ Very similar to Java.[^java-copycat]
 * [Visual Guide to Programming Language Properties](/articles/2013/02/20/visual-guide-to-programming-language-properties/)
     * *Shows programming language features, how they are related, and which features are present in popular languages.*
     * *Visualizes some of the features discussed in this article.*
+* [Notes on Racket](/articles/2013/03/01/notes-on-racket/)
+    * *Describes Racket, a dialect of Lisp with batteries included.*  
+      *Useful for implementing other languages and creating cross-platform GUI programs.*
+* [Notes on Prolog](/articles/2013/02/25/notes-on-prolog/)
+    * *Describes Prolog, a highly declarative language.*  
+      *Useful for exploring and verifying proofs.*
 * [Learnings from SICP (and Lisp)](/articles/2013/02/02/learnings-from-sicp/)
     * *Discusses computer science concepts and how they manifest in various programming languages.*

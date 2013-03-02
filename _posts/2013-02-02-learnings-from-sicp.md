@@ -196,6 +196,9 @@ So those are a few interesting things I learned from reading SICP. Taking notes 
 
 ### *Related Articles*
 
+* [Notes on Racket](/articles/2013/03/01/notes-on-racket/)
+    * *Describes Racket, a dialect of Lisp with batteries included.*  
+      *Useful for implementing other languages and creating cross-platform GUI programs.*
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*
 * [Notes on Prolog](/articles/2013/02/25/notes-on-prolog/)
