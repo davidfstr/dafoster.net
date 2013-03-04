@@ -5,12 +5,12 @@
 
 # (Used in <title> for every page. Used in nav bar. Used in Atom feed.)
 title: DaFoster
-# (Not used anywhere)
-tagline: 
+# (Used in RSS feed)
+tagline: Thoughts on software and productivity from David Foster.
 author:
   # (Used in author <meta> for every page and in Atom feed)
   name: David Foster
-  # (Used in Atom feed)
+  # (Optional. Used in Atom feed)
   email: 
   # (All of the following are unused)
   github: davidfstr

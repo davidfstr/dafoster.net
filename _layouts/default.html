@@ -21,6 +21,10 @@
     <meta http-equiv="refresh" content="0;URL='{{ page.redirect_to_url }}'">
   {% endif %}
     
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
+    
   {% if site.safe %}
     {% include analytics %}
   {% endif %}
