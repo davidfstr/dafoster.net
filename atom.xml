@@ -25,7 +25,7 @@ title: Atom Feed
      <category term="{{ tag }}"/>
    {% endfor %}
    <link rel="alternate" href="{{ site.production_url }}{{ post.url }}"/>
-   <content type="html">{{ post.content | xml_escape }}</content>
+   <content type="html">{% if post.feed_content %}{{ post.feed_content | markdownify | xml_escape }}{% else %}{{ post.content | xml_escape }}{% endif %}</content>
  </entry>
  {% endfor %}
  

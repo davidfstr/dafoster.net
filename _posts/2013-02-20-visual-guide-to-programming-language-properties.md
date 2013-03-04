@@ -40,6 +40,14 @@ script: |
         }
     });
 
+# The interactive graphs do not render well in Atom/RSS feeds.
+# Therefore just direct the reader to the full article on the site.
+feed_content: |
+    Here's an interactive chart showing high-level properties of various programming languages.  
+    You can filter the chart to only show the properties that your favorite language supports.
+    
+    [Read more...](/articles/2013/02/20/visual-guide-to-programming-language-properties/)
+
 ---
 
 Here's an interactive chart showing high-level properties of various programming languages.  
