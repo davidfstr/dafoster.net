@@ -65,11 +65,12 @@ html { overflow-y: scroll }
   border: 1px solid #cdcdcd;
 }
 
-.subscribe {
+/* Subscribe link in Topics block */
+.block .subscribe {
   display: block;
   margin-bottom: -5px;
 }
-.subscribe img {
+.block .subscribe img {
   margin-right: .4em;
   vertical-align: text-top;
 }

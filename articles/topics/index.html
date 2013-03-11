@@ -16,7 +16,12 @@ style: |
 ---
 <div class="row">
   <div class="span9">
-    <h1>{{ page.title }}</h1>
+    <h1>
+      {{ page.title }}
+      <a class="subscribe" href="{{ site.production_url | replace: 'http://', 'feed://'}}/rss.xml">
+        <img src="/assets/feed-icon-20x20.png" width="20" height="20" alt="Subscribe" title="Subscribe"/>
+      </a>
+    </h1>
     
     {% for tag in site.tags %} 
       <h2 id="{{ tag[0] }}">{{ tag[0] }} <sup>{{ tag[1].size }}</sup></h2>
