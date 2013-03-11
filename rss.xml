@@ -15,7 +15,7 @@ layout: nil
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | xml_escape }}</title>
-      <link>{{ site.production_url }}{{ post.url }}</link>
+      <link>{{ site.production_url }}{{ post.url }}?utm_source=rss&utm_medium=feed&utm_campaign=feed</link>
       <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
       <guid>{{ site.production_url }}{{ post.id }}</guid>
       <description>{% if post.feed_content %}{{ post.feed_content | markdownify | xml_escape }}{% else %}{{ post.content | xml_escape }}{% endif %}</description>
