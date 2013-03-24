@@ -11,6 +11,11 @@ layout: nil
     <language>en-us</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
+    <image>
+      <url>{{ site.production_url }}/assets/favicon.ico</url>
+      <title>{{ site.title }}</title>
+      <link>{{ site.production_url }}/</link>
+    </image>
 
     {% for post in site.posts %}
     {% capture post_absolute_url %}{{ site.production_url }}{{ post.url }}?utm_source=rss&utm_medium=feed&utm_campaign=feed{% endcapture %}

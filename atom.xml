@@ -14,6 +14,8 @@ title: Atom Feed
    <name>{{ site.author.name }}</name>
    {% if site.author.email %}<email>{{ site.author.email }}</email>{% endif %}
  </author>
+ <icon>{{ site.production_url }}/assets/favicon.ico</icon>
+ <logo>{{ site.production_url }}/assets/favicon.ico</logo>
 
  {% for post in site.posts %}
  {% capture post_absolute_url %}{{ site.production_url }}{{ post.url }}?utm_source=atom&utm_medium=feed&utm_campaign=feed{% endcapture %}
