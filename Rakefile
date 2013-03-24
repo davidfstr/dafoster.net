@@ -60,6 +60,10 @@ task :deploy do
     system "rake dist"  # (will clobber contents of _site)
     system "mv /tmp/davidfstr.github.com-git _production/.git"  # restore .git
     
+    # Add .nojekyll to avoid unnecessary Jekyll processing of the compiled site
+    # after deployment
+    system "touch _production/.nojekyll"
+    
     # Push new version of production site
     Dir.chdir("_production") do
       system "git add -A"
