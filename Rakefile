@@ -2,6 +2,7 @@ task :default => [:preview]
 
 desc "Compile main site (except prism) to _site and launch preview server"
 task :preview do
+  puts "Starting preview server at: http://localhost:4000/"
   system "jekyll --auto --server"
 end
 
