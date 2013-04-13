@@ -1,0 +1,77 @@
+---
+layout: default
+title: Disqus Reverts IE 8+ to Compatibility Mode
+tags: []
+breadcrumbs: [/, /articles/]
+---
+<div class="row">
+  <div class="span9 post">
+    <h1>{{ page.title }}</h1>
+    <div class="post-metadata">
+      MISSING_DATE &ndash; Filed under: 
+      <span class="tag_box inline">
+        {% assign tags_list = page.tags %}
+        {% for tag in tags_list %} 
+          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></span>
+        {% endfor %}
+      </span>
+    </div>
+    
+    <p>
+      This is a test article that includes Disqus commenting.
+    </p>
+    <p>
+      In IE 8+ this webpage will revert to Compatibility Mode instead of
+      Standards Mode when Disqus loads unless the following is put in the
+      [head] tag:
+    </p>
+    <pre>
+      [!-- IE 8+: Hide the Compatibility View button. --]
+      [meta http-equiv="X-UA-Compatible" content="IE=edge"]</pre>
+    <p>
+      Unfortunately the <code>X-UA-Compatible</code> does not pass the W3C
+      validator, so using that header breaks validation for a site.
+    </p>
+    <p>
+      So in summary there are two problems:
+    </p>
+    <ol>
+      <li>Disqus generates weird HTML that puts IE 8+ into Compatibility Mode.</li>
+      <li>X-UA-Compatible is not recognized as a valid [meta] HTTP header.
+        <ul>
+          <li>I have filed bugs to get this fixed, but I no longer have the
+              energy to keep sheparding these bugs, especially since I have
+              eliminated the use of Disqus on my blog, which obviates the
+              need to do any of this.</li>
+          <li>It would probably be best for someone on the IE team to push
+              the X-UA-Compatible header (or a new UA-Compatible variant)
+              towards standardization.</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+  
+  <div class="span3 block-bar">
+    {% include blocks/article_topics %}
+  </div>
+  
+  <div class="span12">
+    <div class="pagination pagination-centered">
+      <ul>
+      {% if page.previous %}
+        <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
+      {% else %}
+        <li class="prev disabled"><a>&larr; Previous</a></li>
+      {% endif %}
+        <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Index</a></li>
+      {% if page.next %}
+        <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
+      {% else %}
+        <li class="next disabled"><a>Next &rarr;</a>
+      {% endif %}
+      </ul>
+    </div>
+    
+    {% include JB/comments-providers/disqus %}
+  </div>
+</div>
