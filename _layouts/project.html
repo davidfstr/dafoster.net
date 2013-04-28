@@ -17,7 +17,7 @@ style: |
   <div class="span9">
     <img class="logo" src="logo-128.png" alt="Logo for {{ page.title }}"/>
     
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.title }}{% if page.subtitle %} <small>&ndash; {{ page.subtitle }}</small>{% endif %}</h1>
     
     {% if page.redirect_to_url %}
       {% include redirecting %}

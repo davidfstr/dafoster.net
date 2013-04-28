@@ -1,6 +1,7 @@
 ---
 layout: project
 title: RDiscount
+subtitle: Markdown for Ruby
 summary: >
     Converts Markdown text to HTML, in Ruby.
     Includes many useful Markdown extensions.

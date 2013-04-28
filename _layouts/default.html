@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8">
     
-    <title>{{ page.title }} | {{ site.title }}</title>
+    <title>{{ page.title }}{% if page.subtitle %} | {{ page.subtitle }}{% endif %} | {{ site.title }}</title>
   {% comment %}[Displayed as snippet for Google search results]{% endcomment %}
   {% if page.description %}
     {% comment %}[Allow pages to specify explicit SEO description]{% endcomment %}
