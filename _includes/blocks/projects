@@ -1,5 +1,5 @@
 <div class="block">
-  <h3>Projects</h3>
+  <h3>{% if page.layout != "page" %}Other {% endif %}Projects</h3>
   {% comment %}[TODO: Use distinct styling from a real tag box]{% endcomment %}
   <ul class="tag_box" style="margin-bottom: .5em">
     {% for cur_page in site.pages %}
