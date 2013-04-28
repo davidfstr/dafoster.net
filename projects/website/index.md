@@ -82,7 +82,7 @@ to debug and fix.
 So I decided to [stop using Drupal] and go with a simpler system: render all
 pages to static HTML which can then be deployed to any web host, including
 free ones. All dynamic behavior is farmed out to JavaScript and third party
-services (ex: Discus).
+services (ex: Disqus).
 
 ### Technologies
 
