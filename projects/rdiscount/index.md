@@ -53,6 +53,11 @@ See usage instructions below to enable additional extensions.
 
 <pre>gem install rdiscount</pre>
 
+Ruby 1.9.2 has a known issue with RDiscount. Please use Ruby 1.9.3 or later.
+
+If you are creating a Heroku app that depends on RDiscount, you must specify
+a Ruby version in your Gemfile since Heroku currently uses Ruby 1.9.2 by default.
+
 ## Usage <small>in Ruby and Jekyll</small>
 
 ### In Ruby
