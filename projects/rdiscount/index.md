@@ -25,9 +25,9 @@ extensions to the Markdown language.
 
 Discount is fast and supports many useful extensions to the original Markdown language:
 
-* Multi-level bulleted lists
-* [Footnotes]&shy;[^footnote_example] - from *PHP Markdown Extra*
+* [Footnotes] - from *PHP Markdown Extra*
 * [Tables] - from *PHP Markdown Extra*
+* Multi-level bulleted lists
 * Images with sizes
     * `![GitHub Favicon](https://github.com/favicon.ico =16x16)` &rarr; ![GitHub Favicon](https://github.com/favicon.ico =16x16)
 * Typographic substitutions with [SmartyPants]
@@ -45,7 +45,6 @@ See usage instructions below to enable additional extensions.
 
 [SmartyPants]: http://daringfireball.net/projects/smartypants/
 [Footnotes]: http://michelf.ca/projects/php-markdown/extra/#footnotes
-[^footnote_example]: I'm a footnote!
 [Tables]: http://michelf.ca/projects/php-markdown/extra/#table
 [backtick-delimited]: https://help.github.com/articles/github-flavored-markdown#fenced-code-blocks
 [tilde-delimited]: http://michelf.ca/projects/php-markdown/extra/#fenced-code-blocks
