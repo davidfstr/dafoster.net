@@ -6,7 +6,7 @@ x_date_written: 2012-10-23
 
 ---
 
-This is a quick premier on copyrights and licenses for software developers who may not know their rights under United States law. I cannot speak for international copyright law.
+This is a quick overview of copyrights and licenses for software developers who may not know their rights under United States law. I cannot speak for international copyright law.
 
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
@@ -37,7 +37,7 @@ In reality, download sites generally rely on software authors to not *enforce* t
 
 ### Copyrights are useless unless they are enforced.
 
-Enforcement takes the form of the copyright holder actively looking for *infringers*: other people that who are distributing or selling the software without permission.
+Enforcement takes the form of the copyright holder actively looking for *infringers*: other people who are distributing or selling the software without permission.
 
 For example, the MPAA may issue a DMCA takedown request to a YouTube user who has (without permission) posted an episode of a TV show that MPAA owns. If the user does not comply with the takedown, the MPAA may sue the user for infringement.
 
@@ -79,7 +79,7 @@ Projects that are particularly aware of copyright concerns may require all contr
 
 ### No Warranty
 
-All software licenses I have seen explicitly disclaim all warranties. Meaning that if the software harms someone, they can't sue you for it. This is great for software developers but  in my opinion bad for society.
+All software licenses I have seen explicitly disclaim all warranties. Meaning that if the software harms someone, you can't sue the developer for it. This is great for software developers but in my opinion bad for society.
 
 <a name="common_licenses"></a>
 ### Common Licenses
