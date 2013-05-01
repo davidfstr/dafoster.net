@@ -118,7 +118,7 @@ All development is coordinated on the [GitHub project page].
 
 Please report bugs and feature requests on the [issue tracker].
 
-[GitHub project page]: https://github.com/rtomayko/rdiscount
-[issue tracker]: https://github.com/rtomayko/rdiscount/issues
+[GitHub project page]: https://github.com/davidfstr/rdiscount
+[issue tracker]: https://github.com/davidfstr/rdiscount/issues
 
-[RDiscount class documentation]: http://rdoc.info/github/rtomayko/rdiscount/master/RDiscount
+[RDiscount class documentation]: http://rdoc.info/github/davidfstr/rdiscount/RDiscount
