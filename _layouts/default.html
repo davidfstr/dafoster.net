@@ -23,7 +23,7 @@
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
     
-  {% if site.safe %}
+  {% if site.server == false %}
     {% include analytics %}
   {% endif %}
 
@@ -81,7 +81,7 @@
                 <li><a href="{{ BASE_PATH }}{{ node.url | replace: '/index.html', '/' }}">{{ node.title }}</a></li>
               {% endif %}
             {% endfor %}
-            {% if site.safe == false %}
+            {% if site.server %}
               <li style="background-color: red; color: white; margin-top: 13px; padding-left: .2em; padding-right: .2em; font-family: Verdana, sans-serif;">
                 <span class="private" style="background-position: center right;">
                   DEVELOPMENT MODE
@@ -143,7 +143,7 @@
 
       <footer>
         <p>&copy; {{ site.time | date: '%Y'}} <a href="/about/">{{ site.author.name }}</a>
-        {% if site.safe == false %}
+        {% if site.server %}
          | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a>
          | <a href="{{ site.production_url }}{{ page.url | replace: '/index.html', '/' }}"><span class="private">View in Production</span></a>
         <br/>
@@ -174,7 +174,7 @@
     </script>
   {% endif %}
     
-  {% if site.safe %}
+  {% if site.server == false %}
     {% include analytics_footer %}
   {% endif %}
   </body>

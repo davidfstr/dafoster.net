@@ -4,7 +4,7 @@
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}';
     var disqus_title = '{{ page.title }}';
     var disqus_url = '{{ site.production_url }}{{ page.url | replace: '/index.html', '/' }}';
-  {% if site.safe == false %}
+  {% if site.server %}
     var disqus_developer = 1; // disable URL authentication
   {% endif %}
     

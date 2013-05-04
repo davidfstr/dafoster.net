@@ -3,7 +3,7 @@ task :default => [:preview]
 desc "Compile main site (except prism) to _site and launch preview server"
 task :preview do
   puts "Starting preview server at: http://localhost:4000/"
-  system "jekyll --auto --server"
+  system "jekyll --server --auto"
 end
 
 desc "Compile prism subsite to _site"
@@ -13,8 +13,8 @@ end
 
 desc "Compile entire site to _site in production mode"
 task :dist do
-  # TODO: Signify deployment readiness by means other than the "safe" flag.
-  system "jekyll --no-auto --no-server --safe"
+  # NOTE: Production mode is signified by server=false
+  system "jekyll --no-server --no-auto"
   system "python _plugins/prism.py"
   system "touch _site/.nojekyll"
 end
