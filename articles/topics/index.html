@@ -23,13 +23,14 @@ style: |
       </a>
     </h1>
     
-    {% for tag in site.tags %} 
-      <h2 id="{{ tag[0] }}">{{ tag[0] }} <sup>{{ tag[1].size }}</sup></h2>
+    {% assign sorted_tags = site.tags | tags_names_by_popularity %}
+    {% for tag_name in sorted_tags %}
+      {% assign tag_posts = site.tags[tag_name] %}
+      <h2 id="{{ tag_name }}">{{ tag_name }} <sup>{{ tag_posts.size }}</sup></h2>
       <ul>
-        {% assign post_list = tag[1] %}
-        {% for post in post_list %}
+        {% for post in tag_posts %}
           <li>
-            <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+            <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
             {% if post.featured %}
               <span title="Featured Article">&#x2606;</span>
             {% endif %}

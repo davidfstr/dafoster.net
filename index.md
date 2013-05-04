@@ -46,7 +46,7 @@ My [articles] may also be of interest.
   {% for post in site.posts %}
     {% if post.featured %}
       <li>
-        <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
         {% if post.featured %}
           <span title="Featured Article">&#x2606;</span>
         {% endif %}
@@ -60,7 +60,7 @@ My [articles] may also be of interest.
 <ul class="x-posts">
   {% for post in site.posts limit:30 %}
     <li>
-      <span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
       {% if post.featured %}
         <span title="Featured Article">&#x2606;</span>
       {% endif %}

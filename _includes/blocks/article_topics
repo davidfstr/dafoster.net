@@ -2,18 +2,18 @@
   <h3>Topics</h3>
   
   <ul class="tag_box">
-    {% assign tag_info_list = site.tags %}
-    {% for tag_info in tag_info_list %}
-      {% assign tag = tag_info[0] %}
+    {% assign sorted_tags = site.tags | tags_names_by_popularity %}
+    {% for tag_name in sorted_tags %}
+      {% assign tag_size = site.tags[tag_name].size %}
       
       {% assign page_has_tag = false %}
       {% for page_tag in page.tags %}
-        {% if page_tag == tag %}
+        {% if page_tag == tag_name %}
           {% assign page_has_tag = true %}
         {% endif %}
       {% endfor %}
       
-      <li id="{{ tag }}-topic"{% if page_has_tag %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></li>
+      <li id="{{ tag_name }}-topic"{% if page_has_tag %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag_name }}">{{ tag_name }} <sup>{{ tag_size }}</sup></a></li>
     {% endfor %}
   </ul>
   <hr style="margin: .5em 0;"/>
