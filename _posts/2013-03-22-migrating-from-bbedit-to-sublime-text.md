@@ -2,6 +2,7 @@
 layout: post
 title: Migrating from BBEdit to Sublime Text
 tags: [Software]
+x_date_updated: 2013-05-07
 
 ---
 
@@ -52,6 +53,9 @@ Sublime also has a few features lacking in BBEdit:
 
 BBEdit still is better in a few areas:
 
+* Multi-file search and replace can be done without confirming (or saving) each modified file.
+* Robust on slow filesystems, particularly network filesystems.
+    * Sublime (2.0.1) acts very poorly: times out on directory listings, silently fails searches in "Goto Anything", and probably has other issues.
 * Can edit preferences in a GUI without mucking about in text files.
 * Can quickly split a single file vertically to edit distant sections simultaneously.
 * "Zap Gremlins..."
@@ -64,6 +68,8 @@ BBEdit still is better in a few areas:
 * Customer support I've heard is top-notch.
 
 I think I'm going to continue using Sublime Text. Featurewise it's about the same as BBEdit, but the cross-platform support[^cross-plat], active plugin community, and general polish <!-- & attention to usability --> are winning me over.
+
+**May 2013 Update:** I have now switched to Sublime for my daily programming tasks. Its superior "Goto Anything" functionality is a killer feature for navigating around large projects. And its cross-platform nature is killer when operating in a mixed OS environment. Occasionally I still need to pull out BBEdit to do a large multi-file search & replace, but otherwise I don't use it that frequently.
 
 [BBEdit]: http://www.barebones.com/products/bbedit/index.html
 
