@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Migrating from BBEdit to Sublime Text
-tags: [Software]
+tags: [Software, Productivity]
 x_date_updated: 2013-05-07
 
 ---
