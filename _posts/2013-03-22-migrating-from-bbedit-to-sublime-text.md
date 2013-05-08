@@ -66,6 +66,7 @@ BBEdit still is better in a few areas:
     * Delete (or preserve) all lines containing a subexpression. Exactly like the `grep` command-line tool.
 * Can edit files on an FTP/SFTP server directly.
 * Customer support I've heard is top-notch.
+* It can print.
 
 I think I'm going to continue using Sublime Text. Featurewise it's about the same as BBEdit, but the cross-platform support[^cross-plat], active plugin community, and general polish <!-- & attention to usability --> are winning me over.
 
