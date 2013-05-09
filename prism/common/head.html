@@ -3,11 +3,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=7">
 
 <!-- Configure relative links to be site-relative to root subdirectory. -->
-<!-- IE 6-9+: Only understands *absolute* href in "base" tag.
-  ||          Downlevel-revealed conditional comment breaks validation
-  ||          but works in practice. -->
-<![if !IE]>  <base href="/prism/"> <![endif]>
-<!--[if IE]> <base href="http://dafoster.net/prism/"> <![endif]-->
+<!-- I would prefer to have this just be /prism/, but both IE and Googlebot choke on that. -->
+<base href="http://dafoster.net/prism/">
 
 <link rel="stylesheet" href="common/nav.css" type="text/css">
 <link rel="stylesheet" href="common/layout.css" type="text/css">
