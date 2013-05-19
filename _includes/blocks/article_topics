@@ -19,9 +19,8 @@
   <hr style="margin: .5em 0;"/>
   <!-- Begin Follow button -->
   <iframe
-    allowtransparency="true" frameborder="0" scrolling="no"
-    src="//platform.twitter.com/widgets/follow_button.html?screen_name=davidfstr&size=l"
-    style="width:147px; height:28px;"></iframe>
+    src="//platform.twitter.com/widgets/follow_button.html?screen_name=davidfstr&amp;size=l"
+    style="width:147px; height:28px; background-color: transparent; border: 0; overflow: hidden;"></iframe>
   <!-- End Follow button -->
   <a class="subscribe" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
     <img src="/assets/feed-icon-14x14.png" alt="" width="14" height="14">Subscribe (RSS)
