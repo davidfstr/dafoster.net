@@ -28,9 +28,10 @@ Directory service sites exist with the sole purpose of listing links to other si
 
 And also:
 
-* **TorList** ([torlinksysgthcbz.onion](http://torlinksysgthcbz.onion/))
+* **TorList** ([torlinkbgs6aabns.onion](http://torlinkbgs6aabns.onion/))
     * A newer, more limited, and less organized directory. Moderated.
     * Useful because all its links fit on a single page, so it is a decent starting point.
+    * **Edit:** *Link updated. Was previously pointing to a non-authoritative clone. Possibly a spammer. In case you'd like to compare, here is the <a href="http://torlinksysgthcbz.onion/" rel="nofollow">old link</a>.*
 
 ## Parallel Worlds
 
@@ -56,6 +57,11 @@ It's really surprising and a bit disturbing what can be purchased: drugs, weapon
 ## Final Thoughts
 
 It feels really weird being in a part of the internet that is completely unreachable from Google (or any normal search engine). Much like visiting another country the laws, norms, and aesthetics are different.[^another_country] It is an interesting place to visit, but perhaps not the most desirable place to live.
+
+### Related Links
+
+* [/r/onions](http://www.reddit.com/r/onions)
+    * *Reddit's collection of onion links.*
 
 
 [^no_verify_by_name]: Since domain names basically consist of gibberish, it is not practical to verify whether you are at the authentic URL for a domain, since it is hard to remember and recognize the domain name. Thus it relatively easy to get redirected to a spoofed version of a website and not be aware of it. Certain sites like **Black Market**, which I can only assume have been spoofed a lot in the past, take special measures such as putting the (gibberish) domain name in the site logo and instructing visitors on the main home page to check the domain name explicitly. Hardly a reliable solution.
