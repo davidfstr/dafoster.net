@@ -1,16 +1,35 @@
 ---
 layout: post
-title: Implicit Partial Application (Currying) Considered Harmful
+title: Implicit Partial Application Considered Harmful
 tags: [Software]
 
 ---
 
+<!--
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
         Audience
     </p>
     <p style="margin-bottom: 0em;">
         I assume familiarity with the Haskell programming language or some other language that supports calling a function with less arguments than the function's signature requires. In academic-speak, this is called "partial application of a function".
+    </p>
+</div>
+-->
+
+<div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
+    <p style="font-weight: bold; color: #487858;">
+        Purpose
+    </p>
+    <p>
+        This article is intended to convey my confusion and minor frustration
+        with trying to understand part of Haskell's syntax as I currently
+        learn Haskell.
+    </p>
+    <p style="margin-bottom: 0em;">
+        Since Haskell has many unfamilar concepts relative to other languages
+        I know well, I am likely to make some terminology mistakes here. I am
+        learning and welcome corrections. Please see the discussion on
+        <a href="http://www.reddit.com/r/haskell/comments/1elklu/currying_considered_harmful/">Reddit</a>.
     </p>
 </div>
 
@@ -71,7 +90,7 @@ In this example, we can deduce:
 
 What a mess. If `alpha` does not in fact take two arguments then I have to exert non-trivial effort to derive the type of the expression - or even what the expression semantics are.
 
-## Eliminating the Ambiguity
+## Reducing the Ambiguity
 
 There are two ways I can see to simplify these weird cases:
 
