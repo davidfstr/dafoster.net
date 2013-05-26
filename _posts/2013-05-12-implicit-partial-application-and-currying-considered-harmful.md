@@ -182,4 +182,4 @@ And, if desired, further rewritten to be the more-compact:
 (/ 20)
 ```
 
-This last form uses left-currying, which is obvious since `/` is a well-known built-in infix operator that requires an unspecified left argument, which would be filled in by currying.
+This last form uses partial application to fill in the first argument of `/`, which is obvious since `/` is a well-known built-in infix operator that requires an unspecified left argument.
