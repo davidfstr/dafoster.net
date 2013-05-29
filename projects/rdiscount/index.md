@@ -15,7 +15,7 @@ featured: true
 
 RDiscount converts documents in [Markdown] syntax to HTML.
 
-It uses the excellent [Discount] processor by David Loren Parsens
+It uses the excellent [Discount] processor by David Loren Parsons
 for this purpose, and thereby inherits Discount's numerous useful
 extensions to the Markdown language.
 
