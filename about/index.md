@@ -15,8 +15,10 @@ linkable_headings: true
 
 My name is **David Foster** and I enjoy developing software for fun and profit.
 
-Thinking of hiring me? Read my [biography](#biography) below then
-check out my [resume](/about/resume/).
+Recruiting? Read my [biography] below then check out my [resume].
+
+[biography]: #biography
+[resume]: /about/resume/
 
 <div class="toc">
   <ul>
@@ -28,7 +30,7 @@ check out my [resume](/about/resume/).
 <h2 id="biography">Biography</h2>
 
 I initially discovered computers when I was 4 and starting programming them at 6.
-Since then, programming has been one of my most enduring hobbies.
+Since then, programming has been one of my most enduring passions.
 Witness my large number of [personal projects](/projects/).
 
 Beyond that I enjoy:

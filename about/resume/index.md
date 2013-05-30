@@ -6,8 +6,7 @@ breadcrumbs: [/, /about/]
 ---
 <h1>{{ page.title }}</h1>
 
-*Also see my [LinkedIn profile] for more information, such as my availability
-for work.*
+*See my [LinkedIn profile] for my availability and other information.*
 
 <div class="toc">
   <ul>
