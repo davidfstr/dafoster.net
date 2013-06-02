@@ -4,6 +4,10 @@ title: "Programming for Perfectionists (P4P): A Book Outline"
 tags: [Software]
 x_date_written: 2013-05-05
 
+style: |
+  /* Make inline links extra obvious */
+  .post a:link { text-decoration: underline; }
+
 ---
 
 I've read a lot of programming books. Many focus on teaching a particular language or tool, or are for teaching beginner developers the ropes. Precious few are designed to bring intermediate developers up to an advanced level. It's time to change that.
@@ -33,7 +37,7 @@ Many developers do not understand the common ways of representing various kinds 
     * Decimals
         * Floating Point
         * Fixed Point
-* **Text**
+* [**Text**](/articles/2013/06/01/handling-text-correctly/)
     * Characters and Codepoints
     * Text Encodings
         * "ANSI"
@@ -174,7 +178,7 @@ It should also be noted that a programming language does not stand alone; it com
     * Ruby & Ruby on Rails - bleeding-edge full-stack web framework
     * Python & Django - mature full-stack web framework; rapid development; excellent ORM
     * Python & web2py - mature full-stack web framework
-        * Anecdotal evidence suggests PHP refugees like web2py a bit better than Django,
+        * Anecdotal evidence suggests PHP refugees prefer web2py over Django,
           probably because it uses implicit behavior (i.e. magic) to avoid boilerplate.
           In contrast Django's philosophy is "explicit is better than implicit",
           which is more in line with general Python philosophy.
@@ -324,5 +328,10 @@ Meta:
 ## Comments?
 
 Does any of this content sound interesting to you? If so, [drop me a line]. I may add/remove content and/or modify the order that I write the chapters based on feedback.
+
+
+## Progress
+
+* **2013-06-01**: Added the [Text](/articles/2013/06/01/handling-text-correctly/) chapter.
 
 [drop me a line]: /contact/
