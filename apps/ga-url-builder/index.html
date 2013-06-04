@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Google Analytics URL Builder</title>
+  
+  <!-- Bootstrap: Instantly make page look nicer -->
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <style>
+    /* Form field styling */
+    label { display: block; font-weight: bold; }
+    input { display: block; margin-bottom: 1em; }
+    
+    /* Override Bootstrap so that 'size' attribute on inputs is honored. */
+    input { width: auto; }
+  </style>
+  
+  <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  <script>
+    $(function() {
+      $('#generate').click(function() {
+        var url = $('#url').val();
+        var utm_source = $('#utm_source').val();
+        var utm_medium = $('#utm_medium').val();
+        var utm_campaign = $('#utm_campaign').val();
+        
+        var gaurl = url + '?' + $.param({
+          utm_source: utm_source,
+          utm_medium: utm_medium,
+          utm_campaign: utm_campaign
+        });
+        $('#gaurl').val(gaurl);
+      });
+    });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Google Analytics URL Builder</h1>
+    <p>
+      I'm tired of Google's <a href="https://support.google.com/analytics/answer/1033867">
+      official analytics URL builder</a> breaking on me.
+      So here's my own implementation. It's too simple to break.
+    </p>
+    
+    <label for="url">Website URL*</label>
+    <input id="url" type="text" value="" size="100"/>
+    
+    <label for="utm_source">Campaign Source*</label>
+    <input id="utm_source" type="text" value="" size="30"/>
+    
+    <label for="utm_medium">Campaign Medium*</label>
+    <input id="utm_medium" type="text" value="" size="30"/>
+    
+    <label for="utm_campaign">Campaign Name*</label>
+    <input id="utm_campaign" type="text" value="" size="30"/>
+    
+    <input id="generate" type="submit" value="Generate URL"/>
+    
+    <hr/>
+    
+    <label for="gaurl">Google Analytics URL</label>
+    <input id="gaurl" type="text" value="" size="100"/>
+    
+    <hr/>
+    
+    <a href="/apps/">&lt;&lt; Back to DaFoster.net</a>
+  </div>
+</body>
+</html>
