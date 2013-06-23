@@ -18,17 +18,30 @@ breadcrumbs: [/, /about/]
 
 <h2 id="objectives">Areas of Interest</h2>
 
-I'll be more responsive if your positions intersect my current interests...
+I'll be more responsive if your company and positions intersect my current interests...
 
 ### Sectors
 
-* API and framework development
-* mobile development (iOS, Android, Windows Phone)
-* software development tools (static analysis, code transformation, profilers, test harnesses, compilers)
-* digital preservation (backup software, virtual machines, emulators)
-* networking (clients, servers, website backends)
+* software development tools & community <!--(static analysis, code transformation, profilers, test harnesses, compilers)-->
+* analytics tools, but not advertising
+* education disruption <!--(online classrooms)-->
+* health care disruption for the USA
+* digital preservation <!--(archival software, virtual machines, emulators)-->
+
+<!--
 * robotics (embedded realtime systems)
+-->
+
+### Roles & Technology
+
+* web development (Django, Node.js, HTML, CSS, JavaScript)
+* mobile development (iOS, Android, Windows Phone)
+* Big Data & analytics (Hadoop, Redis, NoSQL, Splunk)
+* API and framework development (REST, various languages)
+
+<!--
 * teaching (tutoring, training, technical writing, documenting)
+-->
 
 ### Languages
 
@@ -48,6 +61,12 @@ Additional languages I have studied but have not created significant software in
 * Standard ML
 * Smalltalk
 
+<!--
+Deprecated languages I avoid:
+
+* PHP &ndash; *except for proofs-of-concept and throwaway prototypes*
+* Classic ASP
+-->
 
 <h2 id="experience">Experience</h2>
 
