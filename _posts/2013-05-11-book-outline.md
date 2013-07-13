@@ -87,7 +87,7 @@ Collections are the backbone for representing compound data in any programming l
     * Trees
     * Graphs (including: directed, multi)
 
-### Error Handling
+### [Error Handling](/articles/2013/07/13/error-handling/)
 
 There are many more ways for a program to fail than succeed.
 
@@ -332,6 +332,7 @@ Does any of this content sound interesting to you? If so, [drop me a line]. I ma
 
 ## Progress
 
+* **2013-07-13**: Added the [Error Handling](/articles/2013/07/13/error-handling/) chapter.
 * **2013-06-01**: Added the [Text](/articles/2013/06/01/handling-text-correctly/) chapter.
 
 [drop me a line]: /contact/

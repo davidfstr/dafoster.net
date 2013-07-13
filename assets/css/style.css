@@ -225,7 +225,7 @@ h2.active,
   padding-left: 2em;
 }
 .toc ul ul ul li {
-  padding-left: 4em;
+  padding-left: 2em;
 }
 
 acronym {
@@ -243,6 +243,13 @@ pre {
   border-radius: 3px;
   background-color: #f8f8f8;
 }
+
+/* Horizontal scrolling code blocks */
+pre      { overflow-x: auto; word-wrap: normal; }
+pre code { white-space: pre; }
+
+/* Prevent word breaks for "UTF-8" and similar phrases */
+.nobr { white-space: nowrap; }
 
 /* ========================================================================== */
 /* Footer */
