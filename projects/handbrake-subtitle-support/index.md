@@ -54,9 +54,13 @@ If you experience any major rendering issues with SSA subtitles, please:
   [contacting me directly].
 
 These days (as of 2011) I am more or less inactive on HandBrake development.
+<!--
 Yet I am currently your best shot at getting SSA issues fixed. Therefore if you
 really want to get a particular issue fixed, you are encouraged to find a
 creative way to motivate me.[^motivate] :-)
+
+[^motivate]: Perhaps by introducing me to a really awesome TV show or anime series that happens not to transcode its subtitles correctly. Particularly if I'm about to fly somewhere. Other ideas encouraged.
+-->
 
 ## Updates
 
@@ -136,6 +140,5 @@ Announced to the HandBrake community here:
 [HandBrake bug tracker]: https://trac.handbrake.fr/report/11
 [Bugs board]: https://forum.handbrake.fr/viewforum.php?f=12
 [contacting me directly]: https://forum.handbrake.fr/ucp.php?i=pm&mode=compose&u=12649
-[^motivate]: Perhaps by introducing me to a really awesome TV show or anime series that happens not to transcode its subtitles correctly. Particularly if I'm about to fly somewhere. Other ideas encouraged.
 [hbencode]: https://github.com/davidfstr/hbencode#readme
 [Burn Planner]: /projects/burn-planner/
