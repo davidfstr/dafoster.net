@@ -2,6 +2,7 @@
 layout: post
 title: Visual Guide to Programming Language Properties
 tags: Software
+featured: true
 
 include_jquery: true
 include_bootstrap_js: true
