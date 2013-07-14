@@ -25,7 +25,7 @@ It will list changelist files and locally modified files that haven't been added
 
 ### Example
 
-<pre>
+```
 [dfoster ~/dev/p4/mybranch/path/to/myproject]$ p4status
 # On changelist 154055
 # 
@@ -46,7 +46,7 @@ It will list changelist files and locally modified files that haven't been added
 # 
 #       new file:   server/apps/setupfx/splunkd/default/inputs-NEW2.conf
 # 
-</pre>
+```
 
 ### Installation
 
