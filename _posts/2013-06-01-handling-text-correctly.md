@@ -120,7 +120,7 @@ The Unicode character set is designed to support all characters in all character
 
 Originally, Unicode mapped characters to numbers in the range 0x0000-0xFFFF, requiring only 16 bits to represent each character. At that time it was possible to encode each Unicode character using a 2-byte fixed width encoding, known as **UCS-2**. Many early Unicode-aware systems, such as Java, were designed around this original specification.
 
-In 1996, Unicode was extended to map characters to numbers in the larger range of 0x00000-0x10FFFF, requiring up to 20 bits per character. Thus UCS-2, being limited to 16-bits, was no longer capable of representing all Unicode characters. In its place arose the **UTF-16** encoding which, like UCS-2, uses a single 16-bit value to represent characters in range 0x0000-0xFFFF (the **basic multilingual plane**) and two 16-bit values to represent characters in range 0x10000-0x10FFFF (the **supplemental plane** or **astral plane**). And so many UCS-2 systems were retroactively upgraded to use UTF-16 in place of UCS-2.
+In 1996, Unicode was extended to map characters to numbers in the larger range of 0x00000-0x10FFFF, requiring up to 20 bits per character. Thus UCS-2, being limited to 16-bits, was no longer capable of representing all Unicode characters. In its place arose the **UTF-16** encoding which, like UCS-2, uses a single 16-bit value to represent characters in range 0x0000-0xFFFF (the **basic multilingual plane**) and two 16-bit values to represent characters in range 0x10000-0x10FFFF (the **supplemental planes**). And so many UCS-2 systems were retroactively upgraded to use UTF-16 in place of UCS-2.
 
 Today, UTF-16 is the most common in-memory representation for Unicode strings. However, many programs incorrectly treat individual 16-bit values from UTF-16 directly as characters, due to ignorance of UTF-16's variable-width nature. In many cases this causes no problems, since most programs operate on strings and substrings opaquely, as opposed to working with individual characters. However problems will arise if unaware programs attempt to manipulate characters directly, such as by counting the number of characters in a string or by filtering individual characters.
 
@@ -148,13 +148,13 @@ Unicode         | UTF-8                 | variable width, 1-4 bytes
 * **UCS-2**
     - This is the native encoding used by early Unicode-aware systems, such as Java 1.4 and below.
     - It can only represent Unicode characters in the basic plane (0x0000-0xFFFF), but no higher.  
-      In particular characters in the supplementary planes (0x10000-0x10FFFF), sometimes known as **astral characters**, cannot be represented.
+      In particular **supplementary characters** in the supplementary planes (0x10000-0x10FFFF) cannot be represented. These are sometimes called **astral characters**.
     - <p>Many APIs that originally only supported UCS-2 were retroactively upgraded to use <span class="nobr">UTF-16</span>.</p>
 * **UTF-16**
     - This is the default in-memory encoding for most modern Unicode-aware systems, including Windows, Mac OS X, the Java 1.5+ runtime[^JavaUTF16], the .NET runtime (including C#), and Python 2.x[^PEP261].
     - It can represent any character in the Unicode character set.
     - Characters in the basic plane (0x0000-0xFFFF) are encoded as a single 16-bit value.  
-      Astral characters (0x10000-0x10FFFF) are encoded as two 16-bit **surrogate** values.
+      Supplementary characters (0x10000-0x10FFFF) are encoded as two 16-bit **surrogate** values.
     - {{ Alert }} It is common for code to incorrectly manipulate UTF-16 data as if it were fixed-width <span class="nobr">UCS-2<span> instead.
     - {{ Alert }} Programs may optionally prepend a *byte-order-mark (BOM)* at the beginning of a file to mark it as UTF-16 or to specify a byte-ordering other than big-endian. Programs that input <span class="nobr">UTF-16<span> files should be prepared to handle BOMs.
     - <p>{{ Alert }} Some outdated documentation and APIs may refer to the UTF-16 encoding as the "Unicode encoding". Notably C#'s <a href="http://msdn.microsoft.com/en-us/library/system.text.unicodeencoding.aspx">UnicodeEncoding</a>, Mac OS X's <a href="http://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/c_ref/NSUnicodeStringEncoding">NSUnicodeStringEncoding</a> or Python 2.2-3.2's `unicode` type on "narrow" builds, which are the default.</p>
@@ -277,7 +277,7 @@ A program can work with strings in a few ways:
     + <p>All foreign strings will be converted to this encoding at the time of input (regardless of source). And upon output, strings will be converted to the appropriate proper output encoding.</p>
     + <p>UTF-8 and UTF-16 are both good candidates for such an in-memory encoding since they can both represent the full repertoire of Unicode characters. Therefore you won't lose any data by converting to/from them.</p>
         - <p>UTF-8 is compact and a superset of ASCII, so you can pass UTF-8 strings to brain-dead functions that are encoding unaware and get correct behavior as long as only ASCII characters are being used.</p>
-        - <p>UTF-16 is convenient because functions that are unaware of astral characters will still get correct behavior as long as basic-plane Unicode characters are used, which are the most common.</p>
+        - <p>UTF-16 is convenient because functions that are unaware of supplementary characters will still get correct behavior as long as basic-plane Unicode characters are used, which are the most common.</p>
 * **Pass around the text encoding around with the underlying byte array, possibly with a custom string datatype.**
     - No encoding conversion overhead with reading the input stream.
     - Cannot mix text with different encodings.
@@ -297,11 +297,11 @@ Gotchas:
 
 Java and C#'s `char` are 16-bits wide. So are C/C++'s `wchar` and Mac OS X's `unichar`. And so are the elements of a Python 2.x string when it is compiled in the default "narrow" mode.
 
-16-bits is sufficient to hold a Unicode character in the basic plane (0x0000-0xFFFF) but not an astral character in a supplemental plane (0x10000-0x10FFFF). In the case of these languages, a `char` represents a single UTF-16 code unit (i.e. either a character in the basic plane or a surrogate) as opposed to an actual character.
+16-bits is sufficient to hold a Unicode character in the basic plane (0x0000-0xFFFF) but not an supplementary character in a supplemental plane (0x10000-0x10FFFF). In the case of these languages, a `char` represents a single UTF-16 code unit (i.e. either a character in the basic plane or a surrogate) as opposed to an actual character.
 
-Therefore text-aware programs in these languages need to be particularly careful to deal with astral characters correctly, since those characters cannot fit into a single `char` variable.
+Therefore text-aware programs in these languages need to be particularly careful to deal with supplementary characters correctly, since those characters cannot fit into a single `char` variable.
 
-Here is a typical Java program that is unaware of astral characters:
+Here is a typical Java program that is unaware of supplementary characters:
 
 ```
 String str = "Hello";
@@ -313,7 +313,7 @@ for (int i=0, n=str.length(); i<n; i++) {
 }
 ```
 
-And here is a much-longer but correct version that correctly identifies surrogates and decodes them to astral characters correctly:
+And here is a much-longer but correct version that correctly identifies surrogates and decodes them to supplementary characters correctly:
 
 ```
 String str = "Hello";
@@ -350,7 +350,7 @@ for (int i=0, n=str.length(); i<n; i++) {
 Gotchas:
 
 * Beware of methods that take exactly one `char` or return exactly one `char`.  
-    * They almost certainly aren't aware of astral characters.
+    * They almost certainly aren't aware of supplementary characters.
 * You can't iterate over the characters in a "string" by iterating over the `char`s.
     * Instead you have to use a loop like the above to iterate over the true characters.  
       This example stores the true character in the `codepoint` variable.
