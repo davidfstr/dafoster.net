@@ -161,7 +161,7 @@ Unicode         | UTF-8                 | variable width, 1-4 bytes
 * **UTF-32 / UCS-4**
     - This is a fixed width encoding capable of representing any Unicode character directly as a 32-bit value.
     - Because it is space inefficient, this encoding is rarely seen in practice.
-        - Python 2.2-3.2 offers "wide" builds use UTF-32.
+        - Python 2.2-3.2 offers "wide" builds that use UTF-32.
     - {{ Alert }} Programs may optionally prepend a *byte-order-mark (BOM)* at the beginning of a file to mark it as UTF-32 or to specify a byte-ordering other than big-endian. Programs that input <span class="nobr">UTF-32</span> files should be prepared to handle BOMs.
 
 [^JavaUTF16]: Compare the documentation for java.lang.String between [Java 1.4](http://docs.oracle.com/javase/1.4.2/docs/api/java/lang/String.html) and [Java 1.5](http://docs.oracle.com/javase/1.5.0/docs/api/java/lang/String.html). The 1.5 documentation clearly states UTF-16 as the internal string encoding.
@@ -207,31 +207,31 @@ Unfortunately many languages allow you to omit the encoding, and then will try t
 Consider the following Java program:
 
 ```
-byte[] goodbyeBytes = {'T', 's', 'c', 'h', \uC3BC, \uC39F, '!'};
-String goodbyeString = new String(goodbyeBytes);              // WRONG: OS-dependent
+byte[] footBytes = {'f', 'u', (byte)0xC3, (byte)0x9F};
+String footString = new String(footBytes);                    // WRONG: OS-dependent
 ```
 
-This program will decode different strings on different operating systems! On Mac OS X and Linux where the platform's default charset is UTF-8, the correct result ("Tschüß!") will be obtained since the original bytes were encoded in UTF-8. However on Windows the bogus result "TschÃ¼ÃŸ!" will be decoded because the default charset is Windows-1252.
+This program will decode different strings on different operating systems! On Mac OS X and Linux where the platform's default encoding is UTF-8, the correct result ("fuß") will be obtained since the original bytes were encoded in UTF-8. However on Windows the bogus result "fuÃŸ" will be decoded because the default encoding is Windows-1252.
 
-Here's the fixed program, which specifies the UTF-8 charset explicitly:
+Here's the fixed program, which specifies the UTF-8 encoding explicitly:
 
 ```
-byte[] goodbyeBytes = {'T', 's', 'c', 'h', \uC3BC, \uC39F, '!'};
-String goodbyeString = new String(goodbyeBytes, "UTF-8");     // CORRECT
+byte[] footBytes = {'f', 'u', (byte)0xC3, (byte)0x9F};
+String footString = new String(footBytes, "UTF-8");           // CORRECT
 ```
 
 As another example, consider the Java `InputStreamReader` and `FileReader` classes, both of which convert from byte streams to character streams.
 
 ```
-byte[] goodbyeBytes = {'T', 's', 'c', 'h', \uC3BC, \uC39F, '!'};
-InputStream goodbyeStream = new ByteArrayInputStream(goodbyeBytes);
-Reader goodbyeReader = new InputStreamReader(goodbyeStream);  // WRONG: OS-dependent
+byte[] footBytes = {'f', 'u', (byte)0xC3, (byte)0x9F};
+InputStream footStream = new ByteArrayInputStream(footBytes);
+Reader footReader = new InputStreamReader(footStream);        // WRONG: OS-dependent
 ```
 
 Or the even more innocent-looking:
 
 ```
-Reader goodbyeReader = new FileReader("goodbye.txt");         // WRONG: OS-dependent
+Reader footReader = new FileReader("foot.txt");               // WRONG: OS-dependent
 ```
 
 Both of these examples are wrong for the same reason: they don't specify the encoding. And both can be fixed by adding `"UTF-8"` as the second argument to the appropriate constructor.
@@ -239,24 +239,24 @@ Both of these examples are wrong for the same reason: they don't specify the enc
 Of course the same problems happen when encoding a string to a byte stream:
 
 ```
-String goodbyeString = "Tschüß!";
-byte[] goodbyeBytes = goodbyeString.getBytes();               // WRONG: OS-dependent
+String footString = "fu\u00DF";
+byte[] footBytes = footString.getBytes();                     // WRONG: OS-dependent
 ```
 
 And when encoding a character stream to a byte stream:
 
 ```
-ByteArrayOutputStream goodbyeStream = new ByteArrayOutputStream();
-Writer goodbyeWriter = new OutputStreamWriter(goodbyeStream); // WRONG: OS-dependent
-goodbyeWriter.write("Tschüß!");
-byte[] goodbyeBytes = goodbyeStream.toByteArray();
+ByteArrayOutputStream footStream = new ByteArrayOutputStream();
+Writer footWriter = new OutputStreamWriter(footStream);       // WRONG: OS-dependent
+footWriter.write("fu\u00DF");
+byte[] footBytes = footStream.toByteArray();
 ```
 
 And when writing to text files:
 
 ```
-Writer goodbyeWriter = new FileWriter("goodbye.txt");         // WRONG: OS-dependent
-goodbyeWriter.write("Tschüß!");
+Writer footWriter = new FileWriter("foot.txt");               // WRONG: OS-dependent
+footWriter.write("fu\u00DF");
 ```
 
 <a id="a-char-in-your-favorite-language-is-probably-not-a-character"></a>
