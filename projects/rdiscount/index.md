@@ -33,13 +33,10 @@ Discount is fast and supports many useful extensions to the original Markdown la
     * `![GitHub Favicon](https://github.com/favicon.ico =16x16)` &rarr; ![GitHub Favicon](https://github.com/favicon.ico =16x16)
 * Typographic substitutions with [SmartyPants]
     * Straight quotes (&quot; and &#39;) &rarr; “curly” quotes
-* [...and more](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions)
-
-Discount 2.1.5 (soon to be supported in RDiscount) also has:
-
 * Fenced code blocks
     * [backtick-delimited] – from *GitHub Flavored Markdown*
     * [tilde-delimited] – from *PHP Markdown Extra*
+* [...and more](http://www.pell.portland.or.us/~orc/Code/discount/#Language.extensions)
 
 Some of these extensions are not enabled by default.
 See usage instructions below to enable additional extensions.
