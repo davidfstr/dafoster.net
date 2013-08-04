@@ -89,7 +89,7 @@ services (ex: Disqus).
 * Jekyll[^jb], Liquid - generate pages
 * Markdown - author content
 * Bootstrap - base CSS
-* Discus - comments
+* Disqus - comments
 * Google Analytics - basic analytics
 * HTML5 Shim - make IE play nice with HTML5
 * JQuery - trivial DOM manipulation in JavaScript
