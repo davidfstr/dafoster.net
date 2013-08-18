@@ -120,6 +120,7 @@ Environment isolater | -   | -           | -     | -       | virtualenv  | rvm  
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*
     * *Describes some <span class="property">properties</span> mentioned in this article in more detail.*
+* [*Chinese translation of this article*](http://m.csdn.net/article/2013-06-28/2816045-Visual-Guide-to-Programming-Language-Properties)
 
 <hr/>
 
