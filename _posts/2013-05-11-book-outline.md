@@ -32,7 +32,7 @@ Here is an outline of a book I would like to write. I will probably try writing 
     * [Error Handling](#error-handling)
     * [Concurrency](#concurrency)
     * [Memory Management](#memory-management)
-* [Languages](#)
+* [Languages](#languages)
     * [Comparing Programming Languages](#comparing-programming-languages)
     * [Programming Paradigms](#programming-paradigms)
 * [Process](#process)
@@ -44,6 +44,8 @@ Here is an outline of a book I would like to write. I will probably try writing 
     * [Debugging Techniques](#debugging-techniques)
     * [Profiling/Instrumentation](#profiling-instrumentation)
     * [Maintaining Legacy Code Safely (Advanced Refactoring)](#maintaining-legacy-code-safely)
+* [Other](#other)
+    * [Persistence](#persistence)
 * [Comments?](#comments)
 * [Progress](#progress)
 
@@ -375,6 +377,41 @@ Meta:
 *Although the concept of refactoring can be applied to any code, not just legacy code, the *deliberate and careful* application of refactoring techniques is mostly restricted to legacy code.*
 
 *This is covered in great detail in the "Refactoring" book by Martin Fowler.*
+
+
+<a id="other"></a>
+## Other
+
+The topics in this section don't fit in any of the other major topics. Should these extra topics not form a cohesive whole, they will not be included in the book.
+
+<a id="persistence"></a>
+### Persistence
+
+* Prefer the use of a standard metaformat instead of rolling your own format.  
+  You'll save a ton of time.
+* **Standard Metaformats**
+    * XML
+    * JSON
+    * YAML
+    * Config files
+        * UNIX config file
+        * Windows INI file
+        * Mac Plist file
+    * SQLite database
+* **Considerations with custom formats**:
+    * Text vs. Binary
+    * Backward Compatibility, Forward Compatibility, Version Numbers
+    * Extensibility
+    * In-place Modifications & Appendability
+        - For text formats, this means the preservation of comments and whitespace.
+    * Partially-loadable
+* **Examples of custom formats**:
+    * Hotline protocol - highly extensible, featureful, binary protocol
+    * Mac resource fork format - partially-loadable appendable binary file format
+    * QuickTime video container - highly extensible binary file format
+    * Matroska video container - highly extensible binary file format
+    * ZIP file format
+* **Bundles** - a means for combining multiple subfiles into a single virtual file
 
 <a id="comments"></a>
 ## Comments?
