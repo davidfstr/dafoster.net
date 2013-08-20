@@ -13,6 +13,9 @@
     
     /* Override Bootstrap so that 'size' attribute on inputs is honored. */
     input { width: auto; }
+    
+    /* Other styles */
+    .hidden { display: none }
   </style>
   
   <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
@@ -30,6 +33,15 @@
           utm_campaign: utm_campaign
         });
         $('#gaurl').val(gaurl);
+        
+        // Warn if URL looks like a local URL
+        if (gaurl.indexOf('localhost') !== -1 ||
+            gaurl.indexOf('127.0.0.1') !== -1)
+        {
+          $('.local-url-alert').removeClass('hidden');
+        } else {
+          $('.local-url-alert').addClass('hidden');
+        }
       });
     });
   </script>
@@ -60,6 +72,9 @@
     <hr/>
     
     <label for="gaurl">Google Analytics URL</label>
+    <div class="alert local-url-alert hidden">
+      <strong>Local URL</strong> This URL cannot be accessed on other computers.
+    </div>
     <input id="gaurl" type="text" value="" size="100"/>
     
     <hr/>
