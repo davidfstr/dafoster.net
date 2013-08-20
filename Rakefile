@@ -6,6 +6,12 @@ task :preview do
   system "jekyll --server --auto"
 end
 
+desc "Launch preview server and visit it in a web browser."
+task :go do
+  Thread.new { sleep 3; system 'open "http://localhost:4000/"' }
+  system "rake preview"
+end
+
 desc "Compile prism subsite to _site"
 task :prism do
   system "python _plugins/prism.py"
