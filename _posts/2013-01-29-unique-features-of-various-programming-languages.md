@@ -16,6 +16,24 @@ I like learning new languages to get myself to think about problems in different
 
 Here's a list of a few well-known languages I've worked with and some of the more interesting features I've encountered:
 
+{% capture toc_content %}
+
+* [C](#c)
+* [Java](#java)
+* [C&#35;](#csharp)
+* [Python](#python)
+* [JavaScript](#javascript)
+* [Haskell](#haskell)
+* [Lisp](#lisp)
+* [Other](#other)
+
+{% endcapture %}
+
+<div class="toc">
+  {{ toc_content | markdownify }}
+</div>
+
+<a id="c"></a>
 ### C
 
 * **Undefined behavior**
@@ -24,12 +42,13 @@ Here's a list of a few well-known languages I've worked with and some of the mor
 
 [^overflow]: For example it is undefined what happens when you add to an integer variable and the variable overflows. In most compilers adding 1 to the largest integer wraps around to result in the smallest integer, and thus a number of programs depend on this behavior. Other compilers [assume overflow is impossible](http://thiemonagel.de/2010/01/signed-integer-overflow/).
 
+<a id="java"></a>
 ### Java
 
 * **Objects are the primary unit of composition**
     * There are no standalone functions.
     * Design Patterns can be used to describe high level object coordination patterns.
-    * However sometimes the community's focus on objects can be a bit extreme[^java-rant].
+    * However sometimes the community's focus on objects can be a bit extreme.[^java-rant]
 * **Checked exceptions**
     * Great when used *sparingly*, as it forces the caller to handle expected error conditions.    
         * I do think that it was a usability error to make `Exception` checked and `RuntimeException` unchecked. Rather it should be `Exception` that is *unchecked* and a new `CheckedException` should be the base for all checked exceptions. This makes it clear that *unchecked* exceptions should be the default.
@@ -50,6 +69,7 @@ Here's a list of a few well-known languages I've worked with and some of the mor
 
 [wora]: http://en.wikipedia.org/wiki/Write_once,_run_anywhere
 
+<a id="csharp"></a>
 ### C&#35;
 
 Very similar to Java.[^java-copycat]
@@ -76,6 +96,7 @@ Very similar to Java.[^java-copycat]
 
 [^event-flaw]: If you invoke an uninitialized event-property, it will throw a `NullReferenceException` instead of ignoring your request, as you would expect. Workaround by initializing events with an empty delegate.
 
+<a id="python"></a>
 ### Python
 
 * **Indentation is significant**
@@ -101,6 +122,7 @@ Very similar to Java.[^java-copycat]
     * Coroutines enable straightforward *pushing* of values to a complex data sink.
     * Python calls both constructs a *generator*.
 
+<a id="javascript"></a>
 ### JavaScript
 
 * **No blocking I/O**
@@ -126,6 +148,7 @@ Very similar to Java.[^java-copycat]
 
 [^js-truthy]: Hence recommendations to only depend on the "truthy" and "falsy" values of expressions instead of direct comparisons with `null` or `undefined`.
 
+<a id="haskell"></a>
 ### Haskell
 
 * **Lazy evaluation**
@@ -149,6 +172,7 @@ Very similar to Java.[^java-copycat]
 
 [^control-flow]: Want to implement Ruby's `until` loop or `unless` conditional? No problem.
 
+<a id="lisp"></a>
 ### Lisp <small>(Common Lisp, Scheme, Clojure)[^lisp-dialects]</small>
 
 * **Homoiconic**
@@ -173,6 +197,7 @@ Very similar to Java.[^java-copycat]
 
 [^macro-optimize]: Prismatic performs efficient [compile-time DOM templating](http://blog.getprismatic.com/blog/2013/1/22/the-magic-of-macros-lighting-fast-templating-in-clojurescript) in ClojureScript using macros.
 
+<a id="other"></a>
 ### Other
 
 * **Fexprs**
