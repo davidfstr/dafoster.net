@@ -101,7 +101,7 @@ There are a few languages I learned enough of to decide they weren't worth using
     * *Describes unique features of several languages mentioned in this article.*
 
 
-[^power]: Paul Graham's essays on Lisp and language power are a thought-provoking read. By my assessment the current most-powerful languages out there are [Haskell](http://www.haskell.org/) and various members of the Lisp family (ex: Scheme, [Racket](http://racket-lang.org/), [Clojure](http://clojure.org/)). I've decided to pass over Haskell for the time being for a number of reasons, particularly because of its high learning curve. I will probably return to it eventually.
+[^power]: Paul Graham's essays on [Lisp and language power](http://www.paulgraham.com/icad.html) are a thought-provoking read. By my assessment the current most-powerful languages out there are [Haskell](http://www.haskell.org/) and various members of the Lisp family (ex: Scheme, [Racket](http://racket-lang.org/), [Clojure](http://clojure.org/)). I've decided to pass over Haskell for the time being for a number of reasons, particularly because of its high learning curve. I will probably return to it eventually.
 
 [^rmf]: **RealMediaFixer** was a program I wrote that repaired RealMedia (`.rm`) files playable in RealPlayer. Such files downloaded over dialup would often get subtlely corrupted. Since downloading a 30-minute video could easily take a day it was more practical to try repairing the broken file rather than redownloading it.
 

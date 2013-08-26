@@ -130,8 +130,13 @@ Very similar to Java.[^java-copycat]
 
 * **Lazy evaluation**
     * Expressions are only evaluated when some primitive operation (like `print` or `add`) requires the value of the expression.
-    * Allows you to define your own control flow operators.[^control-flow]
+    * Allows you to glue programs together in new ways. In particular, execution
+      of multiple functions can be interleaved trivially and termination
+      conditions can be separated from looped computation.
+        - This is explained in more detail in [Why Functional Programming (1990)](http://www.cs.kent.ac.uk/people/staff/dat/miranda/whyfp90.pdf),
+          §4 "Gluing Programs Together".
     * Allows you to extract complex expressions without fear of introducing a performance hit (since the expression will only actually be evaluated if it is needed).
+    * Allows you to define your own control flow operators.[^control-flow]
 * **Side effects banned by default**
     * Mutation of data structures and I/O, both of which have order-sensitive side effects, are not allowed except within the confines of **monad**.
     * A **monad** is a construct that explicitly controls evaluation order, in contrast to the usual unpredictable lazy evaluation behavior.
