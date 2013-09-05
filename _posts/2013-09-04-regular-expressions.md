@@ -3,6 +3,12 @@ layout: post
 title: Regular Expressions
 tags: [Software, Productivity]
 
+# Feed validator doesn't like iframe
+feed_content: |
+    Regular expressions are a concise way to search and transform strings using patterns. They are available in numerous text editors and programming languages.
+    
+    [Read more...](/articles/2013/09/04/regular-expressions/)
+
 ---
 
 Regular expressions are a concise way to search and transform strings using patterns. They are available in numerous text editors and programming languages.
