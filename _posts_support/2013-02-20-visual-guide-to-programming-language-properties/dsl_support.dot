@@ -15,16 +15,16 @@ digraph "Language Properties" {
         //label="Domain Specific Language Support"
         
         // Labels & Styles
-        Homoiconic          [label="Homoiconicity‡", fillcolor=lightblue1]                          // L_LISP
-        Macros              [label="Macros (code-\ntransforming)", fillcolor=lightblue1]            // L_LISP
+        Homoiconic          [label="Homoiconicity‡", fillcolor=lightblue1]                          //            L_LISP
+        Macros              [label="Macros (code-\ntransforming)", fillcolor=lightblue1]            //            L_LISP
         EmbeddedDSLs        [label="Embedded domain specific\n languages (DSLs) easy",
-            fillcolor=palegreen, shape=box]                                                         // L_LISP,           L_RUBY
+            fillcolor=palegreen, shape=box]                                                         // L_HASKELL, L_LISP,           L_RUBY
         BadTypography       [label="Lousy typography\n (Hard to read)‡",
-            fillcolor=pink, shape=box]                                                              // L_LISP
+            fillcolor=pink, shape=box]                                                              //            L_LISP
         OperatorsAsMethods  [label="Operators implemented\n as normal functions",
-            fillcolor=lightblue1, shape=Mrecord]                                                    // L_LISP, L_PYTHON
-        OperatorOverloading [label="Operator overloading", fillcolor=lightblue1]                    // L_LISP, L_PYTHON,         L_CPP
-        RelaxedParens       [label="Relaxed parentheses\n requirements", fillcolor=lightblue1]      //                   L_RUBY
+            fillcolor=lightblue1, shape=Mrecord]                                                    // L_HASKELL, L_LISP, L_PYTHON
+        OperatorOverloading [label="Operator overloading", fillcolor=lightblue1]                    // L_HASKELL, L_LISP, L_PYTHON,         L_CPP
+        RelaxedParens       [label="Relaxed parentheses\n requirements", fillcolor=lightblue1]      // L_HASKELL,                   L_RUBY
         
         // Nodes & Edges
         Homoiconic -> BadTypography [style=dashed]
