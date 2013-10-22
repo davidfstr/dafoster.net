@@ -25,7 +25,7 @@ To summarize **current NSA capabilities** that have been revealed:
 
 This behavior is wildly in violation of the 4th Amendment, which is intended to protect Americans against unreasonable search and seizures. I don’t care if there is a lower law such as the Patriot Act which supposedly authorizes these actions. I am sure that was never the intent of Congress.
 
-I think the best starting point to counter these encroachments is to directly **fight back against the most egregious violations**. In particular I find the lack of any court oversight over individual NSA analysts to be appalling.
+I think the best starting point to counter these encroachments is to directly **fight back against the most egregious violations**. In particular I find the lack of any court oversight over individual NSA analysts to be especially distressing.
 
 If you'd like to join me in this first battle, please **[sign my petition](http://bit.ly/nsatap)** to stop NSA analysts from being able to wiretap people without oversight and **share it with others**:
 
