@@ -30,7 +30,7 @@ I think the best starting point to counter these encroachments is to directly **
 If you'd like to join me in this first battle, please **[sign my petition](http://bit.ly/nsatap)** to stop NSA analysts from being able to wiretap people without oversight and **share it with others**:
 
 * [Stop NSA analysts from wiretapping people without due process](http://bit.ly/nsatap)  
-  http://bit.ly/nsatap
+  <u><http://bit.ly/nsatap></u>
 
 I expect this will be a long war. But worth fighting for.
 
