@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "WA Initiative 522: GMO Food Labeling"
-tags: [Offtopic]
+tags: [Politics]
 
 ---
 
