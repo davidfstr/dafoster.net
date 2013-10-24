@@ -32,7 +32,7 @@ If you'd like to join me in this first battle, please **[sign my petition](http:
 * [Stop NSA analysts from wiretapping people without due process](http://bit.ly/nsatap)  
   <u><http://bit.ly/nsatap></u>
 
-I expect this will be a long war. But worth fighting for.
+I expect this will be a long war. <!-- But worth fighting for. -->
 
 
 [^tap-email]: <http://news.cnet.com/8301-13578_3-57589495-38/nsa-spying-flap-extends-to-contents-of-u.s-phone-calls/>
