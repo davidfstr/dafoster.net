@@ -9,14 +9,11 @@ If you have notes in the "On My Phone" or "On My Mac" accounts but want to move 
 
 ![](/assets/2013/notes-accounts-on-iphone.png)
 
-## Easy Way
+## Easy Way <small>(Straightforward but tedious)</small>
 
 Mail every note to yourself and copy the contents into the Notes program (if using OS X 10.8 - 10.9) or into Mail (if using OS X 10.7 or earlier).
 
-**Pros:** Tedious but straightforward.  
-**Cons:** Loses the dates associated with the original notes which will mess up their ordering.
-
-## Hard Way
+## Hard Way <small>(Perfect migration but lots of steps)</small>
 
 First you will need **OS X 10.7 (Lion)**, either already running on a computer you own or installed on a virtual machine, such as created by [Parallels](http://www.parallels.com/products/desktop/) or [VMware](http://www.vmware.com/products/fusion/). OS X 10.8 (Mountain Lion) and OS X 10.9 (Mavericks) [removed the notes syncing feature](https://support.apple.com/kb/HT4191) that these instructions depend on.
 
