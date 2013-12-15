@@ -3,6 +3,6 @@ layout: page
 title: Donate
 breadcrumbs: [/, /projects/, /projects/burn-planner/]
 
-redirect_to_url: /projects/burn-planner/#donate
+redirect_to_url: /projects/burn-planner/
 
 ---

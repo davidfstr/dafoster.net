@@ -348,6 +348,11 @@ a:hover { /* must be after a:link, a:visited */
   text-decoration: underline;
 }
 
+/* Restore standard Bootstrap text color for big green buttons */
+a.btn-success {
+  color: #ffffff;
+}
+
 .block {
   background-color: #f0fad8;
   margin-bottom: 10px;

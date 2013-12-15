@@ -10,48 +10,16 @@ x_languages: [Objective_C]
 x_lines_of_code: 1,934
 x_location: Cathode at /Users/davidf/Projects
 
-linkable_headings: true
-
 ---
 Burn Planner helps you burn a series of files to multiple DVDs quickly by 
 automatically allocating files among DVDs and naming the DVDs.
 
-I got tired of doing this manually for all of the anime I archive to DVDs,
-so I make this program to automate the whole process.
+<a class="btn btn-success" href="Burn%20Planner%20v1.0.dmg">Download</a> for Mac OS X 10.5 and later
 
-## Download
+<!-- Screencast (original dimensions 420 x 315)-->
+<iframe width="500" height="371" src="//www.youtube.com/embed/1GaEYlAx2CI" frameborder="0" allowfullscreen></iframe>
 
-* [Burn Planner 1.0](Burn%20Planner%20v1.0.dmg) &ndash; Mac OS X 10.5 and later
+## History
 
-<h2 id="donate">Donate</h2>
-
-If this program saves you time, consider giving back with a donation.
-
-<div class="paypal">
-	<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-		<div>
-			<input type="hidden" name="cmd" value="_xclick">
-			<input type="hidden" name="business" value="donations@dafoster.net">
-			<input type="hidden" name="item_name" value="Burn Planner">
-			<input type="hidden" name="item_number" value="burnplanner">
-			<input type="hidden" name="image_url" value="http://dafoster.net/projects/burn-planner/logo-50.png">
-			<input type="hidden" name="no_shipping" value="1">
-			<input type="hidden" name="return" value="http://dafoster.net/projects/burn-planner">
-			<input type="hidden" name="cancel_return" value="http://dafoster.net/projects/burn-planner">
-			<input type="hidden" name="cn" value="Feature Requests">
-			<input type="hidden" name="currency_code" value="USD">
-			<input type="hidden" name="tax" value="0">
-			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif"
-				width="147" height="47"
-				alt="Donate" name="submit">
-			<select name="amount" style="width: 65px; vertical-align: top;">
-				<option value="5.00">$5</option>
-				<option value="10.00" selected="selected">$10</option>
-				<option value="15.00">$15</option>
-				<option value="20.00">$20</option>
-				<option value="25.00">$25</option>
-				<option value="">Other</option>
-			</select>
-		</div>
-	</form>
-</div>
+I wrote this program because I archive a lot of files to DVDs and I needed a
+program to make the process faster.
