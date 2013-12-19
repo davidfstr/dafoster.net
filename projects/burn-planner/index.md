@@ -17,7 +17,7 @@ automatically allocating files among DVDs and naming the DVDs.
 <a class="btn btn-success" href="https://itunes.apple.com/us/app/burn-planner/id779198024?ls=1&amp;mt=12">Download</a> for Mac OS X 10.5 and later
 
 <!-- Screencast (original dimensions 420 x 315)-->
-<iframe width="500" height="371" src="//www.youtube.com/embed/1GaEYlAx2CI" frameborder="0" allowfullscreen></iframe>
+<iframe width="500" height="371" src="//www.youtube.com/embed/1GaEYlAx2CI?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ## History
 
