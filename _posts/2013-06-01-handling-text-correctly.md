@@ -3,8 +3,15 @@ layout: post
 title: Handling Text Correctly
 tags: [Software]
 x_date_written: 2011-05-18
+x_date_updated: 2014-01-01
 
 ---
+
+A remarkable number of programs do not handle text in a reasonable fashion, which causes those programs to break when confronted with non-English characters and symbols. Even the standard libraries of most programming languages are not immune.[^stdlib-broken]
+
+This chapter describes the foundation of how text handling works in software and gives examples of common pitfalls when working with text in real code. Upon completion you should be able to evaluate your favorite programming environment's built-in support for handling text and be able to write programs that handle text correctly and consistently across operating systems.
+
+[^stdlib-broken]: See [The String Type is Broken](http://mortoray.com/2013/11/27/the-string-type-is-broken/) for examples of how the standard libraries of various languages mishandle text.
 
 <div class="toc">
   <ul>
@@ -234,7 +241,22 @@ Or the even more innocent-looking:
 Reader footReader = new FileReader("foot.txt");               // WRONG: OS-dependent
 ```
 
-Both of these examples are wrong for the same reason: they don't specify the encoding. And both can be fixed by adding `"UTF-8"` as the second argument to the appropriate constructor.
+Both of these examples are wrong for the same reason: they don't specify the encoding.
+
+The former example can be fixed by adding `"UTF-8"` as the second constructor argument:
+
+```
+byte[] footBytes = {'f', 'u', (byte)0xC3, (byte)0x9F};
+InputStream footStream = new ByteArrayInputStream(footBytes);
+Reader footReader = new InputStreamReader(footStream, "UTF-8");    // CORRECT
+```
+
+Fixing the second example unfortunately requires using an entirely different class since `FileReader` has no constructer with an encoding parameter.
+
+```
+Reader footReader = new InputStreamReader(
+    new FileInputStream("foot.txt"), "UTF-8");                // CORRECT
+```
 
 Of course the same problems happen when encoding a string to a byte stream:
 
@@ -283,7 +305,7 @@ A program can work with strings in a few ways:
     - Cannot mix text with different encodings.
     - <p>Ruby takes this approach with its built-in `String` type.</p>
 * **Blithely ignore encoding issues altogether and get unexpected results when working with international characters.**
-    - Many programs written in languages where the default string type in not Unicode take this option out of ignorance. In particular this includes many programs in C, PHP, and <span class="nobr">Python 2.x</span>.
+    - Many programs written in languages where the default string type is not Unicode take this option out of ignorance. In particular this includes many programs in C, PHP, and <span class="nobr">Python 2.x</span>.
 
 Gotchas:
 
@@ -471,3 +493,9 @@ Working with text is tricky. Your programming language probably has default hand
         This article is part of the <a href="/articles/2013/05/11/book-outline/">Programming for Perfectionists</a> series.
     </p>
 </div>
+
+**Updates:**
+
+* 2014-01-01:
+    * Add introduction.
+    * Spell out how to add encoding parameter to `FileReader` and `InputStreamReader`.
