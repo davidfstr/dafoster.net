@@ -1,0 +1,560 @@
+<!DOCTYPE HTML>
+<html><head><meta charset="UTF-8"><title>Main</title><script type="text/javascript" src="elm-runtime.js"></script><script type="text/javascript">Elm.Main = Elm.Main || {};
+Elm.Main.make = function (_elm) {
+   _elm.Main = _elm.Main || {};
+   if (_elm.Main.values)
+   return _elm.Main.values;
+   var N = Elm.Native,
+   _N = N.Utils.make(_elm),
+   _L = N.List.make(_elm),
+   _E = N.Error.make(_elm),
+   _J = N.JavaScript.make(_elm),
+   $moduleName = "Main";
+   var Text = Elm.Text.make(_elm);
+   var Text = Elm.Text.make(_elm);
+   var Basics = Elm.Basics.make(_elm);
+   var Signal = Elm.Signal.make(_elm);
+   var List = Elm.List.make(_elm);
+   var Maybe = Elm.Maybe.make(_elm);
+   var Time = Elm.Time.make(_elm);
+   var Prelude = Elm.Prelude.make(_elm);
+   var Graphics = Graphics || {};
+   Graphics.Element = Elm.Graphics.Element.make(_elm);
+   var Color = Elm.Color.make(_elm);
+   var Graphics = Graphics || {};
+   Graphics.Collage = Elm.Graphics.Collage.make(_elm);
+   var Keyboard = Elm.Keyboard.make(_elm);
+   var Random = Elm.Random.make(_elm);
+   var _op = {};
+   var timeBetweenBombs = 1000;
+   var shotSpeed = 300 / 1000;
+   var shotSpriteType = {_: {}
+                        ,imagePath: "assets/shot.png"
+                        ,size: {_: {},h: 20,w: 12}
+                        ,velocity: {_: {}
+                                   ,x: 0
+                                   ,y: shotSpeed}};
+   var rewardToKillBomb = 10;
+   var playerSpriteType = {_: {}
+                          ,imagePath: "assets/turret.png"
+                          ,size: {_: {},h: 68,w: 56}
+                          ,velocity: {_: {},x: 0,y: 0}};
+   var playerSpeed = 400 / 1000;
+   var logoSpriteType = {_: {}
+                        ,imagePath: "assets/logo.png"
+                        ,size: {_: {},h: 84,w: 440}
+                        ,velocity: {_: {},x: 0,y: 0}};
+   var instructions = _L.append("Press Enter to begin.\n",
+   _L.append("\n",
+   _L.append("Arrow keys move the player.\n",
+   _L.append("The up key fires shots.\n",
+   _L.append("Objective: Destroy bombs.\n",
+   "")))));
+   var immortalTimeToLive = -1;
+   var filterJust = function (maybes) {
+      return function () {
+         switch (maybes.ctor)
+         {case "::":
+            switch (maybes._0.ctor)
+              {case "Just": return {ctor: "::"
+                                   ,_0: maybes._0._0
+                                   ,_1: filterJust(maybes._1)};
+                 case "Nothing":
+                 return filterJust(maybes._1);}
+              break;
+            case "[]":
+            return _J.toList([]);}
+         _E.Case($moduleName,
+         "between lines 371 and 374");
+      }();
+   };
+   var explosionSpriteType = {_: {}
+                             ,imagePath: "assets/explosion.png"
+                             ,size: {_: {},h: 85,w: 85}
+                             ,velocity: {_: {},x: 0,y: 0}};
+   var explosionInitialTimeToLive = 300;
+   var div2 = function (x) {
+      return Basics.toFloat(x) / 2;
+   };
+   var makeExplosionForBomb = function (s) {
+      return {_: {}
+             ,position: {_: {}
+                        ,x: s.position.x + div2(s.stype.size.w - explosionSpriteType.size.w)
+                        ,y: s.position.y - div2(explosionSpriteType.size.h)}
+             ,stype: explosionSpriteType
+             ,timeToLive: explosionInitialTimeToLive};
+   };
+   var disj = F2(function (list,
+   victim) {
+      return A2(List.filter,
+      function (x) {
+         return !_N.eq(x,victim);
+      },
+      list);
+   });
+   var desiredFps = 20;
+   var costToFireShot = 1;
+   var canvasSize = {_: {}
+                    ,h: 480
+                    ,w: 640};
+   var initialGameState = function () {
+      var playerSprite = {_: {}
+                         ,position: {_: {}
+                                    ,x: div2(canvasSize.w - playerSpriteType.size.w)
+                                    ,y: 0}
+                         ,stype: playerSpriteType
+                         ,timeToLive: immortalTimeToLive};
+      return {_: {}
+             ,isGameOver: true
+             ,score: 0
+             ,sprites: _J.toList([playerSprite])
+             ,timeUntilNextBomb: 0};
+   }();
+   var render = function (s) {
+      return function () {
+         var sz = s.stype.size;
+         var pos = s.position;
+         var opacity = _N.eq(s.timeToLive,
+         immortalTimeToLive) ? 1.0 : s.timeToLive / explosionInitialTimeToLive;
+         var offsetFromCenter = {_: {}
+                                ,x: pos.x - div2(canvasSize.w) + div2(sz.w)
+                                ,y: pos.y - div2(canvasSize.h) + div2(sz.h)};
+         var offsetFromCenter$ = {ctor: "_Tuple2"
+                                 ,_0: offsetFromCenter.x
+                                 ,_1: offsetFromCenter.y};
+         return A2(Graphics.Collage.alpha,
+         opacity,
+         A2(Graphics.Collage.move,
+         offsetFromCenter$,
+         Graphics.Collage.toForm(A3(Graphics.Element.image,
+         sz.w,
+         sz.h,
+         s.stype.imagePath))));
+      }();
+   };
+   var updateSprite = F2(function (input,
+   s) {
+      return _N.eq(s.stype,
+      playerSpriteType) ? function () {
+         var playerVelocity = {_: {}
+                              ,x: Basics.toFloat(input.arrows.x) * playerSpeed
+                              ,y: 0};
+         var newPosition = {_: {}
+                           ,x: s.position.x + playerVelocity.x * input.timeSinceLastFrame
+                           ,y: s.position.y + playerVelocity.y * input.timeSinceLastFrame};
+         var maxX = Basics.toFloat(canvasSize.w - playerSpriteType.size.w);
+         var newPositionClamped = {_: {}
+                                  ,x: A3(Basics.clamp,
+                                  0,
+                                  maxX,
+                                  newPosition.x)
+                                  ,y: newPosition.y};
+         return _N.replace([["position"
+                            ,newPositionClamped]],
+         s);
+      }() : _N.replace([["position"
+                        ,{_: {}
+                         ,x: s.position.x + s.stype.velocity.x * input.timeSinceLastFrame
+                         ,y: s.position.y + s.stype.velocity.y * input.timeSinceLastFrame}]],
+      s);
+   });
+   var bombSpeed = 100 / 1000;
+   var bombSpriteType = {_: {}
+                        ,imagePath: "assets/bomb.png"
+                        ,size: {_: {},h: 44,w: 22}
+                        ,velocity: {_: {}
+                                   ,x: 0
+                                   ,y: 0 - bombSpeed}};
+   var inputS = function () {
+      var timeSinceLastFrameS = Time.fps(desiredFps);
+      var randomBombXS = function () {
+         var maxBombX = canvasSize.w - bombSpriteType.size.w;
+         return A2(Signal.lift,
+         Basics.toFloat,
+         A3(Random.range,
+         0,
+         maxBombX,
+         timeSinceLastFrameS));
+      }();
+      var enterS = Keyboard.enter;
+      var arrowsS = function () {
+         var mergeArrows = F2(function (a1,
+         a2) {
+            return {_: {}
+                   ,x: !_N.eq(a1.x,0) ? a1.x : a2.x
+                   ,y: !_N.eq(a1.y,
+                   0) ? a1.y : a2.y};
+         });
+         return A3(Signal.lift2,
+         mergeArrows,
+         Keyboard.arrows,
+         Keyboard.wasd);
+      }();
+      var liveInputS = A5(Signal.lift4,
+      F4(function (dt,a,rbx,e) {
+         return {_: {}
+                ,arrows: a
+                ,enter: e
+                ,randomBombX: rbx
+                ,timeSinceLastFrame: dt};
+      }),
+      timeSinceLastFrameS,
+      arrowsS,
+      randomBombXS,
+      enterS);
+      return A2(Signal.sampleOn,
+      timeSinceLastFrameS,
+      liveInputS);
+   }();
+   var updateRunningGame = F2(function (input,
+   lastGameState) {
+      return function () {
+         var afterExplosionsAge = function () {
+            var prevState = lastGameState;
+            var ageOrKillSprite = function (s) {
+               return _N.eq(s.timeToLive,
+               immortalTimeToLive) ? Maybe.Just(s) : _N.cmp(s.timeToLive,
+               input.timeSinceLastFrame) > -1 ? Maybe.Just(_N.replace([["timeToLive"
+                                                                       ,s.timeToLive - input.timeSinceLastFrame]],
+               s)) : Maybe.Nothing;
+            };
+            return _N.replace([["sprites"
+                               ,filterJust(A2(List.map,
+                               ageOrKillSprite,
+                               prevState.sprites))]],
+            prevState);
+         }();
+         var afterSpritesMoved = function () {
+            var prevState = afterExplosionsAge;
+            return _N.replace([["sprites"
+                               ,A2(List.map,
+                               updateSprite(input),
+                               prevState.sprites)]],
+            prevState);
+         }();
+         var afterCollisions = function () {
+            var spritesHaveTypes = F4(function (t1,
+            t2,
+            s1,
+            s2) {
+               return _N.eq(s1.stype,
+               t1) && _N.eq(s2.stype,
+               t2) || _N.eq(s1.stype,
+               t2) && _N.eq(s2.stype,t1);
+            });
+            var spriteRect = function (s) {
+               return {_: {}
+                      ,x1: s.position.x
+                      ,x2: s.position.x + Basics.toFloat(s.stype.size.w)
+                      ,y1: s.position.y
+                      ,y2: s.position.y + Basics.toFloat(s.stype.size.h)};
+            };
+            var rectIsValid = function (r) {
+               return _N.cmp(r.x1,
+               r.x2) < 1 && _N.cmp(r.y1,
+               r.y2) < 1;
+            };
+            var rectIntersection = F2(function (r1,
+            r2) {
+               return {_: {}
+                      ,x1: A2(Basics.max,r1.x1,r2.x1)
+                      ,x2: A2(Basics.min,r1.x2,r2.x2)
+                      ,y1: A2(Basics.max,r1.y1,r2.y1)
+                      ,y2: A2(Basics.min,
+                      r1.y2,
+                      r2.y2)};
+            });
+            var rectsCollide = F2(function (r1,
+            r2) {
+               return rectIsValid(A2(rectIntersection,
+               r1,
+               r2));
+            });
+            var spritesCollide = F2(function (s1,
+            s2) {
+               return A2(rectsCollide,
+               spriteRect(s1),
+               spriteRect(s2));
+            });
+            var prevState = afterSpritesMoved;
+            var spriteShouldDie = function (s1) {
+               return A2(List.any,
+               function (s2) {
+                  return A2(spritesCollide,
+                  s1,
+                  s2) && A4(spritesHaveTypes,
+                  shotSpriteType,
+                  bombSpriteType,
+                  s1,
+                  s2);
+               },
+               prevState.sprites);
+            };
+            var spriteShouldLive = function (s) {
+               return Basics.not(spriteShouldDie(s));
+            };
+            var newExplosions = function () {
+               var makeExplosionIfDead = function (s) {
+                  return spriteShouldDie(s) && _N.eq(s.stype,
+                  bombSpriteType) ? Maybe.Just(makeExplosionForBomb(s)) : Maybe.Nothing;
+               };
+               return filterJust(A2(List.map,
+               makeExplosionIfDead,
+               prevState.sprites));
+            }();
+            return _N.replace([["sprites"
+                               ,_L.append(newExplosions,
+                               A2(List.filter,
+                               spriteShouldLive,
+                               prevState.sprites))]
+                              ,["score"
+                               ,prevState.score + rewardToKillBomb * List.length(newExplosions)]],
+            prevState);
+         }();
+         var afterOffscreenShotsDie = function () {
+            var spriteShouldDie = function (s) {
+               return _N.cmp(s.position.y,
+               Basics.toFloat(canvasSize.h)) > 0;
+            };
+            var spriteShouldLive = function (s) {
+               return Basics.not(spriteShouldDie(s));
+            };
+            var prevState = afterCollisions;
+            return _N.replace([["sprites"
+                               ,A2(List.filter,
+                               spriteShouldLive,
+                               prevState.sprites)]],
+            prevState);
+         }();
+         var afterBombsHitGround = function () {
+            var prevState = afterOffscreenShotsDie;
+            var isBombOnGround = function (s) {
+               return _N.eq(s.stype,
+               bombSpriteType) && _N.cmp(s.position.y,
+               0) < 1;
+            };
+            var bombsThatHitGround = A2(List.filter,
+            isBombOnGround,
+            prevState.sprites);
+            return !_N.eq(bombsThatHitGround,
+            _J.toList([])) ? function () {
+               var deathBomb = List.head(bombsThatHitGround);
+               var deathExplosion = makeExplosionForBomb(deathBomb);
+               return _N.replace([["isGameOver"
+                                  ,true]
+                                 ,["sprites"
+                                  ,_L.append(A2(disj,
+                                  prevState.sprites,
+                                  deathBomb),
+                                  _J.toList([deathExplosion]))]],
+               prevState);
+            }() : prevState;
+         }();
+         var afterBombSpawn = function () {
+            var prevState = afterBombsHitGround;
+            var shouldSpawnBomb = _N.cmp(prevState.timeUntilNextBomb,
+            0) < 1;
+            return shouldSpawnBomb ? function () {
+               var newBombSprite = {_: {}
+                                   ,position: {_: {}
+                                              ,x: input.randomBombX
+                                              ,y: Basics.toFloat(canvasSize.h - bombSpriteType.size.h)}
+                                   ,stype: bombSpriteType
+                                   ,timeToLive: immortalTimeToLive};
+               return _N.replace([["sprites"
+                                  ,{ctor: "::"
+                                   ,_0: newBombSprite
+                                   ,_1: prevState.sprites}]
+                                 ,["timeUntilNextBomb"
+                                  ,timeBetweenBombs]],
+               prevState);
+            }() : _N.replace([["timeUntilNextBomb"
+                              ,prevState.timeUntilNextBomb - input.timeSinceLastFrame]],
+            prevState);
+         }();
+         var afterShotSpawn = function () {
+            var shouldSpawnShot = _N.eq(input.arrows.y,
+            1);
+            var prevState = afterBombSpawn;
+            return shouldSpawnShot ? function () {
+               var newShotSprite = function () {
+                  var findPlayer = function (gameState) {
+                     return List.head(A2(List.filter,
+                     function (s) {
+                        return _N.eq(s.stype,
+                        playerSpriteType);
+                     },
+                     gameState.sprites));
+                  };
+                  var player = findPlayer(prevState);
+                  var shotX = player.position.x + div2(playerSpriteType.size.w - shotSpriteType.size.w);
+                  var shotY = player.position.y + Basics.toFloat(playerSpriteType.size.h);
+                  return {_: {}
+                         ,position: {_: {}
+                                    ,x: shotX
+                                    ,y: shotY}
+                         ,stype: shotSpriteType
+                         ,timeToLive: immortalTimeToLive};
+               }();
+               return _N.replace([["sprites"
+                                  ,{ctor: "::"
+                                   ,_0: newShotSprite
+                                   ,_1: prevState.sprites}]
+                                 ,["score"
+                                  ,prevState.score - costToFireShot]],
+               prevState);
+            }() : prevState;
+         }();
+         return afterShotSpawn;
+      }();
+   });
+   var updateGame = F2(function (input,
+   lastGameState) {
+      return lastGameState.isGameOver ? input.enter ? _N.replace([["isGameOver"
+                                                                  ,false]],
+      initialGameState) : lastGameState : A2(updateRunningGame,
+      input,
+      lastGameState);
+   });
+   var backgroundSpriteType = {_: {}
+                              ,imagePath: "assets/background.png"
+                              ,size: {_: {},h: 480,w: 639}
+                              ,velocity: {_: {},x: 0,y: 0}};
+   var renderGame = function (gameState) {
+      return function () {
+         var simpleBackgroundForm = A2(Graphics.Collage.filled,
+         Color.blue,
+         A2(Graphics.Collage.rect,
+         Basics.toFloat(canvasSize.w),
+         Basics.toFloat(canvasSize.h)));
+         var scoreForm = A2(Graphics.Collage.move,
+         {ctor: "_Tuple2"
+         ,_0: 0
+         ,_1: div2(canvasSize.h) - 15},
+         Graphics.Collage.toForm(Text.text(A2(Text.color,
+         Color.black,
+         Text.toText(_L.append("Score: ",
+         Prelude.show(gameState.score)))))));
+         var backgroundForm = A2(Graphics.Collage.move,
+         {ctor: "_Tuple2",_0: 0,_1: 0},
+         Graphics.Collage.toForm(A3(Graphics.Element.image,
+         backgroundSpriteType.size.w,
+         backgroundSpriteType.size.h,
+         backgroundSpriteType.imagePath)));
+         var forms = {ctor: "::"
+                     ,_0: backgroundForm
+                     ,_1: _L.append(A2(List.map,
+                     render,
+                     gameState.sprites),
+                     _J.toList([scoreForm]))};
+         var forms$ = gameState.isGameOver ? function () {
+            var logoForm = A2(Graphics.Collage.moveY,
+            60,
+            Graphics.Collage.toForm(A3(Graphics.Element.image,
+            logoSpriteType.size.w,
+            logoSpriteType.size.h,
+            logoSpriteType.imagePath)));
+            var instructionsForm = A2(Graphics.Collage.moveY,
+            -50,
+            Graphics.Collage.toForm(Text.centered(Text.bold(A2(Text.color,
+            Color.orange,
+            Text.toText(instructions))))));
+            return _L.append(forms,
+            _J.toList([logoForm
+                      ,instructionsForm]));
+         }() : forms;
+         return A3(Graphics.Collage.collage,
+         canvasSize.w,
+         canvasSize.h,
+         forms$);
+      }();
+   };
+   var main = function () {
+      var gameStateS = A3(Signal.foldp,
+      updateGame,
+      initialGameState,
+      inputS);
+      return A2(Signal.lift,
+      renderGame,
+      gameStateS);
+   }();
+   var SpriteType = F3(function (a,
+   b,
+   c) {
+      return {_: {}
+             ,imagePath: a
+             ,size: b
+             ,velocity: c};
+   });
+   var Sprite = F3(function (a,
+   b,
+   c) {
+      return {_: {}
+             ,position: a
+             ,stype: b
+             ,timeToLive: c};
+   });
+   var Size = F2(function (a,b) {
+      return {_: {},h: b,w: a};
+   });
+   var Point = F2(function (a,b) {
+      return {_: {},x: a,y: b};
+   });
+   var Input = F4(function (a,
+   b,
+   c,
+   d) {
+      return {_: {}
+             ,arrows: b
+             ,enter: d
+             ,randomBombX: c
+             ,timeSinceLastFrame: a};
+   });
+   var GameState = F4(function (a,
+   b,
+   c,
+   d) {
+      return {_: {}
+             ,isGameOver: c
+             ,score: d
+             ,sprites: a
+             ,timeUntilNextBomb: b};
+   });
+   _elm.Main.values = {_op: _op
+                      ,canvasSize: canvasSize
+                      ,desiredFps: desiredFps
+                      ,playerSpeed: playerSpeed
+                      ,bombSpeed: bombSpeed
+                      ,shotSpeed: shotSpeed
+                      ,timeBetweenBombs: timeBetweenBombs
+                      ,immortalTimeToLive: immortalTimeToLive
+                      ,explosionInitialTimeToLive: explosionInitialTimeToLive
+                      ,playerSpriteType: playerSpriteType
+                      ,bombSpriteType: bombSpriteType
+                      ,shotSpriteType: shotSpriteType
+                      ,explosionSpriteType: explosionSpriteType
+                      ,logoSpriteType: logoSpriteType
+                      ,backgroundSpriteType: backgroundSpriteType
+                      ,initialGameState: initialGameState
+                      ,instructions: instructions
+                      ,costToFireShot: costToFireShot
+                      ,rewardToKillBomb: rewardToKillBomb
+                      ,main: main
+                      ,renderGame: renderGame
+                      ,render: render
+                      ,inputS: inputS
+                      ,updateGame: updateGame
+                      ,updateRunningGame: updateRunningGame
+                      ,makeExplosionForBomb: makeExplosionForBomb
+                      ,updateSprite: updateSprite
+                      ,div2: div2
+                      ,filterJust: filterJust
+                      ,disj: disj
+                      ,Point: Point
+                      ,Size: Size
+                      ,GameState: GameState
+                      ,Sprite: Sprite
+                      ,SpriteType: SpriteType
+                      ,Input: Input};
+   return _elm.Main.values;
+};</script></head><body><script type="text/javascript">Elm.fullscreen(Elm.Main)</script><noscript></noscript></body></html>
