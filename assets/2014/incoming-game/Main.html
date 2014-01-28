@@ -25,7 +25,9 @@ Elm.Main.make = function (_elm) {
    Graphics.Collage = Elm.Graphics.Collage.make(_elm);
    var Keyboard = Elm.Keyboard.make(_elm);
    var Random = Elm.Random.make(_elm);
+   var String = Elm.String.make(_elm);
    var _op = {};
+   var timePerGame = 2 * 60 * 1000;
    var timeBetweenBombs = 1000;
    var shotSpeed = 300 / 1000;
    var shotSpriteType = {_: {}
@@ -47,7 +49,7 @@ Elm.Main.make = function (_elm) {
    var instructions = _L.append("Press Enter to begin.\n",
    _L.append("\n",
    _L.append("Arrow keys move the player.\n",
-   _L.append("The up key fires shots.\n",
+   _L.append("The space and up keys fire shots.\n",
    _L.append("Objective: Destroy bombs.\n",
    "")))));
    var immortalTimeToLive = -1;
@@ -65,7 +67,7 @@ Elm.Main.make = function (_elm) {
             case "[]":
             return _J.toList([]);}
          _E.Case($moduleName,
-         "between lines 371 and 374");
+         "between lines 398 and 401");
       }();
    };
    var explosionSpriteType = {_: {}
@@ -92,7 +94,7 @@ Elm.Main.make = function (_elm) {
       },
       list);
    });
-   var desiredFps = 20;
+   var desiredFps = 25;
    var costToFireShot = 1;
    var canvasSize = {_: {}
                     ,h: 480
@@ -105,6 +107,7 @@ Elm.Main.make = function (_elm) {
                          ,stype: playerSpriteType
                          ,timeToLive: immortalTimeToLive};
       return {_: {}
+             ,gameTimeLeft: timePerGame
              ,isGameOver: true
              ,score: 0
              ,sprites: _J.toList([playerSprite])
@@ -167,6 +170,7 @@ Elm.Main.make = function (_elm) {
                                    ,y: 0 - bombSpeed}};
    var inputS = function () {
       var timeSinceLastFrameS = Time.fps(desiredFps);
+      var spaceS = Keyboard.space;
       var randomBombXS = function () {
          var maxBombX = canvasSize.w - bombSpriteType.size.w;
          return A2(Signal.lift,
@@ -190,18 +194,20 @@ Elm.Main.make = function (_elm) {
          Keyboard.arrows,
          Keyboard.wasd);
       }();
-      var liveInputS = A5(Signal.lift4,
-      F4(function (dt,a,rbx,e) {
+      var liveInputS = A6(Signal.lift5,
+      F5(function (dt,a,rbx,e,s) {
          return {_: {}
                 ,arrows: a
                 ,enter: e
                 ,randomBombX: rbx
+                ,space: s
                 ,timeSinceLastFrame: dt};
       }),
       timeSinceLastFrameS,
       arrowsS,
       randomBombXS,
-      enterS);
+      enterS,
+      spaceS);
       return A2(Signal.sampleOn,
       timeSinceLastFrameS,
       liveInputS);
@@ -374,7 +380,7 @@ Elm.Main.make = function (_elm) {
          }();
          var afterShotSpawn = function () {
             var shouldSpawnShot = _N.eq(input.arrows.y,
-            1);
+            1) || input.space;
             var prevState = afterBombSpawn;
             return shouldSpawnShot ? function () {
                var newShotSprite = function () {
@@ -405,7 +411,17 @@ Elm.Main.make = function (_elm) {
                prevState);
             }() : prevState;
          }();
-         return afterShotSpawn;
+         var afterGameAges = function () {
+            var prevState = afterShotSpawn;
+            return _N.cmp(prevState.gameTimeLeft,
+            input.timeSinceLastFrame) < 1 ? _N.replace([["gameTimeLeft"
+                                                        ,0]
+                                                       ,["isGameOver",true]],
+            prevState) : _N.replace([["gameTimeLeft"
+                                     ,prevState.gameTimeLeft - input.timeSinceLastFrame]],
+            prevState);
+         }();
+         return afterGameAges;
       }();
    });
    var updateGame = F2(function (input,
@@ -422,6 +438,27 @@ Elm.Main.make = function (_elm) {
                               ,velocity: {_: {},x: 0,y: 0}};
    var renderGame = function (gameState) {
       return function () {
+         var timeLeftForm = function () {
+            var secondsLeft = Basics.ceiling(gameState.gameTimeLeft / 1000);
+            var ss = A3(String.padLeft,
+            2,
+            _N.chr("0"),
+            Prelude.show(A2(Basics.rem,
+            secondsLeft,
+            60)));
+            var mm = Prelude.show(A2(Basics.div,
+            secondsLeft,
+            60));
+            return A2(Graphics.Collage.move,
+            {ctor: "_Tuple2"
+            ,_0: 0
+            ,_1: div2(canvasSize.h) - 15},
+            Graphics.Collage.toForm(Text.text(A2(Text.color,
+            Color.black,
+            Text.toText(_L.append("Time: ",
+            _L.append(mm,
+            _L.append(":",ss))))))));
+         }();
          var simpleBackgroundForm = A2(Graphics.Collage.filled,
          Color.blue,
          A2(Graphics.Collage.rect,
@@ -430,7 +467,7 @@ Elm.Main.make = function (_elm) {
          var scoreForm = A2(Graphics.Collage.move,
          {ctor: "_Tuple2"
          ,_0: 0
-         ,_1: div2(canvasSize.h) - 15},
+         ,_1: div2(canvasSize.h) - 15 - 20},
          Graphics.Collage.toForm(Text.text(A2(Text.color,
          Color.black,
          Text.toText(_L.append("Score: ",
@@ -441,12 +478,12 @@ Elm.Main.make = function (_elm) {
          backgroundSpriteType.size.w,
          backgroundSpriteType.size.h,
          backgroundSpriteType.imagePath)));
-         var forms = {ctor: "::"
-                     ,_0: backgroundForm
-                     ,_1: _L.append(A2(List.map,
-                     render,
-                     gameState.sprites),
-                     _J.toList([scoreForm]))};
+         var forms = _L.append(_J.toList([backgroundForm]),
+         _L.append(A2(List.map,
+         render,
+         gameState.sprites),
+         _J.toList([scoreForm
+                   ,timeLeftForm])));
          var forms$ = gameState.isGameOver ? function () {
             var logoForm = A2(Graphics.Collage.moveY,
             60,
@@ -500,21 +537,25 @@ Elm.Main.make = function (_elm) {
    var Point = F2(function (a,b) {
       return {_: {},x: a,y: b};
    });
-   var Input = F4(function (a,
+   var Input = F5(function (a,
    b,
    c,
-   d) {
+   d,
+   e) {
       return {_: {}
              ,arrows: b
              ,enter: d
              ,randomBombX: c
+             ,space: e
              ,timeSinceLastFrame: a};
    });
-   var GameState = F4(function (a,
+   var GameState = F5(function (a,
    b,
    c,
-   d) {
+   d,
+   e) {
       return {_: {}
+             ,gameTimeLeft: e
              ,isGameOver: c
              ,score: d
              ,sprites: a
@@ -539,6 +580,7 @@ Elm.Main.make = function (_elm) {
                       ,instructions: instructions
                       ,costToFireShot: costToFireShot
                       ,rewardToKillBomb: rewardToKillBomb
+                      ,timePerGame: timePerGame
                       ,main: main
                       ,renderGame: renderGame
                       ,render: render
