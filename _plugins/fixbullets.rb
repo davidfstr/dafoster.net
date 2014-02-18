@@ -69,7 +69,7 @@ class BulletFixer
   
   def get_bullet_line_indentation line
     stripped = line.strip
-    if stripped.size >= 1 and BULLET_CHARS.include? stripped[0]
+    if stripped.size >= 2 and BULLET_CHARS.include? stripped[0] and stripped[1] == ' '
       # Assume that there is exactly one whitespace char between
       # bullet and its line's content
       line.scan(/^\s*/)[0].size + 2

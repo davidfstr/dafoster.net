@@ -72,7 +72,12 @@ I expect that many of these shortcomings will be addressed over time.
 
 In the meantime, as I mentioned before, I think Agda is still worthy of investigation for expanding one's knowledge of what is possible in a powerful type system. In fact, any language where you can do something like write a sorting function that both works and proves itself to be a correct implementation in the same stroke deserves a closer look.[^sort]
 
-[^sort]: <p>I forget the specific tutorial where I first recognized that you could write this kind of provably correct sorting function. You end up having a sorting function with a signature like `sort : (inList : List a) -> (outList : List a, IsSorted outList, EqElements inList outList)`.</p> <p>The `IsSorted outList` type represents proofs that `outList` is sorted. Thus the existence of a member of the `IsSorted outList` type proves that `outList` is sorted. Similarly the `EqElements inList outList` is a proof type where `inList` and `outList` are proven to have equal elements.</p>
+### *Related Articles*
+
+* [Agda: Second Impressions](/articles/2014/02/17/agda-second-impressions/)
+    * *Next article in this series.*
+
+[^sort]: <p>I first recognized that you could write this kind of provably correct sorting function when I read [these slides](http://www.cs.swan.ac.uk/~csetzer/lectures/intertheo/07/intertheodraft1.pdf) at [swan.ac.uk](http://www.cs.swan.ac.uk/~csetzer/lectures/intertheo/07/interactiveTheoremProvingForAgdaUsers.html). You end up having a sorting function with a signature like `sort : (inList : List a) -> (outList : List a, IsSorted outList, EqElements inList outList)`.</p> <p>The `IsSorted outList` type represents proofs that `outList` is sorted. Thus the existence of a member of the `IsSorted outList` type proves that `outList` is sorted. Similarly the `EqElements inList outList` is a proof type where `inList` and `outList` are proven to have equal elements.</p><p>See also the [dedicated article at mazzo.li](http://mazzo.li/posts/AgdaSort.html)</p>
 
 
 <a id="getting-started"></a>
