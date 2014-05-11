@@ -65,10 +65,12 @@ rdiscount:
 # {% endhighlight %}
 pygments: true
 
-# Automatically regenerate the site when a local Jekyll server is running
-# and a file is modified. (Some types of changes still require manually
-# restarting the server though, such as modifying this file.)
-auto: true
+# Disable automatic excerpts introduced in Jekyll 1.x.
+# These conflict with posts that start immediately with {% capture %} blocks.
+excerpt_separator: ""
+
+# Whether the site is in development mode
+develop: false
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 JB:
