@@ -26,19 +26,10 @@ Have specific questions about how these were implemented? [Contact me].
 
 ## Installation
 
-* Install Jekyll.
-    * If you already have this installed, you may need to upgrade
-      RDiscount to version 2.0.7 or later with `gem update rdiscount`.
-
-```
-gem install jekyll
-```
-
-* Download the site source:
-
 ```
 git clone https://github.com/davidfstr/dafoster.net
 cd dafoster.net
+bundle install
 ```
 
 
