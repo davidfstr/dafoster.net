@@ -43,7 +43,7 @@ Beyond that I enjoy:
 
 <h2 id="contact">Contact</h2>
 
-Need to contact me? Solve the following puzzle to get my email:
+Need to contact me? To prove you are not a bot, solve the following puzzle to get my email:
 
 **MyEmail = "david" + RemoveVowels("foster") + "@gmail.com"**
 
