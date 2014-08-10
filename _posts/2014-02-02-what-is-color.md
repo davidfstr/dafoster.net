@@ -73,7 +73,18 @@ I have seen a programs that filter colors on the screen to attain different effe
 
 Could I make a filtering program like this that would alter onscreen colors in such a way that a colorblind individual could distinguish them more easily? This would be very useful to me since I am colorblind myself and would like to be able to distinguish colors more easily.
 
-The principal difficulty I foresee is that my computer monitor may not be a full-spectrum light source. Indeed the manual for the DELL U2711 (my monitor) does not have any information about its spectral output. So I would need to measure it with a spectrometer or similar instrument. Unfortunately Amazon only appears to carry simple spectrometers that give spectral lines only, not their intensities or the full spectral graph.
+The principal difficulty I foresee is that my computer monitor may not be a full-spectrum light source. Indeed the manual for the DELL U2711 (my monitor) does not have any information about its spectral output. So I would need to measure it with a spectrometer or similar instrument. 
+
+Unfortunately Amazon only appears to mainly simple spectrometers that give spectral lines only, not their intensities or the full spectral graph. A spectrometer that can measure the full spectral power distribution currently costs a fair bit more. A few I've noticed:
+
+* [AIBC AI-MK350 Handheld Spectrometer] ($2,000)
+* [SpectroCAL Classic Spectroradiometer] (£6,000 ≈ $10,000)
+
+
+[AIBC AI-MK350 Handheld Spectrometer]: https://www.amazon.com/AIBC-LED-AI-MK350-Handheld-Spectrometer/dp/B0050DAD72/ref=as_sl_pc_ss_til?tag=dafo07-20&linkCode=w01&linkId=&creativeASIN=B0050DAD72
+
+[SpectroCAL Classic Spectroradiometer]: http://www.crsltd.com/tools-for-vision-science/light-measurement-display-calibation/spectrocal-classic-spectroradiometer/
+
 
 ### Additional References
 
