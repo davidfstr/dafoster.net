@@ -131,7 +131,9 @@ To do this I anticipate my next study focuses will be on:
 I'm probably most excited about the last activity, as I imagine smalltalk in a foreign language will be a lot more fun than in English.
 
 
-[^pics]: I'm in the process of posting all 28,000 or so photos from Japan to Facebook for friends to see. And I expect to have a slideshow presentation uploaded as well for the public to see later this month.
+[^pics]: I'm in the process of posting all 28,000 or so photos from Japan to Facebook for friends to see. I've also uploaded a [slideshow presentation](https://www.youtube.com/watch?v=RCM0I67G4Hc) that I gave at work a few days ago.
+
+And I expect to have a slideshow presentation uploaded as well for the public to see later this month.
 
 [^pro-limit]: Regarding Japanese pronounciation limitations: <p>(1) All syllables consist of a consonant followed by a vowel. This means that the Japanese cannot generally say words that end in a consonant. The exception is that N (ん) is a permissible standalone consonant. Thus the Japanese tend to append vowels to words that normally end in consonants. <p>(2) There is no L sound independent of R. Hence the inability to distinguish "rice" from "lice". The Japanese R is about halfway between the English R and L in sound. <p>(3) There is no V sound. <p>The preceding limitations make it difficult to pronounce my name ("David") correctly. It tends to become "Debiddo" (デビッド), or "Debi" (デビ) for short.
 
