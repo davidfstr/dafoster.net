@@ -628,6 +628,11 @@ Don't be that guy who provides useless generic error messages:
 
 (I doubt even the program itself knows what went wrong.)
 
+### *Related Articles*
+
+* [Error handling styles in programming](/articles/2014/11/22/error-handling-styles/)
+    * *Summarizes the most prominent strategies for handling runtime errors.*
+
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
         Series
