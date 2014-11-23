@@ -165,9 +165,9 @@ If a language supports checked exceptions, the expected exceptions should genera
 
 [^bad-checked-example]: Java has a few annoying examples where unexpected exceptions were marked as checked, burdening all subsequent callers. In particular `Object.clone()` throws the checked `CloneNotSupportedException`, making it hard to use. And Java's reflection library throws the checked `IllegalAccessException` and `InvocationTargetException` whenever you try to `invoke()` a method, neither of which are expected errors. And `Thread.sleep()` throws the checked `InterruptedException`. Now `IOException`, thrown by all I/O functions, is legitimately a checked exception because it is an expected exception.
 
-[^cs-exception-hierarchy]: The C# exception heirarchy is illustrated in ["C# exception hierarchy"](http://book.javanb.com/From-Java-To-Csharp-A-Developers-Guide/0321136225_ch13lev1sec2.html).
+[^cs-exception-hierarchy]: The C# exception hierarchy is illustrated in ["C# exception hierarchy"](http://book.javanb.com/From-Java-To-Csharp-A-Developers-Guide/0321136225_ch13lev1sec2.html).
 
-[^python-exc-hierarchy]: The Python exception heirarchy is documented in ["Exception Hierarchy"](http://docs.python.org/2/library/exceptions.html#exception-hierarchy).
+[^python-exc-hierarchy]: The Python exception hierarchy is documented in ["Exception Hierarchy"](http://docs.python.org/2/library/exceptions.html#exception-hierarchy).
 
 <a id="guarantees-after-failure"></a>
 ## Guarantees after Failure

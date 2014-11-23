@@ -92,7 +92,7 @@ There are a few languages I learned enough of to decide they weren't worth using
 * **Ruby** &ndash; used primarily as a server-side web language
     * Insufficiently distinct from Python.
     * Poor backward compatibility guarantees. No release notes.
-    * Sloppy design: Non-formal grammar. Syntax schizophrenia. Monkeypatching accepted as a valid practice. Mutable strings. <!-- Non-uniform string representation. -->
+    * Sloppy design: [Non-formal grammar.](http://madhadron.com/posts/2014-11-10-languages_for_humans_and_subhumans.html) Syntax schizophrenia. Monkeypatching accepted as a valid practice. Mutable strings. <!-- Non-uniform string representation. -->
     * But superior packaging, dependency management, and isolation systems.
 
 ### *Related Articles*

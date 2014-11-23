@@ -8,7 +8,7 @@ end
 
 desc "Launch preview server and visit it in a web browser."
 task :go do
-  Thread.new { sleep 3; system 'open "http://localhost:4000/"' }
+  Thread.new { sleep 5; system 'open "http://localhost:4000/"' }
   system "rake preview"
 end
 
