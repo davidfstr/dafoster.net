@@ -64,6 +64,10 @@ class BulletFixer
       end
     end
     
+    if inside_list
+      end_last_bullet false
+    end
+    
     @output_lines.join("")
   end
   
