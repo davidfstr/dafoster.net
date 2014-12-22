@@ -49,6 +49,12 @@ feed_content: |
     
     [Read more...](/articles/2013/02/20/visual-guide-to-programming-language-properties/)
 
+metadata_extra: |
+    <a href="http://m.csdn.net/article/2013-06-28/2816045-Visual-Guide-to-Programming-Language-Properties">
+        <img src="/assets/2013/china_flag.gif" style="margin-right: .3em;"/>
+        Chinese translation
+    </a>
+
 ---
 
 Here's an interactive chart showing high-level properties of various programming languages.  
@@ -120,7 +126,6 @@ Environment isolater | -   | -           | -     | cabal-dev, hsenv | virtualenv
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*
     * *Describes some <span class="property">properties</span> mentioned in this article in more detail.*
-* [*Chinese translation of this article*](http://m.csdn.net/article/2013-06-28/2816045-Visual-Guide-to-Programming-Language-Properties)
 
 <hr/>
 

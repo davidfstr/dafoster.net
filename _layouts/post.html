@@ -13,6 +13,9 @@ breadcrumbs: [/, /articles/]
           <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></span>
         {% endfor %}
       </span>
+      {% if page.metadata_extra %}
+        &ndash; {{ page.metadata_extra }}
+      {% endif %}
     </div>
     
     {{ content }}
