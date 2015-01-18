@@ -6,11 +6,9 @@ tags: [Software]
 include_jquery: true
 include_bootstrap_js: true
 
+full_width: true
+
 style: |
-    /* Full width article */
-    .post { width: 100% }
-    .block-bar { display: none; }
-    
     /* Add space between the diagram bottom and the following text */
     #spectrum-diagram { margin-bottom: 1em; }
 
