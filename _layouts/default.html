@@ -42,6 +42,11 @@
       [Also useful in general since style tags are only allowed in the head
        element for standards-compliant HTML.]
     {% endcomment %}
+    {% if page.style0 %}
+      <style>
+        {{ page.style0 }}
+      </style>
+    {% endif %}
     {% if page.style %}
       <style>
         {{ page.style }}
