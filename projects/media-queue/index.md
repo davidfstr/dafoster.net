@@ -16,12 +16,29 @@ full_width: true
 
 style: |
     .img-right { float: right; margin-left: 0.5em; }
+    
+    /* Override Bootstrap rule that conflicts with carousel */
+    #screenshots img { max-width: none; }
+
+carousels: true
+script: |
+    // Display carousel
+    $(window).load(function() {
+        $('#screenshots').orbit({ bullets: true });
+    });
 
 ---
 
 MediaQueue allows you to write down media that you want to watch - movies, TV series, books, etc. - and helps you to quickly locate the media for streaming, download, pickup, or purchase.
 
 MediaQueue is implemented as a Google Docs spreadsheet with custom macros that search for media items entered into the sheet.
+
+<div style="margin-bottom: 3em;">
+    <div id="screenshots">
+        <img src="/assets/2015/media-queue/screen1.png" width="750" height="525" />
+        <img src="/assets/2015/media-queue/screen2.png" width="750" height="525" />
+    </div>
+</div>
 
 {% capture toc_content %}
 
