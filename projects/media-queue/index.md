@@ -37,6 +37,7 @@ MediaQueue is implemented as a Google Docs spreadsheet with custom macros that s
     <div id="screenshots">
         <img src="/assets/2015/media-queue/screen1.png" width="750" height="525" />
         <img src="/assets/2015/media-queue/screen2.png" width="750" height="525" />
+        <img src="/assets/2015/media-queue/screen3.png" width="750" height="525" />
     </div>
 </div>
 
