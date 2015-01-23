@@ -41,6 +41,16 @@ MediaQueue is implemented as a Google Docs spreadsheet with custom macros that s
     </div>
 </div>
 
+### Supported Media Sources
+
+* Netflix - Stream source for everything
+* KissAnime - Stream source for Anime (`A`)
+* The Pirate Bay - Download source for everything
+* BakaBT - Download source for Anime (`A`)
+* Seattle Public Library - Pickup source for everything
+* Barnes & Noble - Pickup source for Books (`B`)
+* Amazon - Buy source for everything
+
 {% capture toc_content %}
 
 * [Installation](#installation)
@@ -151,9 +161,21 @@ By default the name of the media item is used as the search query when searching
 ## Contributing
 
 I'd love to hear from you if you make extensions to this program.
-Adding support for new media sources would be especially welcome.
 <a href="/contact/">Send me an email</a>.
 
 <a class="btn btn-primary" target="_new" href="https://gist.github.com/davidfstr/0f212ddf160b2f776884">
     Browse Source Code
 </a>
+
+Adding support for new media sources would be especially welcome:
+
+### Desired Media Sources
+
+* Wikipedia - Info source for everything
+* Google - Info source for everything
+* THEM Anime - Info source for Anime (`A`)
+* Anime Planet - Info source for Anime (`A`)
+* Rotten Tomatoes - Info source for Movies (`M`)
+* IMDB - Info source for Movies (`M`)
+* NyaaTorrents - Download source for Anime (`A`)
+* iTunes Store - Buy source for everything
