@@ -65,54 +65,54 @@ MediaQueue is implemented as a Google Docs spreadsheet with custom macros that s
 
 3. From the **File** menu select **Make a copy**:
    
-   ![Menu: File > Make a copy](install-copy.png)
+   ![Menu: File > Make a copy](steps/install-copy.png)
 
 4. From the **MediaQueue** menu select **Settings...**:
    
-   ![Menu: MediaQueue > Settings...](install-settings.png)
+   ![Menu: MediaQueue > Settings...](steps/install-settings.png)
    
 5. Confirm the authorization prompt:
    
-   ![Authorization prompt](install-authorize.png)
+   ![Authorization prompt](steps/install-authorize.png)
    
    This will take you to the settings page, which you can leave blank for now.
    
 4. Again, from the **MediaQueue** menu select **Settings...**:
    
-   ![Menu: MediaQueue > Settings...](install-settings.png)
+   ![Menu: MediaQueue > Settings...](steps/install-settings.png)
    
    This will take you back to the Queue sheet.
 
 5. From the **Tools** menu select **Script editor...**:
    
-   ![Menu: Tools > Script editor...](install-open-editor.png)
+   ![Menu: Tools > Script editor...](steps/install-open-editor.png)
    
    The script editor will appear in a new tab.
 
 6. From the **Resources** menu select **Current project's triggers**:
    
-   ![Menu: Resources > Current project's triggers](install-show-triggers.png)
+   ![Menu: Resources > Current project's triggers](steps/install-show-triggers.png)
    
    An empty trigger box will appear:
    
-   ![Empty trigger box](install-empty-triggers.png)
+   ![Empty trigger box](steps/install-empty-triggers.png)
 
 7. Configure a new edit trigger with the following settings:
    
-   ![Edit trigger settings](install-edit-trigger.png)
+   ![Edit trigger settings](steps/install-edit-trigger.png)
    
 8. Click "Save" to dismiss the trigger box.
 
 9. Close the current script editor tab. This will take you back to the Queue sheet:
 
-   ![Back on the Queue sheet](install-queue-sheet.png)
+   ![Back on the Queue sheet](steps/install-queue-sheet.png)
 
 <a id="usage"></a>
 ## Usage
 
 ### 1. Add an item
 
-<img title="Insert a row" src="usage-add.png" class="img-right"/>
+<img title="Insert a row" src="steps/usage-add.png" class="img-right"/>
 
 To insert a new media item in the queue, insert a new row and type the item name and the item type. Providing a correct item type helps MediaQueue search more relevant media sources in the next step.
 
@@ -133,15 +133,15 @@ To search for a media item in various media sources, locate the row containing t
 
 1. Type a period (`.`) in the cell for the row and column you identified. This will summon a new sheet and initiate a search for the media item in various media sources. 
 
-   <img title="Type period into appropriate cell" src="usage-search.png"/>
+   <img title="Type period into appropriate cell" src="steps/usage-search.png"/>
 
 2. Once the search is complete select a search result by typing the number of your choice into the yellow cell.
 
-   <img title="Type choice into yellow cell" src="usage-results.png"/>
+   <img title="Type choice into yellow cell" src="steps/usage-results.png"/>
 
 3. The selected choice will be substituted back into the cell that you initially typed a period into.
 
-   <img title="Choice substituted back on Queue sheet" src="usage-done.png"/>
+   <img title="Choice substituted back on Queue sheet" src="steps/usage-done.png"/>
 
 ### Tips
 
