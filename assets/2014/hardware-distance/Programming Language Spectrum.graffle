@@ -87,7 +87,7 @@
 		</dict>
 	</array>
 	<key>ModificationDate</key>
-	<string>2014-12-21 01:23:00 +0000</string>
+	<string>2015-02-01 22:07:57 +0000</string>
 	<key>Modifier</key>
 	<string>David Foster</string>
 	<key>NotesVisible</key>
@@ -155,6 +155,84 @@
 			<string>1 in = 1 in</string>
 			<key>GraphicsList</key>
 			<array>
+				<dict>
+					<key>Bounds</key>
+					<string>{{292.70007, 955}, {110, 26}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>0</string>
+						</dict>
+						<key>Font</key>
+						<string>Helvetica-BoldOblique</string>
+						<key>NSKern</key>
+						<real>0.0</real>
+						<key>Size</key>
+						<real>10</real>
+					</dict>
+					<key>ID</key>
+					<integer>1229</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.59628499, -1.19257}</string>
+						<string>{0, -1.33333}</string>
+						<string>{0.59628499, -1.19257}</string>
+						<string>{1.19257, -0.59628499}</string>
+						<string>{1.33333, 0}</string>
+						<string>{1.19257, 0.59628499}</string>
+						<string>{0.59628499, 1.19257}</string>
+						<string>{-1.5894599e-07, 1.33333}</string>
+						<string>{-0.59628499, 1.19257}</string>
+						<string>{-1.19257, 0.59628499}</string>
+						<string>{-1.33333, 0}</string>
+						<string>{-1.19257, -0.59628499}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.991211</string>
+								<key>g</key>
+								<string>0.880476</string>
+								<key>r</key>
+								<string>0.916213</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\b\fs20 \cf0 \expnd0\expndtw0\kerning0
+Regular Expressions}</string>
+						<key>VerticalPad</key>
+						<integer>7</integer>
+					</dict>
+					<key>Wrap</key>
+					<string>NO</string>
+				</dict>
 				<dict>
 					<key>Bounds</key>
 					<string>{{9, 999}, {381, 39}}</string>
@@ -415,9 +493,9 @@ Safety-critical, realtime, and embedded systems.}</string>
 					<integer>1211</integer>
 					<key>Points</key>
 					<array>
-						<string>{225, 990}</string>
-						<string>{225, 945}</string>
-						<string>{441, 945}</string>
+						<string>{163.5, 990}</string>
+						<string>{163.5, 945}</string>
+						<string>{441, 943.2406}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -445,7 +523,7 @@ Safety-critical, realtime, and embedded systems.}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{108, 955}, {108, 26}}</string>
+					<string>{{48, 955}, {108, 26}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -1977,8 +2055,10 @@ Standard ML}</string>
 
 \f0\b\fs20 \cf0 \expnd0\expndtw0\kerning0
 Lisp \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
 
-\b0 (Language Family)}</string>
+\b0 \cf0 \expnd0\expndtw0\kerning0
+(Language Family)}</string>
 						<key>VerticalPad</key>
 						<integer>7</integer>
 					</dict>
@@ -4040,7 +4120,7 @@ Agda}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{234, 955}, {108, 26}}</string>
+					<string>{{171, 955.3999}, {108, 26}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -6589,8 +6669,6 @@ Low level systems programming. Assumes the programmer knows what they're doing a
 			<dict>
 				<key>ShowsGrid</key>
 				<string>YES</string>
-				<key>SnapsToGrid</key>
-				<string>YES</string>
 			</dict>
 			<key>HPages</key>
 			<integer>2</integer>
@@ -6652,6 +6730,84 @@ Low level systems programming. Assumes the programmer knows what they're doing a
 			<string>1 in = 1 in</string>
 			<key>GraphicsList</key>
 			<array>
+				<dict>
+					<key>Bounds</key>
+					<string>{{266.79999, 676}, {110, 26}}</string>
+					<key>Class</key>
+					<string>ShapedGraphic</string>
+					<key>FitText</key>
+					<string>YES</string>
+					<key>Flow</key>
+					<string>Resize</string>
+					<key>FontInfo</key>
+					<dict>
+						<key>Color</key>
+						<dict>
+							<key>w</key>
+							<string>0</string>
+						</dict>
+						<key>Font</key>
+						<string>Helvetica-BoldOblique</string>
+						<key>NSKern</key>
+						<real>0.0</real>
+						<key>Size</key>
+						<real>10</real>
+					</dict>
+					<key>ID</key>
+					<integer>1229</integer>
+					<key>Magnets</key>
+					<array>
+						<string>{-0.59628499, -1.19257}</string>
+						<string>{0, -1.33333}</string>
+						<string>{0.59628499, -1.19257}</string>
+						<string>{1.19257, -0.59628499}</string>
+						<string>{1.33333, 0}</string>
+						<string>{1.19257, 0.59628499}</string>
+						<string>{0.59628499, 1.19257}</string>
+						<string>{-1.5894599e-07, 1.33333}</string>
+						<string>{-0.59628499, 1.19257}</string>
+						<string>{-1.19257, 0.59628499}</string>
+						<string>{-1.33333, 0}</string>
+						<string>{-1.19257, -0.59628499}</string>
+					</array>
+					<key>Shape</key>
+					<string>Rectangle</string>
+					<key>Style</key>
+					<dict>
+						<key>fill</key>
+						<dict>
+							<key>Color</key>
+							<dict>
+								<key>b</key>
+								<string>0.991211</string>
+								<key>g</key>
+								<string>0.880476</string>
+								<key>r</key>
+								<string>0.916213</string>
+							</dict>
+						</dict>
+						<key>shadow</key>
+						<dict>
+							<key>Draws</key>
+							<string>NO</string>
+						</dict>
+					</dict>
+					<key>Text</key>
+					<dict>
+						<key>Text</key>
+						<string>{\rtf1\ansi\ansicpg1252\cocoartf1265\cocoasubrtf210
+\cocoascreenfonts1{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\qc
+
+\f0\b\fs20 \cf0 \expnd0\expndtw0\kerning0
+Regular Expressions}</string>
+						<key>VerticalPad</key>
+						<integer>7</integer>
+					</dict>
+					<key>Wrap</key>
+					<string>NO</string>
+				</dict>
 				<dict>
 					<key>Bounds</key>
 					<string>{{9, 715}, {381, 39}}</string>
@@ -7792,9 +7948,9 @@ Assembly}</string>
 					<integer>1211</integer>
 					<key>Points</key>
 					<array>
-						<string>{198, 711}</string>
-						<string>{198, 666}</string>
-						<string>{390, 666}</string>
+						<string>{138, 711}</string>
+						<string>{138, 666}</string>
+						<string>{386.51874, 666}</string>
 					</array>
 					<key>Style</key>
 					<dict>
@@ -7822,7 +7978,7 @@ Assembly}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{81, 676}, {108, 26}}</string>
+					<string>{{21, 676}, {108, 26}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -9892,7 +10048,7 @@ Agda}</string>
 				</dict>
 				<dict>
 					<key>Bounds</key>
-					<string>{{207, 676}, {108, 26}}</string>
+					<string>{{145.5, 676}, {108, 26}}</string>
 					<key>Class</key>
 					<string>ShapedGraphic</string>
 					<key>FitText</key>
@@ -11314,7 +11470,7 @@ Small Standard Library}</string>
 	<key>WindowInfo</key>
 	<dict>
 		<key>CurrentSheet</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>DrawerOpen</key>
 		<true/>
 		<key>DrawerTab</key>
@@ -11324,7 +11480,7 @@ Small Standard Library}</string>
 		<key>Frame</key>
 		<string>{{1123, 214}, {1212, 1182}}</string>
 		<key>VisibleRegion</key>
-		<string>{{-94, 0}, {957.59998, 854.40002}}</string>
+		<string>{{0, 0}, {957.59998, 854.40002}}</string>
 		<key>Zoom</key>
 		<real>1.25</real>
 	</dict>
