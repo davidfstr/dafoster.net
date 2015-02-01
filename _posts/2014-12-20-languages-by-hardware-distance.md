@@ -17,7 +17,7 @@ style: |
 
 Programming languages (and the ecosystems that surround them) are incredibly interesting. They can be sliced in many different ways based on syntactic similarity, type system similarity, suitedness for various problem domains, and many other attributes.
 
-Below I present an spectrum of various languages, arranged by **distance from the underlying hardware**:
+Below I present an spectrum of various languages, arranged by **distance from the underlying hardware**[^hw-dist]:
 
 <ul class="nav nav-tabs">
   <li class="active">
@@ -63,6 +63,8 @@ A few interesting patterns become evident in this diagram:
 * **Declarative Languages that are general-purpose are rare.**
     * Most Declarative Languages are domain-specific. Arguably Prolog is general since it answers arbitrary questions from logic. And arguably SQL is general because most data stores (and every SQL database) is queryable with it.
     * Other examples of declarative languages not listed here are VHDL and Verilog (used for hardware design), and ReceiptTally[^rt] (used for personal finance).
+
+[^hw-dist]: When speaking of "hardware distance", the hardware I am referring to is the common commodity hardware architectures such as x86 and ARM. It should be noted that there are also specialized architectures where Forth, Lisp, and Prolog *are* the assembly language. And some architectures like the Burroughs actually have typed memory and pointers, which eliminates a lot of the dangers of working with untyped assembly.
 
 [^jargon]: Examples of Practitioner-jargon: "inheritance", "generics", "dependency injection", "covariance". Examples of Academic-jargon: "monad", "functor", "reduce", "dependent type", "currying". More examples from this [presentation on functional programming](http://www.slideshare.net/ScottWlaschin/fp-patterns-buildstufflt/10).
 
