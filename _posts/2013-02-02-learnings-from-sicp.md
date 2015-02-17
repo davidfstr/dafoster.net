@@ -185,7 +185,7 @@ from a set of initial set of declarative statements.
 Query systems for databases are a type of logic programming language.
 
 A "query" (i.e. an expression in the language) is transformed into a
-"query plan" (i.e. a specific set of steps to follow) by a query planner. The implemented of these planners is quite complex.
+"query plan" (i.e. a specific set of steps to follow) by a query planner. The implementation of these planners is quite complex.
 
 [Prolog]: /articles/2013/02/25/notes-on-prolog/
 
