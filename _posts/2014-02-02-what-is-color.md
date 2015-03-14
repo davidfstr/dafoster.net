@@ -56,9 +56,11 @@ Research suggests that the most common type of alteration to the typical frequen
 
 EnChroma glasses make it easier for colorblind persons (and even color-normative persons) to distinguish colors in the presence of bright full-spectrum light (such as sunlight). These glasses work by reflecting a narrow frequency band between the M-cones and L-cones.[^enchroma-operation]
 
-I speculate that this selective reflection strategy improves color differentiation ability by causing higher contrast between the M-cone and L-cone tristimulus values when wide-spectrum reds and greens are viewed through such lenses.
+I speculate that this selective reflection strategy improves color differentiation ability by causing higher contrast between the M-cone and L-cone tristimulus values when *wide-spectrum* reds and greens are viewed through such lenses.
 
 It has been observed that EnChroma glasses do not improve performance on the Ishihara color vision test. This makes sense to me because I expect that these tests use *narrow-spectrum* reds and greens, likely even residing in the frequency band that EnChroma glasses reflect.
+
+In summary I expect EnChroma glasses to be useful in improving color discrimination for full-spectrum light sources such as sunlight, incandescent bulbs, and special full-spectrum "daylight" bulbs. However I do not expect any improvements in color discrimination for narrow-spectrum light sources such as flourescent bulbs, computer monitors, and backlit phone/tablet screens.
 
 [^enchroma-operation]: The discovery underlying EnChroma glasses is documented in this news report: <http://abclocal.go.com/kgo/story?section=news/health&id=8964511>
 
@@ -73,7 +75,7 @@ I have seen a programs that filter colors on the screen to attain different effe
 
 Could I make a filtering program like this that would alter onscreen colors in such a way that a colorblind individual could distinguish them more easily? This would be very useful to me since I am colorblind myself and would like to be able to distinguish colors more easily.
 
-The principal difficulty I foresee is that my computer monitor may not be a full-spectrum light source. Indeed the manual for the DELL U2711 (my monitor) does not have any information about its spectral output. So I would need to measure it with a spectrometer or similar instrument. 
+The principal difficulty I foresee is that my computer monitor is probably a narrow-spectrum light source. Indeed the manual for the DELL U2711 (my monitor) does not have any information about its spectral output. So I would need to measure it with a spectrometer or similar instrument. 
 
 Unfortunately Amazon mainly has simple spectrometers that give spectral lines only, not their intensities or the full spectral graph. A spectrometer that can measure the full spectral power distribution currently costs a fair bit more. A few I've noticed:
 
