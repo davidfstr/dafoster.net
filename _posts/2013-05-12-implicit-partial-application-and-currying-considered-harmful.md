@@ -144,8 +144,6 @@ alpha(beta)(gamma)
 alpha(beta)(gamma, ...)
 </pre>
 
-This more C-like (or ALGOL-like) notation is a lot more readable to mainstream programmers than the original Haskell syntax.
-
 ### *Related Articles*
 
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
