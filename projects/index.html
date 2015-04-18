@@ -4,22 +4,28 @@ title: Projects
 group: navigation
 breadcrumbs: [/]
 
+style: |
+  .project .date { float: right; color: gray; }
+
 ---
 <div class="row">
   <div class="span9">
     <h1>{{ page.title }}</h1>
     
     <div class="x-projects" style="margin-bottom: 1.25em">
-      {% for cur_page in site.pages %}
+      {% assign project_pages = site.pages | projects_by_date %}
+      {% for cur_page in project_pages %}
         {% if cur_page.layout == "project" %}
           {% assign project_title = cur_page.title %}
           {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
           {% assign project_summary = cur_page.summary %}
           {% assign project_is_redirect = cur_page.redirect_to_url %}
+          {% assign project_date = cur_page.started_on %}
           
           <div class="project">
             <a href="{{ project_url }}"><img src="{{ project_url }}logo-128.png" alt="Logo for {{ project_title }}" /></a>
             <div>
+              <div class="date">{{ project_date | date: "%b %Y" }}</div>
               <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
                 {% if cur_page.featured %}
                   <span title="Featured Project">&#x2606;</span>

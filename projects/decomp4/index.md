@@ -3,8 +3,8 @@ layout: project
 title: decomp4
 summary: >
     Java decompiler. Converts .class files to .java files.
-x_started_on: Jun 29, 2004
-x_ended_on: Jan 30, 2006
+started_on: 2004-06-29
+ended_on: 2006-01-30
 x_languages: [Java]
 x_lines_of_code: 57,085
 x_concepts_learned: |

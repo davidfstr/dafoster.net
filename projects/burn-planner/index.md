@@ -4,8 +4,8 @@ title: Burn Planner
 summary: >
     Burns a series of files to multiple DVDs quickly
     by automatically allocating files among DVDs and naming the DVDs.
-x_started_on: Nov 20, 2010
-x_ended_on: Jan 19, 2011
+started_on: 2010-11-20
+ended_on: 2011-01-19
 x_languages: [Objective_C]
 x_lines_of_code: 1,934
 x_location: Cathode at /Users/davidf/Projects

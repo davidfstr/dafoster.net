@@ -6,8 +6,8 @@ summary: >
     A system for tracking and searching for media items
     (movies, TV series, anime, books) in various different
     media sources.
-x_started_on: 2015-01-02
-x_ended_on: 2015-01-06
+started_on: 2015-01-02
+ended_on: 2015-01-06
 x_languages: [Google_Apps_Script]
 x_lines_of_code: 819
 x_location: "Google Docs > Media Queue Latest - David Foster"

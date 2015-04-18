@@ -5,8 +5,8 @@ subtitle: Markdown for Ruby
 summary: >
     Converts Markdown text to HTML, in Ruby.
     Includes many useful Markdown extensions.
-x_started_on: Jan 19, 2013
-x_ended_on: Ongoing
+started_on: 2013-01-19
+ended_on: Ongoing
 x_languages: [Ruby, C, Autoconf]
 x_location: Cathode at /Users/davidf/Projects
 featured: true

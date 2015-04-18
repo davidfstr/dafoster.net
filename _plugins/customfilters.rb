@@ -10,6 +10,10 @@ module Jekyll
     def usa_date_to_string(date)
       date.strftime("%b %d, %Y")
     end
+    
+    def projects_by_date(site_pages)
+      site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["started_on"]}.reverse
+    end
   end
 end
 

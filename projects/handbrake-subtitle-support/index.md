@@ -5,8 +5,8 @@ summary: >
     Extends the popular HandBrake ripping and transcoding tool
     to enable processing subtitles from files, including the SSA subtitles
     found commonly in anime.
-x_started_on: Feb 6, 2010
-x_ended_on: Oct 2, 2010
+started_on: 2010-02-06
+ended_on: 2010-10-02
 x_languages: [C]
 x_location: Online at svn://svn.handbrake.fr/HandBrake/trunk
 featured: true
