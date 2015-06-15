@@ -5,17 +5,17 @@ tags: [Software]
 
 ---
 
-<!--
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
         Audience
     </p>
     <p style="margin-bottom: 0em;">
-        I assume familiarity with the Haskell programming language or some other language that supports calling a function with less arguments than the function's signature requires. In academic-speak, this is called "partial application of a function".
+        I assume familiarity with the Haskell programming language or some other language that supports calling a function with less arguments than the function's signature requires. This is called "partial application of a function".
     </p>
 </div>
--->
 
+{% comment %}
+<!-- All this does is imply a weakening of my position, which would be inaccurate -->
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
         Purpose
@@ -32,6 +32,7 @@ tags: [Software]
         <a href="http://www.reddit.com/r/haskell/comments/1elklu/currying_considered_harmful/">Reddit</a>.
     </p>
 </div>
+{% endcomment %}
 
 Consider the following function-call expression in Haskell:
 
