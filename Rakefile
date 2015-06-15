@@ -19,6 +19,8 @@ end
 
 desc "Compile entire site to _site in production mode"
 task :dist do
+  abort unless system "python _plugins/checkdates.py"
+  
   # NOTE: Production mode is signified by site.develop=false
   system "jekyll build --config _config.yml"
   system "python _plugins/prism.py"
@@ -63,7 +65,7 @@ task :deploy do
     
     # Regenerate entire site in _site (and _production), preserving .git
     system "mv _production/.git /tmp/davidfstr.github.com-git"  # preserve .git
-    system "rake dist"  # (will clobber contents of _site)
+    abort unless system "rake dist"  # (will clobber contents of _site)
     system "mv /tmp/davidfstr.github.com-git _production/.git"  # restore .git
     
     # Add .nojekyll to avoid unnecessary Jekyll processing of the compiled site
