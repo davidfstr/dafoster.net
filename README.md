@@ -26,11 +26,15 @@ Have specific questions about how these were implemented? [Contact me].
 
 ## Installation
 
+Assuming you have the [Bundler] dependency manager installed, run:
+
 ```
 git clone https://github.com/davidfstr/dafoster.net
 cd dafoster.net
 bundle install
 ```
+
+[Bundler]: http://bundler.io
 
 
 ## Usage
