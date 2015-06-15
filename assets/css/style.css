@@ -68,6 +68,8 @@ html { overflow-y: scroll }
 /* Subscribe link in Topics block */
 .block .subscribe {
   display: block;
+}
+.block .subscribe-last {
   margin-bottom: -5px;
 }
 .block .subscribe img {
