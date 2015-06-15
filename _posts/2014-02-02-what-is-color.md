@@ -64,6 +64,9 @@ In summary I expect EnChroma glasses to be useful in improving color discriminat
 
 [^enchroma-operation]: The discovery underlying EnChroma glasses is documented in this news report: <http://abclocal.go.com/kgo/story?section=news/health&id=8964511>
 
+
+{% comment %}
+<!-- This section is distracting from the main point of the article -->
 ## Could I make an "EnChroma computer monitor"?
 
 > **Objective:** Find a way to simulate the effect of Enchroma glasses when applied to a computer monitor.
@@ -86,6 +89,7 @@ Unfortunately Amazon mainly has simple spectrometers that give spectral lines on
 [AIBC AI-MK350 Handheld Spectrometer]: https://www.amazon.com/AIBC-LED-AI-MK350-Handheld-Spectrometer/dp/B0050DAD72/ref=as_sl_pc_ss_til?tag=dafo07-20&linkCode=w01&linkId=&creativeASIN=B0050DAD72
 
 [SpectroCAL Classic Spectroradiometer]: http://www.crsltd.com/tools-for-vision-science/light-measurement-display-calibation/spectrocal-classic-spectroradiometer/
+{% endcomment %}
 
 
 ### Additional References
