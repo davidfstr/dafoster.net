@@ -18,7 +18,8 @@ POST_DATE_RE = re.compile(r'^([0-9]{4})-([0-9]{2})-([0-9]{2})-')
 
 def main(args):
     post_filenames = os.listdir('_posts')
-    post_dates = [POST_DATE_RE.search(x).groups() for x in post_filenames]
+    post_date_matchers = [POST_DATE_RE.search(fn) for fn in post_filenames]
+    post_dates = [m.groups() for m in post_date_matchers if m is not None]
     
     duplicate_dates_detected = False
     for (date, freq) in Counter(post_dates).iteritems():
