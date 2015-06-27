@@ -52,6 +52,3 @@ DEPENDENCIES
   jekyll (~> 1.5.0)
   liquid
   rdiscount
-
-BUNDLED WITH
-   1.10.3
