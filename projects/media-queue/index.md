@@ -41,16 +41,6 @@ MediaQueue is implemented as a Google Docs spreadsheet with custom macros that s
     </div>
 </div>
 
-### Supported Media Sources
-
-* Netflix - Stream source for everything
-* KissAnime - Stream source for Anime (`A`)
-* The Pirate Bay - Download source for everything
-* BakaBT - Download source for Anime (`A`)
-* Seattle Public Library - Pickup source for everything
-* Barnes & Noble - Pickup source for Books (`B`)
-* Amazon - Buy source for everything
-
 ## Download
 
 In the past I have provided installation instructions for MediaQueue 1.0.
