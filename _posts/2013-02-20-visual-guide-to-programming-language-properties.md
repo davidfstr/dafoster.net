@@ -129,6 +129,15 @@ Environment isolater | -   | -           | -     | cabal-dev, hsenv | virtualenv
     * *Discusses several programming languages and their unique features.*
     * *Describes some <span class="property">properties</span> mentioned in this article in more detail.*
 
+<div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
+    <p style="font-weight: bold; color: #487858;">
+        Series
+    </p>
+    <p style="margin-bottom: 0em;">
+        This article is part of the <a href="/articles/2013/05/11/book-outline/">Programming for Perfectionists</a> series.
+    </p>
+</div>
+
 <hr/>
 
 Please send comments and corrections to [David Foster](/contact/).

@@ -222,3 +222,12 @@ Very similar to Java.[^java-copycat]
       *Useful for exploring and verifying proofs.*
 * [Learnings from SICP (and Lisp)](/articles/2013/02/02/learnings-from-sicp/)
     * *Discusses computer science concepts and how they manifest in various programming languages.*
+
+<div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
+    <p style="font-weight: bold; color: #487858;">
+        Series
+    </p>
+    <p style="margin-bottom: 0em;">
+        This article is part of the <a href="/articles/2013/05/11/book-outline/">Programming for Perfectionists</a> series.
+    </p>
+</div>

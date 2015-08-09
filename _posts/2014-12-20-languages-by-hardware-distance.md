@@ -80,6 +80,15 @@ A few interesting patterns become evident in this diagram:
 * [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
     * *Discusses several programming languages and their unique features.*
 
+<div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
+    <p style="font-weight: bold; color: #487858;">
+        Series
+    </p>
+    <p style="margin-bottom: 0em;">
+        This article is part of the <a href="/articles/2013/05/11/book-outline/">Programming for Perfectionists</a> series.
+    </p>
+</div>
+
 {% endcapture %}
 {{ content_with_bullets | fixbullets }}
 

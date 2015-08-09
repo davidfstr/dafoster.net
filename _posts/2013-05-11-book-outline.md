@@ -107,7 +107,7 @@ Many developers do not understand the common ways of representing various kinds 
 
 Collections are the backbone for representing compound data in any programming language. Specific implementations are covered in great detail in most any traditional CS textbook. However there are a number of more advanced collections which are useful for tough problems.
 
-* **Basic Collections**
+* [**Basic Collections**](/2015/08/08/algorithms-101/)
     * Arrays
         * Bit Vectors
     * Lists
@@ -246,6 +246,12 @@ It should also be noted that a programming language does not stand alone; it com
     * Haskell - academic programming<sup>AcadProg</sup>; static; better compile-time safety than any mainstream language
 
 <span style="font-variant: small-caps;">AcadProg</span>: This language tends to be used in academia, especially by programming language researchers. Thus it also gets various cutting-edge programming language features before mainstream languages.
+
+**Related Articles:**
+
+* [Unique Features of Various Programming Languages](/articles/2013/01/29/unique-features-of-various-programming-languages/)
+* [Spectrum of Languages by Hardware Distance](/articles/2014/12/20/languages-by-hardware-distance/)
+* [Visual Guide to Programming Language Properties](/articles/2013/02/20/visual-guide-to-programming-language-properties/)
 
 [^ruby_ecosystem]: For example, the early appearance of the Ruby on Rails web framework in the Ruby language caused a lot of the Ruby ecosystem to cater to web development needs. Subsequently Ruby gained the "move fast and break things" web mentality, along with the necessary tooling to support that mentality: heavy-duty testing, continuous integration, semantic versioning, package management, etc.
 
@@ -422,6 +428,9 @@ Does any of this content sound interesting to you? If so, [drop me a line]. I ma
 <a id="progress"></a>
 ## Progress
 
+* **2015-08-08**
+    - Added a section on [Basic Collections](/articles/2015/08/08/algorithms-101/).
+    - Retroactively link some articles under "Comparing Programming Languages".
 * **2013-07-13**: Added the [Error Handling](/articles/2013/07/13/error-handling/) chapter.
 * **2013-06-01**: Added the [Text](/articles/2013/06/01/handling-text-correctly/) chapter.
 
