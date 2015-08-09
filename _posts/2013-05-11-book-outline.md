@@ -2,6 +2,7 @@
 layout: post
 title: "Programming for Perfectionists (P4P): A Book Outline"
 tags: [Software]
+featured: true
 x_date_written: 2013-05-05
 
 style: |

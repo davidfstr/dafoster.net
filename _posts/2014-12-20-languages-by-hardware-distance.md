@@ -2,6 +2,7 @@
 layout: post
 title: Spectrum of Languages by Hardware&nbsp;Distance
 tags: [Software]
+featured: true
 
 include_jquery: true
 include_bootstrap_js: true
