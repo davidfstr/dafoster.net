@@ -42,8 +42,4 @@ Beyond that I enjoy:
 
 <h2 id="contact">Contact</h2>
 
-Need to contact me? To prove you are not a bot, solve the following puzzle to get my email:
-
-**MyEmail = "david" + RemoveVowels("foster") + "@gmail.com"**
-
-*(The letters A, E, I, O, and U are vowels.)*
+Email **david** at this domain (dafoster.net).
