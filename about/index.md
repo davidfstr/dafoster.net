@@ -8,9 +8,8 @@ linkable_headings: true
 ---
 <h1>{{ page.title }}</h1>
 
-<div class="image-box">
-  <img src="portrait.jpg" width="120" height="160" alt="Portrait of David Foster" />
-  <p>A picture of me</p>
+<div style="float: right; margin-left: 1em; margin-bottom: 1em;">
+  <img src="portrait.jpg" width="200" height="200" alt="Portrait of David Foster" />
 </div>
 
 My name is **David Foster** and I enjoy developing software for fun and profit.
