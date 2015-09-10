@@ -14,17 +14,13 @@ linkable_headings: true
 
 My name is **David Foster** and I enjoy developing software for fun and profit.
 
+I am currently the CTO at [TechSmartKids](http://www.techsmartkids.com),
+helping to bring world-class computer science education to K-12 students.
+
 Recruiting? Read my [biography] below then check out my [resume].
 
 [biography]: #biography
 [resume]: /about/resume/
-
-<div class="toc">
-  <ul>
-    <li><a href="#biography">Biography</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</div>
 
 <h2 id="biography">Biography</h2>
 
