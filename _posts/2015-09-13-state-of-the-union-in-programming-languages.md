@@ -52,11 +52,11 @@ style: |
     }
     
     /* Span styling */
-    .footnotes li p span.sotu-cell-excellent,
-    .footnotes li p span.sotu-cell-good,
-    .footnotes li p span.sotu-cell-okay,
-    .footnotes li p span.sotu-cell-poor,
-    .footnotes li p span.sotu-cell-fail {
+    span.sotu-cell-excellent,
+    span.sotu-cell-good,
+    span.sotu-cell-okay,
+    span.sotu-cell-poor,
+    span.sotu-cell-fail {
         padding: .15em .2em;
     }
 
@@ -93,17 +93,21 @@ script: |
         });
         
         // Add .sotu-cell-* classes to footnotes
-        $('.footnotes li p').each(function(_, pEl) {
-            pEl = $(pEl);
-            
-            var pHtml = pEl.html();
-            pHtml = pHtml.replace(/Excellent/g, '<span class="sotu-cell-excellent">Excellent</span>');
-            pHtml = pHtml.replace(/Good/g, '<span class="sotu-cell-good">Good</span>');
-            pHtml = pHtml.replace(/Okay/g, '<span class="sotu-cell-okay">Okay</span>');
-            pHtml = pHtml.replace(/Poor/g, '<span class="sotu-cell-poor">Poor</span>');
-            pHtml = pHtml.replace(/Fail/g, '<span class="sotu-cell-fail">Fail</span>');
-            pEl.html(pHtml);
-        });
+        function colorizeTextIn(containerEl) {
+            containerEl.each(function(_, pEl) {
+                pEl = $(pEl);
+                
+                var pHtml = pEl.html();
+                pHtml = pHtml.replace(/Excellent/g, '<span class="sotu-cell-excellent">Excellent</span>');
+                pHtml = pHtml.replace(/Good/g, '<span class="sotu-cell-good">Good</span>');
+                pHtml = pHtml.replace(/Okay/g, '<span class="sotu-cell-okay">Okay</span>');
+                pHtml = pHtml.replace(/Poor/g, '<span class="sotu-cell-poor">Poor</span>');
+                pHtml = pHtml.replace(/Fail/g, '<span class="sotu-cell-fail">Fail</span>');
+                pEl.html(pHtml);
+            });
+        }
+        colorizeTextIn($('.footnotes li p'));
+        colorizeTextIn($('.sotu-colorize'));
     });
 
 ---
@@ -120,11 +124,17 @@ Additionally, some programming languages are on the rise or on the decline, for 
 
 The rating scale is:
 
+{% capture scale %}
 * **Excellent** (+2)
 * **Good** (+1)
 * **Okay** (0)
 * **Poor** (-1)
 * **Fail** (-2)
+{% endcapture %}
+
+<div class="sotu-colorize">
+    {{ scale|markdownify }}
+</div>
 
 ### Application Domain / General Purpose
 
