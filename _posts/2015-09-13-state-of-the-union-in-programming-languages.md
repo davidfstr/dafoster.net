@@ -102,7 +102,8 @@ The rating scale is:
 
 ### Other Worthy-of-Consideration Languages
 
-* Clojure - a dialect of Lisp
+* Swift
+* Clojure - a Lisp dialect
 * OCaml
 * Standard ML
 * Ada
