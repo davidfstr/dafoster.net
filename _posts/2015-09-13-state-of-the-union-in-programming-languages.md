@@ -27,6 +27,84 @@ style: |
     .post table tr td {
         border: 1px solid lightgray;
     }
+    
+    /* Cell colors */
+    .post .sotu-cell-excellent {
+        background-color: green;
+        color: white;
+    }
+    .post .sotu-cell-good {
+        background-color: lightgreen;
+    }
+    .post .sotu-cell-okay {
+        background-color: lightgray;
+    }
+    .post .sotu-cell-poor {
+        background-color: gray;
+        color: white;
+    }
+    .post .sotu-cell-fail {
+        background-color: #333; /* dark gray */
+        color: white;
+    }
+    .post .sotu-cell-other {
+        background-color: cyan;
+    }
+    
+    /* Span styling */
+    .footnotes li p span.sotu-cell-excellent,
+    .footnotes li p span.sotu-cell-good,
+    .footnotes li p span.sotu-cell-okay,
+    .footnotes li p span.sotu-cell-poor,
+    .footnotes li p span.sotu-cell-fail {
+        padding: .15em .2em;
+    }
+
+include_jquery: true
+script: |
+    $(function() {
+        // Add .sotu-cell-* classes to table cells
+        $('table tr').each(function(_, trEl) {
+            trEl = $(trEl);
+            
+            var firstCellInTr = true;
+            $('td', trEl).each(function(_, cellEl) {
+                cellEl = $(cellEl);
+                
+                var cellText = cellEl.text();
+                if (cellText.indexOf('Excellent') !== -1) {
+                    cellEl.addClass('sotu-cell-excellent');
+                } else if (cellText.indexOf('Good') !== -1) {
+                    cellEl.addClass('sotu-cell-good');
+                } else if (cellText.indexOf('Okay') !== -1) {
+                    cellEl.addClass('sotu-cell-okay');
+                } else if (cellText.indexOf('Poor') !== -1) {
+                    cellEl.addClass('sotu-cell-poor');
+                } else if (cellText.indexOf('Fail') !== -1) {
+                    cellEl.addClass('sotu-cell-fail');
+                } else {
+                    if (!firstCellInTr) {
+                        cellEl.addClass('sotu-cell-other');
+                    }
+                }
+                
+                firstCellInTr = false;
+            });
+        });
+        
+        // Add .sotu-cell-* classes to footnotes
+        $('.footnotes li p').each(function(_, pEl) {
+            pEl = $(pEl);
+            
+            var pHtml = pEl.html();
+            pHtml = pHtml.replace(/Excellent/g, '<span class="sotu-cell-excellent">Excellent</span>');
+            pHtml = pHtml.replace(/Good/g, '<span class="sotu-cell-good">Good</span>');
+            pHtml = pHtml.replace(/Okay/g, '<span class="sotu-cell-okay">Okay</span>');
+            pHtml = pHtml.replace(/Poor/g, '<span class="sotu-cell-poor">Poor</span>');
+            pHtml = pHtml.replace(/Fail/g, '<span class="sotu-cell-fail">Fail</span>');
+            pEl.html(pHtml);
+        });
+    });
 
 ---
 
@@ -67,8 +145,8 @@ The rating scale is:
 | &nbsp;                 | JavaScript[^J]| PHP[^3]       | NodeJS        | Ruby          | Go            |
 |------------------------|---------------|---------------|---------------|---------------|---------------|
 | **Programmer-bound**   | Okay[^6]      | Okay[^9]      | Poor          | Good[^11]     | Okay          |
-| **I/O-bound**          | ?             | ?             | Excellent     | Good          | Excellent     |
-| **CPU-bound**          | Good[^7]      | ?             | Good[^4]      | Poor          | Excellent     |
+| **I/O-bound**          | Okay?         | Okay?         | Excellent     | Good          | Excellent     |
+| **CPU-bound**          | Good[^7]      | Okay?         | Good[^4]      | Poor          | Excellent     |
 | **Platform longevity** | Excellent[^8] | Good[^10]     | Good[^5]      | Good[^12]     | Okay          |
 
 [^J]: Specifically JavaScript used on the frontend in a web browser.
