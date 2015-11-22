@@ -31,10 +31,6 @@ Beyond that I enjoy:
 * kayaking, visiting gardens; and
 * watching the occasional anime series.
 
-<h2 id="resume">Resume</h2>
-
-My resume is currently hosted on [LinkedIn](/about/resume/).
-
 <h2 id="contact">Contact</h2>
 
 Email **david** at this domain (dafoster.net).
