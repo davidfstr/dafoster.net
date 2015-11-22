@@ -8,10 +8,6 @@ linkable_headings: true
 ---
 <h1>{{ page.title }}</h1>
 
-<div style="float: right; margin-left: 1em; margin-bottom: 1em;">
-  <img src="portrait.jpg" width="200" height="200" alt="Portrait of David Foster" />
-</div>
-
 My name is **David Foster** and I enjoy developing software for fun and profit.
 
 I am currently the CTO at [TechSmartKids](http://www.techsmartkids.com),
