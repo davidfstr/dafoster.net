@@ -89,6 +89,9 @@ For example:
 * **Writer** - Plans and writes long-form compositions such as technical documentation, manuals, blog posts, or books.
 
 
+<!-- This section is not very well thought out, mostly irrelevant to software, and is distracting from the main points. Omit. -->
+<!--
+
 ### Operator
 
 An operator completes tasks within a predetermined framework. An operator does not generally create new things outside that framework. Although this may sound limiting, many types of operators are highly skilled.
@@ -111,6 +114,9 @@ Examples of operators outside software teams:
 * Accountants
 * Drivers: Bus, taxi, etc
 * Servers (i.e. waiters and waitresses)
+
+-->
+
 
 ### Salesperson
 
