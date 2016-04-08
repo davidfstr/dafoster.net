@@ -26,11 +26,26 @@ Have specific questions about how these were implemented? [Contact me].
 
 ## Installation
 
-Assuming you have the [Bundler] dependency manager installed, run:
+Download this repository:
 
 ```
 git clone https://github.com/davidfstr/dafoster.net
 cd dafoster.net
+```
+
+If you are starting fresh, with no Ruby environment:
+
+* Install [RVM](https://rvm.io).
+* Install Ruby with RVM:
+    * `rvm install ruby-2.0.0-p648`
+* Create an isolated gemset for this website:
+    * `rvm use ruby-2.0.0-p648@website --create`
+* Install [Bundler]:
+    * `gem install bundler`
+
+Once you have a basic Ruby environment and [Bundler] available, run:
+
+```
 bundle install
 ```
 
