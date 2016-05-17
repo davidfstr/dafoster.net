@@ -14,7 +14,7 @@ x_location: Cathode at /Users/davidf/Projects
 Burn Planner helps you burn a series of files to multiple DVDs quickly by 
 automatically allocating files among DVDs and naming the DVDs.
 
-<a class="btn btn-success" href="https://itunes.apple.com/us/app/burn-planner/id779198024?ls=1&amp;mt=12">Download</a> for Mac OS X 10.5 and later
+<a class="btn btn-success" href="Burn%20Planner%20v1.0.dmg">Download</a> for Mac OS X 10.5 and later
 
 <!-- Screencast (original dimensions 420 x 315)-->
 <iframe width="500" height="371" src="//www.youtube.com/embed/1GaEYlAx2CI?rel=0" frameborder="0" allowfullscreen></iframe>
