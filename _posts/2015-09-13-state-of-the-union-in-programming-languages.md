@@ -2,6 +2,7 @@
 layout: post
 title: "State of the Union in Programming Languages (2015)"
 tags: [Software]
+featured: true
 
 style: |
     /* Table layout */
