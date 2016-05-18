@@ -32,7 +32,7 @@ Very recently I decided to learn Clojure to fulfill my future needs for a high-p
         - DarkBASIC is also promising for making 3D games, although I haven't used it for anything serious. It has native 3D graphics.
         - Python has a REPL that you can experiment with and has reasonably straightforward and consistent syntax. However it has no native graphics and no physicality.
         - Processing has a built-in graphics. But it's not designed for composability at all, meaning that you can't mix and match parts from different programs. Its function naming is also haphazard and inconsistent.
-    * <p>My game [Dungeons](/prism/projects/dungeons/) was the most advanced program I wrote in HyperCard. Other kids at National Computer Camp would line up at my computer who wanted to play it - a very humbling experience.</p>
+    * <p>My game [Dungeons](/prism/projects/dungeons/) was the most advanced program I wrote in HyperCard. Other kids at National Computer Camp would line up at my computer who wanted to play it. I was very proud.</p>
 * **BASIC, Pascal** &ndash; Instructional Setting
     * At age 8 I picked these languages up at National Computer Camp because the instructors insisted on learning them before going on to other languages. <!-- With my prior two years of HyperTalk and general programming experience, I blew through these languages very quickly. -->
     * These were my first compiled languages.
