@@ -53,8 +53,15 @@ Environments that encourage this style:
 * **Python**
 
 ### *Related Articles*
+{% capture content_with_bullets %}
 
 * [Error Handling](/articles/2013/07/13/error-handling/)
     * *More comprehensively discusses considerations and specific implementation techniques for writing code that is robust in the presence of errors.*
+
+* [Abandonment vs. Unchecked Exceptions for Error Handling](/articles/2016/05/17/abandonment-vs-unchecked-exceptions-for-error-handling/)
+    * *Describes abandonment, an uncommon error-handling style.*
+
+{% endcapture %}
+{{ content_with_bullets | fixbullets }}
 
 [Exercises in Programming Style]: https://www.amazon.com/Exercises-Programming-Style-Cristina-Videira/dp/1482227371/ref=as_sl_pc_ss_til?tag=dafo07-20&linkCode=w01&linkId=7FSPMMHJB3KVNUKV&creativeASIN=1482227371

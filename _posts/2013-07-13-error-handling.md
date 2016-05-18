@@ -629,9 +629,16 @@ Don't be that guy who provides useless generic error messages:
 (I doubt even the program itself knows what went wrong.)
 
 ### *Related Articles*
+{% capture content_with_bullets %}
 
 * [Error handling styles in programming](/articles/2014/11/22/error-handling-styles/)
     * *Summarizes the most prominent strategies for handling runtime errors.*
+
+* [Abandonment vs. Unchecked Exceptions for Error Handling](/articles/2016/05/17/abandonment-vs-unchecked-exceptions-for-error-handling/)
+    * *Describes abandonment, an uncommon error-handling style.*
+
+{% endcapture %}
+{{ content_with_bullets | fixbullets }}
 
 <div style="padding: .8em 1em .8em; margin-bottom: 1em; border: 1px solid #94da3a;">
     <p style="font-weight: bold; color: #487858;">
