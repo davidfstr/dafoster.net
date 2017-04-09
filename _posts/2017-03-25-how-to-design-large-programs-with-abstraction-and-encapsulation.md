@@ -11,13 +11,13 @@ I spend a lot of time as a professional coder working on very large programs, at
 
 ### The Challenge
 
-A large program has a lot of behavior to specify. The number of lines of code is roughly proportional to the complexity of the behavior specified.[^squared]
+A large program has a lot of behavior to specify. The complexity of the behavior specified by a program is roughly proportional to its size.[^squared]
 
 ![Lines](/assets/2017/abstraction-and-encapsulation/1-lines.png)
 
 However a coder, being only human, can only hold a fixed amount of **concepts** in their head at once.
 
-[^squared]: I lied: When you think about it program complexity tends to grow with the *square* of its size rather than linearly because all pieces of the program can depend on the other pieces and these dependencies contribute to the program complexity.
+[^squared]: I'm intentionally oversimplifying: Program complexity actually tends to grow with the *square* of its size rather than linearly because all pieces of the program can depend on the other pieces and these dependencies contribute to the program complexity.
 
 ### Chunking
 
@@ -74,6 +74,16 @@ The same principle applies yet again to *modules*, a larger kind of unit:
 ![Anatomy of a Module](/assets/2017/abstraction-and-encapsulation/5-module_anatomy.png)
 
 Again, everything should be private by default.
+
+### Combining Encapsulated Abstractions
+
+Encapsulated abstractions really shine in reducing program complexity when you combine them together.
+
+Without abstractions everything can depend on everything else which creates a potential combinatorial explosion of complexity. By contrast *with* abstractions, the local complexity is bounded much more tightly.
+
+![Complexity with and without abstractions](/assets/2017/abstraction-and-encapsulation/complexity_comparison.png)
+
+> Within an abstraction the maximum local complexity is proportional to the size of that particular abstraction's private interior plus the size of the public surface areas of all other abstractions.
 
 ## Names Matter
 
