@@ -2,6 +2,7 @@
 layout: post
 title: How to Design Large Programs with Abstraction and Encapsulation
 tags: [Software]
+featured: true
 
 ---
 
