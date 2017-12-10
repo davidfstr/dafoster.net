@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How to learn to cook: My journey"
+title: "Learning to cook better: My journey"
 tags: [Cooking]
 
 ---
