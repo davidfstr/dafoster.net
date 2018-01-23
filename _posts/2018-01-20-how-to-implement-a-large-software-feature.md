@@ -101,10 +101,10 @@ For this example, here’s a simplified version of the tasks I write out:
 === Released. [1]
 ```
 
-I may review the engineering tasks with another member of the Engineering team if I uncover any additional details that merit review.
+I may review the engineering tasks with another member of the Engineering team if I uncover any additional details that merit review. In this example I do not.
 
 I update the estimated time for the feature on the Project Management calendar. If the new time estimate has significantly increased then I contact Project Management to see whether any external deadlines are impacted and to negotiate if they are.
 
 ### 4. Perform the engineering tasks
 
-This is the easy part: Develop, test, merge, repeat.
+This is the easy part: Develop, test, code review, merge, repeat.
