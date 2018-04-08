@@ -14,7 +14,7 @@ The conventional wisdom in the academic community [appears to be] that a type sy
 
 However as a software practitioner I definitely find unsound type systems to still be quite useful. The principal benefits that I get out of a type system include:
 
-* **Elimination of many common types of errors**, in particular:
+* **Identification of many common types of errors**, in particular:
 
     - misspelled names of functions and variables,
     - missing import statements,
