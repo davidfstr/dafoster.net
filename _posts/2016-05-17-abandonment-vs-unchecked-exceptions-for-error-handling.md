@@ -27,7 +27,7 @@ Midori has chosen to run with
 These seem to be reasonable choices given the special constraints of a language intended for systems, namely:
 
 * **correctness** is more important than convenience,
-* **constant-time performance**[^perf1] is important,
+* **constant-factor performance**[^perf1] is important,
 
 However I work mostly in application domains rather than system domains, so I wouldn't make these same choices. In particular *abandonment* really gets under my skin.
 
@@ -49,9 +49,9 @@ I have a few problems with this approach:
 
 But there is one big advantage to using abandonment:
 
-* **Better constant-time performance.**
+* **Better constant-factor performance.**
 
-  Using abandonment in place of unchecked exceptions means that there is no need to pepper functions everywhere with the low-level code needed to propagate unchecked exceptions. Such code globally degrades constant-time performance of all functions in the language.
+  Using abandonment in place of unchecked exceptions means that there is no need to pepper functions everywhere with the low-level code needed to propagate unchecked exceptions. Such code globally degrades constant-factor performance of all functions in the language.
 
 ### Unchecked Exceptions
 
@@ -68,7 +68,7 @@ In most modern programming languages intended for applications (as opposed to sy
 
 But:
 
-* **Unchecked exceptions degrade constant-time performance.**.
+* **Unchecked exceptions degrade constant-factor performance.**.
 
   However this typically doesn't matter in application domains. Only *algorithmic performance* matters.
 
@@ -89,4 +89,4 @@ I think abandonment is a reasonable approach for systems languages but I still p
 {{ content_with_bullets | fixbullets }}
 
 
-[^perf1]: As used in this article, **constant-time performance** refers to being sensitive to high constant factors in program time costs. This is in contrast to **algorithmic performance** which cares primarily about avoiding, for example, an O(n^2) algorithm where an O(n) algorithm would suffice.
+[^perf1]: As used in this article, **constant-factor performance** refers to being sensitive to high constant factors in program time costs. This is in contrast to **algorithmic performance** which cares primarily about avoiding, for example, an O(n^2) algorithm where an O(n) algorithm would suffice.

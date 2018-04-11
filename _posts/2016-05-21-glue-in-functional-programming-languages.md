@@ -42,7 +42,7 @@ Lazy evaluation can certainly be very expressive for processing large data struc
   
   This limits lazy evaluation's advantages in processing large data structures to only those structures which are *in-memory* or *procedurally generated* rather than the (IMHO more-common) structures that reside *on disk* or must be fetched *over the network* - which must be read with I/O and may be malformed, thus requiring error handling.
 
-* Pervasive use of lazy evaluation introduces unnecessary context switching overhead that **degrades the constant-time performance of algorithms** for which greedy evaluation would be acceptable. This makes pervasive lazy evaluation unsuitable for certain domains, such as systems domains.
+* Pervasive use of lazy evaluation introduces unnecessary context switching overhead that **degrades the constant-factor performance of algorithms** for which greedy evaluation would be acceptable. This makes pervasive lazy evaluation unsuitable for certain domains, such as systems domains.
 
 Instead of *pervasive* lazy evaluation, I find it sufficient to have lazy evaluation *on demand* in the form of Python's **generators**, **generator comprehensions**, and **coroutines** when needed.
 
