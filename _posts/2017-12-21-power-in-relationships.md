@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Power in Relationships
-tags: [Offtopic]
+tags: [Relationships]
 
 ---
 
