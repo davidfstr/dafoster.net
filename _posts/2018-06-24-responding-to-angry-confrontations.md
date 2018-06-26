@@ -38,14 +38,14 @@ I have not actually made use of this process yet, so I don't really know how it 
 
         * Observe **repeated generalizations**, which are likely to be more impactful to or more strongly held by the other.
     
-    * **Consider**. Form an initial interpretation silently.
-
-        * <p>**Beware of Confabulation**: When folks are angry (or otherwise experiencing very strong emotions) it is not uncommon for assertions or accusations they make to be after-the-fact confabulated generalizations to explain their initial emotional reactions. **Focus on concrete details** they cite - which are more reliable - rather than on generalizations.</p>
-    
     * **Replay** conversation back, focusing on the other's concrete assertions and acknowledging generalizations, regardless of agreement.
 
         * <p>Verify that details were conveyed and understood, regardless of agreement.</p>
 
+    * **Consider**. Form an initial interpretation silently.
+
+        * <p>**Beware of Confabulation**: When folks are angry (or otherwise experiencing very strong emotions) it is not uncommon for assertions or accusations they make to be after-the-fact confabulated generalizations to explain their initial emotional reactions. **Focus on concrete details** they cite - which are more reliable - rather than on generalizations.</p>
+    
     * **Discuss**:
 
         * Contribute **my own concrete observations**, focusing on any that are related to the other's generalizations.
