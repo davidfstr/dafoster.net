@@ -2,7 +2,7 @@
 layout: post
 title: Unsound type systems are still useful
 tags: [Software]
-x_target_audience: [Type System Academics, Software Practitioners]
+x_target_audience: [Type System Academics, Software Engineers]
 
 ---
 
