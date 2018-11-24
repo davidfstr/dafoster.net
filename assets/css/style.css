@@ -253,6 +253,11 @@ pre code { white-space: pre; }
 /* Prevent word breaks for "UTF-8" and similar phrases */
 .nobr { white-space: nowrap; }
 
+/* Reinstate spacing between paragraphs in blockquotes */
+blockquote p {
+  margin-bottom: 0.7em;
+}
+
 /* ========================================================================== */
 /* Footer */
 
