@@ -3,6 +3,8 @@ layout: post
 title: Responding to angry confrontations
 tags: [Relationships]
 x_target_audience: [Humans]
+x_unpublish_reason: >
+    Offtopic. Probably too personal.
 
 ---
 

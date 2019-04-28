@@ -2,6 +2,8 @@
 layout: post
 title: Power in Relationships
 tags: [Relationships]
+x_unpublish_reason: >
+    Offtopic. Has no angle.
 
 ---
 
