@@ -3,7 +3,7 @@ layout: default
 breadcrumbs: [/, /articles/]
 ---
 <div class="row">
-  <div class="{% if page.full_width != true %}span9{% else %}span12{% endif %} content post">
+  <div class="{% if page.full_width != true %}col-md-9{% else %}col-md-12{% endif %} content post">
     <h1>{{ page.title }}</h1>
     <div class="post-metadata">
       {{ page.date | usa_date_to_string }} &ndash; Filed under: 
@@ -22,12 +22,12 @@ breadcrumbs: [/, /articles/]
   </div>
   
   {% if page.full_width != true %}
-  <div class="span3 block-bar">
+  <div class="col-md-3 block-bar">
     {% include blocks/article_topics %}
   </div>
   {% endif %}
   
-  <div class="span12">
+  <div class="col-md-12">
     <div class="pagination pagination-centered">
       <ul>
       {% if page.previous %}

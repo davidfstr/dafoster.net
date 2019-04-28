@@ -14,7 +14,7 @@ featured: true
 style: |
     h3 { margin-bottom: -.3em; }
     small { font-size: 14px; }
-    .span9 > hr { border-top-color: #d3d3d3; /* subtle */ }
+    .col-md-9 > hr { border-top-color: #d3d3d3; /* subtle */ }
 
 ---
 [HandBrake] is a popular program for ripping DVDs and for converting

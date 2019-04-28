@@ -14,7 +14,7 @@ style0: |
 
 ---
 <div class="row">
-  <div class="{% if page.full_width != true %}span9{% else %}span12{% endif %} content">
+  <div class="{% if page.full_width != true %}col-md-9{% else %}col-md-12{% endif %} content">
     <img class="logo" src="logo-128.png" alt="Logo for {{ page.title }}"/>
     
     <h1>{{ page.title }}{% if page.subtitle %} <small>&ndash; {{ page.subtitle }}</small>{% endif %}</h1>
@@ -27,7 +27,7 @@ style0: |
   </div>
   
   {% if page.full_width != true %}
-  <div class="span3 block-bar">
+  <div class="col-md-3 block-bar">
     {% include blocks/projects %}
   </div>
   {% endif %}
