@@ -15,22 +15,6 @@ html, body {
 html { overflow-y: scroll }
 
 /* ========================================================================== */
-/* Navigation */
-
-.navbar {
-  margin-bottom: 0;
-}
-
-/* Fix Bootstrap regression: Center content of static navbars */
-.navbar-inner > .container { width: 940px; }
-
-/* Center the navbar */
-.navbar {
-  width: 980px;
-  margin-left: auto; margin-right: auto;
-}
-
-/* ========================================================================== */
 /* Breadcrumbs */
 
 .breadcrumb-bar {
@@ -308,15 +292,10 @@ h6:first-child {
 }
 
 /* Don't force links in nav bar to have white background */
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
+.nav .navbar-nav > .active > a,
+.nav .navbar-nav > .active > a:hover,
+.nav .navbar-nav > .active > a:focus {
   background-color: transparent;
-}
-
-.navbar-inner {
-  /* IE 9: Disable filter attribute in Bootstrap, since it confuses IE */
-  filter: none;
 }
 
 sup {
@@ -339,7 +318,7 @@ sup {
 /* ========================================================================== */
 /* Accent Color: Green */
 
-.navbar-inner {
+.navbar {
   background-color: #64a914;  /* bright green */
   background-image: none;
 }
