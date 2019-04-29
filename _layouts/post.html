@@ -28,8 +28,8 @@ breadcrumbs: [/, /articles/]
   {% endif %}
   
   <div class="col-md-12">
-    <div class="pagination pagination-centered">
-      <ul>
+    <div style="text-align: center;">
+      <ul class="pagination">
       {% if page.previous %}
         <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
       {% else %}
