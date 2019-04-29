@@ -1,4 +1,7 @@
 ---
+# The responsive navbar of Bootstrap 3 requires Bootstrap JS in order to work.
+# Therefore all pages need Bootstrap JS now.
+include_bootstrap_js: true
 ---
 <!DOCTYPE html>{% include JB/setup %}
 <html lang="en">
@@ -68,7 +71,7 @@
   -->
     
     <!-- Le scripts -->
-  {% if page.include_jquery or page.linkable_headings or page.carousels %}
+  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js %}
     <script src="{{ ASSET_PATH }}/js/jquery-1.12.4.min.js"></script>
   {% endif %}
   {% if page.include_jquery_hashchange or page.linkable_headings %}
