@@ -15,30 +15,6 @@ html, body {
 html { overflow-y: scroll }
 
 /* ========================================================================== */
-/* Breadcrumbs */
-
-.breadcrumb-bar {
-  background-color: #f5f5f5;
-  padding: 10px 20px 5px;
-  margin: -20px -20px 20px;
-  border-bottom: 2px solid #cdcdcd;
-}
-
-.breadcrumb-bar {
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
-}
-
-.breadcrumb {
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.breadcrumb li:last-child .divider {
-  display: none;
-}
-
-/* ========================================================================== */
 /* Blocks */
 
 .block-bar { }

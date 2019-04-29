@@ -116,30 +116,6 @@
 
     <div class="container">
       <div class="content-container">
-        <div class="breadcrumb-bar">
-          <ul class="breadcrumb">
-            {% capture divider %} <span class="divider">&gt;</span>{% endcapture %}
-            
-            {% assign has_breadcrumbs = false %}
-            {% for bc_url in page.breadcrumbs %}
-              {% assign bc_title = '&#x26a0;' %}
-              {% for node in site.pages %}
-                {% capture node_url %}{{ node.url | replace: '/index.html', '/' }}{% endcapture %}
-                {% if bc_url == node_url %}
-                  {% capture bc_title %}{{ node.title }}{% endcapture %}
-                {% endif %}
-              {% endfor %}
-              
-              <li><a href="{{ bc_url }}">{{ bc_title }}</a>{{ divider }}</li>
-              {% assign has_breadcrumbs = true %}
-            {% endfor %}
-            
-            {% if has_breadcrumbs == false %}
-              <li>&nbsp;</li>
-            {% endif %}
-          </ul>
-        </div>
-        
         <!-- Encourage IE 6 users to upgrade their browser. -->
         <!--[if lt IE 7]>
           <div style="clear: both; height: 59px; padding: 0 0 0 50px; position: relative;">
