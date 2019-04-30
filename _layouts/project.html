@@ -26,7 +26,7 @@ style0: |
     {% endif %}
   </div>
   
-  {% if page.full_width != true %}
+  {% if page.full_width != true and !redirect_to_url %}
   <div class="col-md-3 block-bar">
     {% include blocks/projects %}
   </div>
