@@ -277,6 +277,16 @@ h6:first-child {
   margin-bottom: 0;
 }
 
+/* Remove navbar-to-content gap at small screen sizes */
+.navbar {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {  /* md */
+  .navbar {
+    margin-bottom: 22px;
+  }
+}
+
 /* Don't force links in nav bar to have white background */
 .nav .navbar-nav > .active > a,
 .nav .navbar-nav > .active > a:hover,
