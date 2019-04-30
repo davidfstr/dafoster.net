@@ -1,13 +1,14 @@
 ---
 layout: default
 breadcrumbs: [/, /articles/]
+full_width: false  # no longer used in post layout
 ---
 <div class="row">
-  <div class="{% if page.full_width != true %}col-md-9{% else %}col-md-12{% endif %} content post">
+  <div class="col-md-12 content post">
     <h1>{{ page.title }}</h1>
     <div class="post-metadata">
       {{ page.date | usa_date_to_string }} &ndash; Filed under: 
-      <span class="tag_box inline">
+      <span class="tag_box tag_box--inline">
         {% assign tags_list = page.tags %}
         {% for tag in tags_list %} 
           <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></span>
@@ -21,11 +22,9 @@ breadcrumbs: [/, /articles/]
     {{ content }}
   </div>
   
-  {% if page.full_width != true %}
-  <div class="col-md-3 block-bar">
-    {% include blocks/article_topics %}
+  <div class="col-md-12 block-bar">
+    {% include blocks/subscribe %}
   </div>
-  {% endif %}
   
   <div class="col-md-12">
     <div style="text-align: center;">

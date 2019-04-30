@@ -17,10 +17,5 @@
     {% endfor %}
   </ul>
   <hr style="margin: .5em 0;"/>
-  <a class="subscribe" href="https://twitter.com/davidfstr">
-    <img src="/assets/twitter-icon-16x16.png" alt="" width="16" height="16" />Subscribe (Twitter)
-  </a>
-  <a class="subscribe subscribe-last" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
-    <img src="/assets/feed-icon-14x14.png" alt="" width="14" height="14" style="padding-right: 2px;" />Subscribe (RSS)
-  </a>
+  {% include blocks/subscribe_links %}
 </div>

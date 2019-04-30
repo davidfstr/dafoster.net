@@ -2,21 +2,20 @@
   <h3>{% if page.layout != "page" %}Other {% endif %}Projects</h3>
   {% comment %}[TODO: Use distinct styling from a real tag box]{% endcomment %}
   <ul class="tag_box" style="margin-bottom: .5em">
-    {% for cur_page in site.pages %}
-      {% if cur_page.layout == "project" %}
-        {% if cur_page.short_title %}
-          {% assign project_title = cur_page.short_title %}
-        {% else %}
-          {% assign project_title = cur_page.title %}
-        {% endif %}
-        {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
-        {% assign project_slug = cur_page.url | replace: '/projects/', '' | replace: '/index.html', '' %}
-        {% assign project_is_redirect = cur_page.redirect_to_url %}
-        
-        <li id="{{ project_slug }}-project"{% if cur_page.url == page.url %} class="active"{% endif %}>
-          <a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
-        </li>
+    {% assign project_pages = site.pages | projects_by_title %}
+    {% for cur_page in project_pages %}
+      {% if cur_page.short_title %}
+        {% assign project_title = cur_page.short_title %}
+      {% else %}
+        {% assign project_title = cur_page.title %}
       {% endif %}
+      {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
+      {% assign project_slug = cur_page.url | replace: '/projects/', '' | replace: '/index.html', '' %}
+      {% assign project_is_redirect = cur_page.redirect_to_url %}
+      
+      <li id="{{ project_slug }}-project"{% if cur_page.url == page.url %} class="active"{% endif %}>
+        <a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
+      </li>
     {% endfor %}
   </ul>
   {% include blocks/projects_more %}

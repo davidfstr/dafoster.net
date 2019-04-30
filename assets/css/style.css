@@ -292,6 +292,49 @@ sup {
 }
 
 /* ========================================================================== */
+/* Backport from Bootstrap 4 */
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
+/* ========================================================================== */
 /* Accent Color: Green */
 
 .navbar {
@@ -343,9 +386,15 @@ a.btn-success {
 }
 .tag_box li {
 	line-height:28px;
+  float:left;
 }
-.tag_box.inline li {
+.tag_box.tag_box--inline li {
 	float:left;
+}
+@media (min-width: 992px) {  /* lg */
+  .tag_box li {
+    float: unset;
+  }
 }
 .tag_box a {
 	padding: 3px 6px;

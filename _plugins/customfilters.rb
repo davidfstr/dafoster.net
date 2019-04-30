@@ -11,6 +11,10 @@ module Jekyll
       date.strftime("%b %d, %Y")
     end
     
+    def projects_by_title(site_pages)
+      site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["title"]}
+    end
+    
     def projects_by_date(site_pages)
       site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["started_on"]}.reverse
     end
