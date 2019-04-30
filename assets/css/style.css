@@ -15,46 +15,6 @@ html, body {
 html { overflow-y: scroll }
 
 /* ========================================================================== */
-/* Navigation */
-
-.navbar {
-  margin-bottom: 0;
-}
-
-/* Fix Bootstrap regression: Center content of static navbars */
-.navbar-inner > .container { width: 940px; }
-
-/* Center the navbar */
-.navbar {
-  width: 980px;
-  margin-left: auto; margin-right: auto;
-}
-
-/* ========================================================================== */
-/* Breadcrumbs */
-
-.breadcrumb-bar {
-  background-color: #f5f5f5;
-  padding: 10px 20px 5px;
-  margin: -20px -20px 20px;
-  border-bottom: 2px solid #cdcdcd;
-}
-
-.breadcrumb-bar {
-  font-family: Verdana, sans-serif;
-  font-size: 12px;
-}
-
-.breadcrumb {
-  padding: 0;
-  margin-bottom: 0;
-}
-
-.breadcrumb li:last-child .divider {
-  display: none;
-}
-
-/* ========================================================================== */
 /* Blocks */
 
 .block-bar { }
@@ -282,15 +242,25 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.2em;
 }
 
-/* Make headings smaller: Size h{N} as h{N+1} */
-h1 { font-size: 36px; }
-h2 { font-size: 28px; }
-h3 { font-size: 20px; }
-h4 { font-size: 16px; }
-h5 { font-size: 13.6px; }
-h1 small { font-size: 20px; }
-h2 small { font-size: 16px; }
-h3 small { font-size: 13.6px; }
+/* Make headings smaller x 2: Size h{N} as h{N+1} */
+h1 { font-size: 28px; }
+h2 { font-size: 20px; }
+h3 { font-size: 16px; }
+h1 small { font-size: 16px; }
+h2 small { font-size: 13.6px; }
+h3 small { font-size: 10px; }
+
+@media (min-width: 576px) {  /* sm */
+  /* Make headings smaller x 1: Size h{N} as h{N+1} */
+  h1 { font-size: 36px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 20px; }
+  h4 { font-size: 16px; }
+  h5 { font-size: 13.6px; }
+  h1 small { font-size: 20px; }
+  h2 small { font-size: 16px; }
+  h3 small { font-size: 13.6px; }
+}
 
 /* No margin before first heading in a block */
 h1:first-child,
@@ -307,16 +277,21 @@ h6:first-child {
   margin-bottom: 0;
 }
 
-/* Don't force links in nav bar to have white background */
-.navbar .nav > .active > a,
-.navbar .nav > .active > a:hover,
-.navbar .nav > .active > a:focus {
-  background-color: transparent;
+/* Remove navbar-to-content gap at small screen sizes */
+.navbar {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {  /* md */
+  .navbar {
+    margin-bottom: 22px;
+  }
 }
 
-.navbar-inner {
-  /* IE 9: Disable filter attribute in Bootstrap, since it confuses IE */
-  filter: none;
+/* Don't force links in nav bar to have white background */
+.nav .navbar-nav > .active > a,
+.nav .navbar-nav > .active > a:hover,
+.nav .navbar-nav > .active > a:focus {
+  background-color: transparent;
 }
 
 sup {
@@ -337,9 +312,52 @@ sup {
 }
 
 /* ========================================================================== */
+/* Backport from Bootstrap 4 */
+
+.d-none {
+  display: none !important;
+}
+
+@media (min-width: 576px) {
+  .d-sm-none {
+    display: none !important;
+  }
+  .d-sm-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .d-md-none {
+    display: none !important;
+  }
+  .d-md-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .d-lg-none {
+    display: none !important;
+  }
+  .d-lg-block {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .d-xl-none {
+    display: none !important;
+  }
+  .d-xl-block {
+    display: block !important;
+  }
+}
+
+/* ========================================================================== */
 /* Accent Color: Green */
 
-.navbar-inner {
+.navbar {
   background-color: #64a914;  /* bright green */
   background-image: none;
 }
@@ -388,9 +406,15 @@ a.btn-success {
 }
 .tag_box li {
 	line-height:28px;
+  float:left;
 }
-.tag_box.inline li {
+.tag_box.tag_box--inline li {
 	float:left;
+}
+@media (min-width: 992px) {  /* lg */
+  .tag_box li {
+    float: unset;
+  }
 }
 .tag_box a {
 	padding: 3px 6px;

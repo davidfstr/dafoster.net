@@ -1,4 +1,7 @@
 ---
+# The responsive navbar of Bootstrap 3 requires Bootstrap JS in order to work.
+# Therefore all pages need Bootstrap JS now.
+include_bootstrap_js: true
 ---
 <!DOCTYPE html>{% include JB/setup %}
 <html lang="en">
@@ -19,6 +22,8 @@
     <meta http-equiv="refresh" content="0;URL='{{ page.redirect_to_url }}'">
   {% endif %}
     
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Feeds -->
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/atom.xml" />
     <link rel="alternate" type="application/rss+xml" title="RSS Feed" href="/rss.xml" />
@@ -33,7 +38,7 @@
     <![endif]-->
 
     <!-- Le styles -->
-    <link href="{{ ASSET_PATH }}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ ASSET_PATH }}/bootswatch-readable-3.4.1/bootstrap.min.css" rel="stylesheet">
     {% if page.carousels %}
       <link href="{{ ASSET_PATH }}/js/orbit-1.2.3/orbit-1.2.3.css" rel="stylesheet">
     {% endif %}
@@ -66,14 +71,14 @@
   -->
     
     <!-- Le scripts -->
-  {% if page.include_jquery or page.linkable_headings or page.carousels %}
-    <script src="{{ ASSET_PATH }}/js/jquery-1.8.3.min.js"></script>
+  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js %}
+    <script src="{{ ASSET_PATH }}/js/jquery-1.12.4.min.js"></script>
   {% endif %}
   {% if page.include_jquery_hashchange or page.linkable_headings %}
     <script src="{{ ASSET_PATH }}/js/jquery.ba-hashchange.min.js"></script>
   {% endif %}
   {% if page.include_bootstrap_js %}
-    <script src="{{ ASSET_PATH }}/js/bootstrap.min.js"></script>
+    <script src="{{ ASSET_PATH }}/bootstrap-3.4.1/js/bootstrap.min.js"></script>
   {% endif %}
   {% if page.carousels %}
     <script src="{{ ASSET_PATH }}/js/orbit-1.2.3/jquery.orbit-1.2.3.min.js"></script>
@@ -82,11 +87,19 @@
 
   <body>
 
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-          <ul class="nav">
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#df-navbar-collapse" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
+        </div>
+        <div class="navbar-collapse collapse" id="df-navbar-collapse">
+          <ul class="nav navbar-nav">
             {% for node in site.pages %}
               {% if node.group == 'navigation' %}
                 <li><a href="{{ BASE_PATH }}{{ node.url | replace: '/index.html', '/' }}">{{ node.title }}</a></li>
@@ -102,34 +115,10 @@
           </ul>
         </div>
       </div>
-    </div>
+    </nav>
 
     <div class="container">
       <div class="content-container">
-        <div class="breadcrumb-bar">
-          <ul class="breadcrumb">
-            {% capture divider %} <span class="divider">&gt;</span>{% endcapture %}
-            
-            {% assign has_breadcrumbs = false %}
-            {% for bc_url in page.breadcrumbs %}
-              {% assign bc_title = '&#x26a0;' %}
-              {% for node in site.pages %}
-                {% capture node_url %}{{ node.url | replace: '/index.html', '/' }}{% endcapture %}
-                {% if bc_url == node_url %}
-                  {% capture bc_title %}{{ node.title }}{% endcapture %}
-                {% endif %}
-              {% endfor %}
-              
-              <li><a href="{{ bc_url }}">{{ bc_title }}</a>{{ divider }}</li>
-              {% assign has_breadcrumbs = true %}
-            {% endfor %}
-            
-            {% if has_breadcrumbs == false %}
-              <li>&nbsp;</li>
-            {% endif %}
-          </ul>
-        </div>
-        
         <!-- Encourage IE 6 users to upgrade their browser. -->
         <!--[if lt IE 7]>
           <div style="clear: both; height: 59px; padding: 0 0 0 50px; position: relative;">

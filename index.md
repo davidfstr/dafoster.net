@@ -58,7 +58,7 @@ My [articles] may also be of interest.
 ## Recent Articles
 
 <ul class="x-posts">
-  {% for post in site.posts limit:30 %}
+  {% for post in site.posts limit:10 %}
     <li>
       <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
       {% if post.featured %}

@@ -15,7 +15,7 @@ style: |
 
 ---
 <div class="row">
-  <div class="span9">
+  <div class="col-md-9">
     <h1>
       {{ page.title }}
       <a class="subscribe" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
@@ -40,7 +40,7 @@ style: |
     {% endfor %}
   </div>
   
-  <div class="span3 block-bar">
+  <div class="col-md-3 block-bar">
     {% include blocks/article_topics %}
   </div>
 </div>

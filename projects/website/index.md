@@ -109,6 +109,14 @@ services (ex: Disqus).
 * Version control. For content *and* site structure.
 
 
+<h2 id="version-3-1" style="margin-top: .7em;">
+Version 3.1 <small>Mobile-Friendly (Apr 29, 2019)</small>
+</h2>
+
+At long last I upgraded the site to look reasonable on mobile devices.
+I also refreshed the overall typography.
+
+
 [original website]: /prism/
 [^ie6]: IE6 is surprisingly difficult to support. It doesn't understand PNGs, has a different layout model than other browsers, and has lots of other quirks.
 [stop using Drupal]: /articles/2012/12/16/why-i-no-longer-use-drupal/
