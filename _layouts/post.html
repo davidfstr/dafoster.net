@@ -11,7 +11,7 @@ full_width: false  # no longer used in post layout
       <span class="tag_box tag_box--inline">
         {% assign tags_list = page.tags %}
         {% for tag in tags_list %} 
-          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }} <sup>{{ site.tags[tag].size }}</sup></a></span>
+          <span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }}<sup>{{ site.tags[tag].size }}</sup></a></span>
         {% endfor %}
       </span>
       {% if page.metadata_extra %}
