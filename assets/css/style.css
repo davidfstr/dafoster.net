@@ -80,6 +80,11 @@ html { overflow-y: scroll }
   line-height: 1.2em;
 }
 
+.subscribe__prompt {
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-bottom: 5px;
+}
+
 /* ========================================================================== */
 /* Content Area */
 
