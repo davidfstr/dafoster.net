@@ -17,8 +17,8 @@ style: |
     .col-md-9 > hr { border-top-color: #d3d3d3; /* subtle */ }
 
 ---
-[HandBrake] is a popular program for ripping DVDs and for converting
-converts movie files from one format to another.
+[HandBrake] is a popular program for ripping DVDs and converting
+movie files from one format to another.
 
 I extended HandBrake to support subtitles from file inputs (in addition
 to DVDs) and to support the <acronym title="SubStation Alpha">SSA</acronym>
