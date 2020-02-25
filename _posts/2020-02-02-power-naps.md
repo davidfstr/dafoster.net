@@ -10,7 +10,7 @@ For difficult problems[^dp] I have used naps at home and work to recharge quickl
 When to power nap:
 
 * When feeling mentally fuzzy.
-* When slightly tired but still there is more than must be done before sleep.
+* When slightly tired but still there is more that must be done before sleep.
 
 How to power nap:
 
