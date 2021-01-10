@@ -21,8 +21,8 @@ Have specific questions about how these were implemented? [Contact me].
 [breadcrumbs]: http://en.wikipedia.org/wiki/Breadcrumb_(navigation)
 [git]: http://git-scm.com
 [GitHub Pages]: http://pages.github.com
-[tag index]: http://dafoster.net/articles/topics/#Software
-[Contact me]: http://dafoster.net/contact/
+[tag index]: https://dafoster.net/articles/topics/#Software
+[Contact me]: https://dafoster.net/contact/
 
 ## Installation
 
