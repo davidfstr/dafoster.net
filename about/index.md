@@ -10,8 +10,12 @@ linkable_headings: true
 
 My name is **David Foster** and I enjoy developing software for fun and profit.
 
-I work at [TechSmart](http://www.techsmart.codes),
-helping to bring world-class computer science education to K-12 students.
+I co-founded [TechSmart],
+which seeks to bring world-class computer science education to K-12 students.
+I specifically own the [TechSmart Platform] website.
+
+[TechSmart]: https://www.techsmart.codes
+[TechSmart Platform]: https://www.techsmart.codes/platform/
 
 <h2 id="biography">Biography</h2>
 
