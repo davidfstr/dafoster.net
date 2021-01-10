@@ -1,0 +1,6 @@
+# Speeds up "docker-compose build" and "docker-compose up" by limiting
+# the number of files that are sent to the Docker build daemon.
+
+*
+!Gemfile
+!Gemfile.lock

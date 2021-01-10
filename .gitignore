@@ -3,12 +3,10 @@ _site
 
 # Staging for deployment
 _production
+_production_build
 
 # Windows
 Thumbs.db
 
 # OS X
 .DS_Store
-
-# RVM
-.rvmrc

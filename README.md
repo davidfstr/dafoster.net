@@ -26,53 +26,50 @@ Have specific questions about how these were implemented? [Contact me].
 
 ## Installation
 
-Download this repository:
+* Clone this repository:
+    * `git clone https://github.com/davidfstr/dafoster.net`
+    * `cd dafoster.net`
+* Install [Docker]
+* Build Docker image:
+    * `docker build -t dafoster.net .`
+* Create and start Docker container, if not already created:
+    * `docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest`
 
-```
-git clone https://github.com/davidfstr/dafoster.net
-cd dafoster.net
-```
-
-If you are starting fresh, with no Ruby environment:
-
-* Install [RVM](https://rvm.io).
-* Install Ruby with RVM:
-    * `rvm install ruby-2.0.0-p648`
-* Create an isolated gemset for this website:
-    * `rvm use ruby-2.0.0-p648@website --create`
-* Install [Bundler]:
-    * `gem install bundler`
-
-Once you have a basic Ruby environment and [Bundler] available, run:
-
-```
-bundle install
-```
-
-[Bundler]: http://bundler.io
-
+[Docker]: https://www.docker.com/
 
 ## Usage
 
 ##### Run local webserver with the website at: <http://127.0.0.1:4000/>
 
 ```
-rake
-rake prism   # Optional. Run this in a different terminal window.
+docker start dafoster.net
+# (Wait 5-10 seconds for the server to start)
+docker exec -it dafoster.net bash --login -c "rake prism"   # Optional
+open http://127.0.0.1:4000/
 ```
 
 ##### Compile to `_site` directory in production mode
 
 ```
-rake dist
+docker exec -it dafoster.net bash --login -c "rake dist"
 ```
 
 ##### Deploy to GitHub Pages
 
 ```
-rake deploy
+$ docker exec -it dafoster.net bash --login
+$$ eval "$(ssh-agent -s)"  # start SSH agent
+$$ ssh-add  # login to GitHub
+$$ rake deploy
+$$ exit
+```
+
+##### Open shell inside Docker container
+
+```
+docker exec -it dafoster.net bash --login
 ```
 
 ## License
 
-Copyright &copy; 2013 by David Foster. All rights reserved.
+Copyright &copy; 2013-2021 by David Foster. All rights reserved.
