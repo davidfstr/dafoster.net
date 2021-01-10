@@ -14,15 +14,12 @@ how a complex [Jekyll] site is structured**. Notable features include:
 * a **[tag index]** for blog posts
     * ...including anchor-based header highlighting
 
-Have specific questions about how these were implemented? [Contact me].
-
 [David Foster]: https://github.com/davidfstr
 [Jekyll]: https://github.com/mojombo/jekyll
 [breadcrumbs]: http://en.wikipedia.org/wiki/Breadcrumb_(navigation)
 [git]: http://git-scm.com
 [GitHub Pages]: http://pages.github.com
 [tag index]: https://dafoster.net/articles/topics/#Software
-[Contact me]: https://dafoster.net/contact/
 
 ## Installation
 
@@ -33,7 +30,9 @@ Have specific questions about how these were implemented? [Contact me].
 * Build Docker image:
     * `docker build -t dafoster.net .`
 * Create and start Docker container, if not already created:
-    * `docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest`
+    * ```
+      docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest
+      ```
 
 [Docker]: https://www.docker.com/
 
