@@ -13,6 +13,7 @@ how a complex [Jekyll] site is structured**. Notable features include:
 * **deployment automation** to [GitHub Pages] via [git]
 * a **[tag index]** for blog posts
     * ...including anchor-based header highlighting
+* building/running the site from inside **[Docker]** so that I don't have to upgrade Ruby, Jekyll, etc just to keep things running the way they always have
 
 [David Foster]: https://github.com/davidfstr
 [Jekyll]: https://github.com/mojombo/jekyll
@@ -20,6 +21,7 @@ how a complex [Jekyll] site is structured**. Notable features include:
 [git]: http://git-scm.com
 [GitHub Pages]: http://pages.github.com
 [tag index]: https://dafoster.net/articles/topics/#Software
+[Docker]: https://docs.docker.com/get-started/
 
 ## Installation
 
