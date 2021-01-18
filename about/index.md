@@ -8,14 +8,27 @@ linkable_headings: true
 ---
 <h1>{{ page.title }}</h1>
 
-My name is **David Foster** and I enjoy developing software for fun and profit.
+My name is **David Foster** and I enjoy developing software for fun and profit,
+with the aim of making a positive difference in the world.
 
 I co-founded [TechSmart],
 which seeks to bring world-class computer science education to K-12 students.
-I specifically own the [TechSmart Platform] website.
+I specifically develop and lead the team building the [TechSmart Platform] website.
 
 [TechSmart]: https://www.techsmart.codes
 [TechSmart Platform]: https://www.techsmart.codes/platform/
+
+My open source contributions that are probably the most well-known include:
+
+* maintaining [RDiscount], Ruby bindings to the Discount Markdown implementation;
+* [TypedDict's initial implementation] and other typechecking extensions in Python/mypy;
+* [SSA subtitle support in HandBrake]; and
+* enhancements to [Django].
+
+[RDiscount]: /projects/rdiscount/
+[TypedDict's initial implementation]: /projects/typeddict/
+[SSA subtitle support in HandBrake]: /projects/handbrake-subtitle-support/
+[Django]: https://www.djangoproject.com/
 
 <h2 id="biography">Biography</h2>
 
