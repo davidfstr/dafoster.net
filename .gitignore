@@ -8,5 +8,8 @@ _production_build
 # Windows
 Thumbs.db
 
-# OS X
+# macOS
 .DS_Store
+
+# Sublime Text
+*.sublime-workspace
