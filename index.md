@@ -24,7 +24,7 @@ My [articles] may also be of interest.
       {% assign project_is_redirect = cur_page.redirect_to_url %}
       
       <div class="project">
-        <a href="{{ project_url }}"><img src="{{ project_url }}logo-128.png" alt="Logo for {{ project_title }}" /></a>
+        <a href="{{ project_url }}"><img src="{{ project_url }}{% if cur_page.logo_filename %}{{ cur_page.logo_filename }}{% else %}logo-128.png{% endif %}" alt="Logo for {{ project_title }}" /></a>
         <div>
           <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
             {% if cur_page.featured %}
