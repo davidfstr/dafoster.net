@@ -13,15 +13,15 @@ with the aim of making a positive difference in the world.
 
 I co-founded [TechSmart],
 which seeks to bring world-class computer science education to K-12 students.
-I specifically develop and lead the team building the [TechSmart Platform] website.
+I specifically engineer the [TechSmart Platform] website.
 
 [TechSmart]: https://www.techsmart.codes
-[TechSmart Platform]: https://www.techsmart.codes/platform/
+[TechSmart Platform]: /projects/techsmart-platform/
 
 My open source contributions that are probably the most well-known include:
 
 * maintaining [RDiscount], Ruby bindings to the Discount Markdown implementation;
-* [TypedDict's initial implementation] and other typechecking extensions in Python/mypy;
+* [TypedDict's initial implementation] and other typechecking extensions in Python & mypy;
 * [SSA subtitle support in HandBrake]; and
 * enhancements to [Django].
 
