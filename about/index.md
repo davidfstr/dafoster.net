@@ -5,8 +5,16 @@ group: navigation
 breadcrumbs: [/]
 linkable_headings: true
 
+style: |
+  #profile { width: 200px; margin-left: 20px; }
+  @media (max-width: 576px) {
+    #profile { width: 100px; margin-left: 10px; }
+  }
+
 ---
 <h1>{{ page.title }}</h1>
+
+<img id="profile" alt="Picture of David Foster" src="profile.jpg" style="float: right;" />
 
 My name is **David Foster** and I enjoy developing software for fun and profit,
 with the aim of making a positive difference in the world.
