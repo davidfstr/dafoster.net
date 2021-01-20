@@ -37,6 +37,12 @@ track all of your browsing activity across all sites. Yikes.
   (This copy will not auto-update to future untrusted versions of the extension.)
 * All done! 🎉
 
+**Caveat:** My understanding is that installing an unpacked extension in this way
+will cause Chrome to [issue a new kind of security prompt] every time it is
+launched, which you'll have to ignore. 😕
+
+[issue a new kind of security prompt]: https://news.ycombinator.com/item?id=25847171
+
 ### Other options
 
 Other browser extensions for suspending tabs exist, as mentioned in the
