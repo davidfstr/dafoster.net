@@ -28,6 +28,8 @@ I wonder if the external link symbol would be accepted as an emoji? I don't have
 
 <!-- Also of interest: The rationale for rejecting the external link symbol discouraged another person from even submitting the feed symbol for consideration: https://jameshfisher.com/2017/09/29/unicode-is-only-for-plaintext.html -->
 
+**2021 Update:** These days I use the ⎋ symbol to approximate the external link
+symbol in my own informal writing.
 
 [proposal]: https://www.unicode.org/L2/L2006/06268-ext-link.pdf
 [public review]: https://www.unicode.org/L2/L2006/06324.htm#109-C26
