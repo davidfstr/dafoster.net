@@ -37,5 +37,14 @@ track all of your browsing activity across all sites. Yikes.
   (This copy will not auto-update to future untrusted versions of the extension.)
 * All done! 🎉
 
+### Other options
+
+Other browser extensions for suspending tabs exist, as mentioned in the
+[Hacker New discussion] for this article. However I have not conducted my own
+security review on any of those other extensions
+(whereas I *have* reviewed The Great Suspender 7.1.6), so buyer beware.
+
 [latest good version]: https://github.com/greatsuspender/thegreatsuspender/releases/tag/v7.1.6
 [an unpacked extension]: https://lifehacker.com/how-you-can-still-download-chrome-extensions-without-us-1826796797
+[Hacker New discussion]: https://news.ycombinator.com/item?id=25846504
+
