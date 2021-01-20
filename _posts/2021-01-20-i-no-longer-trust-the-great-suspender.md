@@ -20,7 +20,7 @@ track all of your browsing activity across all sites. Yikes.
 ### Temporary easy fix
 
 * Disable analytics tracking by opening the extension options for
-  The Great Suspender and unchecking
+  The Great Suspender and checking the box
   "Automatic deactivation of any kind of tracking".
 * Pray that the shady developer doesn't issue a malicious update to The Great Suspender later.
   (There's no sensible way to disable updates of an individual extension.)
