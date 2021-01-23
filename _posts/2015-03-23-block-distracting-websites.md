@@ -6,7 +6,9 @@ tags: [Productivity]
 ---
 
 <div class="img-box-right">
-    <img class="img-225" alt="Comic: Person on left: 'I just watched you open Google News and then close it without reading it <em>five times in a row</em>.' Person on right: 'The fact that I spend most of my time so stupidly only makes it <em>more</em> important not to waste any here.'" src="/assets/2015/distracting-websites.png" />
+    <a href="/assets/2015/distracting-websites.png">
+        <img class="img-225" alt="Comic: Person on left: 'I just watched you open Google News and then close it without reading it <em>five times in a row</em>.' Person on right: 'The fact that I spend most of my time so stupidly only makes it <em>more</em> important not to waste any here.'" src="/assets/2015/distracting-websites.png" />
+    </a>
     <div><i>Courtesy of <a href="http://xkcd.com/1502/">xkcd</a></i></div>
 </div>
 
