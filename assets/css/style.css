@@ -154,6 +154,17 @@ h2.active,
 }
 
 /* Image box */
+.img-box-right { float: right; margin-left: 1em; }
+.img-200 { width: 200px; }
+@media (max-width: 576px) {
+  .img-200 { width: 100px; }
+}
+.img-225 { width: 225px; }
+@media (max-width: 576px) {
+  .img-225 { width: 125px; }
+}
+
+/* Image box (Obsolete) */
 .image-box {
   float: right;
   padding: 10px;

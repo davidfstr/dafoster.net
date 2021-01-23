@@ -6,15 +6,17 @@ breadcrumbs: [/]
 linkable_headings: true
 
 style: |
-  #profile { width: 200px; margin-left: 20px; }
+  .img-box-right { float: right; margin-left: 1em; }
+  
+  .img-200 { width: 200px; }
   @media (max-width: 576px) {
-    #profile { width: 100px; margin-left: 10px; }
+    .img-200 { width: 100px; }
   }
 
 ---
 <h1>{{ page.title }}</h1>
 
-<img id="profile" alt="Picture of David Foster" src="profile.jpg" style="float: right;" />
+<img class="img-box-right img-200" alt="Picture of David Foster" src="profile.jpg" />
 
 My name is **David Foster** and I enjoy developing software for fun and profit,
 with the aim of making a positive difference in the world.
