@@ -29,6 +29,8 @@ track all of your browsing activity across all sites. Yikes.
 
 * Close as many unneeded tabs as you can.
 * Unsuspend all remaining tabs. ⏳
+    * ⚠️ Any tabs that you forget to unsuspend will be lost
+      when uninstalling The Great Suspender in the next step.
 * Uninstall The Great Suspender.
 * Download the [latest good version] of The Great Suspender (7.1.6) from GitHub, 
   and move it to some permanent location outside your Downloads folder.
