@@ -55,3 +55,16 @@ security review on any of those other extensions, so buyer beware.
 [an unpacked extension]: https://lifehacker.com/how-you-can-still-download-chrome-extensions-without-us-1826796797
 [Hacker New discussion]: https://news.ycombinator.com/item?id=25846504
 
+### *Related Articles*
+
+In {% assign tag = 'Productivity' %}{% include blocks/tag_single %}:
+
+* [Block Distracting Websites](/articles/2015/03/23/block-distracting-websites/)
+* [Sending email from command line scripts](/articles/2013/07/27/sending-email-from-command-line-scripts/)
+* [Scrivener: An IDE for thinkers, creators, and writers](/articles/2013/10/27/scrivener-an-ide-for-thinkers-creators-and-writers/)
+
+In {% assign tag = 'Software' %}{% include blocks/tag_single %}:
+
+* [How to Design Large Programs with Abstraction and Encapsulation](/articles/2017/03/25/how-to-design-large-programs-with-abstraction-and-encapsulation/)
+
+

@@ -1,0 +1,1 @@
+<span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }}<sup>{{ site.tags[tag].size }}</sup></a></span>

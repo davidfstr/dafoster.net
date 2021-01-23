@@ -1,0 +1,1 @@
+<span class="tag_box tag_box--inline">{% include blocks/tag %}</span>
