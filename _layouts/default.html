@@ -146,10 +146,15 @@ include_bootstrap_js: true
         {% if site.develop %}
          | <a href="javascript:void(window.location='x-validator-sac://open?uri='+escape(window.location))"><span class="private">Validate HTML</span></a>
          | <a href="{{ site.production_url }}{{ page.url | replace: '/index.html', '/' }}"><span class="private">View in Production</span></a>
-         | <a href="/apps/ga-url-builder/"><span class="private">URL Builder</span></a>
+         | <a href="/apps/ga-url-builder/"><span class="private">GA URL Builder</span></a>
         <br/>
-           <a href="https://github.com/davidfstr/dafoster.net/issues"><span class="private">View Issues</span></a>
-         | <span class="private">Validate Production Feed (<a href="http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fdafoster.net%2Fatom.xml">Atom</a>, <a href="http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fdafoster.net%2Frss.xml">RSS</a>)</span>
+           <a href="https://github.com/davidfstr/davidfstr.github.com/deployments/activity_log?environment=github-pages"><span class="private">Deployment Log</span></a>
+         | <a href="https://search.google.com/test/mobile-friendly"><span class="private">Mobile-Friendly Test</span></a>
+         | <a href="https://analytics.google.com/"><span class="private">Site Analytics</span></a>
+         | <a href="https://search.google.com/search-console/"><span class="private">Search Console</span></a>
+        <br/>
+           <span class="private">Validate Production Feed (<a href="http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fdafoster.net%2Fatom.xml">Atom</a>, <a href="http://validator.w3.org/feed/check.cgi?url=http%3A%2F%2Fdafoster.net%2Frss.xml">RSS</a>)</span>
+         | <a href="https://github.com/davidfstr/dafoster.net/issues"><span class="private">View Issues</span></a>
         {% endif %}
         </p>
       </footer>
