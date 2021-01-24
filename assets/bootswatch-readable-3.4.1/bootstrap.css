@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway:400,700");
+---
+---
+{% include raleway-font %}
 /*!
  * bootswatch v3.4.1
  * Homepage: http://bootswatch.com
