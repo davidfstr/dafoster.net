@@ -74,7 +74,7 @@ Interesting observations:
 <br/>
 † "Programming with collections" is discussed in [Lisp vs. Pascal Design Philosophies].
 
-[Lisp vs. Pascal Design Philosophies]: /articles/2013/02/02/learnings-from-sicp/#lisp-vs-pascal-design-philosophies
+[Lisp vs. Pascal Design Philosophies]: /articles/2013/02/01/learnings-from-sicp/#lisp-vs-pascal-design-philosophies
 
 ## Resource Management
 
