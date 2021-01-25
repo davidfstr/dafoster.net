@@ -37,3 +37,31 @@ After doing both of these, attempting to visit one of the websites listed in `/e
 
 Of course if you need to temporarily visit one of the blocked sites you can just go back to the hosts file and add a `#` before the corresponding entry.
 
+## 2021 Update
+
+I still use the above `/etcs/hosts` technique (from 2013) to block 
+distracting websites on my Mac laptop.
+
+On the iPhone I use the built-in **[Screen Time]** feature to block myself from
+distracting websites:
+
+* Open the Settings app and navigate to [Screen Time > Content & Privacy 
+  Restrictions > Content Restrictions > Web Content].
+* Alter the restriction type from the default "Unrestricted Access" to
+  "Limit Adult Websites".
+* Then scroll down to the "Never Allow" section and add any distracting websites
+  you'd like to block by default. For example I have `news.ycombinator.com`
+  there. 🙂
+* Then whenever you want to actually access a distracting website intentionally
+  (as opposed to when you reflexively auto-type such a website), you can just
+  temporarily go back to [Settings > Screen Time > Content & Privacy 
+  Restrictions] and just flip the "Content & Privacy Restrictions" switch
+  off temporarily.
+
+On macOS 10.15 Catalina and later there is a similar built-in "Screen Time"
+feature that appears to be usable in the same way as the "Screen Time" feature
+on iPhone. However since I've elected to limit my Macs to upgrade to a max of
+macOS 10.14, I still preferentially use the older `/etc/hosts` trick described
+earlier in this article.
+
+[Screen Time]: https://support.apple.com/en-us/HT208982
