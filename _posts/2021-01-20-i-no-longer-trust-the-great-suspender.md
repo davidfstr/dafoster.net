@@ -50,12 +50,12 @@ macOS 10.14 Mojave with Chrome 88 and Developer Mode left on.
 ### Other options
 
 Other browser extensions for suspending tabs exist, as mentioned in the
-[Hacker New discussion] for this article. However I have not conducted my own
+[Hacker News discussion] for this article. However I have not conducted my own
 security review on any of those other extensions, so buyer beware.
 
 [latest good version]: https://github.com/greatsuspender/thegreatsuspender/releases/tag/v7.1.6
 [an unpacked extension]: https://lifehacker.com/how-you-can-still-download-chrome-extensions-without-us-1826796797
-[Hacker New discussion]: https://news.ycombinator.com/item?id=25846504
+[Hacker News discussion]: https://news.ycombinator.com/item?id=25846504
 
 ### *Related Articles*
 
