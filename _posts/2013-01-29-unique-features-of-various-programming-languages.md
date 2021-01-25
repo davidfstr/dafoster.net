@@ -2,7 +2,7 @@
 layout: post
 title: Unique Features of Various Programming Languages
 tags: [Software]
-x_date_updated: 2013-02-18
+date_updated: 2013-02-18
 
 ---
 

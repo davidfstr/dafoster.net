@@ -2,6 +2,7 @@
 layout: post
 title: Block Distracting Websites
 tags: [Productivity]
+date_updated: 2021-01-25
 
 ---
 

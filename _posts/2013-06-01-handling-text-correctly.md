@@ -3,7 +3,7 @@ layout: post
 title: Handling Text Correctly
 tags: [Software]
 x_date_written: 2011-05-18
-x_date_updated: 2014-01-01
+date_updated: 2014-01-01
 
 ---
 

@@ -11,6 +11,10 @@ module Jekyll
       date.strftime("%b %d, %Y")
     end
     
+    def date_to_time(date)
+      date.to_time
+    end
+    
     def projects_by_title(site_pages)
       site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["title"]}
     end
