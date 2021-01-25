@@ -39,9 +39,11 @@ track all of your browsing activity across all sites. Yikes.
   (This copy will not auto-update to future untrusted versions of the extension.)
 * All done! 🎉
 
-**Caveat:** My understanding is that installing an unpacked extension in this way
+<s>**Caveat:** My understanding is that installing an unpacked extension in this way
 will cause Chrome to [issue a new kind of security prompt] every time it is
-launched, which you'll have to ignore. 😕
+launched, which you'll have to ignore. 😕</s>
+I see no security prompt for using an unpacked extension at least on
+macOS 10.14 Mojave with Chrome 88 and Developer Mode left on.
 
 [issue a new kind of security prompt]: https://news.ycombinator.com/item?id=25847171
 
