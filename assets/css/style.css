@@ -157,7 +157,7 @@ h2.active,
 .img-box-right { float: right; margin-left: 1em; }
 .img-200 { width: 200px; }
 @media (max-width: 576px) {
-  .img-200 { width: 100px; }
+  .img-200 { width: 125px; }
 }
 .img-225 { width: 225px; }
 @media (max-width: 576px) {
