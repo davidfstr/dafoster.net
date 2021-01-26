@@ -21,6 +21,46 @@ include_bootstrap_js: true
   {% if page.redirect_to_url %}
     <meta http-equiv="refresh" content="0;URL='{{ page.redirect_to_url }}'">
   {% endif %}
+  {% if page.is_post %}
+    {% comment %} https://developers.google.com/search/docs/data-types/article#non-amp-sd {% endcomment %}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.production_url }}{{ page.url }}"
+      },
+      "headline": "{{ page.title }}",
+      {% comment %}
+      [TODO: Include image for post if available so that article shows up better in Google search]
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "https://example.com/photos/16x9/photo.jpg"
+      ],
+      {% endcomment %}
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "dateModified": "{% if page.date_updated %}{{ page.date_updated | date_to_time | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+      "author": {
+        "@type": "Person",
+        "name": "David Foster",
+        "image": {
+          "@type": "ImageObject",
+          "url": "{{ site.production_url }}/about/profile.jpg"
+        }
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "David Foster",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "{{ site.production_url }}/about/profile.jpg"
+        }
+      }
+    }
+    </script>
+  {% endif %}
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
