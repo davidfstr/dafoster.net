@@ -5,7 +5,7 @@ tags: [Software]
 
 ---
 
-<img src="/assets/2019/the-little-typer.jpg" width="200px" style="float: right; margin-left: 20px;" />
+<img class="img-box-right img-200" alt="Book: The Little Typer" src="/assets/2019/the-little-typer.jpg" />
 
 Dependent types are a feature of certain programming language type systems that are unusually powerful, expressive, and precise, compared with other kinds of types. Dependently-typed programming languages such as Coq, Agda, and Idris appear occasionally in academia but not at all in mainstream languages used by software practitioners.
 
