@@ -40,6 +40,14 @@ My open source contributions that are probably the most well-known include:
 [SSA subtitle support in HandBrake]: /projects/handbrake-subtitle-support/
 [Django]: https://www.djangoproject.com/
 
+{% assign hiring = false %}
+{% if hiring %}
+If you like what you've read on my site and like the idea of bringing
+computer science education to the K-12 space, [come work for me]!
+
+[come work for me]: https://techsmart.betterteam.com/
+{% endif %}
+
 <h2 id="biography">Biography</h2>
 
 I initially discovered computers when I was 4 and starting programming them at 6.
