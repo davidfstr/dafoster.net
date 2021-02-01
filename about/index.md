@@ -18,8 +18,8 @@ style: |
 
 <img class="img-box-right img-200" alt="Picture of David Foster" src="profile.jpg" />
 
-My name is **David Foster** and I enjoy developing software for fun and profit,
-with the aim of making a positive difference in the world.
+Hi! My name is **David Foster** and my mission is to make the world a better
+place, through the tools of creating software and the written word.
 
 I co-founded [TechSmart],
 which seeks to bring world-class computer science education to K-12 students.

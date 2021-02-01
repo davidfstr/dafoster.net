@@ -4,6 +4,8 @@ title: "Python's type checking renaissance"
 tags: [Software]
 x_audience: |
     all Python developers, including hobbyists, academics, and practitioners
+x_performance: |
+    4,143 hits on day 1 of publish and post to Hacker News
 
 include_jquery: true
 

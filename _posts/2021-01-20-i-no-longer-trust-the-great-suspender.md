@@ -2,6 +2,14 @@
 layout: post
 title: I no longer trust The Great Suspender
 tags: [Productivity, Software, Offtopic]
+x_audience: |
+    all users of The Great Suspender browser extension,
+    which is a subset of all Chrome and Edge users
+    (but not Firefox or Safari users)
+x_performance: |
+    32,350 hits on day 1 of publish and post to Hacker News
+    38,628 hits on week 1 of publish, with daily numbers of:
+        32350, 2651, 1954, 628, 447, 344, 254
 
 ---
 
