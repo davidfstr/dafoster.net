@@ -10,6 +10,6 @@ x_languages: [Python, JavaScript]
 x_lines_of_code: N/A
 x_location: Cathode at /Users/davidf/Projects
 
-redirect_to_url: https://github.com/davidfstr/uhuru#uhuru
+redirect_to_url: https://github.com/davidfstr/uhuru#readme
 
 ---
