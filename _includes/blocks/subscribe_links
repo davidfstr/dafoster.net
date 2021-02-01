@@ -1,6 +1,9 @@
 <a class="subscribe" href="https://twitter.com/davidfstr">
   <img src="/assets/twitter-icon-16x16.png" alt="" width="16" height="16" />Subscribe (Twitter)
 </a>
-<a class="subscribe subscribe-last" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
+<a class="subscribe" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
   <img src="/assets/feed-icon-14x14.png" alt="" width="14" height="14" />Subscribe (RSS)
 </a>
+<span class="subscribe subscribe-last subscribe__frequency">
+  <i>Updated articles every Tuesday!</i>
+</span>

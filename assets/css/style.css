@@ -36,6 +36,11 @@ html { overflow-y: scroll }
   margin-right: .4em;
   vertical-align: text-top;
 }
+.subscribe__frequency {
+  margin-top: 5px;
+  font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+}
 
 /* ========================================================================== */
 /* Projects */
