@@ -28,7 +28,7 @@ My [articles] may also be of interest.
         <div>
           <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
             {% if cur_page.featured %}
-              <span title="Featured Project">&#x2606;</span>
+              {% include featured_project_star %}
             {% endif %}
           </h2>
           <p>
@@ -48,7 +48,7 @@ My [articles] may also be of interest.
       <li>
         <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
         {% if post.featured %}
-          <span title="Featured Article">&#x2606;</span>
+          {% include featured_article_star %}
         {% endif %}
       </li>
     {% endif %}
@@ -62,7 +62,7 @@ My [articles] may also be of interest.
     <li>
       <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
       {% if post.featured %}
-        <span title="Featured Article">&#x2606;</span>
+        {% include featured_article_star %}
       {% endif %}
     </li>
   {% endfor %}

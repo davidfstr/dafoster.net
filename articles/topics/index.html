@@ -32,7 +32,7 @@ style: |
           <li>
             <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
             {% if post.featured %}
-              <span title="Featured Article">&#x2606;</span>
+              {% include featured_article_star %}
             {% endif %}
           </li>
         {% endfor %}
