@@ -47,6 +47,9 @@ My [articles] may also be of interest.
     {% if post.featured %}
       <li>
         <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        {% if post.date_updated %}
+          <span title="Updated {{ post.date_updated | usa_date_to_string }}" style="cursor: help;">✚</span>
+        {% endif %}
         {% if post.featured %}
           {% include featured_article_star %}
         {% endif %}
@@ -61,6 +64,9 @@ My [articles] may also be of interest.
   {% for post in site.posts limit:10 %}
     <li>
       <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+      {% if post.date_updated %}
+        <span title="Updated {{ post.date_updated | usa_date_to_string }}" style="cursor: help;">✚</span>
+      {% endif %}
       {% if post.featured %}
         {% include featured_article_star %}
       {% endif %}
