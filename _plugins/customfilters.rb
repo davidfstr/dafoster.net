@@ -15,6 +15,10 @@ module Jekyll
       date.to_time
     end
     
+    def break_after_underscores(underscore_cased_word)
+      underscore_cased_word.gsub('_', '\_<wbr/>')
+    end
+    
     def projects_by_title(site_pages)
       site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["title"]}
     end
