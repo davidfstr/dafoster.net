@@ -30,3 +30,20 @@ module Jekyll
 end
 
 Liquid::Template.register_filter(Jekyll::CustomFilters)
+
+
+module Jekyll
+  class LongUrl < Liquid::Tag
+
+    def initialize(tag_name, text, tokens)
+      super
+      @text = text
+    end
+
+    def render(context)
+      "<a href=\"#{@text}\">#{@text.gsub('/', '/<wbr/>')}</a>"
+    end
+  end
+end
+
+Liquid::Template.register_tag('long_url', Jekyll::LongUrl)

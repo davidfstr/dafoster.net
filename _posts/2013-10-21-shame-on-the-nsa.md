@@ -41,14 +41,14 @@ I think the best starting point to counter these encroachments is to directly **
 I expect this will be a long war. <!-- But worth fighting for. -->
 
 
-[^tap-email]: <http://news.cnet.com/8301-13578_3-57589495-38/nsa-spying-flap-extends-to-contents-of-u.s-phone-calls/>
+[^tap-email]: {% long_url http://news.cnet.com/8301-13578_3-57589495-38/nsa-spying-flap-extends-to-contents-of-u.s-phone-calls/ %}
 
-[^tap-skype]: <http://arstechnica.com/tech-policy/2013/07/nsa-taps-skype-chats-newly-published-snowden-leaks-confirm/>
+[^tap-skype]: {% long_url http://arstechnica.com/tech-policy/2013/07/nsa-taps-skype-chats-newly-published-snowden-leaks-confirm/ %}
 
-[^retention]: <http://www.theguardian.com/world/2013/jun/20/fisa-court-nsa-without-warrant>
+[^retention]: {% long_url http://www.theguardian.com/world/2013/jun/20/fisa-court-nsa-without-warrant %}
 
-[^backbone]: <http://www.wired.com/threatlevel/2013/08/nsa-tapping-internet/>
+[^backbone]: {% long_url http://www.wired.com/threatlevel/2013/08/nsa-tapping-internet/ %}
 
-[^crypto]: <https://www.schneier.com/blog/archives/2013/09/the_nsa_is_brea.html>
+[^crypto]: {% long_url https://www.schneier.com/blog/archives/2013/09/the_nsa_is_brea.html %}
 
-[^backdoor]: <http://img.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/images/prism-slide-5.jpg>
+[^backdoor]: {% long_url http://img.washingtonpost.com/wp-srv/special/politics/prism-collection-documents/images/prism-slide-5.jpg %}
