@@ -57,7 +57,7 @@ With that TypedDict definition in place, you can take any JSON value received fr
 that API and use it directly in Python, without any additional conversions
 or additional parsing[^parsing]:
 
-[^parsing]: If you want to be *sure* that a JSON-like value is actually in the format you're expecting you might consider using [`trycast(...)`](/projects/trycast/) to actually check the value's shape at runtime rather than trusting a regular `cast(...)`.
+[^parsing]: If you want to be *sure* that a JSON-like value is actually in the format you're expecting you might consider using the [trycast(...)](/projects/trycast/) library function to actually check the value's shape at runtime rather than trusting a regular `cast(...)`.
 
 ```python
 import requests
