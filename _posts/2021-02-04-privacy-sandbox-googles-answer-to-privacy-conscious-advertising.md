@@ -3,6 +3,10 @@ layout: post
 title: "Privacy Sandbox: Google's answer to privacy-conscious advertising"
 tags: [Privacy]
 
+style: |
+    /* Override blockquote to use same font size as body text */
+    blockquote { font-size: 16px !important; }
+
 ---
 
 Google is working on a new technology called [Privacy Sandbox] to replace the
@@ -47,6 +51,16 @@ online companies I interact with to treat me in ways that I don't like or seek
 to predate me. Google has identified this as a risk and seeks to mitigate it
 by doing things like recognizing certain [protected classes] and removing
 features from any identified cohort that put it to close to a protected class.
+
+> **Update:** Everything discussed about Privacy Sandbox so far is only talking
+> about the [FLoC] component of it. But there is also a [TURTLEDOVE] component
+> which avoids the problem of transmitting one's cohort code outside the browser
+> by running the full ad bidding process on the local device. Neat! (Thanks to
+> [jefftk](https://news.ycombinator.com/item?id=26027504) on Hacker News 
+> for the clarification.)
+
+[FLoC]: https://github.com/WICG/floc#readme
+[TURTLEDOVE]: https://github.com/WICG/turtledove#readme
 
 Now a number of advertising companies who like their tried-and-true methods of
 third party tracking are worried about Google closing the door on traditional
