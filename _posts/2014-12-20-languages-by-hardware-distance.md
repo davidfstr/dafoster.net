@@ -33,8 +33,12 @@ Below I present an spectrum of various languages, arranged by **distance from th
   </li>
 </ul>
 <div class="tab-content" id="spectrum-diagram">
-  <img class="tab-pane active" id="diagram-tldr" src="/assets/2014/hardware-distance/tldr-125perc-72dpi.png" />
-  <img class="tab-pane"        id="diagram-full" src="/assets/2014/hardware-distance/full-100perc-72dpi.png" />
+  <a class="tab-pane active" id="diagram-tldr" href="/assets/2014/hardware-distance/tldr-125perc-72dpi.png">
+    <img src="/assets/2014/hardware-distance/tldr-125perc-72dpi.png" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane"        id="diagram-full" href="/assets/2014/hardware-distance/full-100perc-72dpi.png">
+    <img src="/assets/2014/hardware-distance/full-100perc-72dpi.png" style="max-width: 100%;" />
+  </a>
 </div>
 
 A few interesting patterns become evident in this diagram:
