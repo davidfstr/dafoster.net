@@ -26,12 +26,28 @@
   </li>
 </ul>
 <div class="tab-content">
-  <img class="tab-pane active" id="type_system-ALL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.ALL.gif" />
-  <img class="tab-pane " id="type_system-CPP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.CPP.gif" />
-  <img class="tab-pane " id="type_system-OBJC" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.OBJC.gif" />
-  <img class="tab-pane " id="type_system-JAVA" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.JAVA.gif" />
-  <img class="tab-pane " id="type_system-HASKELL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.HASKELL.gif" />
-  <img class="tab-pane " id="type_system-PYTHON" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.PYTHON.gif" />
-  <img class="tab-pane " id="type_system-RUBY" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.RUBY.gif" />
-  <img class="tab-pane " id="type_system-LISP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.LISP.gif" />
+  <a class="tab-pane active" id="type_system-ALL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.ALL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.ALL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-CPP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.CPP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.CPP.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-OBJC" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.OBJC.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.OBJC.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-JAVA" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.JAVA.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.JAVA.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-HASKELL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.HASKELL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.HASKELL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-PYTHON" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.PYTHON.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.PYTHON.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-RUBY" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.RUBY.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.RUBY.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="type_system-LISP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.LISP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/type_system.LISP.gif" style="max-width: 100%;" />
+  </a>
 </div>

@@ -26,12 +26,28 @@
   </li>
 </ul>
 <div class="tab-content">
-  <img class="tab-pane active" id="resource_management-ALL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.ALL.gif" />
-  <img class="tab-pane " id="resource_management-CPP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.CPP.gif" />
-  <img class="tab-pane " id="resource_management-OBJC" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.OBJC.gif" />
-  <img class="tab-pane " id="resource_management-JAVA" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.JAVA.gif" />
-  <img class="tab-pane " id="resource_management-HASKELL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.HASKELL.gif" />
-  <img class="tab-pane " id="resource_management-PYTHON" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.PYTHON.gif" />
-  <img class="tab-pane " id="resource_management-RUBY" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.RUBY.gif" />
-  <img class="tab-pane " id="resource_management-LISP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.LISP.gif" />
+  <a class="tab-pane active" id="resource_management-ALL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.ALL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.ALL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-CPP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.CPP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.CPP.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-OBJC" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.OBJC.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.OBJC.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-JAVA" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.JAVA.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.JAVA.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-HASKELL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.HASKELL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.HASKELL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-PYTHON" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.PYTHON.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.PYTHON.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-RUBY" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.RUBY.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.RUBY.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="resource_management-LISP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.LISP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/resource_management.LISP.gif" style="max-width: 100%;" />
+  </a>
 </div>

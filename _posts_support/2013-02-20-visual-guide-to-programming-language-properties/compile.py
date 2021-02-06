@@ -89,7 +89,9 @@ def compile_html_include(input_filename, langs, images_urlpath=''):
     <a href="#%(ref)s" class="tab-header tab-header-%(lang)s" data-toggle="tab">%(title)s</a>
   </li>"""
     TAB_CONTENT_ITEM_TEMPLATE = """
-  <img class="tab-pane %(cls)s" id="%(ref)s" src="%(img_src)s" />"""
+  <a class="tab-pane %(cls)s" id="%(ref)s" href="%(img_src)s">
+    <img src="%(img_src)s" style="max-width: 100%%;" />
+  </a>"""
     
     tab_header_items = []
     tab_content_items = []

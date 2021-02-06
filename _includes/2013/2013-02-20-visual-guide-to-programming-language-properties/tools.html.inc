@@ -26,12 +26,28 @@
   </li>
 </ul>
 <div class="tab-content">
-  <img class="tab-pane active" id="tools-ALL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.ALL.gif" />
-  <img class="tab-pane " id="tools-CPP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.CPP.gif" />
-  <img class="tab-pane " id="tools-OBJC" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.OBJC.gif" />
-  <img class="tab-pane " id="tools-JAVA" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.JAVA.gif" />
-  <img class="tab-pane " id="tools-HASKELL" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.HASKELL.gif" />
-  <img class="tab-pane " id="tools-PYTHON" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.PYTHON.gif" />
-  <img class="tab-pane " id="tools-RUBY" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.RUBY.gif" />
-  <img class="tab-pane " id="tools-LISP" src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.LISP.gif" />
+  <a class="tab-pane active" id="tools-ALL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.ALL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.ALL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-CPP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.CPP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.CPP.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-OBJC" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.OBJC.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.OBJC.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-JAVA" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.JAVA.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.JAVA.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-HASKELL" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.HASKELL.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.HASKELL.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-PYTHON" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.PYTHON.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.PYTHON.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-RUBY" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.RUBY.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.RUBY.gif" style="max-width: 100%;" />
+  </a>
+  <a class="tab-pane " id="tools-LISP" href="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.LISP.gif">
+    <img src="/assets/2013/2013-02-20-visual-guide-to-programming-language-properties/tools.LISP.gif" style="max-width: 100%;" />
+  </a>
 </div>
