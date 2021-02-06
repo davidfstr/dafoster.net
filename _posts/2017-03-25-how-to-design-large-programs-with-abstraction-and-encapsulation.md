@@ -24,7 +24,9 @@ However a coder, being only human, can only hold a fixed amount of **concepts** 
 
 The number of concepts can be reduced by **chunking** them into larger concepts that are less numerous. For example a bundle of *lines* can be chunked into a single *function* or a *method*.
 
-![Functions](/assets/2017/abstraction-and-encapsulation/2-functions.png)
+{% assign alt = "Functions" %}
+{% assign src = "/assets/2017/abstraction-and-encapsulation/2-functions.png" %}
+{% include wide_image %}
 
 Chunking allows you to reduce the total number of concepts that you need to keep in your head at once.
 
@@ -82,7 +84,9 @@ Encapsulated abstractions really shine in reducing program complexity when you c
 
 Without abstractions everything can depend on everything else which creates a potential combinatorial explosion of complexity. By contrast *with* abstractions, the local complexity is bounded much more tightly.
 
-![Complexity with and without abstractions](/assets/2017/abstraction-and-encapsulation/complexity_comparison.png)
+{% assign alt = "Complexity with and without abstractions" %}
+{% assign src = "/assets/2017/abstraction-and-encapsulation/complexity_comparison.png" %}
+{% include wide_image %}
 
 > Within an abstraction the maximum local complexity is proportional to the size of that particular abstraction's private interior plus the size of the public surface areas of all other abstractions.
 

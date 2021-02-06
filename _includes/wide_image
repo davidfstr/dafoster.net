@@ -1,0 +1,3 @@
+<a href="{{ src }}">
+    <img alt="{{ alt }}" src="{{ src }}" style="max-width: 100%" />
+</a>
