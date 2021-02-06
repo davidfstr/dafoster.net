@@ -2,6 +2,19 @@
 layout: post
 title: Tests as Policy Automation
 tags: [Software]
+x_audience: |
+    backend web developers who care about testing,
+    especially those using a macro backend framework like Django or Rails
+x_performance: |
+    16 hits on day 1 of publish and post to Hacker News (Tues)
+     5 hits on day 1 of post to r/django on 2021-02-05 (Fri) evening
+    TODO hits on week 1 of publish, with daily numbers of:
+        16, 2, 1, 5, 8, TODO, TODO
+    
+    Did further revise article on 2021-02-06 (Sat) morning to have
+    higher-quality content, and revised post on r/django.
+    But by this time the post on r/django has already slipped to
+    the 50% scroll point, which is several screens down.
 
 ---
 

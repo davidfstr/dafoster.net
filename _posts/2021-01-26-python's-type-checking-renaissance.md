@@ -6,6 +6,12 @@ x_audience: |
     all Python developers, including hobbyists, academics, and practitioners
 x_performance: |
     4,143 hits on day 1 of publish and post to Hacker News
+    6,473 hits on week 1 of publish, with daily numbers of:
+        4143, 1500, 453, 144, 69, 80, 84
+                                  ↑ interesting to see increase here
+                                        21 from Hacker News
+                                         1 from Twitter
+                                         * from elsewhere
 
 include_jquery: true
 
