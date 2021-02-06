@@ -17,33 +17,47 @@ Here are some example of special policies I've enforced from the automated test 
 
 {% capture test_outline %}
 * Ensure the typechecker reports no errors
-    * <code>test_type_checker_reports_no_errors_in_python</code>
-    * <code>test_type_checker_reports_no_errors_in_typed_javascript</code>
+    * <code>test_type_checker_reports_no_errors_in_python</code> [^mypy]
+    * <code>test_type_checker_reports_no_errors_in_typed_javascript</code> [^typescript-for-javascript]
 * Ban unsafe coding patterns by inspecting source code
     * <code>test_no_new_fragile_test_suites</code>[^fragile-test-suites]
     * <code>test_ensure_all_directories_containing_py_files_have_init_file</code>[^no-init-file]
 * Ensure hard-coded debug modes are turned off
-    * <code>test_the_debug_toolbar_is_disabled</code>
-    * <code>test_that_compress_is_enabled</code>
+    * <code>test_the_debug_toolbar_is_disabled</code> [^debug-toolbar]
+    * <code>test_that_compress_is_enabled</code> [^django-compress]
 * Ensure test-only environmental settings are correctly configured
     * <code>test_that_tests_do_not_send_real_emails</code>
 * Ensure invariants that should apply to all types of a large/unbounded number of domain objects are satisfied:
-    * <code>test_all_django_add_and_edit_admin_pages_render</code>
-    * <code>test_every_block_type_satisfies_all_block_standards</code>
+    * <code>test_all_django_add_and_edit_admin_pages_render</code> [^admin-pages-render-metatest] 👈 **especially useful and powerful**
+    * <code>test_every_block_type_satisfies_all_block_standards</code> [^blocks]
         * <code>test_c_blocks_for_python_blocks_must_use_consistent_indent_width</code>
         * <code>test_every_field_id_must_use_underscore_case</code>
         * <code>test_every_block_type_whose_codegen_always_references_x_library_must_import_x_library</code>
         * ... (9 more)
 * Prevent certain configuration settings from changing without triggering a discussion with Product Management, the Business, or your Dev Lead
-    * <code>test_max_redirect_count_is_5</code>
+    * <code>test_max_redirect_count_is_5</code> [^requests-redirect-count]
 {% endcapture %}
 {{ test_outline | break_after_underscores }}
 
 Hopefully these examples give you some ideas of some special policies you might enforce in your own automated test suite. Happy coding!
 
+[^mypy]: TechSmart's backend Python and Django code is typechecked using the [mypy](http://mypy-lang.org/) type checker.
+
+[^typescript-for-javascript]: TechSmart's frontend JavaScript code is typechecked using the [TypeScript](https://www.typescriptlang.org/) compiler, `tsc`.
+
 [^fragile-test-suites]: In this context a "fragile test suite" corresponds to a subclass of Django's `StaticLiveServerTestCase` or `TestCase` whose `setUpClass` method fails to use a `try-finally` to invoke `super().tearDownClass()` explicitly if something goes wrong partway through the test suite setup. This fragile-detection metatest walks through all test suite classes and uses Python's `inspect.getsourcelines` to read the source code of all test classes to look for the absense of the proper kind of try-finally.
 
 [^no-init-file]: It is important for any directory containing Python source files (`*.py`) to contain an `__init__.py` file so that the directory is marked properly as a Python package and is recognized correctly by Python typecheckers like mypy.
+
+[^debug-toolbar]: The [Django Debug Toolbar](https://github.com/jazzband/django-debug-toolbar#readme) is an amazingly useful tool to profile the database queries that your Django-rendered page is making.
+
+[^django-compress]: TechSmart's frontend JavaScript code is concatentated and minified using the excellent [Django Compressor](https://pypi.org/project/django-compressor/) app. At some point we may migrate instead to using [Snowpack](https://www.snowpack.dev/), a lightweight module bundler.
+
+[^admin-pages-render-metatest]: The "all Django Add and Edit pages must render" metatest automatically discovers all Django models and related pages that exist in Django's admin site. Then it tries to navigate to each such admin page and ensures that it renders completely. This metatest has caught cases where some of our more complex custom admin pages broke due to a code change elsewhere.
+
+[^blocks]: The "blocks" referred to here are the lego-like blocks which snap together to form programs in the visual [Skylark language](/projects/skylark/).
+
+[^requests-redirect-count]: The Python IDE <!-- TODO: Make non-redirecting DPython project page --> in the TechSmart Platform contains an API-compatible reimplementation of the popular [Requests](https://pypi.org/project/requests/) HTTP client library so that students can write programs that access the internet, in a controlled fashion.
 
 ### *Related Articles*
 
