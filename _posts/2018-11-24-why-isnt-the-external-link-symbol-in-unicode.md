@@ -2,7 +2,12 @@
 layout: post
 title: "Why isn't the external link symbol in Unicode?"
 tags: [Software]
-x_target_audience: [Writers]
+x_audience: |
+    folks who use Unicode characters in computerized writing
+x_performance: |
+    I seem to get about 30 hits per week as of 2021-02-06,
+        mostly from this Quora article:
+        https://www.quora.com/Is-the-symbol-for-external-link-available-in-Unicode-If-so-how-do-I-get-in-on-my-Mac
 
 ---
 
@@ -29,7 +34,7 @@ I wonder if the external link symbol would be accepted as an emoji? I don't have
 <!-- Also of interest: The rationale for rejecting the external link symbol discouraged another person from even submitting the feed symbol for consideration: https://jameshfisher.com/2017/09/29/unicode-is-only-for-plaintext.html -->
 
 **2021 Update:** These days I use the ⎋ symbol to approximate the external link
-symbol in my own informal writing.
+symbol in my own informal writing. I've also used 🔗 in the past.
 
 [proposal]: https://www.unicode.org/L2/L2006/06268-ext-link.pdf
 [public review]: https://www.unicode.org/L2/L2006/06324.htm#109-C26
