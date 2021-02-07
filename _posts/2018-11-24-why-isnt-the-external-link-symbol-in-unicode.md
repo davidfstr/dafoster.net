@@ -2,6 +2,7 @@
 layout: post
 title: "Why isn't the external link symbol in Unicode?"
 tags: [Software]
+featured: true
 x_audience: |
     folks who use Unicode characters in computerized writing
 x_performance: |
