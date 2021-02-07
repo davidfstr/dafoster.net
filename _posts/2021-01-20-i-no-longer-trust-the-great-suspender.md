@@ -74,9 +74,16 @@ Other browser extensions for suspending tabs exist, as mentioned in the
 [Hacker News discussion] for this article. However I have not conducted my own
 security review on any of those other extensions, so buyer beware.
 
+**2021-02-06 Update:** Wow. [Google has pulled The Great Suspender] from its web store.
+It is still possible to install the latest clean version of The Great Suspender
+using the "Permanent harder fix" instructions above. Or you might consider one
+of the [alternatives suggested by Lifehacker].
+
 [latest good version]: https://github.com/greatsuspender/thegreatsuspender/releases/tag/v7.1.6
 [an unpacked extension]: https://lifehacker.com/how-you-can-still-download-chrome-extensions-without-us-1826796797
 [Hacker News discussion]: https://news.ycombinator.com/item?id=25846504
+[Google has pulled The Great Suspender]: https://www.zdnet.com/article/google-kills-the-great-suspender-heres-what-you-should-do-next/
+[alternatives suggested by Lifehacker]: https://lifehacker.com/ditch-the-great-suspender-before-it-becomes-a-security-1845989664
 
 ### *Related Articles*
 
