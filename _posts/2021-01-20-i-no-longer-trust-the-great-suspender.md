@@ -7,9 +7,22 @@ x_audience: |
     which is a subset of all Chrome and Edge users
     (but not Firefox or Safari users)
 x_performance: |
-    32,350 hits on day 1 of publish and post to Hacker News
+    32,350 hits on day 1 of publish and post to Hacker News.
+        Was in the top 2 items on Hacker News from
+        6:02 AM to at least 1:28 PM (7.5 hours)
+        on the day of its posting.
     38,628 hits on week 1 of publish, with daily numbers of:
         32350, 2651, 1954, 628, 447, 344, 254
+    
+    878 hit spike on 2021-02-04 from Google organic traffic,
+        up from 39 on the previous day (2,151% increase),
+        probably because of news that Google has blocked
+        The Great Suspender in the Chrome Web Store:
+        https://www.zdnet.com/article/google-kills-the-great-suspender-heres-what-you-should-do-next/
+        
+        Wow. There's a fairly good chance that this article
+        was a major contributor to TGS getting pulled,
+        considering how much attention it got.
 
 ---
 
