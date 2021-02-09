@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Performance Testing
-tags: [Software]
+tags: [Software, Django]
 x_target_audience: [Full-Stack Software Engineers]
 
 ---

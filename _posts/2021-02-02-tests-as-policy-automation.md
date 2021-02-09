@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tests as Policy Automation
-tags: [Software]
+tags: [Django, Software]
 x_audience: |
     backend web developers who care about testing,
     especially those using a macro backend framework like Django or Rails
@@ -76,4 +76,4 @@ Hopefully these examples give you some ideas of some special policies you might 
 
 * <a href="https://sirupsen.com/shitlists/" class="external">Shitlist Driven Development</a> - Gives techniques for how to effectively apply automated policy changes of the type discussed in this article at *large* scale.
 <!-- * [Performance Testing](/articles/2018/06/02/performance-testing/) -->
-* [Database clamps: Deterministic performance tests for database-dependent code](/articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/) - *Next week's article* 🙂
+* [Database clamps: Deterministic performance tests for database-dependent code](/articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/) - Shows how to clamp the database performance of server-side rendering using automated tests.
