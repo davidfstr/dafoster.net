@@ -56,7 +56,7 @@ Avoid the embarassment of your site falling over when only a handful of customer
 
 A database clamp which uses Django's [assertNumQueries] function will fail not just when the number of database queries *increases* (which is usually a problem) but will also fail when the number of queries *decreases* (which is usually okay, and even desirable).
 
-In [my own Django web application](/projects/techsmart-platform) I use a custom version of `assertNumQueries` that still fails if the number of queries *increases* but only issues a warning (via `warnings.warn(...)`) if the number of queries *decreases*:
+In my own Django web application I use a custom version of `assertNumQueries` that still fails if the number of queries *increases* but only issues a warning (via `warnings.warn(...)`) if the number of queries *decreases*:
 
 ```
 $ python3 manage.py test gradebook
