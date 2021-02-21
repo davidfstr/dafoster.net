@@ -7,8 +7,8 @@ x_audience: |
 x_performance: |
     24 hits on day 1 of publish and post to Hacker News as response
         to comment on high-ranking prior article posted by someone else
-    TODO hits on week 1 of publish, with daily numbers of:
-        24, 3, TODO, TODO, TODO, TODO, TODO
+    30 hits on week 1 of publish, with daily numbers of:
+        24, 3, 1, 1, 0, 1, 0
 
 style: |
     /* Override blockquote to use same font size as body text */

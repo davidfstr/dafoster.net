@@ -8,8 +8,10 @@ x_audience: |
 x_performance: |
     16 hits on day 1 of publish and post to Hacker News (Tues)
      5 hits on day 1 of post to r/django on 2021-02-05 (Fri) evening
-    TODO hits on week 1 of publish, with daily numbers of:
-        16, 2, 1, 5, 8, TODO, TODO
+    35 hits on week 1 of publish, with daily numbers of:
+        16, 2, 1, 5, 9, 1, 1
+         ↑ HN     ↑ r/django
+                     ↑ Revised article
     
     Did further revise article on 2021-02-06 (Sat) morning to have
     higher-quality content, and revised post on r/django.

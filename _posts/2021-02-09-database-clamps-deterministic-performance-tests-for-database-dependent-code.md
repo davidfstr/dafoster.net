@@ -7,7 +7,11 @@ x_audience: |
     secondarily, users of other backend web frameworks 
         (like Rails) who write automated tests
 x_performance: |
-    TBD
+    18 pageviews on day 1 of publish and post to r/django
+    53 pageviews on week 1 of publish, with daily numbers of:
+        18, 3, 0, 0, 22, 6, 4; 4, 1, 5
+         ↑ r/django
+                      ↑ referred from home page of DaFoster on a Sat
 
 ---
 

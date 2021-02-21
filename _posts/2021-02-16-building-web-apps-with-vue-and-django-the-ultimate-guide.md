@@ -17,7 +17,11 @@ x_audience: |
         entirely (but it seems unlikely if a lot of effort 
         has already been put into a standalone Vue server)
 x_performance: |
-    TBD
+    595 pageviews on day 1 of publish (2021-02-18) and post to r/django
+    TODO pageviews on week 1 of publish, with daily numbers of:
+        595, 233, 115, TODO, TODO, TODO, TODO
+         ↑ r/django (lots of traction)
+               ↑ HN (almost no traction)
 
 style: |
     /* Override blockquote to use same font size as body text */
