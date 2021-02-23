@@ -3,6 +3,10 @@ layout: post
 title: How to implement a large software feature
 tags: [Software]
 
+style: |
+    /* Override blockquote to use same font size as body text */
+    blockquote { font-size: 16px !important; }
+
 ---
 
 I just started implementing my first big new software feature since the start of the New Year. I thought I'd outline my process since I don't think I've written it down before.
@@ -21,7 +25,9 @@ Therefore this new feature is primarily a UI change, publicizing existing functi
 
 I annotate a screenshot of the current Dynamic Calendar dropdown that staff can use to manipulate days on the calendar:
 
-![](/assets/2018/how-to-implement-a-large-software-feature/before.png)
+<a href="/assets/2018/how-to-implement-a-large-software-feature/before.png">
+    <img alt="High-fidelity UX mockup: Weekly calendar with open dropdown menu, that is divided into 3 sections." src="/assets/2018/how-to-implement-a-large-software-feature/before.png" style="max-width: 100%;" />
+</a>
 
 ### 2. Design the new behavior. Write out the delta between the old and new behaviors.
 
