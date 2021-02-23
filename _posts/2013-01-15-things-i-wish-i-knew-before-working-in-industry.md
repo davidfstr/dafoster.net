@@ -3,6 +3,7 @@ layout: post
 title: Things I Wish I Knew Before Working in Industry
 tags: [Software, Business]
 x_date_written: 2008-04-30
+date_updated: 2021-02-23
 featured: true
 
 ---
@@ -12,23 +13,28 @@ Tech about things he wished he knew before working in the the software
 industry. I have found his advice to be very useful at various points during
 my career. Sadly I have lost the presenter's name.
 
-Here is my outline of his presentation. **Emphasized** points are ones I've found
-to be particularly useful.
+Here is my outline of his presentation, updated for 2021.
+**Emphasized** points are ones I've found to be particularly useful.
 
 ### Technology
 
-* Future: integration
+* Future: integration[^2021-apple-soc]
 * Needed: ease-of-use & less complexity
 * Do *not* reinvent wheels!
     * you'll never finish the project
+
+[^2021-apple-soc]: Apple has always been smart about creating integrated products and experiences. In 2020 Apple announced the M1, an ARM system-on-chip (SOC) with *incredible* performance. [The internet exploded.](https://singhkays.com/blog/apple-silicon-m1-black-magic/)
 
 
 ### Technical Knowledge
 
 * Learn to learn
 * Don't need to take a class to learn something
-* Learn a little about a lot of things
-* Read news highlights from worthwhile sources
+* Learn a little about a lot of things[^2021-generalists]
+* Read news highlights from worthwhile sources[^2021-news]
+
+[^2021-generalists]: I lean toward having a breadth of knowledge or being a generalist. But it's also to have a deep specialization in one or two areas too. [The T-Shaped Engineer](https://alexkondov.com/the-t-shaped-engineer/) gives more insight into the tradeoffs of having generalist vs. specialist skills.
+[^2021-news]: For news of general interest to technologists I like [Hacker News](https://news.ycombinator.com/). There's also frequently a [subreddit](https://www.reddit.com/) for most topics. For example I've been liking [r/django](https://www.reddit.com/r/django/) recently for Django-related information.
 
 ### Problem Solving
 
@@ -54,11 +60,13 @@ to be particularly useful.
 
 * It's not *what* you know.  
   It's not *who* you know.  
-  **It's *who* knows *what* you know.**
+  **It's *who* knows *what* you know.**[^2021-luck-surface-area]
 * Doing more of the same is not enough.
     * Need to try new things – take on more responsibility.
 * Doing what is asked is not enough.
 * Ask you manager what the expectations are.
+
+[^2021-luck-surface-area]: It's not enough to be doing awesome things regularly. If you want that activity to pay off in increasing your luck, you'll also need to find ways to let folks know what you're up to, especially those with similar values and mission-alignment. Doing both will increase your [luck surface area](https://www.codusoperandi.com/posts/increasing-your-luck-surface-area) and opportunities will come your way more often. Luck is where preparation meets opportunity, but you can actually increase opportunities!
 
 ### Working with Others
 
@@ -107,20 +115,27 @@ to be particularly useful.
 * Know your employer's business model.
     * Examples:
         * HP = selling ink;
-        * Microsoft = selling Office and Windows;
-        * Apple = iPod and (to some extent) Macs
+        * [Microsoft] = selling Office, Windows, and cloud services;
+        * Apple = <s>iPods</s> iPhones and (to some extent) Macs
+        * Facebook, Google = selling ads
     * Take a look at the annual reports for your company.
-* **Get *internships*, even if with competitors, maybe even delaying graduation.**
+* **Get *internships*, even if with competitors, maybe even delaying graduation.**[^2021-internships]
     * It gives experience.
     * Increases employment opportunities.
-* Start looking and prepare much earlier.
+* Start looking and prepare much earlier.[^2021-prepare-early]
+
+[Microsoft]: https://www.investopedia.com/how-microsoft-makes-money-4798809
+[^2021-internships]: While in college I interned at several smallish companies (plus Google) and I can attest that my experiences there, in environments of different sizes, helped me learn what kind of work environment I was most interested in aiming for.
+[^2021-prepare-early]: One of the most valuable classes I took in college assigned me the task of creating an online portfolo website. Although the [initial version](/prism/projects/) of that (and this) site was a bit rough, later editions were quite helpful in landing positions. In particular it helped get the attention of my cofounder at [TechSmart](https://www.techsmart.codes/). ✨
 
 ### Successful Employment
 
 * If you want to make a difference, look for chaos.  
-  Stable environments offer little opportunity.
+  Stable environments offer little opportunity.[^2021-google-stagnation]
 * Good employees *deal* with challenges instead of pouting. *Adapt*.
 * Stay above the commodity line (with regard to skill set and type of work done).
+
+[^2021-google-stagnation]: Google has the best actual onsite benefits of any company I've ever seen. (I worked there a while back in 2007.) But this cushiness means the engineers there don't have the same incentives to be cutting edge. Multiple high-profile engineers, notably [Steve Yegge](https://medium.com/@steve.yegge/why-i-left-google-to-join-grab-86dfffc0be84) and [Waze's CEO Noam Bardin](https://paygo.media/p/25171), have written about why they eventually had to leave Google in order to make better headway in [making a difference in the world](/articles/2013/01/08/programming-is-fun-but-what-matters-is-solving-a-real-problem/). All of that said, Google is still *very* cushy and I don't think any less of those who choose to work there.
 
 ### Life
 
@@ -135,3 +150,10 @@ to be particularly useful.
 * Life is one great balancing act.
     * There's no single right way of doing things.
     * Balancing your priorities and goals is important.
+
+## *Related Articles*
+
+* [Skills I Learned at Microsoft](/articles/2013/08/03/skills-i-learned-at-microsoft/)
+* [Skills I Learned at Splunk](/articles/2013/08/04/skills-i-am-learning-at-splunk/)
+* <span style="color: lightgray;">Skills I'm Learning at TechSmart</span> - A future article. 🙂
+* [Programming is Fun. But What Matters is Solving a Real Problem.](/articles/2013/01/08/programming-is-fun-but-what-matters-is-solving-a-real-problem/)
