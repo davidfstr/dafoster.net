@@ -27,9 +27,6 @@ My [articles] may also be of interest.
         <a href="{{ project_url }}"><img src="{{ project_url }}{% if cur_page.logo_filename %}{{ cur_page.logo_filename }}{% else %}logo-128.png{% endif %}" alt="Logo for {{ project_title }}" /></a>
         <div>
           <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
-            {% if cur_page.featured %}
-              {% include featured_project_star %}
-            {% endif %}
           </h2>
           <p>
             {{ project_summary }}
@@ -49,9 +46,6 @@ My [articles] may also be of interest.
         <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
         {% if post.date_updated %}
           <span title="Updated {{ post.date_updated | usa_date_to_string }}" style="cursor: help;">✚</span>
-        {% endif %}
-        {% if post.featured %}
-          {% include featured_article_star %}
         {% endif %}
       </li>
     {% endif %}
