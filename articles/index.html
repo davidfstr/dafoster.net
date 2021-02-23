@@ -13,19 +13,8 @@ breadcrumbs: [/]
       </a>
     </h1>
     
-    <ul class="x-posts">
-      {% for post in site.posts %}
-        <li>
-          <span>{{ post.date | usa_date_to_string }}</span> &raquo; <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-          {% if post.date_updated %}
-            <span title="Updated {{ post.date_updated | usa_date_to_string }}" style="cursor: help;">✚</span>
-          {% endif %}
-          {% if post.featured %}
-            {% include featured_article_star %}
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ul>
+    {% assign posts = site.posts %}
+    {% include post_list %}
   </div>
   
   <div class="col-md-3 block-bar">

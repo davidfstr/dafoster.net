@@ -26,6 +26,17 @@ module Jekyll
     def projects_by_date(site_pages)
       site_pages.select{|p| p.data["layout"] == "project"}.sort_by{|p| p.data["started_on"]}.reverse
     end
+    
+    def posts_by_date_and_updated_date(site_posts)
+      created_posts = site_posts.map do |p|
+        { "type" => "created", "date" => p.date, "post" => p }
+      end
+      updated_posts = site_posts.select{|p| p.data["date_updated"] != nil}.map do |p|
+        { "type" => "updated", "date" => p.data["date_updated"].to_time, "post" => p }
+      end
+      mixed_posts = (created_posts + updated_posts).sort_by{|mp| mp["date"]}
+      return mixed_posts.reverse
+    end
   end
 end
 

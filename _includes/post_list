@@ -1,0 +1,27 @@
+<ul class="x-posts">
+  {% assign mixed_posts = posts | posts_by_date_and_updated_date %}
+  {% for mixed_post in mixed_posts %}
+    {% assign post = mixed_post.post %}
+    {% if mixed_post.type == "created" %}
+      <li>
+        <span>{{ post.date | usa_date_to_string }}</span> &raquo;
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        {% if post.date_updated %}
+          <span title="Updated {{ post.date_updated | usa_date_to_string }}" style="cursor: help;">✚</span>
+        {% endif %}
+        {% if post.featured %}
+          {% include featured_article_star %}
+        {% endif %}
+      </li>
+    {% elsif mixed_post.type == "updated" %}
+      <li>
+        <span>{{ post.date_updated | usa_date_to_string }}</span> &raquo;
+        <span title="Updated. Created {{ post.date | usa_date_to_string }}." style="cursor: help;">✚</span> → 
+        <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+        {% if post.featured %}
+          {% include featured_article_star %}
+        {% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
