@@ -6,15 +6,21 @@ x_date_written: 2008-04-30
 date_updated: 2021-02-23
 featured: true
 
+style: |
+    /* Override blockquote to use same font size as body text */
+    blockquote { font-size: 16px !important; }
+
 ---
 
-In April 2008, a representative from IBM gave a presentation at Georgia
-Tech about things he wished he knew before working in the the software
-industry. I have found his advice to be very useful at various points during
-my career. Sadly I have lost the presenter's name.
+A representative from IBM came to visit me in college several years
+ago<!-- in April 2008 --> when I was a student and talked about several things 
+he wished he knew before working in the software industry.[^anonymous]
+I've found his advice to be very useful at various points during my career.
+And would like to share it again with you now, in outline form:
 
-Here is my outline of his presentation, updated for 2021.
-**Emphasized** points are ones I've found to be particularly useful.
+[^anonymous]: Sadly I have lost the name of the presenter from IBM who gave this talk originally.
+
+> Note: **Bolded** points I've found to be especially useful.
 
 ### Technology
 
