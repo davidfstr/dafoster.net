@@ -18,7 +18,7 @@ style: |
   <div class="col-md-9">
     <h1>
       {{ page.title }}
-      <a class="subscribe" href="{{ site.production_url | replace: 'http://', 'feed://'}}/atom.xml">
+      <a class="subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}/atom.xml">
         <img src="/assets/feed-icon-20x20.png" width="20" height="20" alt="Subscribe" title="Subscribe"/>
       </a>
     </h1>
@@ -26,7 +26,14 @@ style: |
     {% assign sorted_tags = site.tags | tags_names_by_popularity %}
     {% for tag_name in sorted_tags %}
       {% assign tag_posts = site.tags[tag_name] %}
-      <h2 id="{{ tag_name }}">{{ tag_name }} <sup>{{ tag_posts.size }}</sup></h2>
+      <h2 id="{{ tag_name }}">
+        {{ tag_name }} <sup>{{ tag_posts.size }}</sup>
+        {% for feed_page in site.pages %}{% if feed_page.layout == "feed" and feed_page.feed_tag == tag_name %}
+        <a class="subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}{{ feed_page.url }}">
+          <img src="/assets/feed-icon-20x20.png" width="20" height="20" alt="Subscribe to {{ tag_name }}" title="Subscribe to {{ tag_name }}"/>
+        </a>
+        {% endif %}{% endfor %}
+      </h2>
       {% assign posts = tag_posts %}
       {% include post_list %}
     {% endfor %}

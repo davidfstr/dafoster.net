@@ -1,0 +1,36 @@
+---
+layout: nil
+title: Atom Feed
+#feed_tag: "__abstract__"
+---
+{% assign feed_tag = page.feed_tag %}<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>{{ site.title }}{% if feed_tag != "" %} ({{ feed_tag }}){% endif %}</title>
+ <link href="{{ site.production_url }}{% if feed_tag != "" %}/articles/topics/#{{ feed_tag }}{% else %}/{% endif %}"/>
+ <link href="{{ site.production_url }}{% if feed_tag != "" %}/articles/topics/{{ feed_tag }}.xml{% else %}/atom.xml{% endif %}" rel="self"/>
+ <updated>{{ site.time | date_to_xmlschema }}</updated>
+ <id>{{ site.production_url }}{% if feed_tag != "" %}/articles/topics/#{{ feed_tag }}{% endif %}</id>
+ <author>
+   <name>{{ site.author.name }}</name>
+   {% if site.author.email %}<email>{{ site.author.email }}</email>{% endif %}
+ </author>
+ <icon>{{ site.production_url }}/favicon.ico</icon>
+ <logo>{{ site.production_url }}/favicon.ico</logo>
+
+ {% for post in site.posts %}{% if feed_tag == "" or post.tags contains feed_tag %}
+ {% capture post_absolute_url %}{{ site.production_url }}{{ post.url }}?utm_source=atom&utm_medium=feed&utm_campaign=feed{% endcapture %}
+ <entry>
+   <id>{{ site.production_url }}{{ post.id }}</id>
+   <title>{{ post.title | xml_escape }}</title>
+   <published>{{ post.date | date_to_xmlschema }}</published>
+   <updated>{% if post.date_updated %}{{ post.date_updated | date_to_time | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</updated>
+   {% for tag in post.tags %}
+     <category term="{{ tag }}"/>
+   {% endfor %}
+   <link rel="alternate" href="{{ post_absolute_url | xml_escape }}"/>
+   <content type="html">{% if post.feed_content %}{{ post.feed_content | markdownify | xml_escape }}{% else %}{{ post.content | xml_escape }}{% endif %}</content>
+ </entry>
+ {% endif %}{% endfor %}
+ 
+</feed>
