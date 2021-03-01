@@ -21,10 +21,14 @@ desc "Compile entire site to _site in production mode"
 task :dist do
   abort unless system "python _plugins/checkdates.py"
   
+  # Compile site
   # NOTE: Production mode is signified by site.develop=false
   system "jekyll build --config _config.yml"
   system "python _plugins/prism.py"
+  
+  # Apply post-compile modifications
   system "touch _site/.nojekyll"
+  system "rm _site/project.sublime-workspace"
 end
 
 # Deployment performance should be O(n + m), where:
