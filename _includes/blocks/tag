@@ -1,1 +1,7 @@
-<span><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">{{ tag }}<sup>{{ site.tags[tag].size }}</sup></a></span>
+<span class="tag"><a class="tag__pill" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}">
+  {{ tag }}<sup>{{ site.tags[tag].size }}</sup>
+</a>{% for feed_page in site.pages %}{% if feed_page.layout == "feed" and feed_page.feed_tag == tag %}
+<a class="tag__subscribe subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}{{ feed_page.url }}">
+  <img src="/assets/feed-icon-14x14.png" width="14" height="14" alt="Subscribe to {{ tag }}" title="Subscribe to {{ tag }}"/>
+</a>
+{% endif %}{% endfor %}</span>

@@ -4,8 +4,6 @@
   <ul class="tag_box">
     {% assign sorted_tags = site.tags | tags_names_by_popularity %}
     {% for tag_name in sorted_tags %}
-      {% assign tag_size = site.tags[tag_name].size %}
-      
       {% assign page_has_tag = false %}
       {% for page_tag in page.tags %}
         {% if page_tag == tag_name %}
@@ -13,7 +11,9 @@
         {% endif %}
       {% endfor %}
       
-      <li id="{{ tag_name }}-topic"{% if page_has_tag %} class="active"{% endif %}><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag_name }}">{{ tag_name }} <sup>{{ tag_size }}</sup></a></li>
+      <li id="{{ tag_name }}-topic"{% if page_has_tag %} class="active"{% endif %}>
+        {% assign tag = tag_name %}{% include blocks/tag %}
+      </li>
     {% endfor %}
   </ul>
   <hr style="margin: .5em 0;"/>

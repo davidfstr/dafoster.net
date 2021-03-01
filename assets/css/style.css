@@ -26,13 +26,13 @@ html { overflow-y: scroll }
 }
 
 /* Subscribe link in Topics block */
-.block .subscribe {
+.block > .subscribe {
   display: block;
 }
-.block .subscribe-last {
+.block > .subscribe-last {
   margin-bottom: -5px;
 }
-.block .subscribe img {
+.block > .subscribe img {
   margin-right: .4em;
   vertical-align: text-top;
 }
@@ -154,7 +154,7 @@ a.external {
  * (Supported on About and Articles (By Topic) pages.)
  */
 h2.active,
-.tag_box .active a {
+.tag_box .active a.tag__pill {
   background-color: #85e01b; /* bright green */
 }
 
@@ -437,7 +437,7 @@ a.btn-success {
     float: unset;
   }
 }
-.tag_box a {
+.tag_box a.tag__pill {
 	padding: 3px 6px;
 	margin: 2px;
 	background: #eee;
