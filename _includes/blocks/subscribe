@@ -1,4 +1,4 @@
-<div class="block">
+<div id="subscribe-block" class="block">
   <div class="subscribe__prompt">Did you enjoy this article?</div>
   {% include blocks/subscribe_links %}
 </div>

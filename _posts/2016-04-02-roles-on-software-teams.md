@@ -2,7 +2,6 @@
 layout: post
 title: Roles on Software Teams
 tags: [Software, Business]
-featured: true
 
 ---
 
