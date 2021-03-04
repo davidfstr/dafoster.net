@@ -503,13 +503,13 @@ When using a separate frontend server for Vue and a separate backend server for 
 Hopefully this guide has been useful in helping you setup Vue inside your new or existing Django web app. Happy coding!
 
 
-## *Related Articles*
+### *Related Articles*
 
 * [Database clamps](/articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/) - Writing deterministic performance tests for database-dependent code in Django
 * [Tests as Policy Automation](/articles/2021/02/02/tests-as-policy-automation/) - Has ideas for creatively using automated tests to enforce various (non-functional) properties in your Django web app.
 * Other {% assign tag = 'Django' %}{% include blocks/tag_single %} articles
 
 
-## *Related Projects*
+### *Related Projects*
 
 * [TechSmart Platform](/projects/techsmart-platform) - Large web app that I work on that uses Django and Vue. (Sorry it’s closed-source!)
