@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Database clamps: Deterministic performance tests for database-dependent code"
+title_long: true
 tags: [Django, Software]
 x_audience: |
     Django users who write automated tests;

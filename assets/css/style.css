@@ -71,7 +71,7 @@ html { overflow-y: scroll }
 /* Articles */
 
 /* Move the margin under the first h1 to below the .post_metadata */
-.post h1:first-child {
+.post-title {
   /* -0.2em looks good if there are no descenders */
   margin-bottom: 0em;
 }
@@ -81,8 +81,13 @@ html { overflow-y: scroll }
 }
 
 /* Decrease line spacing for titles that wrap */
-.post h1:first-child {
+.post-title {
   line-height: 1.2em;
+}
+
+/* Decrease title size more aggressively on mobile if marked as long */
+@media (max-width: 576px) {
+    .post-title.post-title--long { font-size: 24px; }
 }
 
 .subscribe__prompt {

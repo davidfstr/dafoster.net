@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Real-time updates in Django with WebSockets, Channels, and pub-sub
+title_long: true
 tags: [Django, Software]
 featured: true
 x_audience: |

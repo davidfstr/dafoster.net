@@ -6,7 +6,7 @@ full_width: false  # no longer used in post layout
 ---
 <div class="row">
   <div class="col-md-12 content post">
-    <h1>{{ page.title }}</h1>
+    <h1 class="post-title{% if page.title_long %} post-title--long{% endif %}">{{ page.title }}</h1>
     <div class="post-metadata">
       {% if page.date_updated %}
         <span title="Created {{ page.date | usa_date_to_string }}" style="cursor: help;">Updated {{ page.date_updated | usa_date_to_string }}</span>

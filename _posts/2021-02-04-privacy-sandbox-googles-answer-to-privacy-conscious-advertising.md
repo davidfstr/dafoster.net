@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Privacy Sandbox: Google's answer to privacy-conscious advertising"
+title_long: true
 tags: [Privacy]
 x_audience: |
     technologists who care about privacy and use Google products
