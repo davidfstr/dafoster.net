@@ -12,7 +12,7 @@ full_width: false  # no longer used in post layout
         <span title="Created {{ page.date | usa_date_to_string }}" style="cursor: help;">Updated {{ page.date_updated | usa_date_to_string }}</span>
       {% else %}
         {{ page.date | usa_date_to_string }}
-      {% endif %} &ndash; Filed under: 
+      {% endif %} &ndash; Filed as: 
       <span class="tag_box tag_box--inline">
         {% assign tags_list = page.tags %}
         {% for tag in tags_list %}
