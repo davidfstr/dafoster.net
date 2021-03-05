@@ -30,13 +30,16 @@ I specifically engineer the [TechSmart Platform] website.
 
 My open source contributions that are probably the most well-known include:
 
-* maintaining [RDiscount], Ruby bindings to the Discount Markdown implementation;
-* [TypedDict's initial implementation] and other typechecking extensions in Python & mypy;
+* [TypedDict's initial implementation] and other [typechecking][] [extensions] in Python & [mypy];
 * [SSA subtitle support in HandBrake]; and
+* maintaining [RDiscount], Ruby bindings to the Discount Markdown implementation;
 * enhancements to [Django].
 
 [RDiscount]: /projects/rdiscount/
 [TypedDict's initial implementation]: /projects/typeddict/
+[typechecking]: https://www.python.org/dev/peps/pep-0655/
+[extensions]: https://github.com/python/mypy/issues/9773
+[mypy]: http://mypy-lang.org/index.html
 [SSA subtitle support in HandBrake]: /projects/handbrake-subtitle-support/
 [Django]: https://www.djangoproject.com/
 
