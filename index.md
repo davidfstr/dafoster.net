@@ -16,7 +16,7 @@ style: |
 
 <h1>DaFoster</h1>
 
-My name is [David Foster]. Check out the cool [software I've written].
+My name is [David Foster]. Check out the cool [software I've written]!
 
 My [articles] may also be of interest:
 
