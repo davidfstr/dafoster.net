@@ -38,7 +38,7 @@ My open source contributions that are probably the most well-known include:
 [RDiscount]: /projects/rdiscount/
 [TypedDict's initial implementation]: /projects/typeddict/
 [typechecking]: https://www.python.org/dev/peps/pep-0655/
-[extensions]: https://github.com/python/mypy/issues/9773
+[extensions]: /projects/typeform/
 [mypy]: http://mypy-lang.org/index.html
 [SSA subtitle support in HandBrake]: /projects/handbrake-subtitle-support/
 [Django]: https://www.djangoproject.com/
