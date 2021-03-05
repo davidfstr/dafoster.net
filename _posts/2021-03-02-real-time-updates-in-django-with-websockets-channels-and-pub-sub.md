@@ -25,7 +25,7 @@ script: |
 ---
 It's easy to build a simple chat server in Channels with real-time updates[^channels-chat-tutorial] but it's a bit more complicated to design a system for a more realistic (and complex) data model that has real-time updates. Here, I will show a **publish-subscribe** (or **“pub-sub”**) **pattern** using WebSockets and Channels that can be used by your frontend to watch elements of your backend data model for updates in real-time.
 
-[^channels-chat-tutorial]: The [official Channels tutorial](https://channels.readthedocs.io/en/latest/tutorial/) has a nice example of building a chat server. (Although since I wrote it I may be biased. 😉)
+[^channels-chat-tutorial]: The [official Channels tutorial](https://channels.readthedocs.io/en/latest/tutorial/) has a nice example of building a chat server.
 
 {% capture toc_content %}
 
