@@ -16,11 +16,11 @@ style: |
     blockquote { font-size: 16px !important; }
 
 script: |
-    /*public*/ function scrollToSubscribeBlock() {
-        var subscribeBlock = document.querySelector('#subscribe-block');
-        subscribeBlock.querySelector('.subscribe__prompt').style['backgroundColor'] = '#ffff0070';
-        subscribeBlock.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }
+    ///*public*/ function scrollToSubscribeBlock() {
+    //    var subscribeBlock = document.querySelector('#subscribe-block');
+    //    subscribeBlock.querySelector('.subscribe__prompt').style['backgroundColor'] = '#ffff0070';
+    //    subscribeBlock.scrollIntoView({behavior: 'smooth', block: 'start'});
+    //}
 
 ---
 It's easy to build a simple chat server in Channels with real-time updates[^channels-chat-tutorial] but it's a bit more complicated to design a system for a more realistic (and complex) data model that has real-time updates. Here, I will show a **publish-subscribe** (or **“pub-sub”**) **pattern** using WebSockets and Channels that can be used by your frontend to watch elements of your backend data model for updates in real-time.
@@ -576,7 +576,9 @@ The above implementation does not handle a particular race condition that can oc
 
 By the end of this story Alice has posted three messages to the chat room but Bob only sees the first and third message that Alice posted. Bob missed the second message because it was fired in between when Bob started and finished loading the Chat Room Page.
 
-How can we avoid losing events like this? <a href="javascript:scrollToSubscribeBlock();">Join me next week</a> as I sketch some solutions to this tricky scenario.
+How can we avoid losing events like this? [Join me next week] as I sketch some solutions to this tricky scenario.
+
+[Join me next week]: /articles/2021/03/09/reliable-rendering-of-web-pages-that-view-concurrently-modified-data/
 
 Happy coding!
 
