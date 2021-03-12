@@ -1,6 +1,6 @@
 <p class="x-and-more-projects">And more at:</p>
 <ul>
-  <li><a href="https://github.com/davidfstr?tab=repositories" class="external">GitHub</a></li>
+  <li><a href="https://github.com/davidfstr?tab=repositories&type=source" class="external">GitHub</a></li>
   <li><a href="/prism/projects/" class="external">Historical Projects (2010 and older)</a></li>
   <li><a href="/apps/">Web Apps</a></li>
 </ul>
