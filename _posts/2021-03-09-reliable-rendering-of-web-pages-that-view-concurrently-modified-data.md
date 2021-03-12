@@ -85,7 +85,7 @@ However removing backend templating entirely will cause the initial page load to
 
 I find such a user experience to be unacceptable. So we're back to the more complex design with both backend templating and real-time updates...
 
-## Implementation
+## Implementation <small>(using Django)</small>
 
 Let's actually sketch our design for reliable rendering in code!
 
@@ -145,7 +145,7 @@ def user_home_page(request: HttpRequest) -> HttpResponse:
     chat_room_list = calculate_chat_room_list(request.user)  # capture
     
     return render(request, 'chat/user_home_page.html', dict(
-        user_id=request.user.id,
+        user_id=str(request.user.id),
         last_updated=last_updated,
         chat_room_list=chat_room_list,
     ))
