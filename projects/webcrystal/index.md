@@ -1,5 +1,6 @@
 ---
-layout: project
+# Using "page" layout instead of "project" to omit from projects list
+layout: page
 title: webcrystal
 summary: >
     An archiving HTTP proxy and on-disk archival format for websites.
