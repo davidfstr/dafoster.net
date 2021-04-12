@@ -4,6 +4,8 @@
 <a class="subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}/atom.xml">
   <img src="/assets/feed-icon-14x14.png" alt="" width="14" height="14" />Subscribe (RSS)
 </a>
+{% comment %}
 <span class="subscribe subscribe-last subscribe__frequency">
-  <i>Updated articles every week!</i>
+  <i>Updated articles every TBD!</i>
 </span>
+{% endcomment %}
