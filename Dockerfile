@@ -32,8 +32,12 @@ RUN apt-add-repository -y ppa:rael-gc/rvm && \
         apt-get install rvm -y
 
 # Install Ruby
-RUN rvm install "ruby-2.0.0-p648" && \
-    rvm use ruby-2.0.0-p648@website --create
+# NOTE: Ruby 2.0 does fail to install Bundler due to an SSL error
+# NOTE: Ruby 2.2 and 2.3 does fail to run preview server:
+#       commander/runner.rb:385:in `block in require_program': program version required (Commander::Runner::CommandError)
+# NOTE: Ruby 2.4 does fail to install yajl-ruby
+RUN rvm install "ruby-2.1" && \
+    rvm use ruby-2.1@website --create
 
 # Install Bundler
 RUN gem install bundler:1.17.3  # last bundler that allows ruby < 2.3.0
