@@ -48,8 +48,10 @@ task :deploy do
   end
   
   if preview_server_running
-    if system "pidof jekyll -s > /dev/null"
+    jekyll_pid_str = `pgrep -f "^ruby /usr/share/rvm/gems/ruby-.*/bin/jekyll serve"`.strip    
+    if jekyll_pid_str != ""
       # Did find preview server
+      jekyll_pid = Integer(jekyll_pid_str)
     else
       # Preview server is running but was not found
       puts "*** It looks like a preview server is running,"
@@ -63,7 +65,7 @@ task :deploy do
     # Pause the preview server
     # (If such a server is running in "auto" mode, it will mess around with
     #  the _site directory while this script is operating on it.)
-    system "kill -s STOP $(pidof jekyll -s)"
+    system "kill -s STOP #{jekyll_pid}"
   end
   begin
     # Download latest version of production, if not already done
@@ -113,7 +115,7 @@ task :deploy do
   ensure
     if preview_server_running
       # Resume the preview server
-      system "kill -s CONT $(pidof jekyll -s)"
+      system "kill -s CONT #{jekyll_pid}"
     end
   end
 end
