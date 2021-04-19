@@ -29,14 +29,15 @@ script: |
 
 [Crystal]: /projects/crystal-web-archiver/
 
-* [Download Crystal for Windows 7, 8, and 10](https://github.com/davidfstr/Crystal-Web-Archiver/releases/download/v1.1.1b/crystal-win-1.1.1b.exe)
-* [Download Crystal for macOS 10.14 and later](https://github.com/davidfstr/Crystal-Web-Archiver/releases/download/v1.1.1b/crystal-mac-1.1.1b.dmg)
+* [Download Crystal for Windows 7, 8, and 10](https://github.com/davidfstr/Crystal-Web-Archiver/releases/download/v1.2.0b/crystal-win-1.2.0b.exe)
+* [Download Crystal for macOS 10.14 and later](https://github.com/davidfstr/Crystal-Web-Archiver/releases/download/v1.2.0b/crystal-mac-1.2.0b.dmg)
     * You will need to [right-click or Control-click on the application 
       and select "Open" to open it for the first time](https://github.com/davidfstr/Crystal-Web-Archiver/issues/20).
 * [Quickstart guide](https://github.com/davidfstr/Crystal-Web-Archiver#quickstart-) for downloading your first website
 
-> **Update:** These download links have been updated to point to the 1.1.1b release,
-> which has a number of fixes related to first-time-launch issues.
+> **Update:** These download links have been updated to point to the 1.2.0b release,
+> which has a number of fixes related to first-time-launch issues and improvements for downloading
+> large websites (with 10,000+ URLs).
 
 Many new types of sites can be successfully downloaded with this release of Crystal, including DeviantArt portfolio websites at `*.daportfolio.com` (which are scheduled to fall off the internet in about a week after this post), [Otaku World](http://otakuworld.com/), and [16Personalities](https://www.16personalities.com/). <!-- Some others sites of interest like [bongo.cat](https://bongo.cat/) and the [Calm Blog](https://blog.calm.com/) require additional work. -->
 
