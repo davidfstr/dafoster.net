@@ -32,11 +32,11 @@ permalink: /articles/:categories/:year/:month/:day/:title/
 
 # Don't publish these files to the web.
 exclude:
-    # Not used by the site.
-    - "README.md"
-    - "Rakefile"
-    # Processed by a separate tool.
-    - "prism"
+  # Not used by the site.
+  - "README.md"
+  - "Rakefile"
+  # Processed by a separate tool.
+  - "prism"
 
 # Select and configure the Markdown engine. Not all are created equal.
 # 
@@ -71,6 +71,9 @@ excerpt_separator: ""
 
 # Whether the site is in development mode
 develop: false
+
+# Allow access of local server from outside Docker container
+host: 0.0.0.0
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 JB:
