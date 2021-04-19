@@ -13,3 +13,6 @@ Thumbs.db
 
 # Sublime Text
 *.sublime-workspace
+
+# Jekyll
+.jekyll-metadata

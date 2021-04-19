@@ -75,6 +75,9 @@ develop: false
 # Allow access of local server from outside Docker container
 host: 0.0.0.0
 
+# Enable incremental rebuilds of sites. Experimental as of 2021-04-19.
+incremental: true
+
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 JB:
   version: 0.2.13
