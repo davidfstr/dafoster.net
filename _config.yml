@@ -63,7 +63,7 @@ rdiscount:
 #   puts 'foo'
 # end
 # {% endhighlight %}
-pygments: true
+highlighter: pygments
 
 # Disable automatic excerpts introduced in Jekyll 1.x.
 # These conflict with posts that start immediately with {% capture %} blocks.
