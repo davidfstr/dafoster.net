@@ -32,8 +32,8 @@ RUN apt-add-repository -y ppa:rael-gc/rvm && \
         apt-get install rvm -y
 
 # Install Ruby
-RUN rvm install "ruby-2.4" && \
-    rvm use ruby-2.4@website --create
+RUN rvm install "ruby-2.6" && \
+    rvm use ruby-2.6@website --create
 
 # Install Bundler
 RUN gem install bundler:1.17.3  # last bundler that allows ruby < 2.3.0
