@@ -14,7 +14,7 @@ I spend a lot of time as a professional coder working on very large programs, at
 
 A large program has a lot of behavior to specify. The complexity of the behavior specified by a program is roughly proportional to its size.[^squared]
 
-![Lines](/assets/2017/abstraction-and-encapsulation/1-lines.png)
+![Lines](/assets/2017/abstraction-and-encapsulation/1-lines.svg)
 
 However a coder, being only human, can only hold a fixed amount of **concepts** in their head at once.
 
@@ -25,7 +25,7 @@ However a coder, being only human, can only hold a fixed amount of **concepts** 
 The number of concepts can be reduced by **chunking** them into larger concepts that are less numerous. For example a bundle of *lines* can be chunked into a single *function* or a *method*.
 
 {% assign alt = "Functions" %}
-{% assign src = "/assets/2017/abstraction-and-encapsulation/2-functions.png" %}
+{% assign src = "/assets/2017/abstraction-and-encapsulation/2-functions.svg" %}
 {% include wide_image %}
 
 Chunking allows you to reduce the total number of concepts that you need to keep in your head at once.
@@ -56,7 +56,7 @@ A larger unit that is created by bundling smaller units is called an **abstracti
 
 For a *function* unit, it has a function name, some number of *parameters* and a *return value* which serves as the public surface area, and a body of code lines which serve as the private interior.
 
-![Anatomy of a Function](/assets/2017/abstraction-and-encapsulation/3-func_anatomy.png)
+![Anatomy of a Function](/assets/2017/abstraction-and-encapsulation/3-func_anatomy.svg)
 
 ### Encapsulation
 
@@ -66,7 +66,7 @@ A well-designed abstraction thus strives to **minimize its public surface area**
 
 As an example of minimizing public surface area, let's consider the example of a larger kind of unit, a *class*:
 
-![Anatomy of a Class](/assets/2017/abstraction-and-encapsulation/4-class_anatomy.png)
+![Anatomy of a Class](/assets/2017/abstraction-and-encapsulation/4-class_anatomy.svg)
 
 By extension of the principle above, **everything should be private by default**; only those methods that need to be public (because they are used externally) should be made public.
 
@@ -74,7 +74,7 @@ If a method on a class is declared public when it is only used internally, you c
 
 The same principle applies yet again to *modules*, a larger kind of unit:
 
-![Anatomy of a Module](/assets/2017/abstraction-and-encapsulation/5-module_anatomy.png)
+![Anatomy of a Module](/assets/2017/abstraction-and-encapsulation/5-module_anatomy.svg)
 
 Again, everything should be private by default.
 
