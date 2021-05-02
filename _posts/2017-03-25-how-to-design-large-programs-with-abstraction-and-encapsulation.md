@@ -62,7 +62,9 @@ For a *function* unit, it has a function name, some number of *parameters* and a
 
 An abstraction reduces global complexity by hiding (or **encapsulating**) its large private interior, exposing only the smaller public surface area to the rest of the system. One only needs to understand the smaller public surface area when using the function and not the details of the private interior.
 
-A well-designed abstraction thus strives to **minimize its public surface area** while maximizing its private interior. Such an abstraction takes up only small mental space relative to its interior complexity.
+A well-designed abstraction thus strives to **minimize its public surface area** while maximizing its private interior.[^deep-modules] Such an abstraction takes up only small mental space relative to its interior complexity.
+
+[^deep-modules]: [A Philosophy of Software Design](https://www.amazon.com/Philosophy-Software-Design-John-Ousterhout/dp/1732102201/) makes the same recommendation under the guidance "Modules should be deep", where a "deep module" is an abstraction whose public surface area is small compared to the volume of its private interior.
 
 As an example of minimizing public surface area, let's consider the example of a larger kind of unit, a *class*:
 
