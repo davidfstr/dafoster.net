@@ -7,10 +7,6 @@ x_date_written: 2008-04-30
 date_updated: 2021-02-23
 featured: true
 
-style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-
 ---
 
 A representative from IBM came to visit me in college several years

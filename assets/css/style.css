@@ -244,6 +244,9 @@ blockquote p {
   margin-bottom: 0.7em;
 }
 
+/* Fix blockquote to use same font size as body text */
+blockquote { font-size: 16px; }
+
 /* ========================================================================== */
 /* Footer */
 

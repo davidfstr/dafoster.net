@@ -11,9 +11,6 @@ x_performance: |
     TODO
 
 style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-    
     .sequence-diagram-h {
         max-width: 100%;
         max-height: 250px;

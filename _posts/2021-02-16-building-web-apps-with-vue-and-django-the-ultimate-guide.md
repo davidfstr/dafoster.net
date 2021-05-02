@@ -25,9 +25,6 @@ x_performance: |
                ↑ HN (almost no traction)
 
 style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-    
     .toc-floating {
         float: right;
         margin-left: 1em;

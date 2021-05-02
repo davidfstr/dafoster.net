@@ -3,10 +3,6 @@ layout: post
 title: How to implement a large software feature
 tags: [Software]
 
-style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-
 ---
 
 I just started implementing my first big new software feature since the start of the New Year. I thought I'd outline my process since I don't think I've written it down before.

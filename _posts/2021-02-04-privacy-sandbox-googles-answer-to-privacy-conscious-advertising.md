@@ -11,10 +11,6 @@ x_performance: |
     30 hits on week 1 of publish, with daily numbers of:
         24, 3, 1, 1, 0, 1, 0
 
-style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-
 ---
 
 Google is working on a new technology called [Privacy Sandbox] to replace the

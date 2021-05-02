@@ -10,10 +10,6 @@ x_audience: |
 x_performance: |
     TODO
 
-style: |
-    /* Override blockquote to use same font size as body text */
-    blockquote { font-size: 16px !important; }
-
 script: |
     /*public*/ function scrollToSubscribeBlock() {
         var subscribeBlock = document.querySelector('#subscribe-block');
