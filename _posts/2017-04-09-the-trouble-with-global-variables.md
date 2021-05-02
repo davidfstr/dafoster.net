@@ -26,7 +26,7 @@ Globals are tempting to use when there are a large number of related functions t
 
 For example consider a parser that has a root `parse_calendar_file` function that calls a tree of subordinate functions to parse data from a YAML document into domain objects. Any of these subordinate functions may emit warnings.
 
-![](/assets/2017/the-trouble-with-global-variables/parse_calendar_file.png)
+![](/assets/2017/the-trouble-with-global-variables/parse_calendar_file.svg)
 
 ## Why are globals problematic?
 
@@ -48,7 +48,7 @@ In fact to see whether a function depends on a global you *must* crack it open a
 
 In the parsing example above consider what would happen if you were to invoke a subordinate parsing function like `parse_bell_schedule` directly, without going through the root function that initializes the `warnings` global. Since the call tree of the subordinate function eventually reaches `warn`, which expects `warnings` to be initialized, calling the subordinate function directly will crash!
   
-![](/assets/2017/the-trouble-with-global-variables/write_crashes.png)
+![](/assets/2017/the-trouble-with-global-variables/write_crashes.svg)
   
 It is not possible to read only the implementation of the subordinate function `parse_bell_schedule` to discern that it depends on the `warnings` global: you have to read the implementation of *every* function that it calls, directly or indirectly, to see whether it uses the global! This is a massive encapsulation violation of the entire call tree that leads to the global! Every function in the call tree becomes easy to misuse.
 
@@ -77,7 +77,7 @@ This approach provides no encapsulation around the shared variable and doesn't a
 
 For our parsing example, we'll create a `warnings` parameter on all parsing functions:
 
-![](/assets/2017/the-trouble-with-global-variables/explicit_parameters.png)
+![](/assets/2017/the-trouble-with-global-variables/explicit_parameters.svg)
 
 Our parsing example really wants some encapsulation around the shared `warnings` variable and is likely to want more shared variables later (like `errors`) so the explicit parameter approach is not appropriate here.
 
@@ -90,7 +90,7 @@ A Context Object bundles together a bunch of variables that are shared among a s
 
 For our parsing example, we'll create a `WarningsContext` class which is then passed around among all parsing functions:
   
-![](/assets/2017/the-trouble-with-global-variables/context_object.png)
+![](/assets/2017/the-trouble-with-global-variables/context_object.svg)
 
 It now becomes explicit as to which functions depend on the ability to issue warnings, at the cost of adding noise to the function signatures.
 
@@ -107,7 +107,7 @@ A Method Object is like a Context Object but is even more cohesive: it bundles t
 
 For our parsing example we'll create a `CalendarFileParser` class:
 
-![](/assets/2017/the-trouble-with-global-variables/method_object.png)
+![](/assets/2017/the-trouble-with-global-variables/method_object.svg)
 
 A Method Object is especially useful when there are *many* variables that are used by the same set of cohesive functions and these variables are tightly bound to the functions themselves.
 
