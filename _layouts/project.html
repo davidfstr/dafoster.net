@@ -29,9 +29,12 @@ style0: |
     {% endif %}
   </div>
   
-  {% if page.full_width != true and !redirect_to_url %}
-  <div class="col-md-3 block-bar">
-    {% include blocks/projects %}
-  </div>
+  {% if page.redirect_to_url %}
+  {% else %}
+    {% if page.full_width != true %}
+    <div class="col-md-3 block-bar">
+      {% include blocks/projects %}
+    </div>
+    {% endif %}
   {% endif %}
 </div>
