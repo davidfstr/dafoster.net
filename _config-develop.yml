@@ -1,4 +1,1 @@
 develop: true
-
-# Enable incremental rebuilds of sites. Experimental as of 2021-04-19.
-incremental: true
