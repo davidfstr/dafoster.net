@@ -43,6 +43,11 @@ My open source contributions that are probably the most well-known include:
 [SSA subtitle support in HandBrake]: /projects/handbrake-subtitle-support/
 [Django]: https://www.djangoproject.com/
 
+I was also [interviewed in 2021] which shows what I was thinking about
+at that time.
+
+[interviewed in 2021]: /articles/2021/05/02/interview-with-david-foster/
+
 {% assign hiring = false %}
 {% if hiring %}
 If you like what you've read on my site and like the idea of bringing
