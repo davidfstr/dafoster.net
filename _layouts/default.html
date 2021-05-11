@@ -91,9 +91,9 @@ include_bootstrap_js: true
       [Also useful in general since style tags are only allowed in the head
        element for standards-compliant HTML.]
     {% endcomment %}
-    {% if page.style0 %}
+    {% if layout.style0 %}
       <style>
-        {{ page.style0 }}
+        {{ layout.style0 }}
       </style>
     {% endif %}
     {% if page.style %}
@@ -112,13 +112,13 @@ include_bootstrap_js: true
   -->
     
     <!-- Scripts -->
-  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js %}
+  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js or layout.include_bootstrap_js %}
     <script src="{{ ASSET_PATH }}/js/jquery-1.12.4.min.js"></script>
   {% endif %}
   {% if page.include_jquery_hashchange or page.linkable_headings %}
     <script src="{{ ASSET_PATH }}/js/jquery.ba-hashchange.min.js"></script>
   {% endif %}
-  {% if page.include_bootstrap_js %}
+  {% if page.include_bootstrap_js or layout.include_bootstrap_js %}
     <script src="{{ ASSET_PATH }}/bootstrap-3.4.1/js/bootstrap.min.js"></script>
   {% endif %}
   {% if page.carousels %}
