@@ -3,6 +3,7 @@ layout: post
 title: Performance Testing
 tags: [Software, Django]
 x_target_audience: [Full-Stack Software Engineers]
+date_updated: 2022-02-06
 
 ---
 
@@ -14,6 +15,30 @@ By the end of this article you should understand how we define performance testi
 [^perf-testing]: For the purposes of this article I define performance testing to include **load testing** and **stress testing**.
 
 
+{% capture toc_content %}
+
+* [Theory](#theory)
+* [Gatling Concepts](#gatling-concepts)
+    * [Scenarios and simulations](#scenarios-and-simulations)
+    * [Simulation parameters](#simulation-parameters)
+* [Load generation](#load-generation)
+    * [The "gatling" management command](#the-gatling-management-command)
+    * [The "perftest run" management command](#pt-run)
+    * [Targeting remote environments](#targeting-remote-environments)
+* [Stress testing](#stress-testing)
+    * [The "perftest maxload" management command](#pt-maxload)
+    * [Bottleneck isolation](#bottleneck-isolation)
+    * [Overload behavior](#overload-behavior)
+* [End](#end)
+
+{% endcapture %}
+
+<div class="toc">
+  {{ toc_content | markdownify }}
+</div>
+
+
+<a id="theory"></a>
 ## Theory
 
 Performance testing of a web service typically involves verifying non-functional requirements such as whether it is:
@@ -46,8 +71,10 @@ There are many load generation tools that exist:
 [Gatling]: http://gatling.io
 
 
+<a id="gatling-concepts"></a>
 ## Gatling Concepts
 
+<a id="scenarios-and-simulations"></a>
 ### Scenarios and simulations
 
 A **scenario** describes a pattern of HTTP requests that a single user makes against a web service. For example in the `ViewCodePage` scenario a user performs the {`LoginPage.loginWithoutRedirect`, `CodePage.view`} subscenarios which consist of individual HTTP requests.
@@ -57,6 +84,7 @@ A **simulation** describes an aggregate pattern of HTTP requests that *multiple*
 At TechSmart we have written several simulations that exercise each of the major pages on our platform website.
 
 
+<a id="simulation-parameters"></a>
 ### Simulation parameters
 
 Most simulations written at TechSmart vary their behavior based on *parameters* that are passed in as environment variables. Simulations read these environment variables upon initialization using code like:
@@ -72,8 +100,10 @@ Thus the set of parameters that a particular simulation expects can be deduced b
 Most simulations at TechSmart support X and Y parameters to inject X users over Y seconds during the simulation.
 
 
+<a id="load-generation"></a>
 ## Load generation
 
+<a id="the-gatling-management-command"></a>
 ### The "gatling" management command
 
 The "gatling" management command is a low-level command we've implemented at TechSmart that invokes the Gatling tool, sets up various required paths automatically, and runs a Gatling simulation script.
@@ -81,7 +111,7 @@ The "gatling" management command is a low-level command we've implemented at Tec
 A typical invocation of the "gatling" management command looks like:
 
 ```
-$ X=4 Y=1 pm gatling --simulation tskplatform.LoginAsStudent
+$ X=4 Y=1 pm gatling --simulation tsplatform.LoginAsStudent
 ```
 
 > Note: The `pm` command above is an alias for `python3 manage.py` which is the Django task runner.
@@ -89,7 +119,7 @@ $ X=4 Y=1 pm gatling --simulation tskplatform.LoginAsStudent
 This invocation is equivalent to the more-verbose:
 
 ```
-$ X=4 Y=1 $GATLING_HOME/bin/gatling.sh --simulation tskplatform.LoginAsStudent --simulations-folder $PERFORMANCE_HOME/simulations --data-folder $PERFORMANCE_HOME/data --bodies-folder $PERFORMANCE_HOME/bodies
+$ X=4 Y=1 $GATLING_HOME/bin/gatling.sh --simulation tsplatform.LoginAsStudent --simulations-folder $PERFORMANCE_HOME/simulations --data-folder $PERFORMANCE_HOME/data --bodies-folder $PERFORMANCE_HOME/bodies
 ```
 
 The Gatling tool emits lots of output in the console while it is running and eventually generates an HTML report with detailed statistics about what HTTP requests were made during the simulation, response times for individual and aggregated requests, and other information.
@@ -135,6 +165,7 @@ When 4 user(s) over 1 second(s), max response time for request 'submit_login' is
 
 (We also have a "perftest teardown" command that deletes all test data created by "perftest setup".)
 
+<a id="targeting-remote-environments"></a>
 ### Targeting remote environments
 
 Our simulations are written by default to target the website running on the developer's local machine (127.0.0.1). For real testing you'll want to run tests on a remote version of the website such as the one on a dedicated perf environment (perf.example.com).
@@ -158,7 +189,7 @@ The "on" command sets the `GATLING_BASE_URL` environment variable (among other t
 
 ```
 $ # (Change environment to "perf", defaulting to its database tier, cache tier, etc)
-$ X=4 Y=1 GATLING_BASE_URL=http://perf.example.com pm gatling --simulation tskplatform.LoginAsStudent
+$ X=4 Y=1 GATLING_BASE_URL=http://perf.example.com pm gatling --simulation tsplatform.LoginAsStudent
 ```
 
 All simulations support the `GATLING_BASE_URL` parameter to change the base URL because they all use a common Gatling HTTP Protocol object that defines its base URL from `GATLING_BASE_URL`:
@@ -180,6 +211,7 @@ object Common {
 }
 ```
 
+<a id="stress-testing"></a>
 ## Stress testing
 
 <a name="pt-maxload"></a>
@@ -275,20 +307,42 @@ For a web service, the most common bottlenecks in our experience are:
     - Is there paging activity on some box?
 - IOPS
     - Are the IOPS the maximum for the storage type on some box?
+- Concurrency Configuration
+    - Is the [maximum number of worker processes] active? (Gunicorn)
+    - Is the [maximum number of connections per worker process] being reached? (Nginx)
+- Disk Usage
+    - Has the maximum quota on the /tmp filesystem been reached?
+
+[maximum number of worker processes]: https://docs.gunicorn.org/en/stable/settings.html#worker-processes
+[maximum number of connections per worker process]: https://nginx.org/en/docs/ngx_core_module.html#worker_connections
 
 To isolate the bottleneck, use "perftest run" to start generating a load on the service equivalent to the maximum load  it can handle (as measured previously by "perftest maxload") for a long time interval, say 10 minutes. While that load is being generated, use monitoring tools to look at the usage of CPU, Memory, IOPS, and other resources on each box in the system to look for saturation. When you find the saturated resource, that's the bottleneck.
 
-Once you've located the bottleneck, there are usually a few ways to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing:
+Once you've located the bottleneck, there are usually a few ways to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing (from least to most recently):
 
 * Not enough frontend workers
     * Saturated resource: All frontend Gunicon workers busy 100% of the time, yet not 100% of the CPU utilized
     * Fix: Reconfigure Gunicorn to increase the worker count to (2*N + 1), where N is the number of CPU cores.
 * Too many database requests
     * Saturated resource: Frontends busy waiting on the network for dozens of synchronous database queries to complete for a single page load
-    * Fix: Optimize frontend logic to reduce the number of database queries per page load to less than a dozen. Use automated tests to clamp the database query count so that it doesn't increase.
+    * Fix: Optimize frontend logic to reduce the number of database queries per page load to less than a dozen. Use automated tests to [clamp the database query count] so that it doesn't increase.
 * Not enough frontend CPU
-    * Saturated resource: 100% CPU on each box in the frontend cluster.
+    * Saturated resource: 100% CPU on each box in the frontend cluster
     * Fix: Increase frontend cluster size from 2 up to 5 boxes. At this point the bottleneck moves elsewhere.
+* Not enough database IOPS
+    * Saturated resource: IOPS is maximum for the database storage type (i.e. Magnetic or SSD).
+    * Fixes:
+        * Shrink database contents with compression to reduce persisted data volume.
+        * Switch database storage type from Magnetic to SSD to increase the maximum IOPS.
+    * Other potential fixes:
+        * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
+        * Scale reads. Create read replicas of the database.
+        * Scale writes. Shard the database to multiple database masters.
+* Not enough remaining concurrent requests
+    * Saturated resource: Maximum number of concurrent requests to Nginx
+    * Fix: Increase configured maximum number of concurrent requests.
+
+[clamp the database query count]: /articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/
 
 And here are some bottlenecks that our performance testing has identified we will hit under much higher loads than what we currently experience:
 
@@ -298,33 +352,35 @@ And here are some bottlenecks that our performance testing has identified we wil
         * Cache more aggressively, so that requests are diverted from the database tier to the cache tier.
         * Scale reads. Create read replicas of the database.
         * Scale writes. Shard the database to multiple database masters.
-* Not enough database IOPS
-    * Saturated resource: IOPS is maximum for the database storage type (i.e. Magnetic or SSD).
-    * Potential fixes:
-        * Shrink database contents with compression to reduce persisted data volume.
-        * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
-        * Switch database storage type from Magnetic to SSD to increase the maximum IOPS.
-        * Scale reads. Create read replicas of the database.
-        * Scale writes. Shard the database to multiple database masters.
 
 <a name="overload-behavior"></a>
 ### Overload behavior
 
 It is useful to determine what happens when your service is subjected to greater than its maximum load. In particular:
 
-- Does it reject requests loudly?
-- Does it drop requests silently?
-- Does it crash?
-- If it crashes, does it automatically restart?
+- Does it **reject** requests loudly?
+- Does it **drop** requests silently?
+- Does it **queue** requests? Up to a particular soft or hard limit?
+- Does it **crash**?
+- If it crashes, does it automatically **restart**?
 
-You should decide what desired behavior you want your system to exhibit when receiving a temporary over-maximum load (i.e. a spike) or a sustained over-maximum load (i.e. a flood). Then verify whether the actual behavior matches the desired behavior.
+You should decide what desired behavior you want your system to exhibit when receiving a temporary over-maximum load (i.e. a **spike**) or a sustained over-maximum load (i.e. a **flood**). Then verify whether the actual behavior matches the desired behavior.
 
-If your service is generally written with infinitely-flexible buffers, it's likely that receiving sustained over-maximum load will causes requests to queue up until memory is exhausted, and the out-of-memory condition will cause the service to crash.
+If your service is generally written with *infinitely-flexible buffers*, it's likely that receiving sustained over-maximum load will causes requests to queue up until memory is exhausted, and the out-of-memory condition will cause the service to crash.
 
-On the other hand if your service is generally written with fixed-size buffers, it's likely that receiving any over-maximum load will cause requests to be rejected or dropped.
+On the other hand if your service is generally written with *fixed-size buffers*, it's likely that receiving any over-maximum load will cause requests to be rejected or dropped.
 
+<a id="end"></a>
 ## End
 
 Hopefully this article has provided some insight into concepts around performance testing and given you some ideas about how to implement or improve tooling to perform performance testing.
 
 If you have any improvements or other comments on the contents of this article [I'd love to hear from you](/contact).
+
+**Updates:**
+
+* 2022-02-06:
+    * Mention more types of [bottlenecks](#bottleneck-isolation) I've 
+      encountered at TechSmart since 2018.
+    * Bold common patterns of [overload behavior](#overload-behavior).
+    * Add table of contents for easier navigation.
