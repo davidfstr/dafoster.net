@@ -14,6 +14,30 @@ By the end of this article you should understand how we define performance testi
 [^perf-testing]: For the purposes of this article I define performance testing to include **load testing** and **stress testing**.
 
 
+{% capture toc_content %}
+
+* [Theory](#theory)
+* [Gatling Concepts](#gatling-concepts)
+    * [Scenarios and simulations](#scenarios-and-simulations)
+    * [Simulation parameters](#simulation-parameters)
+* [Load generation](#load-generation)
+    * [The "gatling" management command](#the-gatling-management-command)
+    * [The "perftest run" management command](#pt-run)
+    * [Targeting remote environments](#targeting-remote-environments)
+* [Stress testing](#stress-testing)
+    * [The "perftest maxload" management command](#pt-maxload)
+    * [Bottleneck isolation](#bottleneck-isolation)
+    * [Overload behavior](#overload-behavior)
+* [End](#end)
+
+{% endcapture %}
+
+<div class="toc">
+  {{ toc_content | markdownify }}
+</div>
+
+
+<a id="theory"></a>
 ## Theory
 
 Performance testing of a web service typically involves verifying non-functional requirements such as whether it is:
@@ -46,8 +70,10 @@ There are many load generation tools that exist:
 [Gatling]: http://gatling.io
 
 
+<a id="gatling-concepts"></a>
 ## Gatling Concepts
 
+<a id="scenarios-and-simulations"></a>
 ### Scenarios and simulations
 
 A **scenario** describes a pattern of HTTP requests that a single user makes against a web service. For example in the `ViewCodePage` scenario a user performs the {`LoginPage.loginWithoutRedirect`, `CodePage.view`} subscenarios which consist of individual HTTP requests.
@@ -57,6 +83,7 @@ A **simulation** describes an aggregate pattern of HTTP requests that *multiple*
 At TechSmart we have written several simulations that exercise each of the major pages on our platform website.
 
 
+<a id="simulation-parameters"></a>
 ### Simulation parameters
 
 Most simulations written at TechSmart vary their behavior based on *parameters* that are passed in as environment variables. Simulations read these environment variables upon initialization using code like:
@@ -72,8 +99,10 @@ Thus the set of parameters that a particular simulation expects can be deduced b
 Most simulations at TechSmart support X and Y parameters to inject X users over Y seconds during the simulation.
 
 
+<a id="load-generation"></a>
 ## Load generation
 
+<a id="the-gatling-management-command"></a>
 ### The "gatling" management command
 
 The "gatling" management command is a low-level command we've implemented at TechSmart that invokes the Gatling tool, sets up various required paths automatically, and runs a Gatling simulation script.
@@ -135,6 +164,7 @@ When 4 user(s) over 1 second(s), max response time for request 'submit_login' is
 
 (We also have a "perftest teardown" command that deletes all test data created by "perftest setup".)
 
+<a id="targeting-remote-environments"></a>
 ### Targeting remote environments
 
 Our simulations are written by default to target the website running on the developer's local machine (127.0.0.1). For real testing you'll want to run tests on a remote version of the website such as the one on a dedicated perf environment (perf.example.com).
@@ -180,6 +210,7 @@ object Common {
 }
 ```
 
+<a id="stress-testing"></a>
 ## Stress testing
 
 <a name="pt-maxload"></a>
@@ -323,6 +354,7 @@ If your service is generally written with infinitely-flexible buffers, it's like
 
 On the other hand if your service is generally written with fixed-size buffers, it's likely that receiving any over-maximum load will cause requests to be rejected or dropped.
 
+<a id="end"></a>
 ## End
 
 Hopefully this article has provided some insight into concepts around performance testing and given you some ideas about how to implement or improve tooling to perform performance testing.
