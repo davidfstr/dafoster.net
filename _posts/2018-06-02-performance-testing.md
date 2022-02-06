@@ -110,7 +110,7 @@ The "gatling" management command is a low-level command we've implemented at Tec
 A typical invocation of the "gatling" management command looks like:
 
 ```
-$ X=4 Y=1 pm gatling --simulation tskplatform.LoginAsStudent
+$ X=4 Y=1 pm gatling --simulation tsplatform.LoginAsStudent
 ```
 
 > Note: The `pm` command above is an alias for `python3 manage.py` which is the Django task runner.
@@ -118,7 +118,7 @@ $ X=4 Y=1 pm gatling --simulation tskplatform.LoginAsStudent
 This invocation is equivalent to the more-verbose:
 
 ```
-$ X=4 Y=1 $GATLING_HOME/bin/gatling.sh --simulation tskplatform.LoginAsStudent --simulations-folder $PERFORMANCE_HOME/simulations --data-folder $PERFORMANCE_HOME/data --bodies-folder $PERFORMANCE_HOME/bodies
+$ X=4 Y=1 $GATLING_HOME/bin/gatling.sh --simulation tsplatform.LoginAsStudent --simulations-folder $PERFORMANCE_HOME/simulations --data-folder $PERFORMANCE_HOME/data --bodies-folder $PERFORMANCE_HOME/bodies
 ```
 
 The Gatling tool emits lots of output in the console while it is running and eventually generates an HTML report with detailed statistics about what HTTP requests were made during the simulation, response times for individual and aggregated requests, and other information.
@@ -188,7 +188,7 @@ The "on" command sets the `GATLING_BASE_URL` environment variable (among other t
 
 ```
 $ # (Change environment to "perf", defaulting to its database tier, cache tier, etc)
-$ X=4 Y=1 GATLING_BASE_URL=http://perf.example.com pm gatling --simulation tskplatform.LoginAsStudent
+$ X=4 Y=1 GATLING_BASE_URL=http://perf.example.com pm gatling --simulation tsplatform.LoginAsStudent
 ```
 
 All simulations support the `GATLING_BASE_URL` parameter to change the base URL because they all use a common Gatling HTTP Protocol object that defines its base URL from `GATLING_BASE_URL`:
