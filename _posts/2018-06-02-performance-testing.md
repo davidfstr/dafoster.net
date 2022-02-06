@@ -3,6 +3,7 @@ layout: post
 title: Performance Testing
 tags: [Software, Django]
 x_target_audience: [Full-Stack Software Engineers]
+date_updated: 2022-02-06
 
 ---
 
@@ -306,20 +307,42 @@ For a web service, the most common bottlenecks in our experience are:
     - Is there paging activity on some box?
 - IOPS
     - Are the IOPS the maximum for the storage type on some box?
+- Concurrency Configuration
+    - Is the [maximum number of worker processes] active? (Gunicorn)
+    - Is the [maximum number of connections per worker process] being reached? (Nginx)
+- Disk Usage
+    - Has the maximum quota on the /tmp filesystem been reached?
+
+[maximum number of worker processes]: https://docs.gunicorn.org/en/stable/settings.html#worker-processes
+[maximum number of connections per worker process]: https://nginx.org/en/docs/ngx_core_module.html#worker_connections
 
 To isolate the bottleneck, use "perftest run" to start generating a load on the service equivalent to the maximum load  it can handle (as measured previously by "perftest maxload") for a long time interval, say 10 minutes. While that load is being generated, use monitoring tools to look at the usage of CPU, Memory, IOPS, and other resources on each box in the system to look for saturation. When you find the saturated resource, that's the bottleneck.
 
-Once you've located the bottleneck, there are usually a few ways to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing:
+Once you've located the bottleneck, there are usually a few ways to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing (from least to most recently):
 
 * Not enough frontend workers
     * Saturated resource: All frontend Gunicon workers busy 100% of the time, yet not 100% of the CPU utilized
     * Fix: Reconfigure Gunicorn to increase the worker count to (2*N + 1), where N is the number of CPU cores.
 * Too many database requests
     * Saturated resource: Frontends busy waiting on the network for dozens of synchronous database queries to complete for a single page load
-    * Fix: Optimize frontend logic to reduce the number of database queries per page load to less than a dozen. Use automated tests to clamp the database query count so that it doesn't increase.
+    * Fix: Optimize frontend logic to reduce the number of database queries per page load to less than a dozen. Use automated tests to [clamp the database query count] so that it doesn't increase.
 * Not enough frontend CPU
-    * Saturated resource: 100% CPU on each box in the frontend cluster.
+    * Saturated resource: 100% CPU on each box in the frontend cluster
     * Fix: Increase frontend cluster size from 2 up to 5 boxes. At this point the bottleneck moves elsewhere.
+* Not enough database IOPS
+    * Saturated resource: IOPS is maximum for the database storage type (i.e. Magnetic or SSD).
+    * Fixes:
+        * Shrink database contents with compression to reduce persisted data volume.
+        * Switch database storage type from Magnetic to SSD to increase the maximum IOPS.
+    * Other potential fixes:
+        * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
+        * Scale reads. Create read replicas of the database.
+        * Scale writes. Shard the database to multiple database masters.
+* Not enough remaining concurrent requests
+    * Saturated resource: Maximum number of concurrent requests to Nginx
+    * Fix: Increase configured maximum number of concurrent requests.
+
+[clamp the database query count]: /articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/
 
 And here are some bottlenecks that our performance testing has identified we will hit under much higher loads than what we currently experience:
 
@@ -329,30 +352,23 @@ And here are some bottlenecks that our performance testing has identified we wil
         * Cache more aggressively, so that requests are diverted from the database tier to the cache tier.
         * Scale reads. Create read replicas of the database.
         * Scale writes. Shard the database to multiple database masters.
-* Not enough database IOPS
-    * Saturated resource: IOPS is maximum for the database storage type (i.e. Magnetic or SSD).
-    * Potential fixes:
-        * Shrink database contents with compression to reduce persisted data volume.
-        * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
-        * Switch database storage type from Magnetic to SSD to increase the maximum IOPS.
-        * Scale reads. Create read replicas of the database.
-        * Scale writes. Shard the database to multiple database masters.
 
 <a name="overload-behavior"></a>
 ### Overload behavior
 
 It is useful to determine what happens when your service is subjected to greater than its maximum load. In particular:
 
-- Does it reject requests loudly?
-- Does it drop requests silently?
-- Does it crash?
-- If it crashes, does it automatically restart?
+- Does it **reject** requests loudly?
+- Does it **drop** requests silently?
+- Does it **queue** requests? Up to a particular soft or hard limit?
+- Does it **crash**?
+- If it crashes, does it automatically **restart**?
 
-You should decide what desired behavior you want your system to exhibit when receiving a temporary over-maximum load (i.e. a spike) or a sustained over-maximum load (i.e. a flood). Then verify whether the actual behavior matches the desired behavior.
+You should decide what desired behavior you want your system to exhibit when receiving a temporary over-maximum load (i.e. a **spike**) or a sustained over-maximum load (i.e. a **flood**). Then verify whether the actual behavior matches the desired behavior.
 
-If your service is generally written with infinitely-flexible buffers, it's likely that receiving sustained over-maximum load will causes requests to queue up until memory is exhausted, and the out-of-memory condition will cause the service to crash.
+If your service is generally written with *infinitely-flexible buffers*, it's likely that receiving sustained over-maximum load will causes requests to queue up until memory is exhausted, and the out-of-memory condition will cause the service to crash.
 
-On the other hand if your service is generally written with fixed-size buffers, it's likely that receiving any over-maximum load will cause requests to be rejected or dropped.
+On the other hand if your service is generally written with *fixed-size buffers*, it's likely that receiving any over-maximum load will cause requests to be rejected or dropped.
 
 <a id="end"></a>
 ## End
@@ -360,3 +376,11 @@ On the other hand if your service is generally written with fixed-size buffers, 
 Hopefully this article has provided some insight into concepts around performance testing and given you some ideas about how to implement or improve tooling to perform performance testing.
 
 If you have any improvements or other comments on the contents of this article [I'd love to hear from you](/contact).
+
+**Updates:**
+
+* 2022-02-06:
+    * Mention more types of [bottlenecks](#bottleneck-isolation) I've 
+      encountered at TechSmart since 2018.
+    * Bold common patterns of [overload behavior](#overload-behavior).
+    * Add table of contents for easier navigation.
