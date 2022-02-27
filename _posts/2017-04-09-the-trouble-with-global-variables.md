@@ -98,7 +98,7 @@ In our parsing example if a new caller was introduced that wanted to call the su
   
 Also notice that `WarningsContext` is sufficiently encapsulated to be usable by not just the calendar file parser code but also *reusable* by other code that wishes to generate warnings. Cool.
 
-If there is a desire to add another variable that the parsing functions all depend on (like `errors`), it is easy to add it to the `WarningsContext` class which is already being passed around everywhere, and then rename the class to something more specific like `CalendarParsingContext`. However if you are using a very specific context name you probably want a Method Object instead...
+If there is a desire to add another variable that the parsing functions all depend on (like `errors`), it is easy to add it to the `WarningsContext` class which is already being passed around everywhere, and then rename the class to something more specific like `ParsingContext` or `CalendarFileParsingContext`. However if you are using a very specific context name you probably want a Method Object instead...
 
 
 ### Method Objects
