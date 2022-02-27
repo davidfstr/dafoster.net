@@ -243,7 +243,7 @@ class ChatRoomConsumer(WebsocketConsumer):
     def connect(self) -> None:
         # Authenticate
         if self.user.is_anonymous:
-            self.close(code=401)  # Unauthorized
+            self.close_during_connect(code=4401)  # Unauthorized
             return
         
         room_id = self.scope['url_route']['kwargs']['room_id']
@@ -252,13 +252,13 @@ class ChatRoomConsumer(WebsocketConsumer):
         try:
             self.room = ChatRoom.objects.get(id=room_id)
         except ChatRoom.DoesNotExist:
-            self.close(code=404)  # Not Found
+            self.close_during_connect(code=4404)  # Not Found
             return
         
         # Authorize
         if (self.user.id != self.room.owner_id and 
                 self.user not in self.room.member_set.all()):
-            self.close(code=403)  # Forbidden
+            self.close_during_connect(code=4403)  # Forbidden
             return
         
         # Join group
@@ -269,6 +269,10 @@ class ChatRoomConsumer(WebsocketConsumer):
         )
         
         self.accept()
+    
+    def close_during_connect(*, code: int) -> None:
+        self.accept()  # must accept before closing with custom code
+        self.close(code=code)
     
     def disconnect(self, close_code) -> None: ...
     
@@ -289,7 +293,7 @@ In a regular Django view:
 
 * We'd normally use the `@login_required` decorator
   to authenticate a user but here we need to do that manually by checking
-  `user.is_anonymous` and returning WS 401 Unauthorized manually if the
+  `user.is_anonymous` and returning WS 4401 Unauthorized manually if the
   user hasn't logged in.
 
 * We'd normally receive parameters from the URL as arguments to the view
@@ -300,7 +304,7 @@ In a regular Django view:
   against the room ownership and membership, but here we must check
   `self.user` (which is a shortcut for `self.scope['user']`) instead.
   A failure would normally be reported using an `HttpResponseForbidden`
-  but here we must manually return a WS 403 Forbidden code.
+  but here we must manually return a WS 4403 Forbidden code.
 
 At the end of the connection sequence the consumer adds itself to the
 Channels "group" for all consumers related to the same room topic.
