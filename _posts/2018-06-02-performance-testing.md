@@ -65,7 +65,7 @@ There are many load generation tools that exist:
 
 * One of the oldest load generation tools is [JMeter], which uses a GUI to define simulation programs in an XML-based file format. JMeter uses a separate OS thread for each concurrent HTTP connection which severely limits the number of concurrent HTTP connections it can host on a single box.
 
-* At my company TechSmart we use [Gatling] as our load generation tool. Compared with JMeter, Gatling is far more efficient at generating load because it uses multiplexed async I/O on a single OS thread to handle all HTTP connections. Also, Gatling simulations are written in an actual programming language (Scala) rather than XML, so you can write your simulations with more resilient abstractions and do more-advanced customizations.
+* At my company TechSmart we use [Gatling] as our load generation tool. Compared with JMeter, Gatling is far more efficient at generating load because it uses multiplexed async I/O on a single OS thread to handle all HTTP connections. Also, Gatling simulations are written in an actual programming language (Scala) rather than XML, so you can write your simulations with rich abstractions and do more-advanced customizations.
 
 [JMeter]: https://jmeter.apache.org/
 [Gatling]: http://gatling.io
@@ -318,14 +318,16 @@ For a web service, the most common bottlenecks in our experience are:
 
 To isolate the bottleneck, use "perftest run" to start generating a load on the service equivalent to the maximum load  it can handle (as measured previously by "perftest maxload") for a long time interval, say 10 minutes. While that load is being generated, use monitoring tools to look at the usage of CPU, Memory, IOPS, and other resources on each box in the system to look for saturation. When you find the saturated resource, that's the bottleneck.
 
-Once you've located the bottleneck, there are usually a few ways to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing (from least to most recently):
+Once you've located the bottleneck, there are usually a few options to optimize it away. To give you some ideas, here are some bottlenecks that the TechSmart website has hit in its performance testing (from least to most recently):
 
 * Not enough frontend workers
     * Saturated resource: All frontend Gunicon workers busy 100% of the time, yet not 100% of the CPU utilized
     * Fix: Reconfigure Gunicorn to increase the worker count to (2*N + 1), where N is the number of CPU cores.
 * Too many database requests
     * Saturated resource: Frontends busy waiting on the network for dozens of synchronous database queries to complete for a single page load
-    * Fix: Optimize frontend logic to reduce the number of database queries per page load to less than a dozen. Use automated tests to [clamp the database query count] so that it doesn't increase.
+    * Fixes:
+        * Optimize frontend logic to reduce the number of database queries per page load to less than a dozen.[^django-db-query-optimization]
+        * Use automated tests to [clamp the database query count] so that it doesn't increase.
 * Not enough frontend CPU
     * Saturated resource: 100% CPU on each box in the frontend cluster
     * Fix: Increase frontend cluster size from 2 up to 5 boxes. At this point the bottleneck moves elsewhere.
@@ -338,9 +340,11 @@ Once you've located the bottleneck, there are usually a few ways to optimize it 
         * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
         * Scale reads. Create read replicas of the database.
         * Scale writes. Shard the database to multiple database masters.
-* Not enough remaining concurrent requests
+* Not enough remaining concurrent requests quota
     * Saturated resource: Maximum number of concurrent requests to Nginx
     * Fix: Increase configured maximum number of concurrent requests.
+
+[^django-db-query-optimization]: In Django, an easy way to eliminate a bunch of database queries is to make appropriate use of [`select_related()`](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#select-related) and [`prefetch_related()`](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#prefetch-related) to pre-fetch a group of relationships all at once (with a constant number of queries) rather than one at a time (with a variable number of queries, depending on how many relationships there are).
 
 [clamp the database query count]: /articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/
 
