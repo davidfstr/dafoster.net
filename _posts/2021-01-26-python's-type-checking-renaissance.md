@@ -12,6 +12,7 @@ x_performance: |
                                         21 from Hacker News
                                          1 from Twitter
                                          * from elsewhere
+date_updated: 2022-03-29
 
 include_jquery: true
 
@@ -57,17 +58,29 @@ For the last several releases of Python, there have been an increasing number of
 * Python 3.9 <small>(Released Oct 2020)</small>
     * Fewer imports from the `typing` module are needed:
         * [Type Hinting Generics In Standard Collections (PEP 585)](https://www.python.org/dev/peps/pep-0585/) - Can use `list[T]`, `dict[K, V]`, etc in place of `List[T]` and `Dict[K, V]`. 
-* Python 3.10 <small>(Pending release Oct 2021)</small>
+* Python 3.10 <small>(Released Oct 2021)</small>
     * [Deferred Evaluation of Annotations, without `__future__` (PEP 563)](https://www.python.org/dev/peps/pep-0563/#non-typing-usage-of-annotations)
     * Fewer imports from the `typing` module are needed:
         * [Union types are shortened to `X | Y` (PEP 604)](https://www.python.org/dev/peps/pep-0604/)
-        * (?) [Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)
     * New kinds of types:
         * [Parameter Specification Variables: `ParamSpec` (PEP 612)](https://www.python.org/dev/peps/pep-0612/)
-        * (?) [User-Defined Type Guards: `TypeGuard` (PEP 647)](https://www.python.org/dev/peps/pep-0647/)
-        * (?) Type Hint for Typing Special Forms and Regular Types: `TypeForm` -- in development
+        * [User-Defined Type Guards: `TypeGuard` (PEP 647)](https://www.python.org/dev/peps/pep-0647/)
     * New syntax useful for types:
-        * (?) [Support for indexing with keyword arguments (PEP 637)](https://www.python.org/dev/peps/pep-0637/)
+        * [Explicit Type Aliases (PEP 613)](https://www.python.org/dev/peps/pep-0613)
+        * <strike>[Support for indexing with keyword arguments (PEP 637)](https://www.python.org/dev/peps/pep-0637/)</strike> (Rejected 😞)
+* Python 3.11 <small>(Scheduled for Oct 2022)</small>
+    * (?) [Data Class Transforms (PEP 681)](https://peps.python.org/pep-0681/)
+    * New kinds of types:
+        * [Arbitrary Literal String Type (PEP 675)](https://peps.python.org/pep-0675/)
+        * [`Self` Type (PEP 673)](https://peps.python.org/pep-0673/)
+        * [Variadic Generics with `TypeVarTuple` (PEP 646)](https://peps.python.org/pep-0646/)
+    * New syntax useful for types:
+        * <strike>[Callable Type Syntax (PEP 677)](https://peps.python.org/pep-0677/)</strike> (Rejected 😞)
+* Python 3.12 <small>(Forecasted for Oct 2023)</small>
+    * Fewer imports from the `typing` module are needed:
+        * (??) [Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)
+    * New kinds of types:
+        * (??) [Type Hint for Typing Special Forms and Regular Types: `TypeForm`](https://dafoster.net/projects/typeform/) (planned)
 
 {% endcapture %}
 
@@ -126,3 +139,10 @@ I appreciate this increased productivity that type checking gives me when workin
 ### *Related Discussion*
 
 * [Hacker News](https://news.ycombinator.com/item?id=25916628)
+
+### *Update History*
+
+* 2022-03-29:
+    * Update final PEPs for Python 3.10, which has now been released.
+    * Update in-progress PEPs for Python 3.11, which is now in development.
+    * Update speculative PEPs for Python 3.12, which is in the future.
