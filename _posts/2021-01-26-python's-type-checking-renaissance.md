@@ -18,16 +18,23 @@ include_jquery: true
 
 script: |
     // Rotate triangle symbol when accordian toggled
-    $('.accordion-toggle .expand-symbol').text('▸ ');
-    $('.accordion-toggle').click(function() {
-        var accordianBodySelector = $(this).attr('href');
-        var isCollapsed = $(accordianBodySelector).attr('class').indexOf("in") !== -1;
+    function updateAccordianExpandSymbol(accordianToggleEl, willToggle) {
+        var accordianBodySelector = accordianToggleEl.attr('href');
+        var isCollapsed = !$(accordianBodySelector).attr('class').split(' ').includes('in');
+        if (willToggle) {
+            isCollapsed = !isCollapsed;
+        }
         
         if (isCollapsed) {
-            $('.expand-symbol', this).text('▸ ');
+            $('.expand-symbol', accordianToggleEl).text('▸ ');
         } else {
-            $('.expand-symbol', this).text('▾ ');
+            $('.expand-symbol', accordianToggleEl).text('▾ ');
         }
+    }
+    $('.accordion-toggle').click(function() {
+        updateAccordianExpandSymbol($(this), true);
+    }).each(function(_, accordianToggleDom) {
+        updateAccordianExpandSymbol($(accordianToggleDom));
     });
 
 ---
@@ -40,7 +47,7 @@ You may have heard that TypeScript has been taking the web development space by 
 
 For the last several releases of Python, there have been an increasing number of type checking features added to each release by various PEPs:
 
-{% capture python_releases %}
+{% capture python_releases_old %}
 
 * Python 3.5 <small>(Released Sep 2015)</small>
     * [Type Hints (PEP 484)](https://www.python.org/dev/peps/pep-0484/) - The original introduction of type checking type annotations into the Python language.
@@ -58,6 +65,11 @@ For the last several releases of Python, there have been an increasing number of
 * Python 3.9 <small>(Released Oct 2020)</small>
     * Fewer imports from the `typing` module are needed:
         * [Type Hinting Generics In Standard Collections (PEP 585)](https://www.python.org/dev/peps/pep-0585/) - Can use `list[T]`, `dict[K, V]`, etc in place of `List[T]` and `Dict[K, V]`. 
+
+{% endcapture %}
+
+{% capture python_releases_new %}
+
 * Python 3.10 <small>(Released Oct 2021)</small>
     * New kinds of types:
         * [Parameter Specification Variables: `ParamSpec` (PEP 612)](https://www.python.org/dev/peps/pep-0612/)
@@ -91,12 +103,28 @@ For the last several releases of Python, there have been an increasing number of
   <div class="accordion-group">
     <div class="accordion-heading">
       <a class="accordion-toggle" data-toggle="collapse" data-parent="#python-releases" href="#collapseOne">
-        <span class="expand-symbol"></span><strong>Python releases, and related type checking features</strong>
+        <span class="expand-symbol"></span>Python releases, and related type checking features
       </a>
     </div>
-    <div id="collapseOne" class="accordion-body collapse">
+    <div id="collapseOne" class="accordion-body collapse in">
       <div class="accordion-inner">
-        {{ python_releases | markdownify }}
+        <!-- begin inner -->
+        <div class="accordion" id="python-releases-old">
+          <div class="accordion-group">
+            <div class="accordion-heading" style="margin-left: 25px;">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#python-releases-old" href="#collapseTwo">
+                <span class="expand-symbol"></span>Python 3.5 - 3.9
+              </a>
+            </div>
+            <div id="collapseTwo" class="accordion-body collapse">
+              <div class="accordion-inner" style="margin-left: 40px">
+                {{ python_releases_old | markdownify }}
+              </div>
+            </div>
+          </div>
+        </div>
+        {{ python_releases_new | markdownify }}
+        <!-- end inner -->
       </div>
     </div>
   </div>
