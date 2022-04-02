@@ -59,14 +59,16 @@ For the last several releases of Python, there have been an increasing number of
     * Fewer imports from the `typing` module are needed:
         * [Type Hinting Generics In Standard Collections (PEP 585)](https://www.python.org/dev/peps/pep-0585/) - Can use `list[T]`, `dict[K, V]`, etc in place of `List[T]` and `Dict[K, V]`. 
 * Python 3.10 <small>(Released Oct 2021)</small>
-    * Fewer imports from the `typing` module are needed:
-        * [Union types are shortened to `X | Y` (PEP 604)](https://www.python.org/dev/peps/pep-0604/)
     * New kinds of types:
         * [Parameter Specification Variables: `ParamSpec` (PEP 612)](https://www.python.org/dev/peps/pep-0612/)
         * [User-Defined Type Guards: `TypeGuard` (PEP 647)](https://www.python.org/dev/peps/pep-0647/)
     * New syntax useful for types:
         * [Explicit Type Aliases (PEP 613)](https://www.python.org/dev/peps/pep-0613)
         * <strike>[Support for indexing with keyword arguments (PEP 637)](https://www.python.org/dev/peps/pep-0637/)</strike> (Rejected 😞)
+    * Fewer imports from the `typing` module are needed:
+        * [Union types are shortened to `X | Y` (PEP 604)](https://www.python.org/dev/peps/pep-0604/)
+            * Optional types shortened to `X | None`
+        * <strike>[Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)</strike> ([Withdrawn 👌](https://mail.python.org/archives/list/typing-sig@python.org/message/YVEIYEK3H6KPZVYR5NBTXSVJ77WHBXHY/))
 * Python 3.11 <small>(Scheduled for Oct 2022)</small>
     * New kinds of types:
         * [Arbitrary Literal String Type (PEP 675)](https://peps.python.org/pep-0675/)
@@ -78,12 +80,10 @@ For the last several releases of Python, there have been an increasing number of
         * [Required[] and NotRequired[] items for TypedDict (PEP 655)](https://peps.python.org/pep-0655/)
         * (?) [Data Class Transforms (PEP 681)](https://peps.python.org/pep-0681/)
 * Python 3.12 <small>(Forecasted for Oct 2023)</small>
-    * Fewer imports from the `typing` module are needed:
-        * (??) [Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)
-    * New syntax useful for types:
-        * (??) [Deferred Evaluation Of Annotations Using Descriptors (PEP 649)](https://peps.python.org/pep-0649/) - Most type checking annotations no longer need to be in runtime context.
     * New kinds of types:
         * (??) [Type Hint for Runtime Type Annotation Objects: `TypeForm`](https://dafoster.net/projects/typeform/) (planned)
+    * New syntax useful for types:
+        * (??) [Deferred Evaluation Of Annotations Using Descriptors (PEP 649)](https://peps.python.org/pep-0649/) - Most type checking annotations no longer need to be in runtime context.
 
 {% endcapture %}
 
