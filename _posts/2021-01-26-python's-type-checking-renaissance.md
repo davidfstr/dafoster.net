@@ -72,13 +72,13 @@ For the last several releases of Python, there have been an increasing number of
 * Python 3.11 <small>(Scheduled for Oct 2022)</small>
     * New kinds of types:
         * [Arbitrary Literal String Type (PEP 675)](https://peps.python.org/pep-0675/)
-        * [`Self` Type (PEP 673)](https://peps.python.org/pep-0673/)
         * [Variadic Generics with `TypeVarTuple` (PEP 646)](https://peps.python.org/pep-0646/)
+        * [`Self` Type (PEP 673)](https://peps.python.org/pep-0673/)
+        * (?) [Data Class Transforms (PEP 681)](https://peps.python.org/pep-0681/)
     * New syntax useful for types:
         * <strike>[Callable Type Syntax (PEP 677)](https://peps.python.org/pep-0677/)</strike> (Rejected 😞)
     * Extensions to existing typing features:
         * [Required[] and NotRequired[] items for TypedDict (PEP 655)](https://peps.python.org/pep-0655/)
-        * (?) [Data Class Transforms (PEP 681)](https://peps.python.org/pep-0681/)
 * Python 3.12 <small>(Forecasted for Oct 2023)</small>
     * New kinds of types:
         * (??) [Type Hint for Runtime Type Annotation Objects: `TypeForm`](https://dafoster.net/projects/typeform/) (planned)
