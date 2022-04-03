@@ -80,7 +80,7 @@ For the last several releases of Python, there have been an increasing number of
     * Fewer imports from the `typing` module are needed:
         * [Union types are shortened to `X | Y` (PEP 604)](https://www.python.org/dev/peps/pep-0604/)
             * Optional types shortened to `X | None`
-        * <strike>[Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)</strike> ([Withdrawn 👌](https://mail.python.org/archives/list/typing-sig@python.org/message/YVEIYEK3H6KPZVYR5NBTXSVJ77WHBXHY/))
+        * <strike>[Optional types shortened to `X?` (PEP 645)](https://www.python.org/dev/peps/pep-0645/)</strike> ([Withdrawn](https://mail.python.org/archives/list/typing-sig@python.org/message/YVEIYEK3H6KPZVYR5NBTXSVJ77WHBXHY/))
 * Python 3.11 <small>(Scheduled for Oct 2022)</small>
     * New kinds of types:
         * [Arbitrary Literal String Type (PEP 675)](https://peps.python.org/pep-0675/)
