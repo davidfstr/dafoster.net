@@ -1,6 +1,5 @@
 ---
-# Using "page" layout instead of "project" to omit from projects list
-layout: page
+layout: project
 title: trycast
 summary: >
     Parses JSON-like values whose shape is defined by typed dictionaries
