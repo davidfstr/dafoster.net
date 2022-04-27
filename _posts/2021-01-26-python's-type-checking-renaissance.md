@@ -157,6 +157,10 @@ But *with* type checking I can:
 
 I appreciate this increased productivity that type checking gives me when working on large programs. And I hope that more Python users try type checking for themselves, especially as Python gains an increasing number of related features in recent releases. It's an exciting time to be a Python developer!
 
+### *Related Discussion*
+
+* [Hacker News](https://news.ycombinator.com/item?id=25916628)
+
 ### *Related Articles*
 
 * [Unsound type systems are still useful](/articles/2018/04/07/unsound-type-systems-are-still-useful/)
@@ -166,10 +170,6 @@ I appreciate this increased productivity that type checking gives me when workin
 
 * [TypedDict](/projects/typeddict/) - Python typechecker support for recognizing structured dictionaries with specific named keys mapped to specific value types.
 * [trycast](/projects/trycast/) — Parses JSON-like values whose shape is defined by typed dictionaries (TypedDicts) and other standard Python type hints.
-
-### *Related Discussion*
-
-* [Hacker News](https://news.ycombinator.com/item?id=25916628)
 
 ### *Update History*
 
