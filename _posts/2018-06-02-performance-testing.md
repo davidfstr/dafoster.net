@@ -334,7 +334,7 @@ Once you've located the bottleneck, there are usually a few options to optimize 
 * Not enough database IOPS
     * Saturated resource: IOPS is maximum for the database storage type (i.e. Magnetic or SSD).
     * Fixes:
-        * Shrink database contents with compression to reduce persisted data volume.
+        * [Shrink database contents with compression] to reduce persisted data volume.
         * Switch database storage type from Magnetic to SSD to increase the maximum IOPS.
     * Other potential fixes:
         * Increase RAM on database servers so that the database contents fit into memory, making IOPS irrelevent.
@@ -347,6 +347,7 @@ Once you've located the bottleneck, there are usually a few options to optimize 
 [^django-db-query-optimization]: In Django, an easy way to eliminate a bunch of database queries is to make appropriate use of [`select_related()`](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#select-related) and [`prefetch_related()`](https://docs.djangoproject.com/en/4.0/ref/models/querysets/#prefetch-related) to pre-fetch a group of relationships all at once (with a constant number of queries) rather than one at a time (with a variable number of queries, depending on how many relationships there are).
 
 [clamp the database query count]: /articles/2021/02/09/database-clamps-deterministic-performance-tests-for-database-dependent-code/
+[Shrink database contents with compression]: /articles/2022/07/07/compressed-text-field-for-django-and-mysql-is-released/
 
 And here are some bottlenecks that our performance testing has identified we will hit under much higher loads than what we currently experience:
 
