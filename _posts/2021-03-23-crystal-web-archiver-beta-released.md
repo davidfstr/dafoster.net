@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Crystal Web Archiver 1.1.0b Released!"
-tags: [DigitalPreservation, Other]
+tags: [DigitalPreservation, Software]
 x_audience: |
     Anyone who is interested in downloading websites,
     especially folks old enough to have experienced losing a treasured
@@ -21,7 +21,9 @@ script: |
 
 <img class="img-box-right img-200" alt="Logo: Crystal Web Archiver" src="/assets/2021/crystal-web-archiver/logo@2x.png" />
 
-[Crystal] is a **website downloader program** that is intended to save websites for long-term archival, even after the original site has fallen off the internet. Today I'm pleased to announce Crystal's first beta release, bringing support for downloading more complex static sites than ever before, and generally being stable enough for a full public release.
+[Crystal] is a **website downloader program** that is intended to save websites for long-term archival, even after the original site has fallen off the internet.
+
+Today I'm pleased to announce Crystal's first beta release, bringing support for downloading more complex static sites than ever before, and generally being stable enough for a full public release.
 
 [Crystal]: /projects/crystal-web-archiver/
 
