@@ -9,7 +9,6 @@ started_on: 2010-02-06
 ended_on: 2010-10-02
 x_languages: [C]
 x_location: Online at svn://svn.handbrake.fr/HandBrake/trunk
-featured: true
 
 style: |
     h3 { margin-bottom: -.3em; }

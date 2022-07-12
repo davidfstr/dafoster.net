@@ -59,7 +59,7 @@ For more information, including how to [migrate to use CompressedTextField],
 please see the [documentation].
 
 
-[django-mysql-compressed-fields]: https://github.com/techsmartkids/django-mysql-compressed-fields#readme
+[django-mysql-compressed-fields]: /projects/django-mysql-compressed-fields/
 [TextField]: https://docs.djangoproject.com/en/3.2/ref/models/fields/#textfield
 [TechSmart]: https://www.techsmart.codes/
 [migrate to use CompressedTextField]: https://github.com/techsmartkids/django-mysql-compressed-fields#migration-steps
