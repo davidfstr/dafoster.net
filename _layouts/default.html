@@ -172,7 +172,7 @@ include_bootstrap_js: true
         <![endif]-->
         
         {% if page.redirect_to_url %}
-          {% if page.redirect_has_content %}
+          {% if page.redirect_has_content or page.layout == "project" %}
             {{ content }}
           {% else %}
             {% include redirecting %}
