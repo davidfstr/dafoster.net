@@ -25,7 +25,7 @@ I've been programming since I was 6 years old, which means I've been at it for m
 
 These days I spend most of my time in web development, using Python/Django on the backend, JavaScript/Vue on the frontend, and Amazon Web Services for datacenter operations. Python is probably my favorite all-around language, with Java coming in second.
 
-### How does your typical working day look like? How COVID-19 changed your working routine?
+### How does your typical working day look like? How did COVID-19 change your working routine?
 
 I wake around 6 AM, get myself ready to go, maybe work on a short personal item, and then start work at 8:30 AM. For the next 30 minutes I plan and write down what I'd like to do during the work day and process email. At 9 AM I have a daily standup meeting with the rest of the engineering team. Often immediately afterwards one or more folks will want to trade code reviews with me, or have a quick design discussion. For the rest of the morning until lunch I process various administrative items, reading email, updating our board of cards that track workitems, and have short meetings with other teammembers as needed. I take an hour lunch from 11:30 - 12:30, where the last half of that time I'll read up on the latest technical news, often from Hacker News and some other sources. Directly after lunch there may be someone else who wants to trade code reviews. Then I'll go heads-down coding for the rest of the day, working on my own items that require deep focus, up until the end of the work day at 5 PM sharp.
 
@@ -45,15 +45,15 @@ In the background I'm striving to post a useful article on [my blog] each week, 
 
 I'm not usually working on quite this many projects at the same time, but I seem to have gained a lot of new energy at the start of this year after the low of 2020 so I'm rolling with it for now. :)
 
-[Crystal Web Archiver]: /articles/2021/03/23/crystal-web-archiver-beta-released/?utm_source=news&utm_medium=vlad&utm_campaign=crystal-2021
+[Crystal Web Archiver]: /projects/crystal-web-archiver/
 
-[a new feature for TypedDict]: https://www.python.org/dev/peps/pep-0655/?utm_source=news&utm_medium=vlad&utm_campaign=required
+[a new feature for TypedDict]: https://www.python.org/dev/peps/pep-0655/
 
-[TypeForm]: /projects/typeform/?utm_source=news&utm_medium=vlad&utm_campaign=typeform
+[TypeForm]: /projects/typeform/
 
-[trycast]: /projects/trycast/?utm_source=news&utm_medium=vlad&utm_campaign=trycast
+[trycast]: /projects/trycast/
 
-[my blog]: /articles/?utm_source=news&utm_medium=vlad&utm_campaign=articles
+[my blog]: /articles/
 
 ### Who would you recommend to look at TechSmart?
 
