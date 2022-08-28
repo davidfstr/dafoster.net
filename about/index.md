@@ -28,11 +28,11 @@ I specifically engineer the [TechSmart Platform] website.
 [TechSmart]: https://www.techsmart.codes
 [TechSmart Platform]: /projects/techsmart-platform/
 
-My open source contributions that are probably the most well-known include:
+My most notable open source contributions include:
 
 * [TypedDict's initial implementation] and other [typechecking][] [extensions] in Python & [mypy];
 * maintaining [RDiscount], Ruby bindings to the Discount Markdown implementation;
-* [SSA subtitle support in HandBrake];
+* [SSA subtitle support in HandBrake]; and
 * enhancements to [Django].
 
 [RDiscount]: /projects/rdiscount/
@@ -64,11 +64,11 @@ Witness my large number of [personal projects](/projects/).
 
 Beyond that I enjoy:
 
-* reading;
-* learning about languages (both spoken and programming);
-* teaching;
-* kayaking, visiting gardens; and
-* watching the occasional anime series.
+* reading,
+* being outdoors & visiting flower gardens,
+* digital archival and preservation,
+* rhythm dance games (DDR, PIU), and
+* contra dance.
 
 <h2 id="contact">Contact</h2>
 
