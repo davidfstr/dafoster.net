@@ -124,7 +124,7 @@ process<!-- ...specifically calendar_file.py -->.
 
 In Sep 2016 I started designing (and [naming]) what would become TypedDict on the
 [typing issue tracker] and implementing on the [mypy issue tracker].
-Big kudos especially to [Guido van Rossom](https://github.com/gvanrossum), 
+Big kudos especially to [Guido van Rossum](https://github.com/gvanrossum), 
 [Jukka Lehtosalo](https://github.com/JukkaL), and
 [Ivan Levkivskyi](https://github.com/ilevkivskyi) for providing design
 and implementation feedback.
