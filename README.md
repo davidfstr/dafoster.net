@@ -35,6 +35,10 @@ how a complex [Jekyll] site is structured**. Notable features include:
     * ```
       docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest
       ```
+* Start Docker container, if already created:
+    * ```
+      docker start dafoster.net
+      ```
 
 [Docker]: https://www.docker.com/
 
