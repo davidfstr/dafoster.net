@@ -2,10 +2,13 @@
   <img src="/assets/mastodon-icon-48x48.png" alt="Mastodon icon, by Icons8." width="16" height="16" />Subscribe (Mastodon)
 </a>
 <a class="subscribe" href="https://twitter.com/davidfstr">
-  <img src="/assets/twitter-icon-16x16.png" alt="" width="16" height="16" />Subscribe (Twitter)
+  <img src="/assets/twitter-icon-16x16.png" alt="Twitter icon" width="16" height="16" />Subscribe (Twitter)
 </a>
 <a class="subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}/atom.xml">
-  <img src="/assets/feed-icon-14x14.png" alt="" width="14" height="14" />Subscribe (RSS)
+  <img src="/assets/feed-icon-14x14.png" alt="RSS icon" width="14" height="14" />Subscribe (RSS)
+</a>
+<a class="subscribe" href="mailto:add@rssby.email?body={{ site.production_url | replace: 'https://', 'feed://'}}/atom.xml&subject=Subscribe">
+  <img src="/assets/mail-48x48.png" alt="Email icon, by Freepik at Flaticon.com" width="18" height="18" style="margin-left: -2px;" />Subscribe (Email)
 </a>
 {% comment %}
 <span class="subscribe subscribe-last subscribe__frequency">
