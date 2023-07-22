@@ -117,4 +117,4 @@ For simple names, **coding conventions** related to names often can tell you a l
 
 ## *To Be Continued*
 
-I've got many other techniquies for designing large programs. In the next few articles I hope to share some of these with you.
+I've got many other techniques for designing large programs. In the next few articles I hope to share some of these with you.
