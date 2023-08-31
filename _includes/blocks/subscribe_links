@@ -2,7 +2,7 @@
   <img src="/assets/mastodon-icon-48x48.png" alt="Mastodon icon, by Icons8." width="16" height="16" />Subscribe (Mastodon)
 </a>
 <a class="subscribe" href="https://twitter.com/davidfstr">
-  <img src="/assets/twitter-icon-16x16.png" alt="Twitter icon" width="16" height="16" />Subscribe (Twitter)
+  <img src="/assets/twitter-icon-16x16.png" alt="Twitter icon" width="16" height="16" />Subscribe (Twitter / X)
 </a>
 <a class="subscribe" href="{{ site.production_url | replace: 'https://', 'feed://'}}/atom.xml">
   <img src="/assets/feed-icon-14x14.png" alt="RSS icon" width="14" height="14" />Subscribe (RSS)
