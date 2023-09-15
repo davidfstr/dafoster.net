@@ -27,11 +27,15 @@
         var utm_medium = $('#utm_medium').val();
         var utm_campaign = $('#utm_campaign').val();
         
-        var gaurl = url + '?' + $.param({
+        var params = {
           utm_source: utm_source,
-          utm_medium: utm_medium,
-          utm_campaign: utm_campaign
-        });
+          utm_medium: utm_medium
+        };
+        if (utm_campaign !== '') {
+          params['utm_campaign'] = utm_campaign;
+        }
+        
+        var gaurl = url + '?' + $.param(params);
         $('#gaurl').val(gaurl);
         
         // Warn if URL looks like a local URL
@@ -50,7 +54,7 @@
   <div class="container">
     <h1>Google Analytics URL Builder</h1>
     <p>
-      I'm tired of Google's <a href="https://support.google.com/analytics/answer/1033867">
+      I'm tired of Google's <a href="https://ga-dev-tools.google/ga4/campaign-url-builder/">
       official analytics URL builder</a> breaking on me.
       So here's my own implementation. It's too simple to break.
     </p>
@@ -59,12 +63,12 @@
     <input id="url" type="text" value="" size="100"/>
     
     <label for="utm_source">Campaign Source*</label>
-    <input id="utm_source" type="text" value="" size="30"/>
+    <input id="utm_source" type="text" value="" placeholder="social" size="30"/>
     
     <label for="utm_medium">Campaign Medium*</label>
-    <input id="utm_medium" type="text" value="" size="30"/>
+    <input id="utm_medium" type="text" value="" placeholder="twitter" size="30"/>
     
-    <label for="utm_campaign">Campaign Name*</label>
+    <label for="utm_campaign">Campaign Name</label>
     <input id="utm_campaign" type="text" value="" size="30"/>
     
     <input id="generate" type="submit" value="Generate URL"/>
