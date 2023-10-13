@@ -138,7 +138,7 @@ In short, my experience in getting icons to work in Linux has been a big poorly-
 
 When creating a desktop application for end users it's important to get icons for your app and its documents configured correctly to provide a good user experience, but it getting those configurations correct can be challenging.
 
-I'd like to file bugs on several Linux desktop environments so that future Linux application developers don't have such a hard time getting icons setup, but right now I just don't have the energy. Hopefully at least this blog post will help other Linux developers configure icons more quickly.
+I'd like to file bugs on several Linux desktop environments so that future Linux application developers don't have such a hard time getting icons setup, but right now I just don't have the energy. Hopefully at least this blog post will help other application developers configure icons more quickly.
 
 [website downloader, Crystal]: /projects/crystal-web-archiver/
 [bundles]: https://en.wikipedia.org/wiki/Bundle_(macOS)
