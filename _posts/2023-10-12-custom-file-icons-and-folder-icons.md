@@ -85,25 +85,25 @@ IconIndex=0
 InfoTip=Crystal Project
 ```
 
-<img alt="Diagram showing how to customize a folder's icon on Windows with desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-icon.png" style="max-width: 100%" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-icon.png"><img alt="Diagram showing how to customize a folder's icon on Windows with desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-icon.png" style="max-width: 100%" /></a>
 
 It's even possible to [tell Windows to open Crystal when the folder is double-clicked on](https://learn.microsoft.com/en-us/windows/win32/shell/context-menu-handlers#implementing-custom-verbs-for-folders-through-desktopini) by setting some registry keys:
 
-<img alt="Diagram showing how to customize a folder's open action on Windows with registry keys and desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open.png" style="max-width: 100%" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open.png"><img alt="Diagram showing how to customize a folder's open action on Windows with registry keys and desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open.png" style="max-width: 100%" /></a>
 
-<img alt="Reference explaining how to customize a folder's open action on Windows with registry keys and desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open-reference.png" style="max-width: 100%; border: .5px solid black;" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open-reference.png"><img alt="Reference explaining how to customize a folder's open action on Windows with registry keys and desktop.ini" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-folder-open-reference.png" style="max-width: 100%; border: .5px solid black;" /></a>
 
 However it's still possible to navigate inside of a such a folder, notably from Open and Save dialogs, so we need another way to open projects in those contexts. My solution was to add a special "opener" file inside of a project folder which could be used to open the enclosing project:
 
-<img alt=".crystalproj folder containing a .crystalopen opener file" src="/assets/2023/custom-file-icons-and-folder-icons/crystalproj-contents.png" style="max-width: 488px" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/crystalproj-contents.png"><img alt=".crystalproj folder containing a .crystalopen opener file" src="/assets/2023/custom-file-icons-and-folder-icons/crystalproj-contents.png" style="max-width: calc(min(488px, 100%))" /></a>
 
 Of course that `.crystalopen` file itself needs an icon. Again you can set some registry keys to tell Windows about this new file extension and its associated icon:
 
-<img alt="Diagram showing how to customize a file's icon on Windows with registry keys" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-icon.png" style="max-width: 100%" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-icon.png"><img alt="Diagram showing how to customize a file's icon on Windows with registry keys" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-icon.png" style="max-width: 100%" /></a>
 
 And if a `.crystalopen` file is double-clicked we want it to open Crystal, which can be configured with more registry keys:
 
-<img alt="Diagram showing how to customize a file's open action on Windows with registry keys" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-open.png" style="max-width: 100%" />
+<a href="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-open.png"><img alt="Diagram showing how to customize a file's open action on Windows with registry keys" src="/assets/2023/custom-file-icons-and-folder-icons/windows-customize-file-open.png" style="max-width: 100%" /></a>
 
 All of these registry keys should be [set by the installer for the app](https://github.com/davidfstr/Crystal-Web-Archiver/blob/147adc7bea1fa8d278258e75be3e51fd26892bfa/setup/win-installer.iss#L13-L54). 
 
