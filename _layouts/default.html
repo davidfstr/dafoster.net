@@ -124,6 +124,22 @@ include_bootstrap_js: true
   {% if page.carousels %}
     <script src="{{ ASSET_PATH }}/js/orbit-1.2.3/jquery.orbit-1.2.3.min.js"></script>
   {% endif %}
+  {% if page.include_mermaid %}
+    <!-- Enable use of .mermaid blocks to draw diagrams -->
+    <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.5.1/dist/mermaid.min.js"></script>
+    <style>
+      /* Show loading placeholder for .mermaid blocks */
+      .mermaid:not([data-processed="true"]) {
+        height: 3em;
+        background-color: #f3f3f3;
+        
+        color: transparent;
+        overflow: hidden;
+        
+        margin-bottom: 1em;
+      }
+    </style>
+  {% endif %}
   </head>
 
   <body>
