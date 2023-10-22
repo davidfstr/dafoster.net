@@ -5,7 +5,7 @@ tags: Software
 featured: true
 
 include_jquery: true
-include_bootstrap_js: true
+include_accordian: true
 
 style: |
     .property { background-color: #ceecff; }
@@ -25,19 +25,6 @@ script: |
             window.ignoreTabHeaderClicks = true;
             $('.' + classNameForTabsWithSameLang).click();
             window.ignoreTabHeaderClicks = false;
-        }
-    });
-    
-    // Rotate triangle symbol when accordian toggled
-    $('.accordion-toggle .expand-symbol').text('▸ ');
-    $('.accordion-toggle').click(function() {
-        var accordianBodySelector = $(this).attr('href');
-        var isCollapsed = $(accordianBodySelector).attr('class').indexOf("in") !== -1;
-        
-        if (isCollapsed) {
-            $('.expand-symbol', this).text('▸ ');
-        } else {
-            $('.expand-symbol', this).text('▾ ');
         }
     });
 
@@ -106,20 +93,12 @@ Package manager      | -   | -           | -     | Cabal            | pip       
 Environment isolater | -   | -           | -     | cabal-dev, hsenv | virtualenv  | rvm        | *varies* <!-- no known example -->
 {% endcapture %}
 
-<div class="accordion" id="tool-details">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#tool-details" href="#collapseOne">
-        <span class="expand-symbol"></span>Tool Details
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse">
-      <div class="accordion-inner">
-        {{ details_table | markdownify }}
-      </div>
-    </div>
-  </div>
-</div>
+{% include accordian/begin %}
+    Tool Details
+{% include accordian/middle %}
+    {{ details_table | markdownify }}
+{% include accordian/end %}
+
 
 ### *Related Articles*
 

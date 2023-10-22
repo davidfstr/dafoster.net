@@ -4,35 +4,12 @@ title: "Agda: Second Impressions"
 tags: [Software]
 x_date_started: 2014-02-09
 
-include_jquery: true
-include_bootstrap_js: true
+include_accordian: true
 
 style: |
     /* Remove borders and other styling from accordions with source files */
     .accordion code { border: 0; }
     .accordion-body pre { border: 0; margin: 0; padding: 0; background-color: inherit; }
-
-script: |
-    // Link each accordion toggle to its body. Required by jQuery Accordion plugin.
-    var accordions = $('.accordion');
-    for (var i = 0; i < accordions.length; i++) {
-        var curAccordion = accordions[i];
-        $('.accordion-toggle', curAccordion).attr('href', '#acc' + i);
-        $('.accordion-body', curAccordion).attr('id', 'acc' + i);
-    }
-    
-    // Rotate triangle symbol when accordian toggled
-    $('.accordion-toggle .expand-symbol').text('▸ ');
-    $('.accordion-toggle').click(function() {
-        var accordianBodySelector = $(this).attr('href');
-        var isCollapsed = $(accordianBodySelector).attr('class').indexOf("in") !== -1;
-        
-        if (isCollapsed) {
-            $('.expand-symbol', this).text('▸ ');
-        } else {
-            $('.expand-symbol', this).text('▾ ');
-        }
-    });
 
 ---
 {% capture content_with_bullets %}
@@ -106,28 +83,6 @@ A few issues I found when trying to use Agda as a programming language to get re
 
 The following are all the simple programs I've written with Agda so far.
 
-{% capture accordian_begin %}
-<div class="accordion">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" href="#">
-        <span class="expand-symbol"></span>
-{% endcapture %}
-
-{% capture accordian_middle %}
-      </a>
-    </div>
-    <div class="accordion-body collapse">
-      <div class="accordion-inner">
-{% endcapture %}
-
-{% capture accordian_end %}
-      </div>
-    </div>
-  </div>
-</div>
-{% endcapture %}
-
 <a id="peano"></a>
 ### Peano
 
@@ -150,11 +105,11 @@ zero + n     = n
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>Peano.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_peano | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * I resent being forced to use Emacs as opposed to my favorite text editor.
     - Particularly since the installation instructions are not bulletproof.
@@ -192,11 +147,11 @@ main = run main'
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>HelloNumber.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_hello_number | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * The [Agda standard library](https://github.com/agda/agda-stdlib/) is not installed with Agda by default. WTF?
     - It also has not yet reached v1.0.
@@ -237,11 +192,11 @@ main = run main'
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>HelloWorld.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_hello_world | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * It takes 3 seconds to type-check my Hello World program when compiling to an executable. That's really slow.
     - I hope those 3 seconds are just fixed overhead and not proportional to the size of the program.
@@ -278,11 +233,11 @@ main = run main'
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>PrintTwoThings.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_print_two_things | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * Surprise! The `>>` operator used to join two IO actions isn't `IO A -> IO B -> IO B`. Rather it is `∞ (IO A) -> ∞ (IO B) -> IO B`.
     * This means I need to wrap IO actions inside the `∞` type before I can chain them together.
@@ -332,11 +287,11 @@ main = doThis >>= thenThat
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>EchoInput.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_echo_input | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * There is no function in the standard library to read from standard input. Nor is there a reference to `stdin` itself. Unbelievable.
     - I can [define getLine manually](http://people.inf.elte.hu/divip/AgdaTutorial/Revise.IO.html) using the foreign function interface. But I really shouldn't have to define such a simple function. This should be in the standard library...
@@ -370,11 +325,11 @@ main =
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>PromptForName.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_prompt_for_name | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * Surprise! `Primitive.IO` defines the `>>=` operator but not `>>`. Asymmetric with the regular `IO` module.
 * Native IO functions require `Costring` objects. So a string literal has to be passed to `toCostring` to be used.
@@ -409,11 +364,11 @@ main =
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>EchoInputReverse.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_echo_input_reverse | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * Problem: The line from standard input is a `Costring`. I can't reverse it or do anything useful with it without first converting it to a `String`. But there is no function in the standard library to do this conversion, even as a runtime cast.
 * Surprise workaround: Even though the Haskell type `String` maps to the Agda type `Costring` in the general case, it is still possible to postulate that it maps directly to the Agda type `String` for certain functions where you can assert that the string won't be infinite.
@@ -499,11 +454,11 @@ main =
 
 {% endcapture %}
 
-{{ accordian_begin }}
+{% include accordian/begin %}
     <code>ParseInt.agda</code>
-{{ accordian_middle }}
+{% include accordian/middle %}
     {{ code_parse_int | markdownify }}
-{{ accordian_end }}
+{% include accordian/end %}
 
 * Agda type checking errors are really hard to read:
     * Actual:

@@ -14,28 +14,7 @@ x_performance: |
                                          * from elsewhere
 date_updated: 2022-03-29
 
-include_jquery: true
-
-script: |
-    // Rotate triangle symbol when accordian toggled
-    function updateAccordianExpandSymbol(accordianToggleEl, willToggle) {
-        var accordianBodySelector = accordianToggleEl.attr('href');
-        var isCollapsed = !$(accordianBodySelector).attr('class').split(' ').includes('in');
-        if (willToggle) {
-            isCollapsed = !isCollapsed;
-        }
-        
-        if (isCollapsed) {
-            $('.expand-symbol', accordianToggleEl).text('▸ ');
-        } else {
-            $('.expand-symbol', accordianToggleEl).text('▾ ');
-        }
-    }
-    $('.accordion-toggle').click(function() {
-        updateAccordianExpandSymbol($(this), true);
-    }).each(function(_, accordianToggleDom) {
-        updateAccordianExpandSymbol($(accordianToggleDom));
-    });
+include_accordian: true
 
 ---
 
@@ -99,36 +78,16 @@ For the last several releases of Python, there have been an increasing number of
 
 {% endcapture %}
 
-<div class="accordion" id="python-releases" style="margin-bottom: 1em;">
-  <div class="accordion-group">
-    <div class="accordion-heading">
-      <a class="accordion-toggle" data-toggle="collapse" data-parent="#python-releases" href="#collapseOne">
-        <span class="expand-symbol"></span>Python releases, and related type checking features
-      </a>
-    </div>
-    <div id="collapseOne" class="accordion-body collapse in">
-      <div class="accordion-inner">
-        <!-- begin inner -->
-        <div class="accordion" id="python-releases-old">
-          <div class="accordion-group">
-            <div class="accordion-heading" style="margin-left: 25px;">
-              <a class="accordion-toggle" data-toggle="collapse" data-parent="#python-releases-old" href="#collapseTwo">
-                <span class="expand-symbol"></span>Python 3.5 - 3.9
-              </a>
-            </div>
-            <div id="collapseTwo" class="accordion-body collapse">
-              <div class="accordion-inner" style="margin-left: 40px">
-                {{ python_releases_old | markdownify }}
-              </div>
-            </div>
-          </div>
-        </div>
-        {{ python_releases_new | markdownify }}
-        <!-- end inner -->
-      </div>
-    </div>
-  </div>
-</div>
+{% include accordian/begin %}
+    Python releases, and related type checking features
+{% include accordian/middle expanded="true" %}
+    {% include accordian/begin heading_style="margin-left: 25px;" %}
+        Python 3.5 - 3.9
+    {% include accordian/middle inner_style="margin-left: 40px" %}
+        {{ python_releases_old | markdownify }}
+    {% include accordian/end %}
+    {{ python_releases_new | markdownify }}
+{% include accordian/end %}
 
 The traffic on [typing-sig], the mailing list where most major new typing features are proposed and designed, has also been seeing increasing traffic year over year.[^typing-sig-traffic]
 

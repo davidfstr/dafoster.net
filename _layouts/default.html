@@ -112,7 +112,7 @@ include_bootstrap_js: true
   -->
     
     <!-- Scripts -->
-  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js or layout.include_bootstrap_js %}
+  {% if page.include_jquery or page.linkable_headings or page.carousels or page.include_bootstrap_js or layout.include_bootstrap_js or page.include_accordian %}
     <script src="{{ ASSET_PATH }}/js/jquery-1.12.4.min.js"></script>
   {% endif %}
   {% if page.include_jquery_hashchange or page.linkable_headings %}
@@ -213,6 +213,39 @@ include_bootstrap_js: true
         }
       });
       $(window).hashchange();
+    </script>
+  {% endif %}
+  
+  {% if page.include_accordian %}
+    <script>
+      // Link each accordion toggle to its body. Required by jQuery Accordion plugin.
+      var accordions = $('.accordion');
+      for (var i = 0; i < accordions.length; i++) {
+          var curAccordion = accordions[i];
+          $('.accordion-toggle', curAccordion).attr('href', '#acc' + i);
+          $('.accordion-body', curAccordion).attr('id', 'acc' + i);
+      }
+      
+      // 1. Initialize triangle symbol state
+      // 2. Rotate triangle symbol when accordian toggled
+      function updateAccordianExpandSymbol(accordianToggleEl, willToggle/*=false*/) {
+          var accordianBodySelector = accordianToggleEl.attr('href');
+          var isCollapsed = !$(accordianBodySelector).attr('class').split(' ').includes('in');
+          if (willToggle) {
+              isCollapsed = !isCollapsed;
+          }
+          
+          if (isCollapsed) {
+              $('.expand-symbol', accordianToggleEl).text('▸ ');
+          } else {
+              $('.expand-symbol', accordianToggleEl).text('▾ ');
+          }
+      }
+      $('.accordion-toggle').each(function(_, accordianToggleDom) {
+          updateAccordianExpandSymbol($(accordianToggleDom));
+      }).click(function() {
+          updateAccordianExpandSymbol($(this), /*willToggle=*/true);
+      });
     </script>
   {% endif %}
   

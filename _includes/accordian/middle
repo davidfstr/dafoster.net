@@ -1,0 +1,4 @@
+      </a>
+    </div>
+    <div class="accordion-body collapse{% if include.expanded %} in{% endif %}">
+      <div class="accordion-inner"{% if include.inner_style %} style="{{ include.inner_style }}"{% endif %}>
