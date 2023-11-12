@@ -5,6 +5,7 @@ summary: >
     Parses JSON-like values whose shape is defined by typed dictionaries
     (TypedDicts) and other standard Python type hints.
 logo_filename: logo.svg
+logo_png_filename: logo-96@2x.png
 started_on: 2020-11-26
 ended_on: ongoing
 x_started_on_source: first commit in git repo

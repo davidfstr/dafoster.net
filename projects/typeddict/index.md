@@ -6,6 +6,7 @@ summary: >
     Python typechecker support for recognizing structured dictionaries with specific
     named keys mapped to specific value types. Ubiquitous in JSON.
 logo_filename: logo.svg
+logo_png_filename: logo-133@2x.png
 started_on: 2016-09-24
 ended_on: 2017-01-22
 featured: true

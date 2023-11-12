@@ -21,8 +21,8 @@ include_bootstrap_js: true
   {% if page.redirect_to_url %}
     <meta http-equiv="refresh" content="0;URL='{{ page.redirect_to_url }}'">
   {% endif %}
-  {% if page.is_post %}
-    {% comment %} https://developers.google.com/search/docs/data-types/article#non-amp-sd {% endcomment %}
+  {% if layout.is_post %}
+    {% comment %} Google Snippet -- https://developers.google.com/search/docs/data-types/article#non-amp-sd {% endcomment %}
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -60,6 +60,15 @@ include_bootstrap_js: true
       }
     }
     </script>
+  {% endif %}
+  {% if layout.is_project %}
+    {% comment %} Twitter Card -- https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image {% endcomment %}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@davidfstr" />
+    <meta name="twitter:title" content="{{ page.title }}" />
+    <meta name="twitter:description" content="{{ page.summary }}" />
+    <meta name="twitter:image" content="{{ site.production_url }}{{ page.url }}{% if page.logo_png_filename %}{{ page.logo_png_filename }}{% elsif page.logo_filename %}{{ page.logo_filename }}{% else %}logo-128.png{% endif %}" />
+    <meta name="twitter:image:alt" content="{{ page.title }} Logo" />
   {% endif %}
     
     <meta name="viewport" content="width=device-width, initial-scale=1">

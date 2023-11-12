@@ -4,6 +4,7 @@ title: CompressedTextField for Django and MySQL
 summary: >
     A large text field, stored compressed in the database, for Django and MySQL.
 logo_filename: logo.svg
+logo_png_filename: logo-256@2x.png
 started_on: 2022-07-07
 ended_on: 2022-07-07
 x_languages: [Python]
