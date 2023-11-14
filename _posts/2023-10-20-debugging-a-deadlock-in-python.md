@@ -3,6 +3,9 @@ layout: post
 title: Debugging a deadlock in Python
 tags: [Software]
 
+description: >
+    Adventures in debugging a deadlock in my website downloader Crystal
+
 include_mermaid: true
 include_accordian: true
 

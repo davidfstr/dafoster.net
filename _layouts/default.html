@@ -20,10 +20,10 @@ include_bootstrap_js: true
   
     <!-- Google Snippet -->
     {% if layout.is_post and page.description %}
-      {% comment %} Allow pages to specify explicit SEO description {% endcomment %}
+      {% comment %} Allow pages to specify {% endcomment %}
       <meta name="description" content="{{ page.description }}">
     {% elsif layout.is_project and page.summary %}
-      {% comment %} Use project summary for SEO description {% endcomment %}
+      {% comment %} Use project summary {% endcomment %}
       <meta name="description" content="{{ page.summary }}">
     {% endif %}
     <meta name="author" content="{{ site.author.name }}">
@@ -77,6 +77,15 @@ include_bootstrap_js: true
       <meta name="twitter:description" content="{{ page.summary }}" />
       <meta name="twitter:image" content="{{ site.production_url }}{{ page.url }}{% if page.logo_png_filename %}{{ page.logo_png_filename }}{% elsif page.logo_filename %}{{ page.logo_filename }}{% else %}logo-128.png{% endif %}" />
       <meta name="twitter:image:alt" content="{{ page.title }} Logo" />
+    {% endif %}
+    
+    <!-- LinkedIn Card -->
+    {% comment %} https://www.linkedin.com/post-inspector/ {% endcomment %}
+    {% if layout.is_post %}
+      <meta property="og:type" content="Article" />
+      <meta name="image" property="og:image" content="{{ site.production_url }}/assets/article-pencil-wide.png" />
+      {% comment %} Allow pages to specify {% endcomment %}
+      <meta name="description" property="og:description" content="{{ page.description }}" />
     {% endif %}
     
     <!-- Feeds -->
