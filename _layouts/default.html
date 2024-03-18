@@ -82,10 +82,14 @@ include_bootstrap_js: true
     <!-- LinkedIn Card -->
     {% comment %} https://www.linkedin.com/post-inspector/ {% endcomment %}
     {% if layout.is_post %}
-      <meta property="og:type" content="Article" />
+      <meta property="og:type" content="article" />
       <meta name="image" property="og:image" content="{{ site.production_url }}/assets/article-pencil-wide.png" />
-      {% comment %} Allow pages to specify {% endcomment %}
+      {% comment %} TODO: Allow pages to specify {% endcomment %}
       <meta name="description" property="og:description" content="{{ page.description }}" />
+    {% elsif layout.is_project %}
+      <meta property="og:type" content="website" />
+      <meta name="image" property="og:image" content="{{ site.production_url }}{{ page.url }}{% if page.logo_png_filename %}{{ page.logo_png_filename }}{% elsif page.logo_filename %}{{ page.logo_filename }}{% else %}logo-128.png{% endif %}" />
+      <meta name="description" property="og:description" content="{{ page.summary }}" />
     {% endif %}
     
     <!-- Feeds -->
