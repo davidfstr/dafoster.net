@@ -70,7 +70,14 @@ include_bootstrap_js: true
   
     <!-- Twitter Card -->
     {% comment %} https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image {% endcomment %}
-    {% if layout.is_project %}
+    {% if layout.is_post %}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@davidfstr" />
+      <meta name="twitter:title" content="{{ page.title }}" />
+      {% comment %} Allow pages to specify {% endcomment %}
+      <meta name="twitter:description" content="{{ page.description }}" />
+      <meta name="twitter:image" content="{{ site.production_url }}{% if page.wide_image_filepath %}{{ page.wide_image_filepath }}{% else %}/assets/article-pencil-wide.png{% endif %}" />
+    {% elsif layout.is_project %}
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@davidfstr" />
       <meta name="twitter:title" content="{{ page.title }}" />
@@ -79,12 +86,12 @@ include_bootstrap_js: true
       <meta name="twitter:image:alt" content="{{ page.title }} Logo" />
     {% endif %}
     
-    <!-- LinkedIn Card -->
+    <!-- LinkedIn and Mastodon Card -->
     {% comment %} https://www.linkedin.com/post-inspector/ {% endcomment %}
     {% if layout.is_post %}
       <meta property="og:type" content="article" />
-      <meta name="image" property="og:image" content="{{ site.production_url }}/assets/article-pencil-wide.png" />
-      {% comment %} TODO: Allow pages to specify {% endcomment %}
+      <meta name="image" property="og:image" content="{{ site.production_url }}{% if page.wide_image_filepath %}{{ page.wide_image_filepath }}{% else %}/assets/article-pencil-wide.png{% endif %}" />
+      {% comment %} Allow pages to specify {% endcomment %}
       <meta name="description" property="og:description" content="{{ page.description }}" />
     {% elsif layout.is_project %}
       <meta property="og:type" content="website" />
