@@ -33,7 +33,7 @@ how a complex [Jekyll] site is structured**. Notable features include:
     * `docker build -t dafoster.net .`
 * Create and start Docker container, if not already created:
     * ```
-      docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest
+      docker run --name dafoster.net -it -v `pwd`:/home -v $HOME/.ssh:/root/.ssh:ro -p 4000:4000 -d dafoster.net:latest --attach
       ```
 
 * Start Docker container, if already created:
