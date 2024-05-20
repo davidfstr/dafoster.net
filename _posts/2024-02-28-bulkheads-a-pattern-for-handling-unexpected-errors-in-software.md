@@ -68,15 +68,17 @@ python -m pip install crystal-web
 Here is a small program you can run in the Python REPL that demonstrates the use of bulkheads:
 
 ```python
->>> from crystal.util.bulkheads import capture_crashes_to_stderr
+>>> from crystal.util.bulkheads import BulkheadCell, capture_crashes_to
 >>> 
->>> @capture_crashes_to_stderr
+>>> divide_bulkhead = BulkheadCell()
+>>> 
+>>> @capture_crashes_to(divide_bulkhead)
 ... def divide(x, y):
 ...     return x / y
 ... 
->>> divide(10, 2)
+>>> print(divide(10, 2))
 5.0
->>> divide(10, 0)
+>>> print(divide(10, 0))
 Exception in bulkhead:
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -84,6 +86,11 @@ Traceback (most recent call last):
     return func(*args, **kwargs)  # cr-traceback: ignore
   File "<stdin>", line 3, in divide
 ZeroDivisionError: division by zero
+None
+>>> divide_bulkhead.crash_reason
+ZeroDivisionError('division by zero')
+>>> print(divide(10, 5))
+None
 ```
 
 See the [API](#api) for more detailed information about how to use bulkheads.
