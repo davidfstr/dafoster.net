@@ -44,6 +44,15 @@ Most video links below are to the Hublio platform, which only conference attende
 [pyrewind]: https://github.com/airportyh/time-traveling-debugger
 [debugging in the presence of C extensions]: https://github.com/airportyh/time-traveling-debugger/issues/47
 
+### API Design
+
+* **The Design of Everyday APIs** - Lynn Root
+    * Outlined several principles for improving the design of APIs.
+    * Gives "before" and "after" examples when applying these principles
+      to an example API.
+    * [📽 Video (Hublio)](https://events.hubilo.com/pycon-us-2024/session/234189)
+    * [🎞 Slides](https://www.roguelynn.com/talks/everyday-apis/)
+
 ### AI
 
 * **Keynote** - Simon Willison
