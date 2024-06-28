@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Building web apps with Vue and Django - The Ultimate Guide
+title: Building web apps with Vue and Django (2024) - Ultimate Guide
 title_long: true
 tags: [Django, Software]
 featured: true
+date_updated: 2024-06-28
 x_audience: |
     novice web devs who want to build their first web app;
     experienced web devs coming from Django or Rails who 
