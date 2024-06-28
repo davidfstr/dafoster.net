@@ -302,21 +302,20 @@ To see a full example of combining Django and Vite together using the above stra
     <img alt="Diagram: Transpiled Bundling Strategy" src="/assets/2021/vue-and-django/bundling-strategies/transpiled.svg" class="bundling-diagram bundling-diagram-wide" />
 </a>
 
+> **2024 Update:** The [import-traced bundling] approach used with newer bundlers like Vite gives all the advantages of transpiled bundling without any of the downsides. Therefore I would not recommend a traditional transpiler approach in 2024.
+
 If you want the latest and greatest JavaScript features that haven't made it even to your latest *development* browser (ex: the latest Chrome or Firefox) then you'll need to pay the cost of needing to transpile during development time:
 
 The transpiled bundling approach generally uses the same kind of HTML, JS, and filesystem structure as the [import-traced bundling] approach but you have additional flexibility depending on the particular set of bundler and transpiler tools you select.
 
 [import-traced bundling]: #import-traced-bundling
 
-Common choices for transpiler tools as of early 2021 are [Webpack], [Babel], and [TypeScript].
+Common choices for transpiler tools as of mid 2024 are [Vite]/[Rollup], [Webpack], [Babel], and [TypeScript].
 
+[Rollup]: https://rollupjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
 [TypeScript]: https://www.typescriptlang.org/
-
-For a sketch of how you might wire these tools together, take a look at Jacob Kaplan-Moss's [thoughts on the transpiled bundling approach at PyCon 2019].
-
-[thoughts on the transpiled bundling approach at PyCon 2019]: https://youtu.be/E613X3RBegI?t=1203
 
 Pros of transpiled bundling:
 
@@ -329,6 +328,10 @@ Cons of transpiled bundling:
 * **Moderate-to-slow bundle build times during development.**
     * You can eliminate build times during development entirely using either the [import-traced bundling] or [concatenated bundling] approaches.
 * Slow bundle build times during deployment, assuming you enable aggressive optimizations.
+
+For a sketch of how you might wire these tools together, take a look at Jacob Kaplan-Moss's [thoughts on the transpiled bundling approach at PyCon 2019].
+
+[thoughts on the transpiled bundling approach at PyCon 2019]: https://youtu.be/E613X3RBegI?t=1203
 
 
 <a name="render-baseline-html-with-django"></a>
