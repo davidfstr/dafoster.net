@@ -238,8 +238,11 @@ The root JavaScript file might look like:
 import { defineTodoList } from "@app/todo/list.js";
 
 export function setupTodoPage() {
-    defineTodoList();
-    ...
+    const app = Vue.createApp(...);
+    
+    defineTodoList(app);
+    
+    app.mount(...);
 }
 {% endraw %}{% endcapture %}
 <pre><code>{{ code | replace: "<", "&lt;" | replace: ">", "&gt;" }}</code></pre>
@@ -249,10 +252,8 @@ And that root JS file can include other modules like:
 {% capture code %}{% raw %}// static/todo/list.js
 import { defineTodoItem } from "@app/todo/item.js";
 
-export function defineTodoList() {
-    defineTodoItem();
-    
-    Vue.component('todo-list', {
+export function defineTodoList(app) {
+    app.component('todo-list', {
         props: {
             ...
         },
@@ -263,6 +264,8 @@ export function defineTodoList() {
             ...
         }
     });
+    
+    defineTodoItem(app);
 }
 {% endraw %}{% endcapture %}
 <pre><code>{{ code | replace: "<", "&lt;" | replace: ">", "&gt;" }}</code></pre>
@@ -458,13 +461,12 @@ which will call `setupRecommendationsPanel()`:
 ```
 // store/product/recommendations.js
 /*public*/ function setupRecommendationsPanel() {
-    new Vue({
-        el: '#recommendations-panel',
-        data: function() {
-            return document.querySelector('#recommendations-panel-data').innerText;
+    Vue.createApp({
+        data() {
+            return JSON.parse(document.querySelector('#recommendations-panel-data').innerText);
         },
         computed: {
-            loading: function() {
+            loading() {
                 ...
             },
             ...
@@ -472,7 +474,7 @@ which will call `setupRecommendationsPanel()`:
         methods: {
             ...
         }
-    });
+    }).mount('#recommendations-panel');
 }
 ```
 
