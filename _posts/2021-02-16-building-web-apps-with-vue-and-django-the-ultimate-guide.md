@@ -208,9 +208,9 @@ Note that choosing concatenated bundling does *not* prevent you from using TypeS
     <img alt="Diagram: Import-Traced Bundling Strategy" src="/assets/2021/vue-and-django/bundling-strategies/import-traced.svg" class="bundling-diagram" /> 
 </a>
 
-With the advent of the [Snowpack] bundler we can get all the benefits of the [concatenated bundling] approach while eliminating the need to manage JS dependencies manually, at the cost of a slightly-more-complex deployment process.
+With the advent of the [Vite] bundler we can get all the benefits of the [concatenated bundling] approach while eliminating the need to manage JS dependencies manually, at the cost of a slightly-more-complex deployment process.
 
-[Snowpack]: https://www.snowpack.dev/
+[Vite]: https://vitejs.dev/
 [concatenated bundling]: #concatenated-bundling
 
 With import-traced bundling, you write a root JavaScript file for each page that uses regular [JavaScript import statements] to bring in related modules. Your HTML template then only needs to include the root JavaScript file:<br clear="both" />
@@ -224,7 +224,7 @@ With import-traced bundling, you write a root JavaScript file for each page that
 <body>...</body>
 <!-- js -->
     <script type="module">
-        import { setupTodoPage } from "{% static 'todo/todo.js' %}";
+        import { setupTodoPage } from "@app/todo/todo.js";
         setupTodoPage();
     </script>
 <!-- endjs -->
@@ -235,7 +235,7 @@ With import-traced bundling, you write a root JavaScript file for each page that
 The root JavaScript file might look like:
 
 {% capture code %}{% raw %}// static/todo/todo.js
-import { defineTodoList } from "./todo/list.js";
+import { defineTodoList } from "@app/todo/list.js";
 
 export function setupTodoPage() {
     defineTodoList();
@@ -247,7 +247,7 @@ export function setupTodoPage() {
 And that root JS file can include other modules like:
 
 {% capture code %}{% raw %}// static/todo/list.js
-import { defineTodoItem } from "./item.js";
+import { defineTodoItem } from "@app/todo/item.js";
 
 export function defineTodoList() {
     defineTodoItem();
@@ -267,14 +267,17 @@ export function defineTodoList() {
 {% endraw %}{% endcapture %}
 <pre><code>{{ code | replace: "<", "&lt;" | replace: ">", "&gt;" }}</code></pre>
 
+> Note: The `import` statements above assume that Vite has been configured to resolve `@app` to Django's root `static` directory in `vite.config.js`.
+
 Some key differences between import-traced bundling and concatenated bundling:
 
 * The HTML page only needs to include the root JS file for the page and not any of its indirect JS dependencies.
 * JS modules must use `import` to declare other JS modules that they depend on, and `export` any functions that they want to be importable by other modules.
-* JS files for *all* Django apps in the Django project should be put in a common `static` directory rather than using per-app `static` directories. Having a common directory for all JS files will make it easier to configure Snowpack to build combined JS bundles for production deployments.
-* There is no longer a need to use Django Compressor.
+* JS files for *all* Django apps in the Django project should be put in a common `static` directory rather than using per-app `static` directories. Having a common directory for all JS files will make it easier to configure Vite to build combined JS bundles for production deployments.
+    * It *should* still be possible to configure Vite to use app-specific `static` directories, with some custom build system modifications, but I haven't yet tried to do so myself.
+* Django Compressor is no longer necessary.
 
-For a production deployment, you'll need to alter your deployment script to run Snowpack on the root `static` directory for the Django project, enumerating the set of root JS files, and generating same-named files for deployment to your static asset server.
+For a production deployment, you'll need to alter your deployment script to run Vite on the root `static` directory for the Django project, enumerating the set of root JS files, and generating same-named files for deployment to your static asset server.
 
 Pros of import-traced bundling:
 
@@ -286,7 +289,8 @@ Pros of import-traced bundling:
 Cons of import-traced bundling:
 
 * JavaScript files are not transpiled at *development time* (although they *are* at deployment time), so if you want to use the most bleeding-edge JavaScript features that aren't even supported by your development browser then you're out of luck. If you need transpilation during development consider the [transpiled] or the [2-server] approaches instead.
-* Requires that your development browsers [support JavaScript import] and JS modules in general.
+
+To see a full example of combining Django and Vite together using the above strategy, take a look at the [hello-django-vite](https://github.com/techsmartkids/hello-django-vite#readme) prototype I put together.
 
 [support JavaScript import]: https://caniuse.com/mdn-javascript_statements_import
 
