@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Building web apps with Vue and Django - The Ultimate Guide
+title: Building web apps with Vue and Django (2024) - Ultimate Guide
 title_long: true
 tags: [Django, Software]
 featured: true
+date_updated: 2024-06-28
 x_audience: |
     novice web devs who want to build their first web app;
     experienced web devs coming from Django or Rails who 
@@ -79,7 +80,7 @@ style: |
 
 [Vue] and [Django] are both fantastic for building modern web apps - bringing declarative functional reactive programming to the frontend, and an integrated web app platform, ecosystem, and battle-hardened ORM to the backend. However they can be somewhat tricky to use *together*. 
 
-Here I'd like to show some approaches for setting Vue and Django up in combination for both new web apps and existing Django-based web apps. I've been building web apps with Django for ~6 years and with Vue for ~3 years, and in particular I've extensively tested the [1&#8209;server]&nbsp;[concatenated bundling] approach described below in production.<br clear="both" />
+Here I'd like to show some approaches for setting Vue and Django up in combination for both new web apps and existing Django-based web apps. I've been building web apps with Django for ~9 years and with Vue for ~6 years, and in particular I've extensively tested the [1&#8209;server]&nbsp;[concatenated bundling] approach described below in production.<br clear="both" />
 
 [Vue]: https://vuejs.org/v2/guide/
 [Django]: https://www.djangoproject.com/
@@ -208,9 +209,9 @@ Note that choosing concatenated bundling does *not* prevent you from using TypeS
     <img alt="Diagram: Import-Traced Bundling Strategy" src="/assets/2021/vue-and-django/bundling-strategies/import-traced.svg" class="bundling-diagram" /> 
 </a>
 
-With the advent of the [Snowpack] bundler we can get all the benefits of the [concatenated bundling] approach while eliminating the need to manage JS dependencies manually, at the cost of a slightly-more-complex deployment process.
+With the advent of the [Vite] bundler we can get all the benefits of the [concatenated bundling] approach while eliminating the need to manage JS dependencies manually, at the cost of a slightly-more-complex deployment process.
 
-[Snowpack]: https://www.snowpack.dev/
+[Vite]: https://vitejs.dev/
 [concatenated bundling]: #concatenated-bundling
 
 With import-traced bundling, you write a root JavaScript file for each page that uses regular [JavaScript import statements] to bring in related modules. Your HTML template then only needs to include the root JavaScript file:<br clear="both" />
@@ -224,7 +225,7 @@ With import-traced bundling, you write a root JavaScript file for each page that
 <body>...</body>
 <!-- js -->
     <script type="module">
-        import { setupTodoPage } from "{% static 'todo/todo.js' %}";
+        import { setupTodoPage } from "@app/todo/todo.js";
         setupTodoPage();
     </script>
 <!-- endjs -->
@@ -235,11 +236,14 @@ With import-traced bundling, you write a root JavaScript file for each page that
 The root JavaScript file might look like:
 
 {% capture code %}{% raw %}// static/todo/todo.js
-import { defineTodoList } from "./todo/list.js";
+import { defineTodoList } from "@app/todo/list.js";
 
 export function setupTodoPage() {
-    defineTodoList();
-    ...
+    const app = Vue.createApp(...);
+    
+    defineTodoList(app);
+    
+    app.mount(...);
 }
 {% endraw %}{% endcapture %}
 <pre><code>{{ code | replace: "<", "&lt;" | replace: ">", "&gt;" }}</code></pre>
@@ -247,12 +251,10 @@ export function setupTodoPage() {
 And that root JS file can include other modules like:
 
 {% capture code %}{% raw %}// static/todo/list.js
-import { defineTodoItem } from "./item.js";
+import { defineTodoItem } from "@app/todo/item.js";
 
-export function defineTodoList() {
-    defineTodoItem();
-    
-    Vue.component('todo-list', {
+export function defineTodoList(app) {
+    app.component('todo-list', {
         props: {
             ...
         },
@@ -263,18 +265,23 @@ export function defineTodoList() {
             ...
         }
     });
+    
+    defineTodoItem(app);
 }
 {% endraw %}{% endcapture %}
 <pre><code>{{ code | replace: "<", "&lt;" | replace: ">", "&gt;" }}</code></pre>
+
+> Note: The `import` statements above assume that Vite has been configured to resolve `@app` to Django's root `static` directory in `vite.config.js`.
 
 Some key differences between import-traced bundling and concatenated bundling:
 
 * The HTML page only needs to include the root JS file for the page and not any of its indirect JS dependencies.
 * JS modules must use `import` to declare other JS modules that they depend on, and `export` any functions that they want to be importable by other modules.
-* JS files for *all* Django apps in the Django project should be put in a common `static` directory rather than using per-app `static` directories. Having a common directory for all JS files will make it easier to configure Snowpack to build combined JS bundles for production deployments.
-* There is no longer a need to use Django Compressor.
+* JS files for *all* Django apps in the Django project should be put in a common `static` directory rather than using per-app `static` directories. Having a common directory for all JS files will make it easier to configure Vite to build combined JS bundles for production deployments.
+    * It *should* still be possible to configure Vite to use app-specific `static` directories, with some custom build system modifications, but I haven't yet tried to do so myself.
+* Django Compressor is no longer necessary.
 
-For a production deployment, you'll need to alter your deployment script to run Snowpack on the root `static` directory for the Django project, enumerating the set of root JS files, and generating same-named files for deployment to your static asset server.
+For a production deployment, you'll need to alter your deployment script to run Vite on the root `static` directory for the Django project, enumerating the set of root JS files, and generating same-named files for deployment to your static asset server.
 
 Pros of import-traced bundling:
 
@@ -286,7 +293,8 @@ Pros of import-traced bundling:
 Cons of import-traced bundling:
 
 * JavaScript files are not transpiled at *development time* (although they *are* at deployment time), so if you want to use the most bleeding-edge JavaScript features that aren't even supported by your development browser then you're out of luck. If you need transpilation during development consider the [transpiled] or the [2-server] approaches instead.
-* Requires that your development browsers [support JavaScript import] and JS modules in general.
+
+To see a full example of combining Django and Vite together using the above strategy, take a look at the [hello-django-vite](https://github.com/techsmartkids/hello-django-vite#readme) prototype I put together.
 
 [support JavaScript import]: https://caniuse.com/mdn-javascript_statements_import
 
@@ -298,21 +306,20 @@ Cons of import-traced bundling:
     <img alt="Diagram: Transpiled Bundling Strategy" src="/assets/2021/vue-and-django/bundling-strategies/transpiled.svg" class="bundling-diagram bundling-diagram-wide" />
 </a>
 
+> **2024 Update:** The [import-traced bundling] approach used with newer bundlers like Vite gives all the advantages of transpiled bundling without any of the downsides. Therefore I would not recommend a traditional transpiler approach in 2024.
+
 If you want the latest and greatest JavaScript features that haven't made it even to your latest *development* browser (ex: the latest Chrome or Firefox) then you'll need to pay the cost of needing to transpile during development time:
 
 The transpiled bundling approach generally uses the same kind of HTML, JS, and filesystem structure as the [import-traced bundling] approach but you have additional flexibility depending on the particular set of bundler and transpiler tools you select.
 
 [import-traced bundling]: #import-traced-bundling
 
-Common choices for transpiler tools as of early 2021 are [Webpack], [Babel], and [TypeScript].
+Common choices for transpiler tools as of mid 2024 are [Vite]/[Rollup], [Webpack], [Babel], and [TypeScript].
 
+[Rollup]: https://rollupjs.org/
 [Webpack]: https://webpack.js.org/
 [Babel]: https://babeljs.io/
 [TypeScript]: https://www.typescriptlang.org/
-
-For a sketch of how you might wire these tools together, take a look at Jacob Kaplan-Moss's [thoughts on the transpiled bundling approach at PyCon 2019].
-
-[thoughts on the transpiled bundling approach at PyCon 2019]: https://youtu.be/E613X3RBegI?t=1203
 
 Pros of transpiled bundling:
 
@@ -325,6 +332,10 @@ Cons of transpiled bundling:
 * **Moderate-to-slow bundle build times during development.**
     * You can eliminate build times during development entirely using either the [import-traced bundling] or [concatenated bundling] approaches.
 * Slow bundle build times during deployment, assuming you enable aggressive optimizations.
+
+For a sketch of how you might wire these tools together, take a look at Jacob Kaplan-Moss's [thoughts on the transpiled bundling approach at PyCon 2019].
+
+[thoughts on the transpiled bundling approach at PyCon 2019]: https://youtu.be/E613X3RBegI?t=1203
 
 
 <a name="render-baseline-html-with-django"></a>
@@ -451,13 +462,12 @@ which will call `setupRecommendationsPanel()`:
 ```
 // store/product/recommendations.js
 /*public*/ function setupRecommendationsPanel() {
-    new Vue({
-        el: '#recommendations-panel',
-        data: function() {
-            return document.querySelector('#recommendations-panel-data').innerText;
+    Vue.createApp({
+        data() {
+            return JSON.parse(document.querySelector('#recommendations-panel-data').innerText);
         },
         computed: {
-            loading: function() {
+            loading() {
                 ...
             },
             ...
@@ -465,7 +475,7 @@ which will call `setupRecommendationsPanel()`:
         methods: {
             ...
         }
-    });
+    }).mount('#recommendations-panel');
 }
 ```
 
