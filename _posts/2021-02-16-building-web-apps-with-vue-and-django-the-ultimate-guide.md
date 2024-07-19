@@ -79,7 +79,7 @@ style: |
 
 [Vue] and [Django] are both fantastic for building modern web apps - bringing declarative functional reactive programming to the frontend, and an integrated web app platform, ecosystem, and battle-hardened ORM to the backend. However they can be somewhat tricky to use *together*. 
 
-Here I'd like to show some approaches for setting Vue and Django up in combination for both new web apps and existing Django-based web apps. I've been building web apps with Django for ~6 years and with Vue for ~3 years, and in particular I've extensively tested the [1&#8209;server]&nbsp;[concatenated bundling] approach described below in production.<br clear="both" />
+Here I'd like to show some approaches for setting Vue and Django up in combination for both new web apps and existing Django-based web apps. I've been building web apps with Django for ~9 years and with Vue for ~6 years, and in particular I've extensively tested the [1&#8209;server]&nbsp;[concatenated bundling] approach described below in production.<br clear="both" />
 
 [Vue]: https://vuejs.org/v2/guide/
 [Django]: https://www.djangoproject.com/
