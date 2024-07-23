@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Building web apps with Vue and Django (2024) - Ultimate Guide
+title: Building web apps with Vue and Django (2024) - The&nbsp;Ultimate Guide
 title_long: true
 tags: [Django, Software]
 featured: true
