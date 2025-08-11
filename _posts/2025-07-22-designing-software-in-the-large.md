@@ -121,4 +121,9 @@ Specifically, it advocates taking a **strategic approach** to programming tasks,
 
 Many programmers, by contrast, take a purely **tactical approach** that focuses *only* on getting new features working, disregarding the long-term costs of adding incremental complexity and other forms of cutting corners.
 
+## Takeaway
+
 **Working code (alone) is not enough.**
+
+To keep a software system maintainable, you must strive to keep the complexity of the system low as you & others make changes to it.
+
