@@ -13,28 +13,48 @@ The workflow applies dimming first (to the full diagram), then crops to ensure p
 
 ## Workflow
 
-### Quick Start (Recommended)
+### Complete Process (Regenerate All Outputs)
 
-Use the complete workflow script for one-step processing:
+To regenerate all outputs from scratch:
+
+```bash
+# Extract the input SVG
+(cd inputs/ ; unzip Full.svg.zip ; rm -rf __MACOSX)
+
+# Fix text wrapping issues in the SVG
+python3 src/svg_fix_text_wrap.py "Pass-Through Method,Comments\n(p. 95-120),Special-General Mixture\n(p. 65)" inputs/Full.svg inputs/Full-nowrap.svg
+
+# Find all viewport rectangles
+python3 src/svg_find_viewports.py inputs/Full-nowrap.svg --stroke "#e16919" --out outputs/rectangles.csv
+
+# Generate all sectioned outputs (viewports 0-5)
+for i in {0..5}; do python3 src/svg_process_viewport.py inputs/Full-nowrap.svg outputs/section$i.svg $i; done
+```
+
+### Quick Start (Individual Viewports)
+
+Use the complete workflow script `svg_process_viewport.py` for one-step processing of individual viewports:
 
 ```bash
 # Process viewport 0 (first orange rectangle)
-python3 src/svg_process_viewport.py inputs/Full.svg outputs/section0.svg 0
+python3 src/svg_process_viewport.py inputs/Full-nowrap.svg outputs/section0.svg 0
 
 # Process viewport 1 (second orange rectangle)  
-python3 src/svg_process_viewport.py inputs/Full.svg outputs/section1.svg 1
+python3 src/svg_process_viewport.py inputs/Full-nowrap.svg outputs/section1.svg 1
 ```
 
-### Manual Steps (for debugging)
+### Manual Steps for debugging (Individual Viewports)
+
+The `svg_process_viewport.py` script can be debugged by running the individual steps manually:
 
 1. **Find viewport rectangles** (orange rectangles in your diagram):
 ```bash
-python3 src/svg_find_viewports.py inputs/Full.svg --stroke "#e16919" --out outputs/rectangles.csv
+python3 src/svg_find_viewports.py inputs/Full-nowrap.svg --stroke "#e16919" --out outputs/rectangles.csv
 ```
 
 2. **Dim elements outside viewport**:
 ```bash
-python3 src/svg_dim_by_bbox.py inputs/Full.svg outputs/section1_dimmed.svg 0
+python3 src/svg_dim_by_bbox.py inputs/Full-nowrap.svg outputs/section1_dimmed.svg 0
 ```
 
 3. **Crop to specific viewport**:
@@ -51,6 +71,7 @@ python3 src/svg_crop_by_bbox.py outputs/section1_dimmed.svg --csv outputs/rectan
 
 ## Files
 
+- `svg_fix_text_wrap.py` - Fix specific text boxes so that their contents do not wrap.
 - `svg_find_viewports.py` - Finds orange rectangle viewports in SVG
 - `svg_dim_by_bbox.py` - Dims elements outside viewport (main dimming logic)
 - `svg_crop_by_bbox.py` - Crops SVG to bounding box  
