@@ -31,7 +31,7 @@ style: |
   * **Dependencies** - A dependency exists when a given piece of code cannot be understood and modified in isolation; the code relates in some way to other code.
   * **Obscurity** - Obscurity occurs when important information is not obvious.
 
-<img src="/assets/2025/designing-software-in-the-large/section0.svg" style="max-width: 100%; max-height: 268px;" alt="A concept map diagram showing symptoms and causes of complexity, and how they related to each other" />
+<a href="/assets/2025/designing-software-in-the-large/section0.svg"><img src="/assets/2025/designing-software-in-the-large/section0.svg" style="max-width: 100%; max-height: 268px;" alt="A concept map diagram showing symptoms and causes of complexity, and how they related to each other" /></a>
 
 To keep a software system maintainable, you must strive to keep the complexity of the system low as you & others make changes to it.
 
@@ -54,11 +54,11 @@ Key contributors to dependency-complexity are:
 
 The opposite of dependency-complexity is **cohesive code**, created primarily by focusing on designing **deep modules**.
 
-<img src="/assets/2025/designing-software-in-the-large/section1.svg" style="max-width: 100%; max-height: 550px;" />
+<a href="/assets/2025/designing-software-in-the-large/section1.svg"><img src="/assets/2025/designing-software-in-the-large/section1.svg" style="max-width: 100%; max-height: 550px;" /></a>
 
 **Deep modules** allow a lot of functionality to be accessed through a small interface:
 
-<img src="/assets/2025/designing-software-in-the-large/deep-and-shallow-modules.svg" style="max-width: 100%; max-height: 325px;" />
+<a href="/assets/2025/designing-software-in-the-large/deep-and-shallow-modules.svg"><img src="/assets/2025/designing-software-in-the-large/deep-and-shallow-modules.svg" style="max-width: 100%; max-height: 325px;" /></a>
 
 Keeping module interfaces small lowers the number and strength of dependencies between modules, resulting in lower overall system complexity:
 
@@ -74,7 +74,7 @@ Chapters 4-9 of the book are related to techniques for forming deeper modules. M
 
 Obscurity creates Unknown Unknowns and contributes to High Cognitive Load:
 
-<img src="/assets/2025/designing-software-in-the-large/section3.svg" style="max-width: 100%; max-height: 450px;" />
+<a href="/assets/2025/designing-software-in-the-large/section3.svg"><img src="/assets/2025/designing-software-in-the-large/section3.svg" style="max-width: 100%; max-height: 450px;" /></a>
 
 Key contributors to obscurity:
 
@@ -95,7 +95,7 @@ The opposite of obscurity is **obvious code**. Obvious code
 * is **well-documented**, and 
 * makes good use of **whitespace**.
 
-<img src="/assets/2025/designing-software-in-the-large/section4.svg" style="max-width: 100%; max-height: 400px;" />
+<a href="/assets/2025/designing-software-in-the-large/section4.svg"><img src="/assets/2025/designing-software-in-the-large/section4.svg" style="max-width: 100%; max-height: 400px;" /></a>
 
 There are many techniques for creating **consistency** in code:
 
@@ -105,7 +105,7 @@ There are many techniques for creating **consistency** in code:
 
 * **Documentation** of conventions can be captured in **coding style guides** and through references to documented **design patterns**.
 
-<img src="/assets/2025/designing-software-in-the-large/section5.svg" style="max-width: 100%; max-height: 400px;" />
+<a href="/assets/2025/designing-software-in-the-large/section5.svg"><img src="/assets/2025/designing-software-in-the-large/section5.svg" style="max-width: 100%; max-height: 400px;" /></a>
 
 ## Strategic vs. Tactical Mindset
 
