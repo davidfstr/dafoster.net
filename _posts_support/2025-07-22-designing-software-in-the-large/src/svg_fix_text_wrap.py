@@ -3,13 +3,19 @@
 SVG Text Box Wrapping Fix Script
 
 This script fixes text wrapping issues in SVG files by modifying the CSS styles
-of specific text boxes to prevent line breaks and handle overflow gracefully.
+of specific text boxes to prevent line breaks and increasing their width to 
+accommodate the content without ellipsis.
 
 Usage:
-    python svg_fix_text_wrap.py "text1,text2,text3" input.svg output.svg
+    python3 svg_fix_text_wrap.py "text1,text2,text3" input.svg output.svg
 
 Example:
-    python svg_fix_text_wrap.py "Pass-Through Method,Consistent Names" inputs/Full.svg inputs/Full-2.svg
+    python3 svg_fix_text_wrap.py "Pass-Through Method,Consistent Names" inputs/Full.svg inputs/Full-2.svg
+
+Changes made to each identified text box:
+- Applies no-wrap CSS styles to prevent text wrapping
+- Increases the foreignObject width by 20% to accommodate the full text
+- Removes ellipsis styling since the text should now fit properly
 """
 
 import sys
@@ -70,6 +76,7 @@ def create_no_wrap_style(original_style_str):
     Create the new style for the <p> element to prevent wrapping.
     
     Preserves existing styles but adds no-wrap rules.
+    Since we're increasing the width, we don't need ellipsis.
     """
     styles = parse_style_attribute(original_style_str)
     
@@ -80,8 +87,8 @@ def create_no_wrap_style(original_style_str):
         'overflow-wrap': 'normal',
         'word-break': 'normal', 
         'hyphens': 'none',
-        'overflow': 'hidden',
-        'text-overflow': 'ellipsis'
+        'overflow': 'visible'  # Changed from 'hidden' to 'visible' since we're widening the box
+        # Removed 'text-overflow': 'ellipsis' since we don't want ellipsis anymore
     })
     
     return serialize_style_dict(styles)
@@ -100,8 +107,48 @@ def fix_p_tag_style(p_start_tag):
         return p_start_tag.replace('>', f' style="{new_style}">')
 
 
+def increase_foreign_object_width(foreign_obj_content, width_increase_percent=20):
+    """
+    Increase the width of a foreignObject element by the specified percentage.
+    
+    Args:
+        foreign_obj_content: String containing the foreignObject element
+        width_increase_percent: Percentage to increase the width (default 20%)
+        
+    Returns:
+        Modified string with increased width
+    """
+    # Find the width attribute in the foreignObject opening tag
+    width_match = re.search(r'<foreignObject[^>]*width="([^"]*)"', foreign_obj_content)
+    if width_match:
+        original_width_str = width_match.group(1)
+        try:
+            # Parse the width as a float
+            original_width = float(original_width_str)
+            
+            # Calculate new width (increased by specified percentage)
+            new_width = original_width * (1 + width_increase_percent / 100.0)
+            
+            # Replace the width attribute
+            new_width_str = str(new_width)
+            modified_content = foreign_obj_content.replace(
+                f'width="{original_width_str}"', 
+                f'width="{new_width_str}"'
+            )
+            
+            return modified_content
+            
+        except ValueError:
+            # If width couldn't be parsed as a number, return unchanged
+            print(f"  Warning: Could not parse width '{original_width_str}' as a number")
+            return foreign_obj_content
+    else:
+        print(f"  Warning: Could not find width attribute in foreignObject")
+        return foreign_obj_content
+
+
 def fix_ancestor_divs_for_text_box(modified_content, first_p_start_tag, text_content, last_p_end_tag):
-    """Find and fix ancestor div styles for a text box."""
+    """Find and fix ancestor div styles for a text box and increase its width."""
     # Find the foreignObject that contains this text box
     parts = modified_content.split(first_p_start_tag)
     if len(parts) >= 2:
@@ -130,6 +177,8 @@ def fix_ancestor_divs_for_text_box(modified_content, first_p_start_tag, text_con
                 
                 # Apply fixes to div elements in this foreignObject
                 fixed_foreign_obj = re.sub(r'<div[^>]*style="[^"]*"[^>]*>', fix_div_style, foreign_obj_content)
+                
+                fixed_foreign_obj = increase_foreign_object_width(fixed_foreign_obj)
                 
                 # Replace the original foreignObject with the fixed one
                 return modified_content.replace(foreign_obj_content, fixed_foreign_obj)
