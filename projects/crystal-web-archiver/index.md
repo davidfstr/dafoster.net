@@ -1,6 +1,6 @@
 ---
 layout: project
-title: "Crystal: A Website Downloader"
+title: "Crystal: A Website Archiver"
 summary: >
     Downloads websites in an archival-friendly format.
 started_on: 2011-09-30
