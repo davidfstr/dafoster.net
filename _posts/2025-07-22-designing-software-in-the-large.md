@@ -3,6 +3,8 @@ layout: post
 title: Designing Software in the Large
 tags: [Software]
 
+x_hacker_news_discussion_url: https://news.ycombinator.com/item?id=44864467#44868333
+
 style: |
     /*
     @media (max-width: 640px) {
