@@ -14,28 +14,18 @@ style: |
     
     <div class="x-projects" style="margin-bottom: 1.25em">
       {% assign project_pages = site.pages | projects_by_date %}
+      
+      <h2>Featured</h2>
       {% for cur_page in project_pages %}
-        {% if cur_page.layout == "project" %}
-          {% assign project_title = cur_page.title %}
-          {% assign project_url = cur_page.url | replace: '/index.html', '/' %}
-          {% assign project_summary = cur_page.summary %}
-          {% assign project_is_redirect = cur_page.redirect_to_url %}
-          {% assign project_date = cur_page.started_on %}
-          
-          <div class="project">
-            <a href="{{ project_url }}"><img src="{{ project_url }}{% if cur_page.logo_filename %}{{ cur_page.logo_filename }}{% else %}logo-128.png{% endif %}" alt="Logo for {{ project_title }}" width="128" height="128" /></a>
-            <div>
-              <div class="date">{{ project_date | date: "%b %Y" }}</div>
-              <h2><a href="{{ project_url }}"{% if project_is_redirect %} class="external"{% endif %}>{{ project_title }}</a>
-                {% if cur_page.featured %}
-                  {% include featured_project_star %}
-                {% endif %}
-              </h2>
-              <p>
-                {{ project_summary }}
-              </p>
-            </div>
-          </div>
+        {% if cur_page.layout == "project" and cur_page.featured == true %}
+          {% include project_row cur_page=cur_page %}
+        {% endif %}
+      {% endfor %}
+      
+      <h2>Other Projects</h2>
+      {% for cur_page in project_pages %}
+        {% if cur_page.layout == "project" and cur_page.featured != true %}
+          {% include project_row cur_page=cur_page %}
         {% endif %}
       {% endfor %}
     </div>
