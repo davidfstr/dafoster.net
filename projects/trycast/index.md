@@ -13,6 +13,7 @@ x_ended_on_source: TBD
 x_languages: [Python]
 x_lines_of_code: TBD
 x_location: Cathode at /Users/davidf/Projects
+featured: true
 
 redirect_to_url: https://pypi.org/project/trycast/
 

@@ -10,7 +10,6 @@ ended_on: 2022-07-07
 x_languages: [Python]
 x_lines_of_code: TODO
 x_location: Cathode at django-mysql-compressed-fields
-featured: true
 
 redirect_to_url: https://github.com/techsmartkids/django-mysql-compressed-fields#readme
 
