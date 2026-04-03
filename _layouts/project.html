@@ -23,7 +23,7 @@ style0: |
   <div class="{% if page.full_width != true %}col-md-9{% else %}col-md-12{% endif %} content">
     <img class="logo" src="{% if page.logo_filename %}{{ page.logo_filename }}{% else %}logo-128.png{% endif %}" alt="Logo for {{ page.title }}" width="128" height="128" />
     
-    <h1>{{ page.title }}{% if page.subtitle %} <small>&ndash; {{ page.subtitle }}</small>{% endif %}</h1>
+    <h1>{{ page.title }}{% if page.subtitle and page.subtitle_hidden_from_page_header != true %} <small>&ndash; {{ page.subtitle }}</small>{% endif %}</h1>
     
     {% if page.redirect_to_url %}
       {% include redirecting %}
