@@ -9,11 +9,13 @@ style0: |
     float: right;
     background-color: #fafafa;
     border: 1px solid #dfdfdf;
+    /* Don't decrease logo size when adding padding */
+    box-sizing: content-box;
     padding: 20px;
     margin-left: 10px; margin-bottom: 10px;
   }
   @media (max-width: 576px) {
-    .logo { width: 125px; }
+    .logo { width: 85px; height: 85px; }
   }
 
 ---
