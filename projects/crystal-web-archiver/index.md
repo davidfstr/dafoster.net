@@ -1,7 +1,7 @@
 ---
 layout: project
 title: "Crystal: A Website Archiver"
-subtitle: Free Website Downloader for Mac & Windows
+subtitle: Website Downloader for Mac & Windows
 subtitle_hidden_from_page_header: true
 summary: >
     Crystal is a free website downloader and archiver for Mac, Windows, and Linux.
@@ -21,7 +21,7 @@ style: |
     .download-links li { margin-bottom: 0.5em; }
 
 ---
-**Crystal** is a free tool that downloads high-fidelity copies of websites
+**Crystal** is a tool that downloads high-fidelity copies of websites
 for long-term archival and offline viewing.
 
 It works best on traditional websites made of distinct pages using 
