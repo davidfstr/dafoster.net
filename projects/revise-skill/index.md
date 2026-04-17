@@ -4,11 +4,8 @@ title: Revise Skill
 summary: >
     An Agent Skill that performs common code quality revisions on
     AI-drafted code, optimizing it for human readers.
-# TODO: Create an SVG version of the logo and use it here
-logo_filename: logo.jpg
-# NOTE: Not technically a PNG, but is a RASTER image, which is what all current
-#       users of this filename actually want
-logo_png_filename: logo.jpg
+logo_filename: logo-big.svg
+logo_png_filename: logo-big.png
 started_on: 2026-04-06
 ended_on: ongoing
 x_started_on_source: first commit in git repo
