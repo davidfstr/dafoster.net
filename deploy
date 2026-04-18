@@ -1,0 +1,8 @@
+#!/bin/bash
+set -e
+
+docker exec -it dafoster.net bash --login -c '
+    eval "$(ssh-agent -s)"
+    ssh-add
+    rake deploy
+'

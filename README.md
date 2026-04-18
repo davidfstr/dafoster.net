@@ -60,6 +60,12 @@ docker exec -it dafoster.net bash --login -c "rake dist"
 ##### Deploy to GitHub Pages
 
 ```
+./deploy
+```
+
+or manually:
+
+```
 $ docker exec -it dafoster.net bash --login
 $$ eval "$(ssh-agent -s)"  # start SSH agent
 $$ ssh-add  # login to GitHub
