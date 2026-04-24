@@ -1,5 +1,7 @@
 # SVG Viewport Processing Tools
 
+<img src="README/svg-crop-tools-icon.png" alt="SVG Crop Tools icon" align="right" width="200" />
+
 This toolkit processes concept map diagrams to create zoomed-in views of specific sections.
 
 ## Overview
@@ -10,6 +12,20 @@ When writing articles about complex topics with concept map diagrams, you often 
 2. **Cropping** the SVG to the specific rectangular viewport
 
 The workflow applies filtering first (to the full diagram), then crops to ensure proper visual focus on the main content area.
+
+## Input Preparation
+
+1. Create your diagram using a vector diagramming tool such as [TLDraw](https://www.tldraw.com/).
+
+2. Add colored rectangles to mark the regions you want cropped into individual images. If using TLDraw, use **orange** rectangles (stroke `#e16919`) so the command-line examples below work as-is without any changes.
+
+3. Export the diagram as an `.svg` file. Suggested layout:
+   ```
+   my-post/
+     inputs/
+       Full.svg      ← exported diagram
+     outputs/        ← generated section SVGs will go here
+   ```
 
 ## Workflow
 
