@@ -3,6 +3,8 @@ layout: post
 title: Oops, I wrote a database
 tags: [Software]
 
+wide_image_filepath: /assets/2026/oops-i-wrote-a-database/windows-move-aside--article-image.png
+
 ---
 
 > Never write your own database or filesystem. It's way harder than you expect.  
