@@ -58,8 +58,8 @@ So on Windows, Crystal renames an old zip file to a transitional (but crash-dura
 
 1. Write new zip file to temporary location
 2. Move aside the old zip file to a moved-aside location
-3. Rename the new zip file to its permanent location, where the old zip file was
     - This is permitted even if the old zip file has readers, when opened with `FILE_SHARE_WRITE`
+3. Rename the new zip file to its permanent location, where the old zip file was
 4. Delete the old zip file in its moved-aside location
     - This is permitted even if the old zip file has readers, when opened with `FILE_SHARE_DELETE`
 
