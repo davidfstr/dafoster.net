@@ -4,7 +4,7 @@ title: Revise Skill
 summary: >
     An Agent Skill that performs common code quality revisions on
     AI-drafted code, optimizing it for human readers.
-logo_filename: logo-big.svg
+logo_filename: logo-big-notext.svg
 logo_png_filename: logo-big.png
 started_on: 2026-04-06
 ended_on: ongoing

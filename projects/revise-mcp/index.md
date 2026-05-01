@@ -4,7 +4,7 @@ title: Revise MCP
 summary: >
     An MCP server providing text-based tools to revise and refactor code,
     designed to be highly usable for AI agents.
-logo_filename: logo-big.svg
+logo_filename: logo-big-notext.svg
 logo_png_filename: logo-big.png
 started_on: 2026-02-12
 ended_on: ongoing
