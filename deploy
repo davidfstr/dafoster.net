@@ -1,6 +1,21 @@
 #!/bin/bash
 set -e
 
+# Start Docker Desktop if the daemon isn't reachable
+if ! docker info &>/dev/null; then
+    echo "Starting Docker..."
+    open '/Applications/Docker.app'
+    until docker info &>/dev/null; do
+        sleep 2
+    done
+fi
+
+# Start the dafoster.net container if it isn't running
+if [ "$(docker inspect -f '{{.State.Running}}' dafoster.net 2>/dev/null)" != "true" ]; then
+    echo "Starting dafoster.net container..."
+    docker start dafoster.net
+fi
+
 docker exec -it dafoster.net bash --login -c '
     eval "$(ssh-agent -s)"
     ssh-add
