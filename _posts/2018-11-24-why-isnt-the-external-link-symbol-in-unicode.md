@@ -37,6 +37,8 @@ I wonder if the external link symbol would be accepted as an emoji? I don't have
 **2021 Update:** These days I use the ⎋ symbol to approximate the external link
 symbol in my own informal writing. I've also used 🔗 in the past.
 
+**2026 Update:** I sometimes use the ⧉ symbol now.
+
 [proposal]: https://www.unicode.org/L2/L2006/06268-ext-link.pdf
 [public review]: https://www.unicode.org/L2/L2006/06324.htm#109-C26
 [lost in the shuffle]: https://www.unicode.org/L2/L2012/12143-ext-link.html
