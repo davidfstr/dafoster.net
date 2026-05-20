@@ -449,15 +449,9 @@ a.btn-success {
 }
 .tag_box li {
 	line-height:28px;
-  float:left;
 }
 .tag_box.tag_box--inline li {
 	float:left;
-}
-@media (min-width: 992px) {  /* lg */
-  .tag_box li {
-    float: unset;
-  }
 }
 .tag_box a.tag__pill {
 	padding: 3px 6px;
