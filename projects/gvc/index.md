@@ -25,7 +25,7 @@ formatted, scrollable, searchable diff. It was built as a modern replacement
 for [GitX](https://gitx.frim.nl/)'s `--diff` mode, which served gvc's author
 faithfully for over a decade but lacked dark mode, find, and active maintenance.
 
-<img src="https://raw.githubusercontent.com/davidfstr/git-visual-compare/main/README/screenshot-dark.png"
+<img src="https://raw.githubusercontent.com/davidfstr/git-visual-compare/main/README/screenshot-dark-2.png"
      alt="Screenshot of gvc, showing a diff in dark mode"
      style="max-width: 100%;" />
 
@@ -51,7 +51,7 @@ GUI window appears.
 - Light and dark mode
 - Find (Cmd+F)
 - Adjustable font size (Cmd+Plus / Cmd+Minus)
-- Table of contents to jump to any file
+- File outline to jump to any file
 - Collapsible file sections with expand/collapse all
 
 
