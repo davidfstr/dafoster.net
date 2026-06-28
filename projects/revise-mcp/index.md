@@ -12,7 +12,6 @@ x_started_on_source: first commit in git repo
 x_ended_on_source: TBD
 x_languages: [Python]
 x_location: Cathode at /Users/davidf/Projects/revise-mcp
-featured: true
 
 ---
 **Revise MCP** is an [MCP] (Model Context Protocol) server that provides

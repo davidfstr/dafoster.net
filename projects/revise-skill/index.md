@@ -12,7 +12,6 @@ x_started_on_source: first commit in git repo
 x_ended_on_source: TBD
 x_languages: [Markdown]
 x_location: Cathode at /Users/davidf/.claude/skills/revise
-featured: true
 
 ---
 The **Revise Skill** is an [Agent Skill] that performs common code quality
