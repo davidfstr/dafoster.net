@@ -2,6 +2,7 @@
 layout: post
 title: Designing Software in the Large
 tags: [Software]
+featured: true
 
 x_hacker_news_discussion_url: https://news.ycombinator.com/item?id=44864467#44868333
 
